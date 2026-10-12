@@ -1066,6 +1066,263 @@
       .hero-art { opacity: 0.88; }
     }
 
+
+    /* Intentional layout pass: clear hierarchy, no decorative underlines, no overlaps. */
+    .navigation a,
+    .navigation a:hover,
+    .section-heading h2,
+    .section-label,
+    .about-grid h2 {
+      text-decoration: none;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero {
+      min-height: 570px;
+      padding-top: 34px;
+      padding-bottom: 30px;
+    }
+
+    .hero-top {
+      position: relative;
+      z-index: 3;
+      min-height: 42px;
+    }
+
+    .hero h1.clue-title {
+      z-index: 2;
+      width: fit-content;
+      max-width: 100%;
+      margin: 46px 0 42px;
+      font-size: clamp(52px, 9.6vw, 132px);
+      line-height: 0.94;
+      letter-spacing: -0.075em;
+    }
+
+    .hero h1 .second-line {
+      padding-left: 7%;
+      white-space: nowrap;
+    }
+
+    .hero h1 .title-final {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .hero h1 .clues-word {
+      display: inline;
+      color: var(--orange);
+    }
+
+    .hero-art {
+      z-index: 0;
+      opacity: 0.95;
+    }
+
+    .earth-art {
+      width: clamp(42px, 5vw, 66px);
+      top: 21%;
+      right: 9%;
+      transform: none;
+    }
+
+    .footprints-art {
+      width: clamp(32px, 3.7vw, 46px);
+      left: 5%;
+      top: 59%;
+      transform: rotate(-17deg);
+    }
+
+    .music-art {
+      width: clamp(34px, 4vw, 48px);
+      right: 8%;
+      bottom: 19%;
+      transform: none;
+    }
+
+    .hero-bottom {
+      position: relative;
+      z-index: 3;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .hero-stamp {
+      box-shadow: none;
+      border-color: var(--orange);
+      transform: none;
+    }
+
+    .ticker {
+      border-top: 0;
+      border-bottom: 0;
+      padding: 12px 0;
+    }
+
+    .section {
+      padding-top: 76px;
+      padding-bottom: 76px;
+    }
+
+    .section-heading {
+      align-items: flex-end;
+      margin-bottom: 32px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading h2 {
+      line-height: 1;
+    }
+
+    .section-number,
+    .section-label {
+      flex-shrink: 0;
+    }
+
+    .work-row {
+      padding: 20px 0;
+    }
+
+    .work-row:hover {
+      padding-left: 0;
+      padding-right: 0;
+      background: transparent;
+    }
+
+    .reference-intro {
+      margin: 0 0 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .reference-board {
+      gap: 16px;
+    }
+
+    .reference-card {
+      min-width: 0;
+      min-height: 200px;
+      padding: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .reference-card h3 {
+      margin-top: 22px;
+      overflow-wrap: anywhere;
+    }
+
+    .reference-card a {
+      border-bottom: 0;
+      padding-bottom: 0;
+      color: var(--ink);
+    }
+
+    .reference-card a:hover {
+      color: var(--orange);
+    }
+
+    .about-grid h2 {
+      margin-top: 8px;
+    }
+
+    .contact-section {
+      background: var(--orange);
+    }
+
+    .contact-email {
+      border-bottom: 0;
+      text-decoration: none;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 540px;
+        padding-top: 28px;
+      }
+
+      .hero h1.clue-title {
+        margin: 56px 0 44px;
+        font-size: clamp(46px, 10.8vw, 78px);
+        line-height: 0.98;
+      }
+
+      .hero h1 .second-line {
+        padding-left: 3%;
+      }
+
+      .earth-art {
+        top: 25%;
+        right: 7%;
+        width: 40px;
+      }
+
+      .footprints-art {
+        left: 4%;
+        top: 62%;
+        width: 30px;
+      }
+
+      .music-art {
+        right: 5%;
+        bottom: 24%;
+        width: 34px;
+      }
+
+      .section {
+        padding-top: 56px;
+        padding-bottom: 56px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 26px;
+      }
+
+      .reference-intro {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .reference-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1.clue-title {
+        font-size: 10.5vw;
+      }
+
+      .hero h1 .second-line {
+        padding-left: 0;
+      }
+
+      .earth-art {
+        top: 29%;
+        width: 34px;
+      }
+
+      .footprints-art {
+        top: 65%;
+        width: 26px;
+      }
+
+      .music-art {
+        bottom: 23%;
+        width: 29px;
+      }
+
+      .reference-board {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 
