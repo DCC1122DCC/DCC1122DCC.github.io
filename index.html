@@ -6,15 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Desani Curbelo | Creative Archive</title>
-  <meta name="description" content="A growing collection of visual work, music, creative projects, and ideas—an evolving record of what I make, explore, and learn.">
+  <meta
+    name="description"
+    content="An archive of things I make, things I notice, and the connections that bring new ideas to life."
+  >
+  <meta name="theme-color" content="#f7f5ef">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
-      --background: #f8f6f0;
-      --text: #292921;
-      --muted: #77766c;
-      --accent: #777c60;
-      --line: #dedbd1;
+      --paper: #f7f5ef;
+      --paper-dark: #efede4;
+      --ink: #292a24;
+      --muted: #77776b;
+      --olive: #777b5a;
+      --olive-light: #e7e7da;
+      --line: #dedcd1;
+      --white: #fcfbf7;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --page-width: 1120px;
     }
 
     * {
@@ -23,14 +40,17 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 95px;
     }
 
     body {
       margin: 0;
-      background: var(--background);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 14px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -38,456 +58,1519 @@
       text-decoration: none;
     }
 
-    a:hover {
-      color: var(--accent);
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--olive);
+      outline-offset: 4px;
     }
 
-    header {
-      max-width: 1100px;
-      margin: auto;
-      padding: 28px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      border-bottom: 1px solid var(--line);
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 20px;
-      white-space: nowrap;
+    button {
+      font: inherit;
     }
 
-    nav {
-      display: flex;
-      gap: 22px;
-      flex-wrap: wrap;
-      font-size: 12px;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 30px;
-    }
-
-    .hero {
-      padding: 105px 0 95px;
-      max-width: 760px;
+    .container {
+      width: min(var(--page-width), calc(100% - 64px));
+      margin: 0 auto;
     }
 
     .eyebrow {
-      color: var(--accent);
+      color: var(--olive);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.17em;
+      line-height: 1.6;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 11px;
-      font-weight: bold;
     }
 
-    h1, h2, h3 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: normal;
-      line-height: 1.15;
+    .serif {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 245, 239, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+      flex-shrink: 0;
+    }
+
+    .wordmark-name {
+      font-family: var(--serif);
+      font-size: 20px;
+      letter-spacing: -0.04em;
+    }
+
+    .wordmark-subtitle {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: #595a50;
+      font-size: 11px;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--olive);
+    }
+
+    .nav-contact {
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 0 88px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 850px;
+    }
+
+    .hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 27px;
+    }
+
+    .hero-kicker::before {
+      width: 27px;
+      height: 1px;
+      background: var(--olive);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
     }
 
     h1 {
-      font-size: clamp(42px, 7vw, 76px);
-      letter-spacing: -2px;
-      margin: 22px 0;
+      max-width: 850px;
+      margin-bottom: 28px;
+      font-family: var(--serif);
+      font-size: clamp(46px, 7.2vw, 88px);
+      font-weight: 400;
+      letter-spacing: -0.065em;
+      line-height: 1.08;
     }
 
-    h2 {
-      font-size: 34px;
-      margin: 0;
+    h1 em {
+      color: var(--olive);
+      font-weight: 400;
     }
 
-    h3 {
-      font-size: 24px;
-      margin: 12px 0 8px;
+    .hero-description {
+      max-width: 470px;
+      margin-bottom: 32px;
+      color: #65655a;
+      font-size: 14px;
+      line-height: 1.95;
     }
 
-    .intro {
-      max-width: 580px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .hero-links {
+    .hero-actions {
       display: flex;
-      gap: 25px;
-      margin-top: 30px;
       flex-wrap: wrap;
-      font-size: 13px;
+      align-items: center;
+      gap: 22px;
     }
 
-    .hero-links a {
-      border-bottom: 1px solid var(--accent);
-      padding-bottom: 4px;
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 600;
     }
 
-    section {
-      padding: 55px 0 70px;
-      border-top: 1px solid var(--line);
+    .text-link span {
+      color: var(--olive);
+      transition: transform 0.2s ease;
+    }
+
+    .text-link:hover span {
+      transform: translateX(4px);
+    }
+
+    .hero-note {
+      position: absolute;
+      right: 2%;
+      bottom: 40px;
+      width: 180px;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 15px;
+      font-style: italic;
+      line-height: 1.7;
+      text-align: right;
+      transform: rotate(-4deg);
+    }
+
+    .hero-note::before {
+      display: block;
+      width: 38px;
+      height: 1px;
+      margin: 0 0 13px auto;
+      background: var(--olive);
+      content: "";
+    }
+
+    .intro-strip {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+      background: var(--paper-dark);
+    }
+
+    .intro-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .intro-strip p {
+      max-width: 700px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(17px, 2.5vw, 23px);
+      line-height: 1.6;
+    }
+
+    .intro-strip .eyebrow {
+      flex-shrink: 0;
+    }
+
+    .archive-section {
+      padding: 88px 0;
+      border-bottom: 1px solid var(--line);
     }
 
     .section-heading {
       display: flex;
+      align-items: flex-end;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-      margin-bottom: 30px;
+      gap: 25px;
+      margin-bottom: 38px;
     }
 
-    .section-note {
+    .section-number {
+      display: block;
+      margin-bottom: 11px;
+      color: var(--olive);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 9px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      max-width: 475px;
+      margin-bottom: 0;
       color: var(--muted);
       font-size: 12px;
     }
 
-    .section-intro {
-      max-width: 650px;
+    .section-aside {
+      padding-bottom: 6px;
       color: var(--muted);
-      font-size: 14px;
-      margin: -12px 0 30px;
+      font-size: 10px;
+      white-space: nowrap;
     }
 
-    .grid {
+    .card-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
+      gap: 20px;
     }
 
-    .project {
-      display: block;
-      padding-top: 18px;
+    .archive-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .archive-card:hover {
+      border-color: #b8b8a4;
+      transform: translateY(-3px);
+    }
+
+    .card-visual {
+      position: relative;
+      display: flex;
+      min-height: 190px;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 20px;
+      background: var(--paper-dark);
+    }
+
+    .card-visual img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      object-fit: cover;
+    }
+
+    .visual-placeholder {
+      display: flex;
+      width: 100%;
+      min-height: 150px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--olive);
+      text-align: center;
+    }
+
+    .visual-symbol {
+      font-family: var(--serif);
+      font-size: 46px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .visual-caption {
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .visual-one {
+      background: #e8e4d8;
+    }
+
+    .visual-two {
+      background: #e4e5d9;
+    }
+
+    .visual-three {
+      background: #e8e0d8;
+    }
+
+    .card-body {
+      padding: 22px 20px 20px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .category-label {
+      color: var(--olive);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .status-label {
+      padding: 3px 7px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      color: var(--muted);
+      font-size: 9px;
+    }
+
+    .card-body h3 {
+      margin-bottom: 9px;
+      font-family: var(--serif);
+      font-size: 23px;
+      font-weight: 400;
+      letter-spacing: -0.025em;
+      line-height: 1.35;
+    }
+
+    .card-body > p {
+      margin-bottom: 18px;
+      color: #6f6e63;
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .card-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding-top: 13px;
       border-top: 1px solid var(--line);
     }
 
-    .project-number {
-      color: var(--accent);
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    .project p {
-      font-size: 13px;
+    .connection {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
       color: var(--muted);
-      margin: 0 0 15px;
+      font-size: 10px;
     }
 
-    .project-link {
-      font-size: 12px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 3px;
+    .connection::before {
+      color: var(--olive);
+      content: "↗";
     }
 
-    .reference-grid {
+    .card-link {
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .card-link:hover {
+      color: var(--olive);
+    }
+
+    .collection-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-top: 28px;
+      padding: 18px 20px;
+      border: 1px dashed #ceccbf;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .collection-note .note-icon {
+      color: var(--olive);
+      font-size: 18px;
+    }
+
+    .collection-note p {
+      margin: 0;
+    }
+
+    .collection-note strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .connection-section {
+      background: #efeee6;
+    }
+
+    .connection-map {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      align-items: center;
+      gap: 16px;
+      margin: 35px 0 48px;
+      padding: 28px;
+      border: 1px solid #dad9cc;
+      background: rgba(252, 251, 247, 0.6);
+    }
+
+    .map-node {
+      min-width: 0;
+      text-align: center;
+    }
+
+    .map-node .node-type {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--olive);
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .map-node .node-name {
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.4;
+    }
+
+    .map-node p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .map-arrow {
+      color: var(--olive);
+      font-size: 22px;
+    }
+
+    .notes-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
     }
 
-    .reference {
-      padding: 20px;
-      border: 1px solid var(--line);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      min-height: 190px;
+    .note-card {
+      padding: 25px;
+      border: 1px solid #dad9cc;
+      background: rgba(252, 251, 247, 0.7);
     }
 
-    .reference-type {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
+    .note-card h3 {
+      margin: 12px 0 10px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      line-height: 1.35;
+    }
+
+    .note-card > p {
+      margin-bottom: 18px;
+      color: #6f6e63;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .note-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid #dfded3;
+    }
+
+    .note-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .note-tag {
+      padding: 4px 8px;
+      border: 1px solid #deddd1;
+      border-radius: 20px;
+      color: #69695e;
+      font-size: 9px;
+    }
+
+    .about-section {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 90px;
+      padding: 92px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .about-title h2,
+    .contact-title h2 {
+      margin: 12px 0 0;
+      font-family: var(--serif);
+      font-size: clamp(38px, 4vw, 52px);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+    }
+
+    .about-copy {
+      max-width: 510px;
+    }
+
+    .about-copy p {
+      margin-bottom: 18px;
+      color: #66665b;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .about-copy .about-emphasis {
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.65;
+    }
+
+    .about-interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 24px;
+    }
+
+    .interest {
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      color: #66665b;
       font-size: 10px;
     }
 
-    .reference h3 {
-      font-size: 22px;
+    .contact-section {
+      padding: 75px 0;
+      background: var(--paper-dark);
     }
 
-    .reference p {
-      color: var(--muted);
-      font-size: 13px;
-      margin: 0 0 20px;
-    }
-
-    .reference .project-link {
-      margin-top: auto;
-    }
-
-    .notes-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .notes-list li {
+    .contact-inner {
       display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 35px;
+    }
+
+    .contact-title h2 {
+      max-width: 580px;
+      margin-bottom: 15px;
+    }
+
+    .contact-title p {
+      max-width: 450px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #c9c8ba;
+      font-size: 12px;
+    }
+
+    .contact-link span {
+      color: var(--olive);
+    }
+
+    .site-footer {
+      padding: 22px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding: 17px 0;
-      border-bottom: 1px solid var(--line);
-      font-size: 14px;
     }
 
-    .notes-list span {
+    .footer-inner p {
+      margin: 0;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 10px;
     }
 
-    .about-text {
-      max-width: 650px;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+    }
+
+    .footer-links a {
       color: var(--muted);
+      font-size: 10px;
     }
 
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 28px 30px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
+    .footer-links a:hover {
+      color: var(--olive);
     }
 
-    @media (max-width: 650px) {
-      header {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 22px;
+    @media (max-width: 850px) {
+      .container {
+        width: min(100% - 44px, var(--page-width));
       }
 
-      nav {
-        gap: 12px 18px;
+      .nav {
+        min-height: 72px;
+        gap: 16px;
       }
 
-      main {
-        padding: 0 22px;
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 10px;
       }
 
       .hero {
-        padding: 75px 0;
+        padding: 82px 0 95px;
       }
 
-      .grid,
-      .reference-grid {
-        grid-template-columns: 1fr;
-        gap: 26px;
+      .hero-note {
+        right: 0;
+        bottom: 20px;
+        width: 145px;
+        font-size: 12px;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-section {
+        gap: 40px;
+      }
+
+      .connection-map {
+        gap: 10px;
+        padding: 22px 14px;
+      }
+
+      .map-node .node-name {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 125px;
+      }
+
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .nav {
+        min-height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 13px;
+        padding: 16px 0;
+      }
+
+      .wordmark-name {
+        font-size: 19px;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px 18px;
+      }
+
+      .nav-contact {
+        padding: 0;
+        border: 0;
+      }
+
+      .hero {
+        padding: 67px 0 110px;
+      }
+
+      h1 {
+        font-size: clamp(43px, 12vw, 62px);
+      }
+
+      .hero-description {
+        max-width: 390px;
+        font-size: 13px;
+      }
+
+      .hero-note {
+        right: 4px;
+        bottom: 15px;
+      }
+
+      .intro-strip {
+        padding: 21px 0;
+      }
+
+      .intro-strip-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .intro-strip p {
+        font-size: 19px;
+      }
+
+      .archive-section {
+        padding: 63px 0;
       }
 
       .section-heading {
         align-items: flex-start;
         flex-direction: column;
+        gap: 10px;
+        margin-bottom: 27px;
       }
 
-      .notes-list li {
+      .section-heading h2 {
+        font-size: 38px;
+      }
+
+      .section-aside {
+        white-space: normal;
+      }
+
+      .card-grid,
+      .notes-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .card-visual {
+        min-height: 210px;
+      }
+
+      .connection-map {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin: 25px 0 32px;
+        padding: 24px 18px;
+      }
+
+      .map-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+      }
+
+      .map-node .node-name {
+        font-size: 21px;
+      }
+
+      .note-card {
+        padding: 22px;
+      }
+
+      .about-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 66px 0;
+      }
+
+      .about-title h2,
+      .contact-title h2 {
+        font-size: 40px;
+      }
+
+      .contact-section {
+        padding: 61px 0;
+      }
+
+      .contact-inner {
+        align-items: flex-start;
         flex-direction: column;
-        gap: 4px;
+        gap: 28px;
       }
 
-      footer {
-        padding: 25px 22px;
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <a class="logo" href="#">Desani Curbelo</a>
 
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#references">References</a>
-      <a href="#notes">Notes & Ideas</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+
+      <a class="wordmark" href="#home" aria-label="Desani Curbelo home">
+        <span class="wordmark-name">Desani Curbelo</span>
+        <span class="wordmark-subtitle">Creative Archive</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#work">Work & Experiments</a>
+        <a href="#collected">Collected Things</a>
+        <a href="#connections">Connections & Notes</a>
+        <a href="#about">About</a>
+        <a class="nav-contact" href="#contact">Get in touch ↗</a>
+      </div>
+
     </nav>
   </header>
 
+
   <main>
-    <div class="hero">
-      <div class="eyebrow">A Personal Archive</div>
 
-      <h1>A home for my work and ideas.</h1>
+    <!-- HOMEPAGE -->
+    <section class="hero" id="home">
+      <div class="container">
 
-      <p class="intro">
-        A growing collection of visual work, music, creative projects,
-        and ideas—an evolving record of what I make, explore, and learn.
-      </p>
+        <div class="hero-inner">
+          <div class="hero-kicker eyebrow">
+            A personal archive · Always evolving
+          </div>
 
-      <div class="hero-links">
-        <a href="#work">Explore the work ↓</a>
-        <a href="#references">Things I've been looking at ↗</a>
+          <h1>
+            Collecting things.<br>
+            Connecting dots.<br>
+            <em>Seeing what emerges.</em>
+          </h1>
+
+          <p class="hero-description">
+            An archive of things I make, things I notice, and the
+            connections that bring new ideas to life.
+          </p>
+
+          <div class="hero-actions">
+            <a class="text-link" href="#work">
+              Explore the archive <span>↘</span>
+            </a>
+            <a class="text-link" href="#about">
+              A little about me <span>↗</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-note" aria-hidden="true">
+          A place for the things that stay with me.
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SHORT INTRODUCTION -->
+    <div class="intro-strip">
+      <div class="container intro-strip-inner">
+        <span class="eyebrow">The idea</span>
+        <p>
+          Not everything has to become something.
+          But sometimes, one thing leads to another.
+        </p>
       </div>
     </div>
 
-    <section id="work">
-      <div class="section-heading">
-        <h2>Selected work</h2>
-        <span class="section-note">Things made, tried, and brought to life</span>
-      </div>
 
-      <div class="grid">
-        <a class="project" href="#contact">
-          <div class="project-number">01 / IMAGE</div>
-          <h3>Video & Photography</h3>
-          <p>
-            Photographs, moving images, visual experiments,
-            and moments worth keeping.
-          </p>
-          <span class="project-link">Explore visual work ↗</span>
-        </a>
+    <!-- 01: WORK & EXPERIMENTS -->
+    <section class="archive-section" id="work">
+      <div class="container">
 
-        <a class="project" href="#contact">
-          <div class="project-number">02 / SOUND</div>
-          <h3>Music & Sound</h3>
-          <p>
-            Music, playlists, sounds, and the things
-            that keep finding their way back.
-          </p>
-          <span class="project-link">Explore music ↗</span>
-        </a>
+        <div class="section-heading">
+          <div>
+            <span class="section-number">01 / MAKE</span>
+            <h2>Work & Experiments</h2>
+            <p>
+              Things made, things in progress, and ideas that are still
+              finding their shape.
+            </p>
+          </div>
 
-        <a class="project" href="#contact">
-          <div class="project-number">03 / MAKING</div>
-          <h3>Projects & Experiments</h3>
+          <span class="section-aside">Finished work + works in progress</span>
+        </div>
+
+
+        <div class="card-grid">
+
+          <!-- WORK CARD TEMPLATE: duplicate this article to add a project -->
+          <article class="archive-card">
+            <div class="card-visual visual-one">
+              <!-- Replace this placeholder with an image if desired:
+              <img src="images/your-photo.jpg" alt="Describe your photograph">
+              -->
+              <div class="visual-placeholder">
+                <span class="visual-symbol">01</span>
+                <span class="visual-caption">Photography / Image goes here</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Photography</span>
+                <span class="status-label">Replace with status</span>
+              </div>
+
+              <h3>Your project title</h3>
+
+              <p>
+                Replace this with a short description of the work, what
+                you were exploring, or what inspired you to begin.
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Related: add a reference</span>
+                <!-- Replace # with your actual project URL, or keep
+                     this link pointing to a section on your site. -->
+                <a class="card-link" href="#collected">
+                  View references ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="archive-card">
+            <div class="card-visual visual-two">
+              <div class="visual-placeholder">
+                <span class="visual-symbol">02</span>
+                <span class="visual-caption">Sound / Video / Media</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Music & Sound</span>
+                <span class="status-label">In progress</span>
+              </div>
+
+              <h3>Your next experiment</h3>
+
+              <p>
+                A place for a sound experiment, a music project, a video,
+                a collaboration, or something you are learning to make.
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Related: add a note</span>
+                <a class="card-link" href="#connections">
+                  Follow the idea ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="archive-card">
+            <div class="card-visual visual-three">
+              <div class="visual-placeholder">
+                <span class="visual-symbol">03</span>
+                <span class="visual-caption">Studies / Ideas / Objects</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Creative Study</span>
+                <span class="status-label">Experiment</span>
+              </div>
+
+              <h3>A study in something</h3>
+
+              <p>
+                Document a visual study, a personal project, a collection
+                of tests, or an idea that may lead somewhere unexpected.
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Related: add a reference</span>
+                <a class="card-link" href="#collected">
+                  Explore the source ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="collection-note">
+          <span class="note-icon" aria-hidden="true">✳</span>
           <p>
-            Creative projects, collaborations, research,
-            and ideas taking shape.
+            <strong>A note on process.</strong>
+            Not every experiment needs a conclusion. This is a space for
+            unfinished thoughts, small discoveries, and work that changes
+            as I learn more.
           </p>
-          <span class="project-link">Explore projects ↗</span>
-        </a>
+        </div>
+
       </div>
     </section>
 
-    <section id="references">
-      <div class="section-heading">
-        <h2>Things that catch my attention</h2>
-        <span class="section-note">An ongoing collection</span>
+
+    <!-- 02: COLLECTED THINGS -->
+    <section class="archive-section" id="collected">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-number">02 / COLLECT</span>
+            <h2>Collected Things</h2>
+            <p>
+              References, discoveries, and little things worth keeping.
+              A growing collection of things that catch my attention.
+            </p>
+          </div>
+
+          <span class="section-aside">A personal reference library</span>
+        </div>
+
+
+        <div class="card-grid">
+
+          <!-- REFERENCE CARD TEMPLATE: duplicate to collect something new -->
+          <article class="archive-card">
+            <div class="card-visual visual-two">
+              <div class="visual-placeholder">
+                <span class="visual-symbol">♫</span>
+                <span class="visual-caption">Music to return to</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Music</span>
+                <span class="status-label">Listening</span>
+              </div>
+
+              <h3>Something I've been listening to</h3>
+
+              <p>
+                Add an album, artist, song, or playlist. What do you
+                notice about the sound, the atmosphere, or the feeling
+                it creates?
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Connect to: a project</span>
+                <!-- Replace # with the actual music link -->
+                <a
+                  class="card-link"
+                  href="#replace-with-music-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Open reference ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="archive-card">
+            <div class="card-visual visual-three">
+              <div class="visual-placeholder">
+                <span class="visual-symbol">◌</span>
+                <span class="visual-caption">Film / Image / Atmosphere</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Film & Visual Culture</span>
+                <span class="status-label">Saved</span>
+              </div>
+
+              <h3>A scene, a frame, a feeling</h3>
+
+              <p>
+                Save a film, a director, a photograph, or a visual moment.
+                Keep track of the colors, composition, mood, or details
+                you want to remember.
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Connect to: visual studies</span>
+                <!-- Replace # with the actual film or image link -->
+                <a
+                  class="card-link"
+                  href="#replace-with-film-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit source ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="archive-card">
+            <div class="card-visual visual-one">
+              <div class="visual-placeholder">
+                <span class="visual-symbol">✳</span>
+                <span class="visual-caption">Style / Objects / Design</span>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="category-label">Style & Design</span>
+                <span class="status-label">Reference</span>
+              </div>
+
+              <h3>Details worth noticing</h3>
+
+              <p>
+                Collect a garment, an object, an interior, a design detail,
+                or a combination of materials that makes you curious.
+              </p>
+
+              <div class="card-footer">
+                <span class="connection">Connect to: a visual idea</span>
+                <!-- Replace # with the actual article or image link -->
+                <a
+                  class="card-link"
+                  href="#replace-with-reference-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Explore source ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="collection-note">
+          <span class="note-icon" aria-hidden="true">↗</span>
+          <p>
+            <strong>Keep following the thread.</strong>
+            A saved reference can link to a project, another reference,
+            or a note in the next section. The interesting part is often
+            what happens between the things.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 03: CONNECTIONS & NOTES -->
+    <section class="archive-section connection-section" id="connections">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="section-number">03 / CONNECT</span>
+            <h2>Connections & Notes</h2>
+            <p>
+              Observations, associations, questions, and ideas that
+              emerge when different interests begin to overlap.
+            </p>
+          </div>
+
+          <span class="section-aside">Thinking out loud</span>
+        </div>
+
+
+        <!-- EXAMPLE OF HOW DIFFERENT ARCHIVE ENTRIES CAN CONNECT -->
+        <!-- Replace all three nodes with your own project, reference,
+             and observation. These are illustrative placeholders. -->
+        <div class="connection-map">
+
+          <div class="map-node">
+            <span class="node-type">Reference</span>
+            <div class="node-name">A sound or song</div>
+            <p>Something you noticed</p>
+          </div>
+
+          <span class="map-arrow" aria-hidden="true">→</span>
+
+          <div class="map-node">
+            <span class="node-type">Observation</span>
+            <div class="node-name">A visual feeling</div>
+            <p>An unexpected association</p>
+          </div>
+
+          <span class="map-arrow" aria-hidden="true">→</span>
+
+          <div class="map-node">
+            <span class="node-type">Possibility</span>
+            <div class="node-name">A new experiment</div>
+            <p>Something worth exploring</p>
+          </div>
+
+        </div>
+
+
+        <div class="notes-grid">
+
+          <!-- NOTE TEMPLATE: duplicate this article for each new note -->
+          <article class="note-card">
+            <span class="eyebrow">Open question / 01</span>
+
+            <h3>What happens when a sound becomes a visual?</h3>
+
+            <p>
+              Could the rhythm of a song influence the way an image is
+              composed? Could color, texture, or movement communicate
+              something that is difficult to put into words? This is a
+              question to explore through a future experiment.
+            </p>
+
+            <div class="note-bottom">
+              <div class="note-tags">
+                <span class="note-tag">Music</span>
+                <span class="note-tag">Photography</span>
+                <span class="note-tag">Experiment</span>
+              </div>
+
+              <a class="card-link" href="#work">Related work ↗</a>
+            </div>
+          </article>
+
+
+          <article class="note-card">
+            <span class="eyebrow">Field note / 02</span>
+
+            <h3>Collecting as a way of thinking</h3>
+
+            <p>
+              Sometimes the things I save do not make sense together
+              right away. A photograph, a melody, a film scene, an object.
+              Putting them next to one another might reveal a shared mood,
+              a recurring idea, or a direction I had not considered.
+            </p>
+
+            <div class="note-bottom">
+              <div class="note-tags">
+                <span class="note-tag">References</span>
+                <span class="note-tag">Process</span>
+                <span class="note-tag">Ideas</span>
+              </div>
+
+              <a class="card-link" href="#collected">Related collection ↗</a>
+            </div>
+          </article>
+
+
+          <article class="note-card">
+            <span class="eyebrow">In progress / 03</span>
+
+            <h3>Something I'm currently exploring</h3>
+
+            <p>
+              Replace this with a thought you keep returning to, a
+              question you cannot quite answer, or a creative direction
+              you want to investigate. It does not need to be polished.
+            </p>
+
+            <div class="note-bottom">
+              <div class="note-tags">
+                <span class="note-tag">Work in progress</span>
+                <span class="note-tag">Research</span>
+              </div>
+
+              <a class="card-link" href="#work">Related experiment ↗</a>
+            </div>
+          </article>
+
+
+          <article class="note-card">
+            <span class="eyebrow">Loose thought / 04</span>
+
+            <h3>A detail I don't want to forget</h3>
+
+            <p>
+              A conversation, a place, a passing observation, a line
+              from a book, or a small everyday moment. Leave yourself
+              a note before the idea disappears, and see where it leads.
+            </p>
+
+            <div class="note-bottom">
+              <div class="note-tags">
+                <span class="note-tag">Observation</span>
+                <span class="note-tag">Everyday life</span>
+              </div>
+
+              <a class="card-link" href="#collected">Find a connection ↗</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="collection-note">
+          <span class="note-icon" aria-hidden="true">↔</span>
+          <p>
+            <strong>The archive is allowed to change.</strong>
+            A note can become a project. A project can lead to a new
+            reference. A reference can change how I understand something
+            I made months ago. Nothing has to stay in one category.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="container about-section" id="about">
+
+      <div class="about-title">
+        <span class="eyebrow">A little context</span>
+        <h2>About this space.</h2>
       </div>
 
-      <p class="section-intro">
-        Art, images, music, films, places, designs, and other things
-        worth keeping around. A collection of references, influences,
-        and rabbit holes—some passing interests, some that might lead somewhere.
-      </p>
+      <div class="about-copy">
 
-      <div class="reference-grid">
+        <p class="about-emphasis">
+          A personal space for making, noticing, collecting, and
+          figuring things out.
+        </p>
 
-        <!-- REFERENCE TEMPLATE
-             Duplicate this block whenever you want to add a reference.
-             Replace the title, type, description, and link.
-        -->
+        <p>
+          This archive is a record of my creative interests and the
+          ideas that develop between them. It brings together the things
+          I make, the things I return to, and the questions that emerge
+          along the way.
+        </p>
 
-        <article class="reference">
-          <div class="reference-type">Music / Listening</div>
-          <h3>Playlists & Sound</h3>
+        <p>
+          I am interested in the relationships between music, images,
+          film, fashion, design, culture, and everyday life. Rather than
+          treating these interests as separate, I want to explore how
+          they can inform one another and lead to new ways of seeing
+          or making things.
+        </p>
+
+        <p>
+          Think of this as an evolving notebook as much as a portfolio.
+          Some things will be finished, some will remain experiments,
+          and others might simply be worth keeping.
+        </p>
+
+        <div class="about-interests" aria-label="Areas of interest">
+          <span class="interest">Music & sound</span>
+          <span class="interest">Photography</span>
+          <span class="interest">Film</span>
+          <span class="interest">Visual culture</span>
+          <span class="interest">Fashion & design</span>
+          <span class="interest">Creative research</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-inner">
+
+        <div class="contact-title">
+          <span class="eyebrow">Contact / Collaboration</span>
+
+          <h2>Have something in mind?</h2>
+
           <p>
-            Songs, playlists, and sounds that bring a particular
-            time, feeling, or world to mind.
+            For creative collaborations, conversations, shared references,
+            or simply following an interesting thread.
           </p>
-          <a class="project-link" href="#contact">Add a listening link ↗</a>
-        </article>
+        </div>
 
-        <article class="reference">
-          <div class="reference-type">Visual / Inspiration</div>
-          <h3>Images & Aesthetics</h3>
-          <p>
-            Photography, styling, colors, objects, and visual
-            details worth coming back to.
-          </p>
-          <a class="project-link" href="#contact">Add a visual reference ↗</a>
-        </article>
+        <div class="contact-links">
 
-        <article class="reference">
-          <div class="reference-type">Film / Moving Image</div>
-          <h3>Scenes & Stories</h3>
-          <p>
-            Films, videos, scenes, and visual storytelling
-            that leave something behind.
-          </p>
-          <a class="project-link" href="#contact">Add a film or video ↗</a>
-        </article>
+          <!-- IMPORTANT: replace this placeholder with your real email -->
+          <a
+            class="contact-link"
+            href="mailto:YOUR-EMAIL@example.com"
+          >
+            Email me <span>↗</span>
+          </a>
 
-        <article class="reference">
-          <div class="reference-type">Design / Ideas</div>
-          <h3>Things Worth Keeping</h3>
-          <p>
-            Art, clothes, spaces, objects, writing, and
-            anything else that sparks an idea.
-          </p>
-          <a class="project-link" href="#contact">Add a link or image ↗</a>
-        </article>
+          <!-- OPTIONAL: replace with your real website or profile URL -->
+          <a
+            class="contact-link"
+            href="#replace-with-your-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Another place to find me <span>↗</span>
+          </a>
+
+        </div>
 
       </div>
     </section>
 
-    <section id="notes">
-      <div class="section-heading">
-        <h2>Notes & explorations</h2>
-        <span class="section-note">Ideas in motion</span>
-      </div>
-
-      <p class="section-intro">
-        Some things are finished. Others are still taking shape.
-        This is a place for observations, ongoing experiments,
-        connections, and the beginnings of something new.
-      </p>
-
-      <ul class="notes-list">
-        <li>
-          <a href="#about">Making connections between things</a>
-          <span>Notes & ideas</span>
-        </li>
-        <li>
-          <a href="#references">Collecting influences and references</a>
-          <span>Ongoing</span>
-        </li>
-        <li>
-          <a href="#work">Projects taking shape</a>
-          <span>In progress</span>
-        </li>
-      </ul>
-    </section>
-
-    <section id="about">
-      <div class="eyebrow">About this space</div>
-      <h2 style="margin-top: 14px;">An ongoing collection.</h2>
-
-      <p class="about-text">
-        I'm interested in the things that make a world feel like itself:
-        its images, sounds, ideas, details, and people. I like collecting
-        references, making connections, and seeing what happens when
-        different things come together.
-      </p>
-
-      <p class="about-text">
-        This space brings those interests together. Some things here
-        are finished; others are experiments, influences, or the
-        beginning of something. It's part portfolio, part archive,
-        and always a work in progress.
-      </p>
-    </section>
-
-    <section id="contact">
-      <div class="eyebrow">Contact</div>
-      <h2 style="margin-top: 14px;">Get in touch.</h2>
-
-      <p class="about-text">
-        For conversations, collaborations, or anything related to the work,
-        feel free to reach out.
-      </p>
-
-      <!-- Replace with your own email address. -->
-      <a class="project-link" href="mailto:YOUR-EMAIL@example.com">
-        Send an email ↗
-      </a>
-    </section>
   </main>
 
-  <footer>
-    © 2026 Desani Curbelo · An evolving collection
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <p>
+        © <span id="year">2026</span> Desani Curbelo · Creative Archive
+      </p>
+
+      <div class="footer-links">
+        <a href="#home">Back to top ↑</a>
+        <a href="#work">Work</a>
+        <a href="#collected">Collected things</a>
+        <a href="#connections">Notes</a>
+      </div>
+
+    </div>
   </footer>
+
+
+  <!-- Updates the copyright year automatically. -->
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
 </body>
 </html>
