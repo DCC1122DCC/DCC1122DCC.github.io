@@ -9,7 +9,7 @@
   <title>Desani Curbelo | Creative Archive</title>
   <meta
     name="description"
-    content="A personal archive of things I make, things I notice, and the connections that bring new ideas to life."
+    content="Desani Curbelo — personal creative archive."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -127,6 +127,19 @@
       letter-spacing: 0.5px;
     }
 
+    .eyebrow {
+      display: inline-block;
+      padding: 12px 16px;
+      background: var(--orange);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      box-shadow: 5px 5px 0 var(--ink);
+      font-family: var(--display);
+      font-size: clamp(15px, 2vw, 23px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
+
     .hero-top {
       display: flex;
       justify-content: space-between;
@@ -157,11 +170,19 @@
 
     .hero h1 .second-line {
       color: var(--orange);
-      padding-left: 11%;
+      padding-left: 8%;
     }
 
-    .hero h1 .third-line {
-      padding-left: 3%;
+    .hero h1.clue-title {
+      margin-top: 52px;
+      margin-bottom: 45px;
+      font-size: clamp(64px, 13.2vw, 178px);
+      line-height: 0.84;
+      letter-spacing: -0.09em;
+    }
+
+    .hero h1.clue-title .title-period {
+      color: var(--ink);
     }
 
     .hero-bottom {
@@ -191,6 +212,15 @@
       text-align: center;
       line-height: 1.6;
       transform: rotate(9deg);
+    }
+
+    .about-outro {
+      margin: 0 0 24px;
+      font-family: var(--display);
+      font-size: clamp(27px, 4.2vw, 48px);
+      line-height: 1;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
     }
 
     .ticker {
@@ -486,6 +516,88 @@
       color: var(--ink);
     }
 
+    .references-section {
+      background: var(--paper);
+    }
+
+    .reference-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      margin: -18px 0 36px;
+    }
+
+    .reference-intro p {
+      max-width: 480px;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .reference-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .reference-card {
+      min-height: 185px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 17px;
+      border: 1px solid var(--ink);
+      background: var(--cream);
+    }
+
+    .reference-card:nth-child(2) {
+      background: var(--cyan);
+    }
+
+    .reference-card:nth-child(3) {
+      background: var(--orange);
+    }
+
+    .reference-card:nth-child(4) {
+      background: var(--cyan);
+    }
+
+    .reference-card:nth-child(5) {
+      background: var(--cream);
+    }
+
+    .reference-card .reference-type {
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .reference-card h3 {
+      margin: 28px 0 8px;
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 36px);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .reference-card p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.45;
+    }
+
+    .reference-card a {
+      align-self: flex-start;
+      margin-top: 20px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid currentColor;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -725,6 +837,18 @@
       .playlist-row {
         align-items: flex-start;
       }
+
+      .reference-board {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-bottom {
+        align-items: flex-start;
+      }
+
+      .hero-description {
+        max-width: 240px;
+      }
     }
   </style>
 </head>
@@ -732,317 +856,151 @@
 <body id="home">
   <header class="site-header">
     <a class="wordmark" href="#home">Desani Curbelo®</a>
-
     <nav class="navigation" aria-label="Main navigation">
-      <a href="#work">Work</a>
-      <a href="#music">Music</a>
-      <a href="#photos">Photos</a>
-      <a href="#playlists">Playlists</a>
-      <a href="#resume">Resume</a>
+      <a href="#work">My Work</a>
+      <a href="#collaborations">Collaborations</a>
+      <a href="#references">References</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-top">
-        <span class="eyebrow">Personal archive / 001</span>
-        <p>
-          A place for creative experiments, things worth keeping,
-          and ideas that lead somewhere unexpected.
-        </p>
+        <span class="eyebrow">PERSONAL ARCHIVE / 001</span>
       </div>
 
-      <h1>
-        <span>Making things.</span>
-        <span class="second-line">Saving things.</span>
-        <span class="third-line">Seeing where</span>
-        <span>they lead.</span>
+      <h1 class="clue-title">
+        <span>LOOKING</span>
+        <span class="second-line">FOR CLUES<span class="title-period">.</span></span>
       </h1>
 
       <div class="hero-bottom">
-        <p class="hero-description">
-          An archive of things I make, things I notice, and the connections
-          that bring new ideas to life.
-        </p>
-
-        <div class="hero-stamp">
-          MADE<br />
-          &amp; FOUND<br />
-          2026
-        </div>
+        <p class="hero-description">In an attempt to understand the world around me, I create.</p>
+        <span class="hero-stamp">MADE<br />&amp; FOUND<br />2026</span>
       </div>
     </section>
 
     <div class="ticker" aria-label="Creative interests">
       <div class="ticker-track">
-        <span>Sound</span>
-        <span>Image</span>
-        <span>Memory</span>
-        <span>Movement</span>
-        <span>References</span>
-        <span>Connections</span>
+        <span>SOUND</span>
+        <span>IMAGE</span>
+        <span>MEMORY</span>
+        <span>MOVEMENT</span>
+        <span>REFERENCES</span>
+        <span>CONNECTIONS</span>
       </div>
     </div>
 
     <section class="section" id="work">
       <div class="section-heading">
-        <h2>Things<br />I've made.</h2>
-        <span class="section-number">01 / Selected work</span>
+        <h2>MY WORK</h2>
+        <span class="section-number">01 / MADE</span>
       </div>
-
       <div class="work-list">
-        <a class="work-row" href="#music">
+        <div class="work-row">
           <span class="work-index">01</span>
-          <span>
-            <span class="work-title">Music &amp; Sound</span>
-            <span class="work-description">Demos, experiments, sounds, and ideas</span>
-          </span>
+          <span class="work-title">VIDEO</span>
           <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="work-row" href="#photos">
+        </div>
+        <div class="work-row">
           <span class="work-index">02</span>
-          <span>
-            <span class="work-title">Photography</span>
-            <span class="work-description">Images, places, details, and moments</span>
-          </span>
+          <span class="work-title">PHOTOGRAPHY</span>
           <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="work-row" href="#video">
+        </div>
+        <div class="work-row">
           <span class="work-index">03</span>
-          <span>
-            <span class="work-title">Video &amp; Moving Image</span>
-            <span class="work-description">Visual experiments and things in motion</span>
-          </span>
+          <span class="work-title">MUSIC + AUDIO</span>
           <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-      </div>
-    </section>
-
-    <section class="section music-section" id="music">
-      <div class="section-heading">
-        <h2>Things<br />I listen to.</h2>
-        <p class="music-note">
-          Sounds I return to, songs that stay with me, and music that
-          finds its way into what I make.
-        </p>
-      </div>
-
-      <p class="genre-line">Indie / Rock / Hip-hop</p>
-
-      <div class="music-list">
-        <div class="music-row">
-          <span class="track-number">01</span>
-          <div>
-            <h3>Music demos</h3>
-            <p>Original sounds and works in progress</p>
-          </div>
-          <a href="#contact">Listen ↗</a>
-        </div>
-
-        <div class="music-row">
-          <span class="track-number">02</span>
-          <div>
-            <h3>Sound experiments</h3>
-            <p>Fragments, ideas, and things I'm figuring out</p>
-          </div>
-          <a href="#contact">Listen ↗</a>
-        </div>
-
-        <div class="music-row">
-          <span class="track-number">03</span>
-          <div>
-            <h3>Current rotation</h3>
-            <p>Songs and artists on repeat</p>
-          </div>
-          <a href="#playlists">Explore ↗</a>
         </div>
       </div>
     </section>
 
-    <section class="section" id="photos">
+    <section class="section" id="collaborations">
       <div class="section-heading">
-        <h2>Things<br />I've noticed.</h2>
-        <span class="section-number">02 / Photo archive</span>
+        <h2>COLLABORATIONS</h2>
+        <span class="section-number">02 / MADE TOGETHER</span>
       </div>
-
-      <!--
-        To add your own photographs:
-        1. Create a folder named "images" in your GitHub repository.
-        2. Upload your photos into that folder.
-        3. Replace a photo placeholder below with:
-        <img src="images/your-photo.jpg" alt="A short description of the photo" />
-        4. Update the caption underneath.
-      -->
-
-      <div class="photo-grid">
-        <div>
-          <div class="photo-placeholder">
-            <span class="photo-note">Archive / 001</span>
-            <span class="photo-symbol">Out<br />there.</span>
-            <span class="photo-note">Places &amp; passing moments</span>
-          </div>
-          <p class="photo-caption">Places, light, and things I want to remember.</p>
-        </div>
-
-        <div>
-          <div class="photo-placeholder">
-            <span class="photo-note">Archive / 002</span>
-            <span class="photo-symbol">Little<br />details.</span>
-            <span class="photo-note">Found compositions</span>
-          </div>
-          <p class="photo-caption">Small details that catch my attention.</p>
-        </div>
-
-        <div>
-          <div class="photo-placeholder">
-            <span class="photo-note">Archive / 003</span>
-            <span class="photo-symbol">Visual<br />notes.</span>
-            <span class="photo-note">Color, shape, feeling</span>
-          </div>
-          <p class="photo-caption">Images, colors, and visual ideas.</p>
-        </div>
-
-        <div>
-          <div class="photo-placeholder">
-            <span class="photo-note">Archive / 004</span>
-            <span class="photo-symbol">In<br />between.</span>
-            <span class="photo-note">Life as reference</span>
-          </div>
-          <p class="photo-caption">The things that happen in between plans.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="video">
-      <div class="section-heading">
-        <h2>Things<br />in motion.</h2>
-        <span class="section-number">03 / Video archive</span>
-      </div>
-
       <div class="work-list">
-        <a
-          class="work-row"
-          href="#contact"
-          aria-label="Add a link to a video project"
-        >
+        <div class="work-row">
           <span class="work-index">01</span>
-          <span>
-            <span class="work-title">Video experiments</span>
-            <span class="work-description">Clips, edits, and moving images</span>
-          </span>
+          <span class="work-title">A SPACE FOR SHARED WORK</span>
           <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
-
-        <a class="work-row" href="#contact">
-          <span class="work-index">02</span>
-          <span>
-            <span class="work-title">Visual studies</span>
-            <span class="work-description">Images, rhythm, and atmosphere</span>
-          </span>
-          <span class="work-arrow" aria-hidden="true">↗</span>
-        </a>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="playlists">
+    <section class="section references-section" id="references">
       <div class="section-heading">
-        <h2>Things<br />on repeat.</h2>
-        <span class="section-number">04 / Playlists</span>
+        <h2>REFERENCE BOARD</h2>
+        <span class="section-number">03 / FOUND</span>
       </div>
-
-      <div class="playlist-list">
-        <div class="playlist-row">
+      <div class="reference-intro">
+        <p>A growing collection of things I find, return to, and connect. Not everything has to make sense yet.</p>
+        <span class="section-label">CLUES / IN PROGRESS</span>
+      </div>
+      <div class="reference-board">
+        <article class="reference-card">
+          <span class="reference-type">01 / SOUND</span>
           <div>
-            <h3>For the drive</h3>
-            <p>Songs for moving through a place.</p>
+            <h3>Music &amp; playlists</h3>
+            <p>Indie / Rock / Hip-hop</p>
           </div>
-          <!-- Replace # with your playlist URL. -->
-          <a href="#contact">Open playlist ↗</a>
-        </div>
-
-        <div class="playlist-row">
+          <a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=6c0814e0dab14591" target="_blank" rel="noopener noreferrer">Open Spotify ↗</a>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">02 / IMAGE</span>
           <div>
-            <h3>In another world</h3>
-            <p>Music for getting lost in thought.</p>
+            <h3>Images</h3>
+            <p>Visuals, photographs, and frames worth keeping.</p>
           </div>
-          <!-- Replace # with your playlist URL. -->
-          <a href="#contact">Open playlist ↗</a>
-        </div>
-
-        <div class="playlist-row">
+          <span class="section-label">COLLECT / CONNECT</span>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">03 / MOVEMENT</span>
           <div>
-            <h3>On repeat lately</h3>
-            <p>Whatever I'm listening to right now.</p>
+            <h3>Film &amp; motion</h3>
+            <p>Scenes, gestures, and moving images that leave a trace.</p>
           </div>
-          <!-- Replace # with your playlist URL. -->
-          <a href="#contact">Open playlist ↗</a>
-        </div>
+          <span class="section-label">NOTICE / RETURN</span>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">04 / MEMORY</span>
+          <div>
+            <h3>Things that linger</h3>
+            <p>Fragments, moments, and details I don't want to lose.</p>
+          </div>
+          <span class="section-label">SAVE / REVISIT</span>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">05 / CONNECTIONS</span>
+          <div>
+            <h3>Following a thread</h3>
+            <p>Unexpected links between things that might belong together.</p>
+          </div>
+          <span class="section-label">LOOK CLOSER ↗</span>
+        </article>
       </div>
     </section>
 
-    <section class="section resume-section" id="resume">
-      <div class="resume-inner">
-        <div>
-          <span class="section-label">05 / Work &amp; experience</span>
-          <h2>A little about<br />what I do.</h2>
-        </div>
-
-        <!-- Upload resume.pdf to the root of your repository. -->
-        <a class="round-link" href="resume.pdf" target="_blank" rel="noopener">
-          View my<br />resume ↗
-        </a>
-      </div>
-    </section>
-
-    <section class="section" id="about">
+    <section class="section about-section" id="about">
       <div class="about-grid">
         <div>
-          <span class="section-label">06 / About this place</span>
-          <h2>A personal<br />archive.</h2>
+          <span class="section-label">04 / ABOUT</span>
+          <h2>ABOUT</h2>
         </div>
-
         <div class="about-copy">
-          <p>
-            This is a place to collect the things I make, the things I find,
-            and the things that make me look twice.
-          </p>
-
-          <p>
-            Music, images, film, design, references, half-formed ideas.
-            Different interests, different mediums, all living in the same place.
-          </p>
-
-          <p>
-            I'm interested in the connections between things, and in seeing
-            where those connections lead.
-          </p>
+          <p class="about-outro">LET'S SEE WHERE THIS GOES..</p>
+          <a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM ↗</a>
         </div>
       </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <span class="section-label">07 / Get in touch</span>
-      <h2>Let's see<br />where it goes.</h2>
-
-      <!-- Replace this address with your email. -->
-      <a class="contact-email" href="mailto:YOUR-EMAIL@example.com">
-        YOUR-EMAIL@example.com ↗
-      </a>
     </section>
   </main>
 
   <footer class="site-footer">
     <span>© <span id="year">2026</span> Desani Curbelo</span>
-
-    <a href="https://dcc1122dcc.github.io/#home">
-      Personal archive / Est. 2026
-    </a>
-
-    <a class="back-to-top" href="#home">Back to top ↑</a>
+    <span>PERSONAL ARCHIVE / EST. 2026</span>
+    <a class="back-to-top" href="#home">BACK TO TOP ↑</a>
   </footer>
 
   <script>
