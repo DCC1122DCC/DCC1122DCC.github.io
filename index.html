@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Desani Curbelo | Creative Archive</title>
-  <meta name="description" content="A growing collection of visual work, music, creative projects, and ideas. An evolving record of what I make, explore, and learn.">
+  <meta name="description" content="A growing collection of visual work, music, creative projects, and ideas—an evolving record of what I make, explore, and learn.">
 
   <style>
     :root {
@@ -54,7 +54,7 @@
     }
 
     .logo {
-      font-family: Georgia, serif;
+      font-family: Georgia, "Times New Roman", serif;
       font-size: 20px;
       white-space: nowrap;
     }
@@ -97,8 +97,18 @@
       margin: 22px 0;
     }
 
+    h2 {
+      font-size: 34px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 12px 0 8px;
+    }
+
     .intro {
-      max-width: 540px;
+      max-width: 580px;
       color: var(--muted);
       font-size: 17px;
     }
@@ -129,14 +139,16 @@
       margin-bottom: 30px;
     }
 
-    h2 {
-      font-size: 34px;
-      margin: 0;
-    }
-
     .section-note {
       color: var(--muted);
       font-size: 12px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 14px;
+      margin: -12px 0 30px;
     }
 
     .grid {
@@ -157,11 +169,6 @@
       letter-spacing: 1px;
     }
 
-    .project h3 {
-      font-size: 25px;
-      margin: 12px 0 8px;
-    }
-
     .project p {
       font-size: 13px;
       color: var(--muted);
@@ -174,13 +181,49 @@
       padding-bottom: 3px;
     }
 
-    .recent-list {
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .reference {
+      padding: 20px;
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 190px;
+    }
+
+    .reference-type {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-size: 10px;
+    }
+
+    .reference h3 {
+      font-size: 22px;
+    }
+
+    .reference p {
+      color: var(--muted);
+      font-size: 13px;
+      margin: 0 0 20px;
+    }
+
+    .reference .project-link {
+      margin-top: auto;
+    }
+
+    .notes-list {
       list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    .recent-list li {
+    .notes-list li {
       display: flex;
       justify-content: space-between;
       gap: 20px;
@@ -189,7 +232,7 @@
       font-size: 14px;
     }
 
-    .recent-list span {
+    .notes-list span {
       color: var(--muted);
       font-size: 12px;
     }
@@ -226,9 +269,10 @@
         padding: 75px 0;
       }
 
-      .grid {
+      .grid,
+      .reference-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 26px;
       }
 
       .section-heading {
@@ -236,7 +280,7 @@
         flex-direction: column;
       }
 
-      .recent-list li {
+      .notes-list li {
         flex-direction: column;
         gap: 4px;
       }
@@ -253,8 +297,9 @@
     <a class="logo" href="#">Desani Curbelo</a>
 
     <nav>
-      <a href="#work">Selected Work</a>
-      <a href="#recent">Archive</a>
+      <a href="#work">Work</a>
+      <a href="#references">References</a>
+      <a href="#notes">Notes & Ideas</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -268,68 +313,140 @@
 
       <p class="intro">
         A growing collection of visual work, music, creative projects,
-        and ideas. An evolving record of what I make, explore, and learn.
+        and ideas—an evolving record of what I make, explore, and learn.
       </p>
 
       <div class="hero-links">
-        <a href="#work">Explore the collection ↓</a>
-        <a href="#about">About this space ↗</a>
+        <a href="#work">Explore the work ↓</a>
+        <a href="#references">Things I've been looking at ↗</a>
       </div>
     </div>
 
     <section id="work">
       <div class="section-heading">
         <h2>Selected work</h2>
-        <span class="section-note">Across different interests and mediums</span>
+        <span class="section-note">Things made, tried, and brought to life</span>
       </div>
 
       <div class="grid">
-        <a class="project" href="#recent">
+        <a class="project" href="#contact">
           <div class="project-number">01 / IMAGE</div>
           <h3>Video & Photography</h3>
-          <p>Visual experiments, photographs, moving images, and moments captured along the way.</p>
-          <span class="project-link">View visual work ↗</span>
+          <p>
+            Photographs, moving images, visual experiments,
+            and moments worth keeping.
+          </p>
+          <span class="project-link">Explore visual work ↗</span>
         </a>
 
-        <a class="project" href="#recent">
+        <a class="project" href="#contact">
           <div class="project-number">02 / SOUND</div>
           <h3>Music & Sound</h3>
-          <p>Music, sounds, influences, and explorations of things heard and made.</p>
-          <span class="project-link">Explore sound ↗</span>
+          <p>
+            Music, playlists, sounds, and the things
+            that keep finding their way back.
+          </p>
+          <span class="project-link">Explore music ↗</span>
         </a>
 
-        <a class="project" href="#recent">
-          <div class="project-number">03 / IDEAS</div>
-          <h3>Projects & Ideas</h3>
-          <p>Creative projects, research, collaborations, and ideas taking shape.</p>
+        <a class="project" href="#contact">
+          <div class="project-number">03 / MAKING</div>
+          <h3>Projects & Experiments</h3>
+          <p>
+            Creative projects, collaborations, research,
+            and ideas taking shape.
+          </p>
           <span class="project-link">Explore projects ↗</span>
         </a>
       </div>
     </section>
 
-    <section id="recent">
+    <section id="references">
       <div class="section-heading">
-        <h2>From the archive</h2>
-        <span class="section-note">Collected over time</span>
+        <h2>Things that catch my attention</h2>
+        <span class="section-note">An ongoing collection</span>
       </div>
 
-      <p class="about-text">
-        A place for new work, ongoing experiments, and things worth returning to.
-        This collection will continue to grow as new interests and projects take shape.
+      <p class="section-intro">
+        Art, images, music, films, places, designs, and other things
+        worth keeping around. A collection of references, influences,
+        and rabbit holes—some passing interests, some that might lead somewhere.
       </p>
 
-      <ul class="recent-list">
+      <div class="reference-grid">
+
+        <!-- REFERENCE TEMPLATE
+             Duplicate this block whenever you want to add a reference.
+             Replace the title, type, description, and link.
+        -->
+
+        <article class="reference">
+          <div class="reference-type">Music / Listening</div>
+          <h3>Playlists & Sound</h3>
+          <p>
+            Songs, playlists, and sounds that bring a particular
+            time, feeling, or world to mind.
+          </p>
+          <a class="project-link" href="#contact">Add a listening link ↗</a>
+        </article>
+
+        <article class="reference">
+          <div class="reference-type">Visual / Inspiration</div>
+          <h3>Images & Aesthetics</h3>
+          <p>
+            Photography, styling, colors, objects, and visual
+            details worth coming back to.
+          </p>
+          <a class="project-link" href="#contact">Add a visual reference ↗</a>
+        </article>
+
+        <article class="reference">
+          <div class="reference-type">Film / Moving Image</div>
+          <h3>Scenes & Stories</h3>
+          <p>
+            Films, videos, scenes, and visual storytelling
+            that leave something behind.
+          </p>
+          <a class="project-link" href="#contact">Add a film or video ↗</a>
+        </article>
+
+        <article class="reference">
+          <div class="reference-type">Design / Ideas</div>
+          <h3>Things Worth Keeping</h3>
+          <p>
+            Art, clothes, spaces, objects, writing, and
+            anything else that sparks an idea.
+          </p>
+          <a class="project-link" href="#contact">Add a link or image ↗</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="notes">
+      <div class="section-heading">
+        <h2>Notes & explorations</h2>
+        <span class="section-note">Ideas in motion</span>
+      </div>
+
+      <p class="section-intro">
+        Some things are finished. Others are still taking shape.
+        This is a place for observations, ongoing experiments,
+        connections, and the beginnings of something new.
+      </p>
+
+      <ul class="notes-list">
         <li>
-          <a href="#work">New work and explorations</a>
-          <span>Coming soon</span>
+          <a href="#about">Making connections between things</a>
+          <span>Notes & ideas</span>
         </li>
         <li>
-          <a href="#work">Visual notes and observations</a>
-          <span>Coming soon</span>
+          <a href="#references">Collecting influences and references</a>
+          <span>Ongoing</span>
         </li>
         <li>
-          <a href="#work">Projects in progress</a>
-          <span>Coming soon</span>
+          <a href="#work">Projects taking shape</a>
+          <span>In progress</span>
         </li>
       </ul>
     </section>
@@ -339,8 +456,16 @@
       <h2 style="margin-top: 14px;">An ongoing collection.</h2>
 
       <p class="about-text">
-        A space for the things that catch my attention, the work I create,
-        and the ideas I find myself returning to. Part portfolio, part archive,
+        I'm interested in the things that make a world feel like itself:
+        its images, sounds, ideas, details, and people. I like collecting
+        references, making connections, and seeing what happens when
+        different things come together.
+      </p>
+
+      <p class="about-text">
+        This space brings those interests together. Some things here
+        are finished; others are experiments, influences, or the
+        beginning of something. It's part portfolio, part archive,
         and always a work in progress.
       </p>
     </section>
@@ -354,7 +479,7 @@
         feel free to reach out.
       </p>
 
-      <!-- Replace this example address with your own email. -->
+      <!-- Replace with your own email address. -->
       <a class="project-link" href="mailto:YOUR-EMAIL@example.com">
         Send an email ↗
       </a>
