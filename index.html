@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Desani Curbelo | Creative Archive</title>
+  <meta name="description" content="A growing collection of visual work, music, creative projects, and ideas. An evolving record of what I make, explore, and learn.">
+
+  <style>
+    :root {
+      --background: #f8f6f0;
+      --text: #292921;
+      --muted: #77766c;
+      --accent: #777c60;
+      --line: #dedbd1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      max-width: 1100px;
+      margin: auto;
+      padding: 28px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      white-space: nowrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 30px;
+    }
+
+    .hero {
+      padding: 105px 0 95px;
+      max-width: 760px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    h1, h2, h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      letter-spacing: -2px;
+      margin: 22px 0;
+    }
+
+    .intro {
+      max-width: 540px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 25px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      font-size: 13px;
+    }
+
+    .hero-links a {
+      border-bottom: 1px solid var(--accent);
+      padding-bottom: 4px;
+    }
+
+    section {
+      padding: 55px 0 70px;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin: 0;
+    }
+
+    .section-note {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project {
+      display: block;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    .project h3 {
+      font-size: 25px;
+      margin: 12px 0 8px;
+    }
+
+    .project p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 15px;
+    }
+
+    .project-link {
+      font-size: 12px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 3px;
+    }
+
+    .recent-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .recent-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 17px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    .recent-list span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .about-text {
+      max-width: 650px;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 30px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+      }
+
+      nav {
+        gap: 12px 18px;
+      }
+
+      main {
+        padding: 0 22px;
+      }
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .recent-list li {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      footer {
+        padding: 25px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="#">Desani Curbelo</a>
+
+    <nav>
+      <a href="#work">Selected Work</a>
+      <a href="#recent">Archive</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow">A Personal Archive</div>
+
+      <h1>A home for my work and ideas.</h1>
+
+      <p class="intro">
+        A growing collection of visual work, music, creative projects,
+        and ideas. An evolving record of what I make, explore, and learn.
+      </p>
+
+      <div class="hero-links">
+        <a href="#work">Explore the collection ↓</a>
+        <a href="#about">About this space ↗</a>
+      </div>
+    </div>
+
+    <section id="work">
+      <div class="section-heading">
+        <h2>Selected work</h2>
+        <span class="section-note">Across different interests and mediums</span>
+      </div>
+
+      <div class="grid">
+        <a class="project" href="#recent">
+          <div class="project-number">01 / IMAGE</div>
+          <h3>Video & Photography</h3>
+          <p>Visual experiments, photographs, moving images, and moments captured along the way.</p>
+          <span class="project-link">View visual work ↗</span>
+        </a>
+
+        <a class="project" href="#recent">
+          <div class="project-number">02 / SOUND</div>
+          <h3>Music & Sound</h3>
+          <p>Music, sounds, influences, and explorations of things heard and made.</p>
+          <span class="project-link">Explore sound ↗</span>
+        </a>
+
+        <a class="project" href="#recent">
+          <div class="project-number">03 / IDEAS</div>
+          <h3>Projects & Ideas</h3>
+          <p>Creative projects, research, collaborations, and ideas taking shape.</p>
+          <span class="project-link">Explore projects ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="recent">
+      <div class="section-heading">
+        <h2>From the archive</h2>
+        <span class="section-note">Collected over time</span>
+      </div>
+
+      <p class="about-text">
+        A place for new work, ongoing experiments, and things worth returning to.
+        This collection will continue to grow as new interests and projects take shape.
+      </p>
+
+      <ul class="recent-list">
+        <li>
+          <a href="#work">New work and explorations</a>
+          <span>Coming soon</span>
+        </li>
+        <li>
+          <a href="#work">Visual notes and observations</a>
+          <span>Coming soon</span>
+        </li>
+        <li>
+          <a href="#work">Projects in progress</a>
+          <span>Coming soon</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">About this space</div>
+      <h2 style="margin-top: 14px;">An ongoing collection.</h2>
+
+      <p class="about-text">
+        A space for the things that catch my attention, the work I create,
+        and the ideas I find myself returning to. Part portfolio, part archive,
+        and always a work in progress.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow">Contact</div>
+      <h2 style="margin-top: 14px;">Get in touch.</h2>
+
+      <p class="about-text">
+        For conversations, collaborations, or anything related to the work,
+        feel free to reach out.
+      </p>
+
+      <!-- Replace this example address with your own email. -->
+      <a class="project-link" href="mailto:YOUR-EMAIL@example.com">
+        Send an email ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Desani Curbelo · An evolving collection
+  </footer>
+</body>
+</html>
