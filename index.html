@@ -148,14 +148,14 @@
     }
     .hero-art svg { display: block; width: 100%; height: auto; }
     /* Small illustrations sit in the open margins around the centered headline. */
-    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: 30%; }
-    .footprints-art { width: clamp(25px, 3vw, 36px); left: 30%; top: 62%; transform: rotate(-29deg); }
-    .music-art { width: clamp(27px, 3.2vw, 39px); right: 30%; top: 62%; transform: rotate(8deg); }
-    .magnifier-art { width: clamp(26px, 3vw, 36px); left: 23%; top: 43%; transform: rotate(-18deg); }
-    .star-art { width: clamp(20px, 2.5vw, 30px); left: 30%; top: 22%; transform: rotate(18deg); }
-    .connections-art { width: clamp(35px, 4vw, 48px); right: 23%; top: 43%; transform: rotate(13deg); }
-    .paper-pen-art { width: clamp(29px, 3.4vw, 41px); left: 47%; top: 73%; transform: rotate(-14deg); }
-    .laptop-art { width: clamp(36px, 4.2vw, 52px); left: 47%; top: 8%; transform: rotate(-7deg); }
+    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: max(30px, calc(50% - 330px)); }
+    .footprints-art { width: clamp(25px, 3vw, 36px); left: max(30px, calc(50% - 330px)); top: 62%; transform: rotate(-29deg); }
+    .music-art { width: clamp(27px, 3.2vw, 39px); right: max(30px, calc(50% - 330px)); top: 62%; transform: rotate(8deg); }
+    .magnifier-art { width: clamp(26px, 3vw, 36px); left: max(24px, calc(50% - 430px)); top: 43%; transform: rotate(-18deg); }
+    .star-art { width: clamp(20px, 2.5vw, 30px); left: max(30px, calc(50% - 330px)); top: 22%; transform: rotate(18deg); }
+    .connections-art { width: clamp(35px, 4vw, 48px); right: max(24px, calc(50% - 430px)); top: 43%; transform: rotate(13deg); }
+    .paper-pen-art { width: clamp(29px, 3.4vw, 41px); left: calc(50% - 20px); top: 73%; transform: rotate(-14deg); }
+    .laptop-art { width: clamp(36px, 4.2vw, 52px); left: calc(50% - 20px); top: 8%; transform: rotate(-7deg); }
     .hero-bottom {
       position: relative;
       z-index: 2;
