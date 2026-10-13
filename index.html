@@ -148,12 +148,12 @@
     }
     .hero-art svg { display: block; width: 100%; height: auto; }
     /* Small illustrations sit in the open margins around the centered headline. */
-    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: max(30px, calc(50% - 390px)); }
-    .footprints-art { width: clamp(25px, 3vw, 36px); left: max(30px, calc(50% - 390px)); top: 62%; transform: rotate(-29deg); }
-    .music-art { width: clamp(27px, 3.2vw, 39px); right: max(30px, calc(50% - 390px)); top: 62%; transform: rotate(8deg); }
-    .magnifier-art { width: clamp(26px, 3vw, 36px); left: max(24px, calc(50% - 500px)); top: 43%; transform: rotate(-18deg); }
-    .star-art { width: clamp(20px, 2.5vw, 30px); left: max(30px, calc(50% - 390px)); top: 22%; transform: rotate(18deg); }
-    .connections-art { width: clamp(35px, 4vw, 48px); right: max(24px, calc(50% - 500px)); top: 43%; transform: rotate(13deg); }
+    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: clamp(36px, 8vw, 150px); }
+    .footprints-art { width: clamp(25px, 3vw, 36px); left: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(-29deg); }
+    .music-art { width: clamp(27px, 3.2vw, 39px); right: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(8deg); }
+    .magnifier-art { width: clamp(26px, 3vw, 36px); left: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(-18deg); }
+    .star-art { width: clamp(20px, 2.5vw, 30px); left: clamp(54px, 14vw, 260px); top: 22%; transform: rotate(18deg); }
+    .connections-art { width: clamp(35px, 4vw, 48px); right: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(13deg); }
     .paper-pen-art { width: clamp(29px, 3.4vw, 41px); left: calc(50% - 20px); top: 73%; transform: rotate(-14deg); }
     .laptop-art { width: clamp(36px, 4.2vw, 52px); left: calc(50% - 20px); top: 8%; transform: rotate(-7deg); }
     .hero-bottom {
@@ -193,18 +193,22 @@
       overflow: hidden;
       background: var(--ink);
       color: var(--cream);
-      padding: 12px 0;
-      white-space: nowrap;
+      padding: 12px clamp(12px, 3vw, 44px);
     }
     .ticker-track {
-      display: flex;
-      justify-content: space-around;
-      gap: 35px;
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      align-items: center;
+      justify-items: center;
+      gap: 12px;
+      width: 100%;
       font-family: var(--mono);
-      font-size: 10px;
+      font-size: clamp(9px, .75vw, 11px);
+      text-align: center;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: clamp(.3px, .08vw, 1px);
     }
+    .ticker-track span { min-width: 0; }
     .ticker-track span:nth-child(4n + 1) { color: var(--orange-soft); }
     .ticker-track span:nth-child(4n + 3) { color: var(--cyan); }
 
@@ -370,7 +374,7 @@
       .hero h1 { margin: 34px auto 28px; font-size: clamp(43px, 10.2vw, 74px); line-height: .98; }
       .hero h1 .second-line { padding-left: 0; }
       .earth-art { top: 23%; right: 17%; width: 34px; }
-      .laptop-art { top: 11%; left: 46%; width: 39px; }
+      .laptop-art { top: 7%; left: 46%; width: 39px; }
       .footprints-art { left: 18%; top: 61%; width: 23px; transform: rotate(-27deg); }
       .music-art { right: 18%; top: 61%; width: 25px; }
       .magnifier-art { left: 10%; top: 43%; width: 22px; }
@@ -398,7 +402,7 @@
       .hero h1 { font-size: 10.2vw; margin-top: 30px; margin-bottom: 26px; }
       .hero h1 .second-line { padding-left: 0; }
       .earth-art { top: 23%; right: 15%; width: 29px; }
-      .laptop-art { top: 12%; left: 45%; width: 34px; }
+      .laptop-art { top: 7%; left: 45%; width: 34px; }
       .footprints-art { top: 62%; left: 15%; width: 20px; transform: rotate(-27deg); }
       .music-art { top: 62%; right: 15%; width: 22px; }
       .magnifier-art { left: 7%; top: 43%; width: 20px; }
@@ -408,7 +412,8 @@
       .hero-stamp { width: 64px; height: 64px; }
       .reference-board { grid-template-columns: 1fr; }
       .reference-card { min-height: 175px; }
-      .ticker-track { justify-content: flex-start; gap: 25px; padding-left: 6%; }
+      .ticker { padding: 12px 6%; }
+      .ticker-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 8px; font-size: 9px; letter-spacing: .35px; }
     }
   </style>
 </head>
