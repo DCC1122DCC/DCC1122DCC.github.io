@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#F5F0E6" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2210%22 fill=%22%23f26a2c%22/%3E%3Cpath d=%22M32 9 37.8 24.2 54 25.1 41.4 35.4 45.6 51 32 42.2 18.4 51 22.6 35.4 10 25.1 26.2 24.2Z%22 fill=%22%23ffe35a%22 stroke=%22%23ffe35a%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2210%22 fill=%22%239ccfd4%22/%3E%3Cpath d=%22M32 9 37.8 24.2 54 25.1 41.4 35.4 45.6 51 32 42.2 18.4 51 22.6 35.4 10 25.1 26.2 24.2Z%22 fill=%22%23ffe35a%22 stroke=%22%23ffe35a%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E" />
 
   <title>Desani Curbelo | Creative Archive</title>
   <meta
@@ -72,13 +72,18 @@
       white-space: nowrap;
     }
     .wordmark::after {
-      content: "";
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      margin-left: 5px;
+      content: "★";
+      display: inline-grid;
+      place-items: center;
+      width: 13px;
+      height: 13px;
+      margin-left: 6px;
       background: var(--orange);
+      color: #ffe35a;
       border: 1px solid var(--ink);
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      line-height: 1;
       vertical-align: 1px;
     }
     .navigation {
@@ -177,13 +182,14 @@
       text-transform: uppercase;
     }
     .hero-stamp {
-      width: 88px;
-      height: 88px;
+      width: 100px;
+      height: 100px;
       flex-shrink: 0;
       display: grid;
       place-items: center;
-      border: 1px solid var(--orange);
+      border: 1px solid var(--cyan);
       border-radius: 50%;
+      color: var(--cyan);
       font-family: var(--mono);
       font-size: 9px;
       text-align: center;
@@ -384,7 +390,7 @@
       .paper-pen-art { left: 46%; top: 71%; width: 27px; transform: rotate(-14deg); }
       .seek-note { max-width: 190px; font-size: 12px; }
       .hero-bottom { gap: 15px; }
-      .hero-stamp { width: 72px; height: 72px; font-size: 8px; }
+      .hero-stamp { width: 60px; height: 60px; font-size: 7px; }
       .section { padding: clamp(48px, 7vw, 64px) 6%; }
       .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
       .section-heading h2 { font-size: clamp(34px, 9vw, 58px); }
@@ -411,7 +417,7 @@
       .star-art { left: 22%; top: 23%; width: 16px; }
       .connections-art { right: 7%; top: 43%; width: 26px; transform: rotate(13deg); }
       .paper-pen-art { left: 45%; top: 71%; width: 24px; transform: rotate(-14deg); }
-      .hero-stamp { width: 64px; height: 64px; }
+      .hero-stamp { width: 54px; height: 54px; font-size: 6.5px; }
       .reference-board { grid-template-columns: 1fr; }
       .reference-card { min-height: 175px; }
       .ticker { padding: 12px 6%; }
