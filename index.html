@@ -67,49 +67,44 @@
       align-items: center;
       justify-content: space-between;
       gap: 24px;
-      padding: 17px 5%;
+      padding: 18px 3.3%;
       background: var(--cream);
       border-bottom: 1px solid var(--line);
     }
     .wordmark {
       font-family: var(--display);
-      font-size: 14px;
-      line-height: 1.1;
-      letter-spacing: -.6px;
+      display: inline-flex;
+      align-items: center;
+      font-size: clamp(25px, 2.7vw, 38px);
+      line-height: 1.05;
+      letter-spacing: -1.2px;
       text-transform: uppercase;
       white-space: nowrap;
     }
-    .wordmark::after {
-      content: "★";
-      display: inline-grid;
-      place-items: center;
-      width: 13px;
-      height: 13px;
-      margin-left: 6px;
-      background: var(--cyan);
-      color: #ffe35a;
-      border: none;
-      border-radius: 2px;
-      font-family: Arial, sans-serif;
-      font-size: 9px;
-      line-height: 1;
-      vertical-align: 1px;
+    .wordmark-girl {
+      display: inline-block;
+      width: 43px;
+      height: 54px;
+      margin-left: 9px;
+      vertical-align: middle;
+      overflow: visible;
     }
+    .wordmark-girl svg { display: block; width: 100%; height: 100%; }
     .navigation {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       flex-wrap: wrap;
-      gap: 18px;
+      gap: clamp(22px, 3.1vw, 48px);
       font-family: var(--mono);
-      font-size: 10px;
+      font-size: clamp(10px, .95vw, 14px);
       text-transform: uppercase;
     }
     .navigation a { transition: color .2s ease; }
 
     .hero {
-      min-height: 560px;
-      padding: 34px 8% 30px;
+      min-height: clamp(620px, 74vh, 760px);
+      padding: 34px 3.3% 32px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -142,19 +137,21 @@
       z-index: 2;
       width: 100%;
       max-width: 100%;
-      margin: 36px auto 48px;
+      margin: 34px auto 48px;
+      transform: translateY(10px);
       font-family: var(--display);
-      font-size: clamp(52px, 8.8vw, 118px);
+      font-size: clamp(76px, 10.2vw, 142px);
       line-height: .94;
-      letter-spacing: -.075em;
+      letter-spacing: -.07em;
       text-align: center;
       text-transform: uppercase;
       font-weight: 400;
     }
     .hero h1 span { display: block; }
-    .hero h1 .second-line { padding-left: 0; white-space: nowrap; }
-    .hero h1 .title-final { display: inline-block; white-space: nowrap; }
-    .hero h1 .clues-word { display: inline; color: var(--orange); }
+    .hero h1 .second-line { display: block; padding-left: 0; white-space: nowrap; }
+    .hero h1 .for-word { display: block; }
+    .hero h1 .title-final { display: block; white-space: nowrap; }
+    .hero h1 .clues-word { display: block; color: var(--orange); }
 
     .hero-art {
       position: absolute;
@@ -163,14 +160,14 @@
     }
     .hero-art svg { display: block; width: 100%; height: auto; }
     /* Small illustrations sit in the open margins around the centered headline. */
-    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: clamp(36px, 8vw, 150px); }
-    .footprints-art { width: clamp(25px, 3vw, 36px); left: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(-29deg); }
-    .music-art { width: clamp(27px, 3.2vw, 39px); right: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(8deg); }
-    .magnifier-art { width: clamp(26px, 3vw, 36px); left: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(-18deg); }
-    .star-art { width: clamp(20px, 2.5vw, 30px); left: clamp(54px, 14vw, 260px); top: 22%; transform: rotate(18deg); }
-    .connections-art { width: clamp(35px, 4vw, 48px); right: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(13deg); }
-    .paper-pen-art { width: clamp(29px, 3.4vw, 41px); left: calc(50% - 20px); top: 74%; transform: rotate(-14deg); }
-    .laptop-art { width: clamp(36px, 4.2vw, 52px); left: calc(50% - 20px); top: 8%; transform: rotate(-7deg); }
+    .earth-art { width: clamp(76px, 6.4vw, 108px); top: 10%; right: 18%; }
+    .footprints-art { width: clamp(58px, 5.2vw, 84px); left: 13%; top: 61%; transform: rotate(-29deg); }
+    .music-art { width: clamp(48px, 4.2vw, 68px); right: 16%; top: 39%; transform: rotate(8deg); }
+    .magnifier-art { width: clamp(60px, 5.2vw, 84px); left: 7%; top: 43%; transform: rotate(-18deg); }
+    .star-art { width: clamp(82px, 7.5vw, 122px); left: 2.5%; top: 13%; transform: rotate(18deg); }
+    .connections-art { width: clamp(68px, 5.8vw, 94px); right: 4%; top: 15%; transform: rotate(13deg); }
+    .paper-pen-art { width: clamp(76px, 6.8vw, 110px); right: 4.5%; left: auto; top: 51%; transform: rotate(-14deg); }
+    .laptop-art { width: clamp(54px, 4.3vw, 70px); left: 20%; top: 12%; transform: rotate(-3deg); }
     .hero-bottom {
       position: relative;
       z-index: 2;
@@ -191,12 +188,17 @@
       text-transform: uppercase;
     }
     .hero-stamp {
+      position: absolute;
+      z-index: 1;
+      right: clamp(15%, 17vw, 22%);
+      bottom: 6%;
       display: block;
-      width: clamp(88px, 8.5vw, 108px);
+      width: clamp(104px, 8vw, 136px);
       height: auto;
-      flex: 0 0 auto;
+      margin: 0;
       color: var(--orange);
       overflow: visible;
+      pointer-events: none;
     }
     .hero-stamp svg {
       display: block;
@@ -223,12 +225,12 @@
       font-weight: 400;
       text-anchor: middle;
     }
-    .hero-stamp .stamp-star-teal { fill: #087F79; }
-    .hero-stamp .stamp-star-orange { fill: #E94B12; }
-    .hero-stamp .stamp-star-gold { fill: #F5B91B; }
-    .hero-stamp .stamp-star-cream { fill: var(--cream); }
-    .hero-stamp .stamp-dot { fill: #087F79; }
-    .hero-stamp { color: #087F79; }
+    .hero-stamp .stamp-star-teal,
+    .hero-stamp .stamp-star-orange,
+    .hero-stamp .stamp-star-gold,
+    .hero-stamp .stamp-star-cream,
+    .hero-stamp .stamp-dot { fill: var(--orange); }
+    .hero-stamp { color: var(--orange); }
 
     .ticker {
       overflow: hidden;
@@ -237,11 +239,10 @@
       padding: 12px clamp(12px, 3vw, 44px);
     }
     .ticker-track {
-      display: grid;
-      grid-template-columns: repeat(6, minmax(0, 1fr));
+      display: flex;
       align-items: center;
-      justify-items: center;
-      gap: 12px;
+      justify-content: space-between;
+      gap: clamp(7px, 1.25vw, 20px);
       width: 100%;
       font-family: var(--mono);
       font-size: clamp(9px, .75vw, 11px);
@@ -249,9 +250,9 @@
       text-transform: uppercase;
       letter-spacing: clamp(.3px, .08vw, 1px);
     }
-    .ticker-track span { min-width: 0; }
-    .ticker-track span:nth-child(odd) { color: #ffffff; }
-    .ticker-track span:nth-child(even) { color: var(--cyan); }
+    .ticker-track span { min-width: 0; white-space: nowrap; }
+    .ticker-track .ticker-star { color: #46c9dc; font-size: 20px; line-height: 1; }
+    .ticker-track span:not(.ticker-star) { color: #ffffff; }
 
     .section { padding: 76px 8%; border-bottom: 1px solid var(--line); }
     .section-heading {
@@ -266,7 +267,7 @@
     .section-heading h2 {
       margin: 0;
       font-family: var(--display);
-      font-size: clamp(36px, 6vw, 72px);
+      font-size: clamp(42px, 6.5vw, 96px);
       line-height: 1;
       letter-spacing: -.06em;
       text-transform: uppercase;
@@ -408,9 +409,31 @@
     .back-to-top { display: inline-flex; align-items: center; gap: 6px; }
     .back-to-top-arrow { display: inline-block; width: 13px; height: 13px; flex: 0 0 auto; }
 
+    /* On wide screens, move the laptop and paper into the side clusters. Mobile keeps its original circular arrangement. */
+    @media (min-width: 1100px) {
+      /* Wide screens get generous gaps between each illustration; the title stays centered. */
+      .star-art { left: 3%; top: 15%; width: clamp(66px, 5.6vw, 92px); }
+      .laptop-art { top: 13%; left: 19%; width: clamp(48px, 3.8vw, 62px); transform: rotate(-4deg); }
+      .magnifier-art { left: 7.5%; top: 44%; width: clamp(52px, 4.1vw, 68px); }
+      .footprints-art { left: 14.2%; top: 63%; width: clamp(46px, 3.8vw, 62px); }
+      .earth-art { top: 11%; right: 18%; width: clamp(70px, 5.7vw, 94px); }
+      .connections-art { top: 15%; right: 4.5%; width: clamp(62px, 5.1vw, 84px); }
+      .music-art { top: 40%; right: 15.5%; width: clamp(44px, 3.6vw, 58px); }
+      .paper-pen-art { top: 52%; left: auto; right: 4.5%; width: clamp(70px, 5.7vw, 94px); transform: rotate(-14deg); }
+      .hero-bottom { padding-right: 0; }
+      .hero-stamp { right: 4.5%; bottom: 5.5%; width: clamp(108px, 8vw, 138px); }
+    }
+
+    /* Keep the headline centered and comfortably inside the viewport on resized desktop windows. */
+    @media (min-width: 761px) and (max-width: 1099px) {
+      .hero h1 { font-size: clamp(58px, 8.1vw, 90px); }
+    }
+
     @media (max-width: 760px) {
       .site-header { align-items: flex-start; flex-direction: column; gap: 14px; padding: 16px 6%; }
-      .navigation { justify-content: flex-start; gap: 10px 16px; }
+      .wordmark { font-size: 25px; }
+      .wordmark-girl { width: 31px; height: 38px; margin-left: 7px; }
+      .navigation { justify-content: flex-start; gap: 10px 16px; font-size: 10px; }
       .hero { min-height: 540px; padding: 28px 6% 26px; }
       .hero h1 { margin: 34px auto 28px; font-size: clamp(43px, 10.2vw, 74px); line-height: .98; }
       .hero h1 .second-line { padding-left: 0; }
@@ -424,7 +447,7 @@
       .paper-pen-art { left: 46%; top: 71%; width: 27px; transform: rotate(-14deg); }
       .seek-note { max-width: 190px; font-size: 12px; }
       .hero-bottom { gap: 15px; }
-      .hero-stamp { width: 84px; }
+      .hero-stamp { right: 4.5%; bottom: 6%; width: 68px; }
       .section { padding: clamp(48px, 7vw, 64px) 6%; }
       .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
       .section-heading h2 { font-size: clamp(34px, 9vw, 58px); }
@@ -451,23 +474,45 @@
       .star-art { left: 22%; top: 23%; width: 16px; }
       .connections-art { right: 7%; top: 43%; width: 26px; transform: rotate(13deg); }
       .paper-pen-art { left: 45%; top: 71%; width: 24px; transform: rotate(-14deg); }
-      .hero-stamp { width: 80px; }
+      .hero-stamp { right: 3.5%; bottom: 6%; width: 62px; }
       .reference-board { grid-template-columns: 1fr; }
       .reference-card { min-height: 175px; }
       .ticker { padding: 12px 6%; }
-      .ticker-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 8px; font-size: 9px; letter-spacing: .35px; }
+      .ticker-track { justify-content: center; flex-wrap: wrap; gap: 10px 12px; font-size: 9px; letter-spacing: .35px; }
+      .ticker-track .ticker-star { font-size: 15px; }
     }
   </style>
 </head>
 
 <body id="home">
   <header class="site-header">
-    <a class="wordmark" href="#home">Desani Curbelo</a>
+    <a class="wordmark" href="#home">Desani Curbelo
+      <span class="wordmark-girl" aria-hidden="true">
+        <svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="21" r="16" fill="#ff8a22"/>
+          <g stroke="#25251f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Slim stick-figure silhouette, with long straight honey-brown blonde hair -->
+            <path d="M18 3.2C11.4 3.2 8.1 8 8.8 14.1L8.8 32.8 12.6 34.5 15 21.8H21L23.4 34.5 27.2 32.8 27.2 14.1C27.9 8 24.6 3.2 18 3.2Z" fill="#b99459"/>
+            <path d="M11.2 8.6C13 5.2 15.3 4.3 18 4.3S23.2 5.2 24.8 8.6" fill="none" stroke="#8d6a3d" stroke-width="1.1"/>
+            <circle cx="18" cy="12.5" r="5.8" fill="#f2ebdd"/>
+            <path d="M12.7 11.1C13.7 7.8 16 6.7 18 6.7s4.3 1.1 5.3 4.4" fill="none" stroke="#25251f" stroke-width="1.5"/>
+            <path d="M13.7 20.2 9.8 30.8 18 34.1 26.2 30.8 22.3 20.2Z" fill="#168d83"/>
+            <path d="M15 32.7 13.3 43.8M21 32.7 22.7 43.8M9.8 30.8 6.5 28.1M26.2 30.8 29.5 28.1" fill="none"/>
+            <path d="M13.3 43.8H10.5M22.7 43.8H25.5" fill="none" stroke-width="2.2"/>
+          </g>
+          <circle cx="16" cy="12.5" r=".8" fill="#25251f"/>
+          <circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
+          <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
+          <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
+          <circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
+        </svg>
+      </span>
+    </a>
     <nav class="navigation" aria-label="Main navigation">
       <a href="#work">My Work</a>
       <a href="#collaborations">Collaborations</a>
       <a href="#references">References</a>
-      <a href="#about">About</a>
+      <a href="#about">Contact</a>
     </nav>
   </header>
 
@@ -486,10 +531,19 @@
       <div class="hero-art footprints-art" aria-hidden="true">
         <svg viewBox="0 0 100 150" role="img">
           <g fill="#25251f">
-            <path d="M22 7C13 8 9 18 12 31l5 19c2 7 7 10 13 8 6-2 7-8 6-15l-1-22C34 12 29 6 22 7Z" />
-            <path d="M57 39c-8 1-11 10-9 21l4 19c2 7 7 10 13 8 6-2 8-8 7-15l-2-22c-1-7-6-12-13-11Z" />
-            <path d="M25 59c-8 1-11 8-9 17l2 8 19-4-2-10c-1-7-4-12-10-11Z" />
-            <path d="M62 92c-8 1-11 8-9 17l2 8 19-4-2-10c-1-7-4-12-10-11Z" />
+            <!-- two playful sole prints with distinct toe pads, like the reference -->
+            <path d="M25 31c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
+            <path d="M61 66c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
+            <ellipse cx="15" cy="25" rx="3.4" ry="4.4" transform="rotate(-18 15 25)" />
+            <ellipse cx="21" cy="19" rx="3.5" ry="4.2" transform="rotate(-10 21 19)" />
+            <ellipse cx="28" cy="17" rx="3.5" ry="4.2" />
+            <ellipse cx="35" cy="19" rx="3.2" ry="4" transform="rotate(12 35 19)" />
+            <ellipse cx="41" cy="24" rx="2.8" ry="3.5" transform="rotate(20 41 24)" />
+            <ellipse cx="51" cy="60" rx="3.4" ry="4.4" transform="rotate(-18 51 60)" />
+            <ellipse cx="57" cy="54" rx="3.5" ry="4.2" transform="rotate(-10 57 54)" />
+            <ellipse cx="64" cy="52" rx="3.5" ry="4.2" />
+            <ellipse cx="71" cy="54" rx="3.2" ry="4" transform="rotate(12 71 54)" />
+            <ellipse cx="77" cy="59" rx="2.8" ry="3.5" transform="rotate(20 77 59)" />
           </g>
         </svg>
       </div>
@@ -515,11 +569,11 @@
       </div>
       <div class="hero-art laptop-art" aria-hidden="true">
         <svg viewBox="0 0 100 80" role="img">
-          <rect x="18" y="8" width="64" height="47" rx="3" fill="#9ccfd4" stroke="#25251f" stroke-width="4" />
-          <rect x="24" y="14" width="52" height="35" fill="#fff9e9" stroke="#25251f" stroke-width="2.5" />
-          <path d="M10 60h80l-7 9H17Z" fill="#ff6200" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
-          <path d="M42 61h16" stroke="#25251f" stroke-width="2.5" stroke-linecap="round" />
-          <circle cx="50" cy="31" r="5" fill="#f4d447" stroke="#25251f" stroke-width="2" />
+          <rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f" />
+          <rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5" />
+          <circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5" />
+          <path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round" />
+          <path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round" />
         </svg>
       </div>
       <div class="hero-art connections-art" aria-hidden="true">
@@ -547,7 +601,8 @@
 
       <h1 class="clue-title">
         <span>LOOKING</span>
-        <span class="second-line"><span class="for-word">FOR</span> <span class="title-final"><span class="clues-word">CLUES</span></span></span>
+        <span class="for-word">FOR</span>
+        <span class="clues-word">CLUES</span>
       </h1>
 
       <div class="hero-bottom">
@@ -581,11 +636,11 @@
 
     <div class="ticker" aria-label="Creative interests">
       <div class="ticker-track">
-        <span>SOUND</span>
-        <span>IMAGE</span>
-        <span>MEMORY</span>
-        <span>MOVEMENT</span>
-        <span>REFERENCES</span>
+        <span>SOUND</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>IMAGE</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>MEMORY</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true">★</span>
         <span>CONNECTIONS</span>
       </div>
     </div>
