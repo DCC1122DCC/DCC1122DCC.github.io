@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F2EBDD" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2210%22 fill=%22%239ccfd4%22/%3E%3Cpath d=%22M32 9 37.8 24.2 54 25.1 41.4 35.4 45.6 51 32 42.2 18.4 51 22.6 35.4 10 25.1 26.2 24.2Z%22 fill=%22%23ffe35a%22 stroke=%22%23ffe35a%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Creative Archive" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+  <title>Desani Curbelo | Creative Archive</title>
+  <meta
+    name="description"
+    content="Desani Curbelo — personal creative archive."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --cream: #f2ebdd;
+      --paper: #eae3d6;
+      --orange: #ff6200;
+      --orange-soft: #ff984d;
+      --cyan: #9ccfd4;
+      --cyan-pale: #c8eef0;
+      --rust: #c44332;
+      --ink: #25251f;
+      --muted: #77746a;
+      --line: rgba(37, 37, 31, .22);
+      --display: "Archivo Black", "Helvetica Neue", Arial, sans-serif;
+      --body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
+      --mono: "Space Mono", monospace;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--orange); }
+    a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+    ::selection { background: var(--cyan); color: var(--ink); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 17px 5%;
+      background: var(--cream);
+      border-bottom: 1px solid var(--line);
+    }
+    .wordmark {
+      font-family: var(--display);
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: -.6px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .wordmark::after {
+      content: "★";
+      display: inline-grid;
+      place-items: center;
+      width: 13px;
+      height: 13px;
+      margin-left: 6px;
+      background: var(--cyan);
+      color: #ffe35a;
+      border: none;
+      border-radius: 2px;
+      font-family: Arial, sans-serif;
+      font-size: 9px;
+      line-height: 1;
+      vertical-align: 1px;
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .navigation a { transition: color .2s ease; }
+
+    .hero {
+      min-height: 560px;
+      padding: 34px 8% 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+    .eyebrow, .section-label, .small-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+    .eyebrow {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 8px;
+      background: var(--orange);
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      font-family: var(--display);
+      font-size: clamp(10px, .85vw, 11px);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    .hero-top { position: relative; z-index: 2; min-height: 34px; margin-left: -4%; }
+    .hero h1 {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 100%;
+      margin: 36px auto 48px;
+      font-family: var(--display);
+      font-size: clamp(52px, 8.8vw, 118px);
+      line-height: .94;
+      letter-spacing: -.075em;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .hero h1 span { display: block; }
+    .hero h1 .second-line { padding-left: 0; white-space: nowrap; }
+    .hero h1 .title-final { display: inline-block; white-space: nowrap; }
+    .hero h1 .clues-word { display: inline; color: var(--orange); }
+
+    .hero-art {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .hero-art svg { display: block; width: 100%; height: auto; }
+    /* Small illustrations sit in the open margins around the centered headline. */
+    .earth-art { width: clamp(40px, 4.5vw, 58px); top: 22%; right: clamp(36px, 8vw, 150px); }
+    .footprints-art { width: clamp(25px, 3vw, 36px); left: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(-29deg); }
+    .music-art { width: clamp(27px, 3.2vw, 39px); right: clamp(54px, 14vw, 260px); top: 62%; transform: rotate(8deg); }
+    .magnifier-art { width: clamp(26px, 3vw, 36px); left: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(-18deg); }
+    .star-art { width: clamp(20px, 2.5vw, 30px); left: clamp(54px, 14vw, 260px); top: 22%; transform: rotate(18deg); }
+    .connections-art { width: clamp(35px, 4vw, 48px); right: clamp(24px, 6vw, 110px); top: 43%; transform: rotate(13deg); }
+    .paper-pen-art { width: clamp(29px, 3.4vw, 41px); left: calc(50% - 20px); top: 74%; transform: rotate(-14deg); }
+    .laptop-art { width: clamp(36px, 4.2vw, 52px); left: calc(50% - 20px); top: 8%; transform: rotate(-7deg); }
+    .hero-bottom {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      border-top: 0;
+      padding-top: 0;
+    }
+    .seek-note {
+      margin: 0;
+      max-width: 320px;
+      font-family: var(--display);
+      font-size: clamp(13px, 1.55vw, 19px);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+    .hero-stamp {
+      width: 100px;
+      height: 100px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--orange);
+      border-radius: 50%;
+      color: var(--orange);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-align: center;
+      line-height: 1.55;
+    }
+
+    .ticker {
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 12px clamp(12px, 3vw, 44px);
+    }
+    .ticker-track {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      align-items: center;
+      justify-items: center;
+      gap: 12px;
+      width: 100%;
+      font-family: var(--mono);
+      font-size: clamp(9px, .75vw, 11px);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: clamp(.3px, .08vw, 1px);
+    }
+    .ticker-track span { min-width: 0; }
+    .ticker-track span:nth-child(odd) { color: #ffffff; }
+    .ticker-track span:nth-child(even) { color: var(--cyan); }
+
+    .section { padding: 76px 8%; border-bottom: 1px solid var(--line); }
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 25px;
+      margin-bottom: 32px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+    .section-heading h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(36px, 6vw, 72px);
+      line-height: 1;
+      letter-spacing: -.06em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .section-number { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; }
+    .work-list { border-top: 1px solid var(--ink); }
+    .work-row {
+      display: grid;
+      grid-template-columns: 75px minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 20px;
+      padding: 23px 0;
+      border-bottom: 1px solid var(--line);
+      transition: background .2s ease;
+    }
+    .work-row:hover { background: rgba(156, 207, 212, .12); }
+    .work-index { font-family: var(--mono); font-size: 11px; color: var(--orange); }
+    .work-label { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+    .work-title {
+      display: block;
+      width: fit-content;
+      font-size: clamp(21px, 3vw, 34px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -1.2px;
+    }
+    .work-tagline {
+      display: block;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+      line-height: 1.5;
+      letter-spacing: 0;
+    }
+    /* Short graphic rules under selected category labels, not text underlines. */
+    #work .work-row:nth-child(1) .work-title::after,
+    #work .work-row:nth-child(2) .work-title::after,
+    #work .work-row:nth-child(3) .work-title::after,
+    #collaborations .work-row .work-title::after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 3px;
+      margin-top: 10px;
+      background: var(--orange);
+    }
+    #work .work-row:nth-child(2) .work-title::after { width: 88px; background: var(--cyan); }
+    #work .work-row:nth-child(3) .work-title::after { width: 106px; background: var(--orange); }
+    #collaborations .work-row .work-title::after { width: 72px; background: var(--cyan); }
+    .work-arrow { display: block; width: 25px; height: 25px; transition: transform .2s ease; }
+    .work-arrow svg { display: block; width: 100%; height: 100%; }
+    .work-row:hover .work-arrow { transform: translate(3px, -3px); }
+
+    .references-section { background: var(--cream); color: var(--ink); }
+    .reference-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 28px;
+      margin: 0 0 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .reference-intro p { max-width: 480px; margin: 0; font-size: 16px; }
+    .reference-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .reference-card {
+      min-width: 0;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--cream);
+    }
+    .reference-card:nth-child(n) { background: var(--cream); color: var(--ink); }
+    .reference-card h3::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 3px;
+      margin-top: 10px;
+      background: var(--orange);
+    }
+    .reference-card:nth-child(even) h3::after { background: var(--cyan); }
+    .reference-card .reference-type { font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
+    .reference-card h3 {
+      margin: 22px 0 8px;
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 36px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      text-transform: uppercase;
+      font-weight: 400;
+      overflow-wrap: anywhere;
+    }
+    .reference-card p { margin: 0; font-size: 12px; line-height: 1.45; }
+    .reference-card a { align-self: flex-start; margin-top: 20px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
+
+    .about-section { background: var(--cyan); color: var(--ink); }
+    .about-section .section-label, .about-section .contact-email { color: var(--ink); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .about-grid h2 {
+      margin: 8px 0 0;
+      font-family: var(--display);
+      font-size: clamp(37px, 6vw, 70px);
+      line-height: .95;
+      letter-spacing: -.065em;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+    .about-outro {
+      margin: 0 0 24px;
+      font-family: var(--display);
+      font-size: clamp(27px, 4.2vw, 48px);
+      line-height: 1;
+      letter-spacing: -.055em;
+      text-transform: uppercase;
+    }
+    .about-copy { max-width: 460px; font-size: 17px; line-height: 1.65; }
+    .about-copy p:first-child { margin-top: 0; }
+    .contact-email { display: inline-block; font-size: clamp(17px, 2.5vw, 24px); overflow-wrap: anywhere; }
+    .contact-email:hover { color: var(--orange); }
+
+    .site-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 5%;
+      background: var(--ink);
+      color: var(--cream);
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+    .site-footer a:hover, .back-to-top { color: var(--cyan); }
+    .back-to-top { display: inline-flex; align-items: center; gap: 6px; }
+    .back-to-top-arrow { display: inline-block; width: 13px; height: 13px; flex: 0 0 auto; }
+
+    @media (max-width: 760px) {
+      .site-header { align-items: flex-start; flex-direction: column; gap: 14px; padding: 16px 6%; }
+      .navigation { justify-content: flex-start; gap: 10px 16px; }
+      .hero { min-height: 540px; padding: 28px 6% 26px; }
+      .hero h1 { margin: 34px auto 28px; font-size: clamp(43px, 10.2vw, 74px); line-height: .98; }
+      .hero h1 .second-line { padding-left: 0; }
+      .earth-art { top: 23%; right: 17%; width: 34px; }
+      .laptop-art { top: 11%; left: 46%; width: 39px; }
+      .footprints-art { left: 18%; top: 61%; width: 23px; transform: rotate(-27deg); }
+      .music-art { right: 18%; top: 61%; width: 25px; }
+      .magnifier-art { left: 10%; top: 43%; width: 22px; }
+      .star-art { left: 22%; top: 23%; width: 18px; }
+      .connections-art { right: 10%; top: 43%; width: 29px; transform: rotate(13deg); }
+      .paper-pen-art { left: 46%; top: 71%; width: 27px; transform: rotate(-14deg); }
+      .seek-note { max-width: 190px; font-size: 12px; }
+      .hero-bottom { gap: 15px; }
+      .hero-stamp { width: 60px; height: 60px; font-size: 7px; }
+      .section { padding: clamp(48px, 7vw, 64px) 6%; }
+      .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
+      .section-heading h2 { font-size: clamp(34px, 9vw, 58px); }
+      .work-row { grid-template-columns: 35px minmax(0, 1fr) auto; gap: 12px; padding: clamp(18px, 3.2vw, 23px) 0; }
+      .work-title { font-size: 23px; }
+      .work-tagline { font-size: 10px; }
+      .reference-intro { flex-direction: column; gap: 12px; }
+      .reference-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .reference-card { min-height: 190px; padding: 16px; }
+      .about-grid { grid-template-columns: 1fr; gap: 28px; }
+      .about-copy { font-size: 16px; }
+      .site-footer { align-items: flex-start; flex-direction: column; gap: 10px; padding: 22px 6%; }
+      .back-to-top-arrow { display: none; }
+    }
+    @media (max-width: 420px) {
+      .hero { min-height: 515px; }
+      .hero h1 { font-size: 10.2vw; margin-top: 30px; margin-bottom: 26px; }
+      .hero h1 .second-line { padding-left: 0; }
+      .earth-art { top: 23%; right: 15%; width: 29px; }
+      .laptop-art { top: 12%; left: 45%; width: 34px; }
+      .footprints-art { top: 62%; left: 15%; width: 20px; transform: rotate(-27deg); }
+      .music-art { top: 62%; right: 15%; width: 22px; }
+      .magnifier-art { left: 7%; top: 43%; width: 20px; }
+      .star-art { left: 22%; top: 23%; width: 16px; }
+      .connections-art { right: 7%; top: 43%; width: 26px; transform: rotate(13deg); }
+      .paper-pen-art { left: 45%; top: 71%; width: 24px; transform: rotate(-14deg); }
+      .hero-stamp { width: 54px; height: 54px; font-size: 6.5px; }
+      .reference-board { grid-template-columns: 1fr; }
+      .reference-card { min-height: 175px; }
+      .ticker { padding: 12px 6%; }
+      .ticker-track { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px 8px; font-size: 9px; letter-spacing: .35px; }
+    }
+  </style>
+</head>
+
+<body id="home">
+  <header class="site-header">
+    <a class="wordmark" href="#home">Desani Curbelo</a>
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#work">My Work</a>
+      <a href="#collaborations">Collaborations</a>
+      <a href="#references">References</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-top" aria-hidden="true"></div>
+
+      <div class="hero-art earth-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img">
+          <circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3" />
+          <path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
+          <path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="hero-art footprints-art" aria-hidden="true">
+        <svg viewBox="0 0 100 150" role="img">
+          <g fill="#25251f">
+            <path d="M22 7C13 8 9 18 12 31l5 19c2 7 7 10 13 8 6-2 7-8 6-15l-1-22C34 12 29 6 22 7Z" />
+            <path d="M57 39c-8 1-11 10-9 21l4 19c2 7 7 10 13 8 6-2 8-8 7-15l-2-22c-1-7-6-12-13-11Z" />
+            <path d="M25 59c-8 1-11 8-9 17l2 8 19-4-2-10c-1-7-4-12-10-11Z" />
+            <path d="M62 92c-8 1-11 8-9 17l2 8 19-4-2-10c-1-7-4-12-10-11Z" />
+          </g>
+        </svg>
+      </div>
+      <div class="hero-art music-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img">
+          <g fill="#25251f" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round">
+            <path d="M42 18v48c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V34l31-8v30c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V12Z" />
+            <path d="M42 18 81 8v11L42 29Z" fill="#25251f" />
+          </g>
+        </svg>
+      </div>
+      <div class="hero-art magnifier-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img">
+          <circle cx="41" cy="39" r="25" fill="#9ccfd4" fill-opacity=".55" stroke="#25251f" stroke-width="7" />
+          <path d="M59 58 83 83" fill="none" stroke="#ff6200" stroke-width="11" stroke-linecap="round" />
+          <path d="M59 58 83 83" fill="none" stroke="#25251f" stroke-width="3" stroke-linecap="round" />
+        </svg>
+      </div>
+      <div class="hero-art star-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img">
+          <path d="M50 5 61 36 94 38 68 58 77 91 50 71 23 91 32 58 6 38 39 36Z" fill="#f4d447" stroke="#25251f" stroke-width="5" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="hero-art laptop-art" aria-hidden="true">
+        <svg viewBox="0 0 100 80" role="img">
+          <rect x="18" y="8" width="64" height="47" rx="3" fill="#9ccfd4" stroke="#25251f" stroke-width="4" />
+          <rect x="24" y="14" width="52" height="35" fill="#fff9e9" stroke="#25251f" stroke-width="2.5" />
+          <path d="M10 60h80l-7 9H17Z" fill="#ff6200" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
+          <path d="M42 61h16" stroke="#25251f" stroke-width="2.5" stroke-linecap="round" />
+          <circle cx="50" cy="31" r="5" fill="#f4d447" stroke="#25251f" stroke-width="2" />
+        </svg>
+      </div>
+      <div class="hero-art connections-art" aria-hidden="true">
+        <svg viewBox="0 0 120 100" role="img">
+          <g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round">
+            <path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68" />
+          </g>
+          <g fill="#9ccfd4" stroke="#25251f" stroke-width="4">
+            <circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-art paper-pen-art" aria-hidden="true">
+        <svg viewBox="0 0 100 100" role="img">
+          <path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
+          <path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
+          <path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round" />
+          <g transform="rotate(38 69 66)">
+            <path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
+            <path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3" />
+            <path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
+          </g>
+        </svg>
+      </div>
+
+      <h1 class="clue-title">
+        <span>LOOKING</span>
+        <span class="second-line"><span class="for-word">FOR</span> <span class="title-final"><span class="clues-word">CLUES</span></span></span>
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="seek-note">SEEK, AND YOU SHALL FIND.</p>
+        <span class="hero-stamp">MADE<br />&amp; FOUND<br />2026</span>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Creative interests">
+      <div class="ticker-track">
+        <span>SOUND</span>
+        <span>IMAGE</span>
+        <span>MEMORY</span>
+        <span>MOVEMENT</span>
+        <span>REFERENCES</span>
+        <span>CONNECTIONS</span>
+      </div>
+    </div>
+
+    <section class="section" id="work">
+      <div class="section-heading">
+        <h2>MY WORK</h2>
+        <span class="section-number">01 / MADE</span>
+      </div>
+      <div class="work-list">
+        <div class="work-row">
+          <span class="work-index">01</span>
+          <div class="work-label">
+            <span class="work-title">VIDEO</span>
+            <span class="work-tagline">Clips, edits, and moving images.</span>
+          </div>
+          <span class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <div class="work-row">
+          <span class="work-index">02</span>
+          <div class="work-label">
+            <span class="work-title">PHOTOGRAPHY</span>
+            <span class="work-tagline">Images, places, details, and moments.</span>
+          </div>
+          <span class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+        <div class="work-row">
+          <span class="work-index">03</span>
+          <div class="work-label">
+            <span class="work-title">MUSIC + AUDIO</span>
+            <span class="work-tagline">Demos, experiments, sounds, and ideas.</span>
+          </div>
+          <span class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="collaborations">
+      <div class="section-heading">
+        <h2>COLLABORATIONS</h2>
+        <span class="section-number">02 / MADE TOGETHER</span>
+      </div>
+      <div class="work-list">
+        <div class="work-row">
+          <span class="work-index">01</span>
+          <div class="work-label">
+            <span class="work-title">A SPACE FOR SHARED WORK</span>
+            <span class="work-tagline">A place for ideas to meet and become something new.</span>
+          </div>
+          <span class="work-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false">
+              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references-section" id="references">
+      <div class="section-heading">
+        <h2>REFERENCE BOARD</h2>
+        <span class="section-number">03 / FOUND</span>
+      </div>
+      <div class="reference-intro">
+        <p>A growing collection of things that caught my eye.</p>
+        <span class="section-label">CLUES / IN PROGRESS</span>
+      </div>
+      <div class="reference-board">
+        <article class="reference-card">
+          <span class="reference-type">01 / SOUND</span>
+          <div>
+            <h3>Music &amp; playlists</h3>
+            <p>Songs for every mood, moment, and memory.</p>
+          </div>
+          <a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=6c0814e0dab14591" target="_blank" rel="noopener noreferrer">Open Spotify ↗</a>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">02 / IMAGE</span>
+          <div>
+            <h3>Images</h3>
+            <p>Visuals, photographs, and frames worth keeping.</p>
+          </div>
+          <span class="section-label">COLLECT / CONNECT</span>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">03 / MOVEMENT</span>
+          <div>
+            <h3>Film &amp; motion</h3>
+            <p>Scenes, gestures, and moving images that leave a trace.</p>
+          </div>
+          <span class="section-label">NOTICE / RETURN</span>
+        </article>
+        <article class="reference-card">
+          <span class="reference-type">04 / CONNECTIONS</span>
+          <div>
+            <h3>Following a thread</h3>
+            <p>Fragments, moments, and details I don't want to lose.</p>
+          </div>
+          <span class="section-label">LOOK CLOSER ↗</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-grid">
+        <div>
+          <span class="section-label">04 / CONTACT</span>
+          
+        </div>
+        <div class="about-copy">
+          <p class="about-outro">LET'S SEE WHERE THIS GOES...</p>
+          <a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year">2026</span> Desani Curbelo</span>
+    <span>PERSONAL ARCHIVE / EST. 2026</span>
+    <a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
