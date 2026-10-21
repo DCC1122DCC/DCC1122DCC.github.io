@@ -318,6 +318,16 @@
     #work .work-row:nth-child(2) .work-title::after { width: 88px; background: var(--cyan); }
     #work .work-row:nth-child(3) .work-title::after { width: 106px; background: var(--orange); }
     #collaborations .work-row .work-title::after { width: 72px; background: var(--cyan); }
+
+    /* Compact five-point star icons beside each work title. */
+    .work-arrow { display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; flex: 0 0 25px; color: var(--cyan); transition: transform .2s ease; }
+    .work-arrow svg { display: none; }
+    .work-arrow::before { content: ""; display: block; width: 17px; height: 17px; background: currentColor; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); }
+    .work-row:hover .work-arrow { transform: rotate(12deg) scale(1.06); }
+    .ticker-track .ticker-star { display: inline-block; width: 12px; height: 12px; flex: 0 0 12px; margin: 0 2px; background: #46c9dc; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); vertical-align: middle; }
+    .about-section { background: var(--cyan); border: 0; box-shadow: none; position: relative; }
+    .about-section::before, .about-section::after { content: none !important; display: none !important; }
+
     .work-arrow { display: block; width: 25px; height: 25px; transition: transform .2s ease; }
     .work-arrow svg { display: block; width: 100%; height: 100%; }
     .work-row:hover .work-arrow { transform: translate(3px, -3px); }
@@ -368,7 +378,7 @@
     .reference-card p { margin: 0; font-size: 12px; line-height: 1.45; }
     .reference-card a { align-self: flex-start; margin-top: 20px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
 
-    .about-section { background: var(--cyan); color: var(--ink); }
+    .about-section { background: var(--cyan); color: var(--ink); border-bottom: 0; }
     .about-section .section-label, .about-section .contact-email { color: var(--ink); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
     .about-grid h2 {
@@ -649,11 +659,11 @@
 
     <div class="ticker" aria-label="Creative interests">
       <div class="ticker-track">
-        <span>SOUND</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>IMAGE</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>MEMORY</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>SOUND</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span>
         <span>CONNECTIONS</span>
       </div>
     </div>
@@ -1113,6 +1123,16 @@
     #work .work-row:nth-child(2) .work-title::after { width: 88px; background: var(--cyan); }
     #work .work-row:nth-child(3) .work-title::after { width: 106px; background: var(--orange); }
     #collaborations .work-row .work-title::after { width: 72px; background: var(--cyan); }
+
+    /* Compact five-point star icons beside each work title. */
+    .work-arrow { display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; flex: 0 0 25px; color: var(--cyan); transition: transform .2s ease; }
+    .work-arrow svg { display: none; }
+    .work-arrow::before { content: ""; display: block; width: 17px; height: 17px; background: currentColor; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); }
+    .work-row:hover .work-arrow { transform: rotate(12deg) scale(1.06); }
+    .ticker-track .ticker-star { display: inline-block; width: 12px; height: 12px; flex: 0 0 12px; margin: 0 2px; background: #46c9dc; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); vertical-align: middle; }
+    .about-section { background: var(--cyan); border: 0; box-shadow: none; position: relative; }
+    .about-section::before, .about-section::after { content: none !important; display: none !important; }
+
     .work-arrow { display: block; width: 25px; height: 25px; transition: transform .2s ease; }
     .work-arrow svg { display: block; width: 100%; height: 100%; }
     .work-row:hover .work-arrow { transform: translate(3px, -3px); }
@@ -1163,7 +1183,7 @@
     .reference-card p { margin: 0; font-size: 12px; line-height: 1.45; }
     .reference-card a { align-self: flex-start; margin-top: 20px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
 
-    .about-section { background: var(--cyan); color: var(--ink); }
+    .about-section { background: var(--cyan); color: var(--ink); border-bottom: 0; }
     .about-section .section-label, .about-section .contact-email { color: var(--ink); }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
     .about-grid h2 {
@@ -1444,11 +1464,11 @@
 
     <div class="ticker" aria-label="Creative interests">
       <div class="ticker-track">
-        <span>SOUND</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>IMAGE</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>MEMORY</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true">★</span>
-        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true">★</span>
+        <span>SOUND</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span>
+        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span>
         <span>CONNECTIONS</span>
       </div>
     </div>
