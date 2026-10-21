@@ -504,6 +504,15 @@
 @media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
 @media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
 
+
+/* Eyes: one connected collage, with every photograph fully visible. */
+.eyes-square-collage{width:min(100%,620px);aspect-ratio:auto;display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;}
+.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 5px;vertical-align:top;}
+.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;}
+.eyes-tile.tile-a,.eyes-tile.tile-b,.eyes-tile.tile-c,.eyes-tile.tile-d,.eyes-tile.tile-e,.eyes-tile.tile-f,.eyes-tile.tile-g,.eyes-tile.tile-h,.eyes-tile.tile-i,.eyes-tile.tile-j{grid-area:auto;}
+@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
+@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
+
 </style>
 </head>
 
@@ -1308,6 +1317,15 @@
 .photo-category-section{margin-bottom:12px;}
 @media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
 @media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
+
+
+/* Eyes: one connected collage, with every photograph fully visible. */
+.eyes-square-collage{width:min(100%,620px);aspect-ratio:auto;display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;}
+.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 5px;vertical-align:top;}
+.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;}
+.eyes-tile.tile-a,.eyes-tile.tile-b,.eyes-tile.tile-c,.eyes-tile.tile-d,.eyes-tile.tile-e,.eyes-tile.tile-f,.eyes-tile.tile-g,.eyes-tile.tile-h,.eyes-tile.tile-i,.eyes-tile.tile-j{grid-area:auto;}
+@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
+@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
 
 </style>
 </head>
