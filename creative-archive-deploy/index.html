@@ -481,7 +481,20 @@
       .ticker-track { justify-content: center; flex-wrap: wrap; gap: 10px 12px; font-size: 9px; letter-spacing: .35px; }
       .ticker-track .ticker-star { font-size: 15px; }
     }
-  </style>
+  
+/* Compact, uncropped photo collages: every image keeps its own proportions. */
+.photo-grid{display:block;columns:3;column-gap:10px;}
+.photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 10px;vertical-align:top;}
+.photo-card a{display:block;overflow:hidden;background:transparent;}
+.photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;transition:none;}
+.photo-card a:hover img{transform:none;}
+.photo-card figcaption{padding:5px 0 9px;font-size:9px;}
+.eyes-preview{margin-top:0;}
+.photo-category-section{margin-bottom:12px;}
+@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
+@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
+
+</style>
 </head>
 
 <body id="home">
