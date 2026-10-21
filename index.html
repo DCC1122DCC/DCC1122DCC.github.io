@@ -48,17 +48,21 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;backg
 @media(max-width:700px){.eyes-preview,.eyes-more .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.eyes-intro{font-size:15px}.eyes-more-link-wrap{justify-content:flex-start}}
 
 
-/* Compact, uncropped photo collages: every image keeps its own proportions. */
+/* Compact photo archive: images keep their proportions outside the Eyes collage. */
 .photo-grid{display:block;columns:3;column-gap:10px;}
 .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 10px;vertical-align:top;}
 .photo-card a{display:block;overflow:hidden;background:transparent;}
 .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;transition:none;}
 .photo-card a:hover img{transform:none;}
 .photo-card figcaption{padding:5px 0 9px;font-size:9px;}
-.eyes-preview{margin-top:0;}
 .photo-category-section{margin-bottom:12px;}
-@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
-@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
+/* The Eyes collection is one compact square artwork, not eight separate cards. */
+.eyes-square-collage{width:min(100%,440px);aspect-ratio:1/1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(4,minmax(0,1fr));grid-template-areas:"a a b b" "a a c d" "e f f d" "e f g h";gap:4px;margin:10px auto 0;overflow:hidden;background:var(--cream);}
+.eyes-tile{display:block;min-width:0;min-height:0;overflow:hidden;background:var(--ink);}
+.eyes-tile img{display:block;width:100%;height:100%;object-fit:cover;}
+.eyes-tile.tile-a{grid-area:a}.eyes-tile.tile-b{grid-area:b}.eyes-tile.tile-c{grid-area:c}.eyes-tile.tile-d{grid-area:d}.eyes-tile.tile-e{grid-area:e}.eyes-tile.tile-f{grid-area:f}.eyes-tile.tile-g{grid-area:g}.eyes-tile.tile-h{grid-area:h}
+@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}.eyes-square-collage{width:min(100%,360px);gap:3px;}}
+@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}.eyes-square-collage{width:100%;}}
 
 </style></head>
 <body id="home">
@@ -88,7 +92,7 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;backg
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label">04 / EYES <span>A recurring subject</span></div>
 <p class="eyes-intro">Sometimes the clues are looking right at you.</p>
-<div class="photo-grid eyes-preview" id="eyes-preview"><figure class="photo-card"><a href="./images/eye1.jpg" data-lightbox><img src="./images/eye1.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>01 / Iris</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye2.jpg" data-lightbox><img src="./images/eye2.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>02 / Blue</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye6.jpg" data-lightbox><img src="./images/eye6.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>03 / Contrast</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/EYE14.jpg" data-lightbox><img src="./images/EYE14.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>04 / Close-up</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye3.jpg" data-lightbox><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>05 / Blue-green</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye8.jpg" data-lightbox><img src="./images/eye8.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>06 / Shadow</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye9.jpg" data-lightbox><img src="./images/eye9.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>07 / Blue eyes</span><span>Eyes</span></figcaption></figure><figure class="photo-card"><a href="./images/eye13.jpg" data-lightbox><img src="./images/eye13.jpg" alt="Close-up eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>08 / Color study</span><span>Eyes</span></figcaption></figure></div>
+<div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection"><a class="eyes-tile tile-a" href="./images/eye1.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye1.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-b" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-c" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-d" href="./images/EYE14.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE14.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-e" href="./images/eye3.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph" loading="lazy"></a><a class="eyes-tile tile-f" href="./images/eye8.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye8.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-g" href="./images/eye9.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye9.jpg" alt="Close-up eye photograph" loading="lazy"></a><a class="eyes-tile tile-h" href="./images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a></div>
 </section>
 <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
 <figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a><figcaption><span>01 / Candid</span><span>Photography</span></figcaption></figure>
