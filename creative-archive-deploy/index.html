@@ -146,6 +146,16 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 .flashlight-clue.eyes svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 @media(prefers-reduced-motion:reduce){body.flashlight-mode .flashlight-clue{transition:none}}
 
+
+/* Final polish: smooth, frame-synced flashlight and one continuous cyan contact/footer area. */
+.flashlight-cursor{transition:none !important;will-change:transform;backface-visibility:hidden;}
+.flashlight-overlay{will-change:background;}
+.about-section{border-bottom:0 !important;margin-bottom:0 !important;}
+.site-footer{background:var(--cyan) !important;color:var(--ink) !important;border:0 !important;margin-top:0 !important;box-shadow:none !important;}
+.site-footer:before, footer.site-footer:before{content:none !important;display:none !important;height:0 !important;background:none !important;}
+.site-footer .site-credit-label{color:var(--ink) !important;}
+.site-footer a:hover,.site-footer .back-to-top{color:var(--orange) !important;}
+
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -279,9 +289,22 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
   function moveFlashlight(x, y) {
     document.body.style.setProperty('--flash-x', x + 'px');
     document.body.style.setProperty('--flash-y', y + 'px');
-    if (flashlightCursor) flashlightCursor.style.transform = `translate(${x - 12}px, ${y - 12}px)`;
+    if (flashlightCursor) flashlightCursor.style.transform = `translate3d(${x - 12}px, ${y - 12}px, 0)`;
   }
-  document.addEventListener('pointermove', event => moveFlashlight(event.clientX, event.clientY), {passive:true});
+  let pointerFramePending = false;
+  let pendingPointerX = window.innerWidth / 2;
+  let pendingPointerY = window.innerHeight / 2;
+  document.addEventListener('pointermove', event => {
+    if (event.pointerType === 'touch') return;
+    pendingPointerX = event.clientX;
+    pendingPointerY = event.clientY;
+    if (pointerFramePending) return;
+    pointerFramePending = true;
+    requestAnimationFrame(() => {
+      moveFlashlight(pendingPointerX, pendingPointerY);
+      pointerFramePending = false;
+    });
+  }, {passive:true});
   switchButton.addEventListener('click', () => {
     const enabled = !document.body.classList.contains('flashlight-mode');
     document.body.classList.toggle('flashlight-mode', enabled);
