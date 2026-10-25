@@ -18,15 +18,14 @@
 @media(max-width:760px){.site-header{align-items:flex-start;flex-direction:column;gap:14px;padding:25px 6% 16px}.brand-tools{max-width:100%;gap:8px}.brand-tools .light-switch{flex:none}.site-header:before{left:6%}.wordmark{font-size:25px}.wordmark-girl{width:31px;height:38px;margin-left:7px}.wordmark-girl:before{content:none}.navigation{justify-content:flex-start;gap:10px 16px;font-size:10px}.hero{min-height:540px;padding:28px 6% 26px}.hero h1{padding:0 6%;font-size:clamp(43px,10.2vw,74px);line-height:.98}.earth-art{top:23%;right:17%;width:34px}.laptop-art{top:11%;left:46%;width:39px}.handprint-art{left:18%;top:61%;width:24px}.music-art{right:18%;top:61%;width:25px}.magnifier-art{left:10%;top:43%;width:22px}.star-art{left:22%;top:23%;width:18px}.connections-art{right:10%;top:43%;width:29px}.paper-pen-art{left:46%;top:71%;width:27px}.seek-note{max-width:190px;font-size:12px}.hero-bottom{gap:15px}.hero-stamp{right:12px;left:auto;bottom:6%;width:68px}.section{padding:clamp(48px,7vw,64px) 6%}.section-heading{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:26px}.section-heading h2{font-size:clamp(34px,9vw,58px)}.work-row{grid-template-columns:35px minmax(0,1fr) auto;gap:12px;padding:clamp(18px,3.2vw,23px) 0}.work-title{font-size:23px}.work-tagline{font-size:10px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-card img{height:clamp(180px,57vw,330px)}.photo-card figcaption{font-size:8px}.gallery-intro{align-items:flex-start;flex-direction:column;gap:12px}.project-grid{grid-template-columns:1fr}.reference-intro{flex-direction:column;gap:12px}.reference-board{grid-template-columns:repeat(2,minmax(0,1fr))}.reference-card{min-height:190px;padding:16px}.about-grid{grid-template-columns:1fr;gap:28px}.about-copy{font-size:16px}.site-footer{align-items:flex-start;flex-direction:column;gap:10px;padding:22px 6%}.back-to-top-arrow{display:none}}@media(max-width:420px){.hero{min-height:515px}.hero h1{font-size:10.2vw}.earth-art{top:23%;right:15%;width:29px}.laptop-art{top:12%;left:45%;width:34px}.handprint-art{top:62%;left:15%;width:21px}.music-art{top:62%;right:15%;width:22px}.magnifier-art{left:7%;top:43%;width:20px}.star-art{left:22%;top:23%;width:16px}.connections-art{right:7%;top:43%;width:26px}.paper-pen-art{left:45%;top:71%;width:24px}.hero-stamp{right:0;bottom:6%;width:62px}.reference-board{grid-template-columns:1fr}.reference-card{min-height:175px}.ticker{padding:12px 6%}.ticker-track{display:grid;grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto;justify-content:space-between;align-items:center;gap:4px;font-size:clamp(6px,1.75vw,9px);letter-spacing:0}.ticker-track .ticker-star{font-size:clamp(10px,2.8vw,15px)}}
 
 /* Looking for Clues — small, targeted archive updates */
-.tiny-star{display:inline-block;width:11px;height:11px;position:relative;vertical-align:middle}
-.tiny-star:before{content:"";position:absolute;inset:1px 4px;background:var(--orange);transform:rotate(45deg)}
-.tiny-star:after{content:"";position:absolute;inset:4px 1px;background:var(--orange);transform:rotate(45deg)}
-.ticker-star{display:inline-block;width:10px;height:10px;position:relative;color:var(--cyan);font-size:0}
-.ticker-star:before{content:"";position:absolute;inset:1px 4px;background:var(--cyan);transform:rotate(45deg)}
-.ticker-star:after{content:"";position:absolute;inset:4px 1px;background:var(--cyan);transform:rotate(45deg)}
-.work-arrow{position:relative;font-size:0!important;width:25px;height:25px}
-.work-arrow:before{content:"";position:absolute;width:13px;height:13px;right:3px;top:3px;border-top:2px solid currentColor;border-right:2px solid currentColor}
-.work-arrow:after{content:"";position:absolute;width:18px;height:2px;right:3px;top:10px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.tiny-star{display:inline-block;width:8px;height:8px;position:relative;vertical-align:middle;color:var(--orange);font-size:0}
+.tiny-star:before{content:"★";position:absolute;inset:0;color:var(--orange);font-size:9px;line-height:8px;text-align:center}
+.tiny-star:after{content:none}
+/* Use a real five-point star for the cyan separators; never the old cross-shaped CSS mark. */
+.ticker-track .ticker-star{display:inline-block;position:relative;flex:0 0 10px;width:10px;height:12px;color:var(--cyan);font-size:0;line-height:1}
+.ticker-track .ticker-star:before{content:"★";position:absolute;inset:0;color:var(--cyan);font-size:11px;line-height:12px;text-align:center;background:none;transform:none}
+.ticker-track .ticker-star:after{content:none;background:none;transform:none}
+/* Legacy arrow styling removed from the VIEW buttons. */
 .back-to-top-arrow{position:relative;font-size:0}
 .back-to-top-arrow:before{content:"";position:absolute;width:8px;height:8px;left:2px;top:4px;border-left:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg)}
 .back-to-top-arrow:after{content:"";position:absolute;width:1.5px;height:11px;left:6px;top:4px;background:currentColor}
@@ -57,23 +56,15 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;backg
 .photo-card figcaption{padding:5px 0 9px;font-size:9px;}
 .photo-category-section{margin-bottom:12px;}
 /* The Eyes collection is one compact square artwork, not eight separate cards. */
-.eyes-square-collage{width:min(100%,440px);aspect-ratio:1/1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));grid-template-areas:"a a b b e" "a a c d e" "f g g d h" "f i j j h" "f i j j h";gap:4px;margin:10px auto 0;overflow:hidden;background:var(--cream);}
-.eyes-tile{display:block;min-width:0;min-height:0;overflow:hidden;background:var(--ink);}
-.eyes-tile img{display:block;width:100%;height:100%;object-fit:cover;}
-.eyes-tile.tile-a{grid-area:a}.eyes-tile.tile-b{grid-area:b}.eyes-tile.tile-c{grid-area:c}.eyes-tile.tile-d{grid-area:d}.eyes-tile.tile-e{grid-area:e}.eyes-tile.tile-f{grid-area:f}.eyes-tile.tile-g{grid-area:g}.eyes-tile.tile-h{grid-area:h}.eyes-tile.tile-i{grid-area:i}.eyes-tile.tile-j{grid-area:j}
-@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}.eyes-square-collage{width:min(100%,360px);gap:3px;}}
-@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}.eyes-square-collage{width:100%;}}
+@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
+@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
 
 
 /* Eyes collection: a larger, centered photo composition with intact image proportions. */
 .eyes-intro{text-align:center;max-width:none;margin:0 auto 8px;font-size:clamp(17px,1.8vw,23px);}
 .eyes-click-note{text-align:center;margin:0 auto 18px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--muted);}
-.eyes-square-collage{width:min(100%,800px);display:block;columns:3;column-gap:8px;margin:0 auto;overflow:visible;background:transparent;}
-.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 8px;vertical-align:top;}
-.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;}
 .eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
-@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:6px}.eyes-tile{margin-bottom:6px}.eyes-click-note{margin-bottom:14px}}
-@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
+@media(max-width:760px){.eyes-click-note{margin-bottom:14px}}
 
 
 /* Looking for Clues — soft, breathy title entrance */
@@ -101,11 +92,6 @@ footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;backg
 .tiny-star:after{content:none}
 .work-arrow{display:inline-flex;align-items:center;justify-content:center;min-width:66px;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--ink);font-weight:400;transition:background .2s,color .2s}.work-arrow:before{content:"VIEW";position:static;font-size:10px;line-height:1;text-align:center;color:inherit}.work-row:hover .work-arrow{background:var(--cyan);color:var(--ink);transform:none}
 /* Eyes collage: eye2, eye6 and EYE14 form the central focal cluster; images remain uncropped. */
-.eyes-square-collage{width:min(100%,700px);aspect-ratio:5/2.15;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));grid-template-areas:"a b c d e" "f g h i j";gap:3px;margin:10px auto 0;overflow:visible;background:transparent;columns:initial}
-.eyes-tile{grid-area:auto;display:flex;align-items:center;justify-content:center;min-width:0;min-height:0;overflow:hidden;background:var(--paper);margin:0;break-inside:initial;padding:2px}
-.eyes-tile img{display:block;width:100%;height:100%;object-fit:contain;max-height:none}
-.eyes-tile.eye-one{grid-area:a}.eyes-tile.eye-two{grid-area:b}.eyes-tile.eye-six{grid-area:c}.eyes-tile.eye-fourteen{grid-area:d}.eyes-tile.eye-three{grid-area:e}.eyes-tile.eye-eight{grid-area:f}.eyes-tile.eye-nine{grid-area:g}.eyes-tile.eye-thirteen{grid-area:h}.eyes-tile.eye-fifteen{grid-area:i}.eyes-tile.eye-sixteen{grid-area:j}
-.eyes-tile.focal-eye{background:var(--cyan-pale);padding:4px}
 /* Soft spring from the center, then settle into the existing breathing motion. */
 .hero h1 span{transform-origin:50% 50%;animation:clues-spring 1.2s cubic-bezier(.18,.9,.22,1.22) both}
 .hero h1 .for-word{animation-delay:.12s}.hero h1 .clues-word{animation-delay:.24s}
@@ -125,9 +111,24 @@ body.flashlight-mode .flashlight-overlay{display:block}
 body.flashlight-mode .light-switch{z-index:1201;position:relative}
 .flashlight-cursor{position:fixed;z-index:1199;left:0;top:0;width:42px;height:42px;pointer-events:none;display:none;transform:translate(-12px,-12px);filter:drop-shadow(0 2px 2px rgba(0,0,0,.55));transition:transform .025s linear}
 body.flashlight-mode .flashlight-cursor{display:block}
-@media(max-width:760px){.eyes-square-collage{width:100%;aspect-ratio:5/3.3;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:2px}.light-switch{font-size:9px;padding:7px 9px}.wordmark-girl{width:31px;height:38px;margin-left:7px}}
+@media(max-width:760px){.light-switch{font-size:9px;padding:7px 9px}.wordmark-girl{width:31px;height:38px;margin-left:7px}}
 @media(prefers-reduced-motion:reduce){.light-switch,.switch-track:after{transition:none}}
 
+
+/* Clean VIEW pills: text only, no inherited arrow pseudo-elements. */
+.work-row .work-arrow{position:static;display:inline-flex;align-items:center;justify-content:center;min-width:66px;width:auto;height:auto;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font-family:var(--mono);font-size:10px!important;letter-spacing:.05em;color:var(--ink);font-weight:400;line-height:1;}
+.work-row .work-arrow:before{content:"VIEW";position:static;display:block;width:auto;height:auto;inset:auto;border:0;background:none;transform:none;font-size:10px;line-height:1;text-align:center;color:inherit;}
+.work-row .work-arrow:after{content:none;display:none;}
+
+/* Eyes collage — restored to the original natural-photo masonry layout.
+   One canonical rule set avoids competing CSS; no forced tile sizes or image crops. */
+.eyes-square-collage{width:min(100%,620px);display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;aspect-ratio:auto;grid-template-columns:none;grid-template-rows:none;grid-template-areas:none}
+.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:visible;background:transparent;margin:0 0 5px;padding:0;vertical-align:top;grid-area:auto}
+.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.eyes-tile.focal-eye{background:transparent;padding:0}
+.eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
+@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -174,16 +175,16 @@ body.flashlight-mode .flashlight-cursor{display:block}
 <div class="photo-group-label">04 / EYES <span>A recurring subject</span></div>
 <p class="eyes-intro">Sometimes the clues are looking right at you.</p><p class="eyes-click-note">EXPAND PHOTO FOR A CLOSER LOOK</p>
 <div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
-<a class="eyes-tile focal-eye eye-two" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile focal-eye eye-six" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile focal-eye eye-fourteen" href="./images/EYE14.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE14.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-one" href="./images/eye1.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye1.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-three" href="./images/eye3.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-eight" href="./images/eye8.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye8.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-nine" href="./images/eye9.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye9.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-thirteen" href="./images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-fifteen" href="./images/EYE15.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE15.jpg" alt="Close-up brown eye photograph" loading="lazy"></a>
-<a class="eyes-tile eye-sixteen" href="./images/EYE16.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE16.jpg" alt="Close-up blue eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE14.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE14.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye1.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye1.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye3.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye8.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye8.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye9.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye9.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE15.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE15.jpg" alt="Close-up brown eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE16.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE16.jpg" alt="Close-up blue eye photograph" loading="lazy"></a>
 </div>
 </section>
 <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
