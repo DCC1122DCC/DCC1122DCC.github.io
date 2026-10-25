@@ -1,1629 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#F2EBDD" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="icon" href="./favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="Creative Archive" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#F2EBDD">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg"><link rel="icon" href="./favicon.ico" sizes="any"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"><link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png"><link rel="manifest" href="./manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Creative Archive"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Desani Curbelo | Photography & Video</title><meta name="description" content="Desani Curbelo — photography, music videos, and collaborative creative work.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f2ebdd;--paper:#eae3d6;--orange:#ff6200;--orange-soft:#ff984d;--cyan:#9ccfd4;--cyan-pale:#c8eef0;--rust:#c44332;--ink:#25251f;--muted:#77746a;--line:rgba(37,37,31,.22);--display:"Archivo Black","Helvetica Neue",Arial,sans-serif;--body:"Space Grotesk","Helvetica Neue",Arial,sans-serif;--mono:"Space Mono",monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}a{color:inherit;text-decoration:none}a:hover{color:var(--orange)}a:focus-visible{outline:2px solid var(--orange);outline-offset:4px}::selection{background:var(--cyan);color:var(--ink)}
+.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 3.3%;background:var(--cream);border-bottom:1px solid var(--line)}.site-header:before{content:"SITE MADE BY";position:absolute;top:9px;left:3.3%;font-family:var(--mono);font-size:8px;line-height:1;letter-spacing:.12em;color:var(--muted)}.site-header{padding-top:27px}.wordmark{font-family:var(--display);display:inline-flex;align-items:center;font-size:clamp(23px,2.4vw,34px);line-height:1.05;letter-spacing:-1.2px;text-transform:uppercase;white-space:nowrap}.wordmark-girl{display:inline-block;position:relative;isolation:isolate;width:43px;height:54px;margin-left:9px;vertical-align:middle;overflow:visible}.wordmark-girl:before{content:"";position:absolute;z-index:-1;width:25px;height:25px;left:5px;top:2px;border-radius:50%;background:var(--orange)}.wordmark-girl svg{position:relative;display:block;width:100%;height:100%}.navigation{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:clamp(22px,3.1vw,48px);font-family:var(--mono);font-size:clamp(10px,.95vw,14px);text-transform:uppercase}.navigation a{transition:color .2s ease}
+.hero{min-height:clamp(620px,74vh,760px);padding:34px 3.3% 32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;isolation:isolate;overflow:hidden}.eyebrow,.section-label,.small-label{font-family:var(--mono);font-size:10px;line-height:1.6;text-transform:uppercase;letter-spacing:.5px}.hero-top{position:relative;z-index:2;min-height:34px;margin-left:-4%}.hero h1{position:absolute;z-index:2;top:48%;left:50%;width:94%;max-width:100%;margin:0;padding:0;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(76px,10.2vw,142px);line-height:.94;letter-spacing:-.07em;text-align:center;text-transform:uppercase;font-weight:400}.hero h1 span{display:block;width:100%;text-align:center}.hero h1 .for-word{display:block;width:100%;text-align:center}.hero h1 .clues-word{display:block;width:100%;color:var(--orange);text-align:center}.hero-art{position:absolute;z-index:1;pointer-events:none}.hero-art svg{display:block;width:100%;height:auto}.earth-art{width:clamp(76px,6.4vw,108px);top:10%;right:18%}.handprint-art{width:clamp(52px,4.7vw,76px);left:13%;top:60%;transform:rotate(-20deg)}.music-art{width:clamp(48px,4.2vw,68px);right:16%;top:39%;transform:rotate(8deg)}.magnifier-art{width:clamp(60px,5.2vw,84px);left:7%;top:43%;transform:rotate(-18deg)}.star-art{width:clamp(82px,7.5vw,122px);left:2.5%;top:13%;transform:rotate(18deg)}.connections-art{width:clamp(68px,5.8vw,94px);right:4%;top:15%;transform:rotate(13deg)}.paper-pen-art{width:clamp(76px,6.8vw,110px);right:4.5%;top:51%;transform:rotate(-14deg)}.laptop-art{width:clamp(54px,4.3vw,70px);left:20%;top:12%;transform:rotate(-3deg)}.hero-bottom{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:30px}.seek-note{margin:0;max-width:320px;font-family:var(--display);font-size:clamp(13px,1.55vw,19px);line-height:1.2;letter-spacing:-.035em;text-transform:uppercase}.hero-stamp{position:absolute;z-index:3;right:clamp(12px,3.3vw,48px);left:auto;bottom:6%;display:block;width:clamp(104px,8vw,136px);height:auto;color:var(--orange);pointer-events:none}.hero-stamp svg{display:block;width:100%;height:auto;overflow:visible}.stamp-ring{fill:none;stroke:currentColor;stroke-width:1.15}.stamp-curve{fill:currentColor;font-family:var(--display);font-size:10px;letter-spacing:1.15px}.stamp-year{fill:currentColor;font-family:var(--display);font-size:10px;text-anchor:middle}.stamp-dot{fill:var(--orange)}
+.ticker{overflow:hidden;background:var(--ink);color:var(--cream);padding:12px clamp(12px,3vw,44px)}.ticker-track{display:flex;align-items:center;justify-content:space-between;gap:clamp(7px,1.25vw,20px);width:100%;font-family:var(--mono);font-size:clamp(9px,.75vw,11px);text-align:center;text-transform:uppercase;letter-spacing:clamp(.3px,.08vw,1px)}.ticker-track span{min-width:0;white-space:nowrap}.ticker-track .ticker-star{position:relative;display:inline-block;flex:0 0 12px;width:12px;height:16px;color:#46c9dc;font-size:0;line-height:1}.ticker-track .ticker-star:before{content:"✦";position:absolute;inset:0;color:#46c9dc;font-size:16px;line-height:16px;text-align:center}.ticker-track span:not(.ticker-star){color:#fff}
+.section{padding:76px 8%;border-bottom:1px solid var(--line)}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:32px;padding-bottom:14px;border-bottom:1px solid var(--line)}.section-heading h2{margin:0;font-family:var(--display);font-size:clamp(42px,6.5vw,96px);line-height:1;letter-spacing:-.06em;text-transform:uppercase;font-weight:400}.section-number{font-family:var(--mono);font-size:11px;color:var(--muted);flex-shrink:0}.work-list{border-top:1px solid var(--ink)}.work-row{display:grid;grid-template-columns:75px minmax(0,1fr) auto;align-items:center;gap:20px;padding:23px 0;border-bottom:1px solid var(--line);transition:background .2s ease}.work-row:hover{background:rgba(156,207,212,.12)}.work-index{font-family:var(--mono);font-size:11px;color:var(--orange)}.work-label{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}.work-title{display:block;width:fit-content;font-size:clamp(21px,3vw,34px);font-weight:600;line-height:1.1;letter-spacing:-1.2px}.work-tagline{display:block;color:var(--muted);font-family:var(--mono);font-size:11px;line-height:1.5}.work-row .work-title:after{content:"";display:block;width:54px;height:3px;margin-top:10px;background:var(--orange)}.work-row:nth-child(2) .work-title:after{width:88px;background:var(--cyan)}.work-row:nth-child(3) .work-title:after{width:106px;background:var(--orange)}.work-arrow{display:block;position:relative;width:25px;height:25px;font-size:0;line-height:1;text-align:center;color:var(--cyan);transition:transform .2s ease}.work-arrow:before{content:"✦";position:absolute;inset:0;font-size:24px;line-height:25px;text-align:center;color:var(--cyan)}.work-row:hover .work-arrow{transform:rotate(18deg) scale(1.08)}
+.gallery-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:46px 0 20px}.gallery-intro h3{margin:0;font-family:var(--display);font-size:clamp(28px,4.5vw,48px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase}.tiny-star{color:var(--orange)}.gallery-intro p{max-width:340px;margin:0;font-size:14px;line-height:1.5}.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.photo-group-label{display:flex;align-items:center;gap:12px;margin:30px 0 14px;padding-top:15px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}.photo-group-label span{color:var(--muted);font-size:10px}.photo-note{max-width:600px;margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.6}.photo-categories{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.photo-categories a{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-family:var(--mono);font-size:10px;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}.photo-categories a:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}.photo-category-section{scroll-margin-top:100px}.category-placeholder{margin:0 0 18px;color:var(--muted);font-size:12px;line-height:1.6}.photo-group-label a{color:var(--orange);text-decoration:underline;text-underline-offset:3px}.photo-card{min-width:0;margin:0}.photo-card a{display:block;overflow:hidden;background:var(--paper)}.photo-card img{display:block;width:100%;height:clamp(220px,32vw,420px);object-fit:cover;transition:transform .35s ease}.photo-card a:hover img{transform:scale(1.035)}.photo-card figcaption{display:flex;justify-content:space-between;gap:10px;padding:10px 0 18px;font-family:var(--mono);font-size:10px;line-height:1.5;text-transform:uppercase}.photo-card figcaption span:last-child{color:var(--muted);text-align:right}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;border-top:1px solid var(--ink)}.project-card{display:flex;flex-direction:column;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}.project-type,.project-number{font-family:var(--mono);font-size:10px;text-transform:uppercase}.project-card h3{margin:24px 0 10px;font-family:var(--body);font-size:clamp(21px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-1.2px;text-transform:none}.project-card p{max-width:440px;margin:0 0 20px;font-size:14px;line-height:1.55}.project-link{display:inline-flex;gap:10px;align-items:center;margin-top:auto;font-family:var(--mono);font-size:11px;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}.embed-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--paper);margin:0 0 18px}.embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.instagram-frame{aspect-ratio:4/5;max-height:620px;overflow:auto;background:transparent}.instagram-frame blockquote{min-height:420px!important}.video-projects .project-card h3{margin-top:20px}.video-projects .project-card{min-width:0}
+.references-section{background:var(--cream);color:var(--ink)}.reference-intro{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin:0 0 28px;padding-bottom:24px;border-bottom:1px solid var(--line)}.reference-intro p{max-width:480px;margin:0;font-size:16px}.reference-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.reference-card{min-width:0;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;padding:18px;border:1px solid var(--line);background:var(--cream)}.reference-card h3:after{content:"";display:block;width:42px;height:3px;margin-top:10px;background:var(--orange)}.reference-card:nth-child(even) h3:after{background:var(--cyan)}.reference-card .reference-type{font-family:var(--mono);font-size:10px;text-transform:uppercase}.reference-card h3{margin:22px 0 8px;font-family:var(--display);font-size:clamp(22px,3vw,36px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase;font-weight:400;overflow-wrap:anywhere}.reference-card p{margin:0;font-size:12px;line-height:1.45}.reference-card a{align-self:flex-start;margin-top:20px;font-family:var(--mono);font-size:10px;text-transform:uppercase}.about-section{background:var(--cyan);color:var(--ink)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.about-copy{max-width:460px;font-size:17px;line-height:1.65}.about-outro{margin:0 0 24px;font-family:var(--display);font-size:clamp(27px,4.2vw,48px);line-height:1;letter-spacing:-.055em;text-transform:uppercase}.contact-email{display:inline-block;font-size:clamp(17px,2.5vw,24px);overflow-wrap:anywhere}.contact-email:hover{color:var(--orange)}.site-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 5%;background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:10px;text-transform:uppercase}.site-credit{display:flex;flex-direction:column;gap:5px}.site-credit-label{font-size:8px;letter-spacing:.12em;color:var(--cyan)}.wishboard-wrap{margin-top:44px}.wishboard-wrap .gallery-intro{margin-top:0}.wishboard-links{display:flex;flex-wrap:wrap;gap:18px}.site-footer a:hover,.back-to-top{color:var(--cyan)}.back-to-top{display:inline-flex;align-items:center;gap:6px}.back-to-top-arrow{display:inline-block;width:13px;height:13px;flex:0 0 auto}
+@media(min-width:1100px){.star-art{left:3%;top:15%;width:clamp(66px,5.6vw,92px)}.laptop-art{top:13%;left:19%;width:clamp(48px,3.8vw,62px);transform:rotate(-4deg)}.magnifier-art{left:7.5%;top:44%;width:clamp(52px,4.1vw,68px)}.handprint-art{left:14.2%;top:62%;width:clamp(42px,3.5vw,58px)}.earth-art{top:11%;right:18%;width:clamp(70px,5.7vw,94px)}.connections-art{top:15%;right:4.5%;width:clamp(62px,5.1vw,84px)}.music-art{top:40%;right:15.5%;width:clamp(44px,3.6vw,58px)}.paper-pen-art{top:52%;right:4.5%;width:clamp(70px,5.7vw,94px)}.hero-stamp{right:clamp(12px,3.3vw,48px);left:auto;bottom:10%;width:clamp(108px,8vw,138px)}}@media(min-width:761px) and (max-width:1099px){.hero h1{font-size:clamp(58px,8.1vw,90px)}}
+@media(max-width:760px){.site-header{align-items:flex-start;flex-direction:column;gap:14px;padding:25px 6% 16px}.site-header:before{left:6%}.wordmark{font-size:25px}.wordmark-girl{width:31px;height:38px;margin-left:7px}.wordmark-girl:before{width:19px;height:19px;left:4px;top:1px}.navigation{justify-content:flex-start;gap:10px 16px;font-size:10px}.hero{min-height:540px;padding:28px 6% 26px}.hero h1{padding:0 6%;font-size:clamp(43px,10.2vw,74px);line-height:.98}.earth-art{top:23%;right:17%;width:34px}.laptop-art{top:11%;left:46%;width:39px}.handprint-art{left:18%;top:61%;width:24px}.music-art{right:18%;top:61%;width:25px}.magnifier-art{left:10%;top:43%;width:22px}.star-art{left:22%;top:23%;width:18px}.connections-art{right:10%;top:43%;width:29px}.paper-pen-art{left:46%;top:71%;width:27px}.seek-note{max-width:190px;font-size:12px}.hero-bottom{gap:15px}.hero-stamp{right:12px;left:auto;bottom:6%;width:68px}.section{padding:clamp(48px,7vw,64px) 6%}.section-heading{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:26px}.section-heading h2{font-size:clamp(34px,9vw,58px)}.work-row{grid-template-columns:35px minmax(0,1fr) auto;gap:12px;padding:clamp(18px,3.2vw,23px) 0}.work-title{font-size:23px}.work-tagline{font-size:10px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-card img{height:clamp(180px,57vw,330px)}.photo-card figcaption{font-size:8px}.gallery-intro{align-items:flex-start;flex-direction:column;gap:12px}.project-grid{grid-template-columns:1fr}.reference-intro{flex-direction:column;gap:12px}.reference-board{grid-template-columns:repeat(2,minmax(0,1fr))}.reference-card{min-height:190px;padding:16px}.about-grid{grid-template-columns:1fr;gap:28px}.about-copy{font-size:16px}.site-footer{align-items:flex-start;flex-direction:column;gap:10px;padding:22px 6%}.back-to-top-arrow{display:none}}@media(max-width:420px){.hero{min-height:515px}.hero h1{font-size:10.2vw}.earth-art{top:23%;right:15%;width:29px}.laptop-art{top:12%;left:45%;width:34px}.handprint-art{top:62%;left:15%;width:21px}.music-art{top:62%;right:15%;width:22px}.magnifier-art{left:7%;top:43%;width:20px}.star-art{left:22%;top:23%;width:16px}.connections-art{right:7%;top:43%;width:26px}.paper-pen-art{left:45%;top:71%;width:24px}.hero-stamp{right:0;bottom:6%;width:62px}.reference-board{grid-template-columns:1fr}.reference-card{min-height:175px}.ticker{padding:12px 6%}.ticker-track{display:grid;grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto;justify-content:space-between;align-items:center;gap:4px;font-size:clamp(6px,1.75vw,9px);letter-spacing:0}.ticker-track .ticker-star{font-size:clamp(10px,2.8vw,15px)}}
 
-  <title>Desani Curbelo | Creative Archive</title>
-  <meta
-    name="description"
-    content="Desani Curbelo — personal creative archive."
-  />
+/* Looking for Clues — small, targeted archive updates */
+.tiny-star{display:inline-block;width:11px;height:11px;position:relative;vertical-align:middle}
+.tiny-star:before{content:"";position:absolute;inset:1px 4px;background:var(--orange);transform:rotate(45deg)}
+.tiny-star:after{content:"";position:absolute;inset:4px 1px;background:var(--orange);transform:rotate(45deg)}
+.ticker-star{display:inline-block;width:10px;height:10px;position:relative;color:var(--cyan);font-size:0}
+.ticker-star:before{content:"";position:absolute;inset:1px 4px;background:var(--cyan);transform:rotate(45deg)}
+.ticker-star:after{content:"";position:absolute;inset:4px 1px;background:var(--cyan);transform:rotate(45deg)}
+.work-arrow{position:relative;font-size:0!important;width:25px;height:25px}
+.work-arrow:before{content:"";position:absolute;width:13px;height:13px;right:3px;top:3px;border-top:2px solid currentColor;border-right:2px solid currentColor}
+.work-arrow:after{content:"";position:absolute;width:18px;height:2px;right:3px;top:10px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.back-to-top-arrow{position:relative;font-size:0}
+.back-to-top-arrow:before{content:"";position:absolute;width:8px;height:8px;left:2px;top:4px;border-left:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg)}
+.back-to-top-arrow:after{content:"";position:absolute;width:1.5px;height:11px;left:6px;top:4px;background:currentColor}
+.eyes-intro{font-size:clamp(15px,1.5vw,20px);font-style:italic;margin:0 0 18px;color:var(--ink);max-width:600px}
+.eyes-more-link-wrap{display:flex;justify-content:flex-end;margin-top:14px}
+.look-closer{display:inline-flex;align-items:center;gap:10px;border:0;background:none;padding:10px 0;color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.04em;cursor:pointer}
+.look-closer:hover{color:var(--orange)}
+.css-arrow{display:inline-block;width:12px;height:12px;position:relative}
+.css-arrow:before{content:"";position:absolute;right:1px;top:1px;width:7px;height:7px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+.css-arrow:after{content:"";position:absolute;right:1px;top:5px;width:11px;height:1.5px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.photo-card a[data-lightbox]{cursor:zoom-in}
+.photo-lightbox{position:fixed;inset:0;z-index:1000;background:rgba(20,20,18,.94);display:none;align-items:center;justify-content:center;padding:5vw}
+.photo-lightbox.is-open{display:flex}
+.photo-lightbox img{display:block;max-width:92vw;max-height:88vh;object-fit:contain}
+.photo-lightbox-close{position:absolute;right:22px;top:15px;border:1px solid rgba(242,235,221,.5);background:transparent;color:var(--cream);font:12px var(--mono);padding:9px 12px;cursor:pointer}
+.photo-lightbox-close:hover{color:var(--cyan);border-color:var(--cyan)}
+footer{position:relative}
+footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--orange) 0 24%,var(--cyan) 24% 48%,var(--rust) 48% 62%,var(--ink) 62%)}
+@media(max-width:700px){.eyes-preview,.eyes-more .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.eyes-intro{font-size:15px}.eyes-more-link-wrap{justify-content:flex-start}}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
 
-  <style>
-    :root {
-      --cream: #f2ebdd;
-      --paper: #eae3d6;
-      --orange: #ff6200;
-      --orange-soft: #ff984d;
-      --cyan: #9ccfd4;
-      --cyan-pale: #c8eef0;
-      --rust: #c44332;
-      --ink: #25251f;
-      --muted: #77746a;
-      --line: rgba(37, 37, 31, .22);
-      --display: "Archivo Black", "Helvetica Neue", Arial, sans-serif;
-      --body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-      --mono: "Space Mono", monospace;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: var(--orange); }
-    a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
-    ::selection { background: var(--cyan); color: var(--ink); }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px 3.3%;
-      background: var(--cream);
-      border-bottom: 1px solid var(--line);
-    }
-    .wordmark {
-      font-family: var(--display);
-      display: inline-flex;
-      align-items: center;
-      font-size: clamp(25px, 2.7vw, 38px);
-      line-height: 1.05;
-      letter-spacing: -1.2px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .wordmark-girl {
-      display: inline-block;
-      width: 43px;
-      height: 54px;
-      margin-left: 9px;
-      vertical-align: middle;
-      overflow: visible;
-    }
-    .wordmark-girl svg { display: block; width: 100%; height: 100%; }
-    .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: clamp(22px, 3.1vw, 48px);
-      font-family: var(--mono);
-      font-size: clamp(10px, .95vw, 14px);
-      text-transform: uppercase;
-    }
-    .navigation a { transition: color .2s ease; }
-
-    .hero {
-      min-height: clamp(620px, 74vh, 760px);
-      padding: 34px 3.3% 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-    }
-    .eyebrow, .section-label, .small-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      line-height: 1.6;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-    .eyebrow {
-      display: inline-block;
-      width: fit-content;
-      padding: 6px 8px;
-      background: var(--orange);
-      color: var(--ink);
-      border: 1px solid var(--ink);
-      font-family: var(--display);
-      font-size: clamp(10px, .85vw, 11px);
-      line-height: 1.15;
-      letter-spacing: -.035em;
-    }
-    .hero-top { position: relative; z-index: 2; min-height: 34px; margin-left: -4%; }
-    .hero h1 {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 100%;
-      margin: 34px auto 48px;
-      transform: translateY(10px);
-      font-family: var(--display);
-      font-size: clamp(76px, 10.2vw, 142px);
-      line-height: .94;
-      letter-spacing: -.07em;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .hero h1 span { display: block; }
-    .hero h1 .second-line { display: block; padding-left: 0; white-space: nowrap; }
-    .hero h1 .for-word { display: block; }
-    .hero h1 .title-final { display: block; white-space: nowrap; }
-    .hero h1 .clues-word { display: block; color: var(--orange); }
-
-    .hero-art {
-      position: absolute;
-      z-index: 1;
-      pointer-events: none;
-    }
-    .hero-art svg { display: block; width: 100%; height: auto; }
-    /* Small illustrations sit in the open margins around the centered headline. */
-    .earth-art { width: clamp(76px, 6.4vw, 108px); top: 10%; right: 18%; }
-    .footprints-art { width: clamp(58px, 5.2vw, 84px); left: 13%; top: 61%; transform: rotate(-29deg); }
-    .music-art { width: clamp(48px, 4.2vw, 68px); right: 16%; top: 39%; transform: rotate(8deg); }
-    .magnifier-art { width: clamp(60px, 5.2vw, 84px); left: 7%; top: 43%; transform: rotate(-18deg); }
-    .star-art { width: clamp(82px, 7.5vw, 122px); left: 2.5%; top: 13%; transform: rotate(18deg); }
-    .connections-art { width: clamp(68px, 5.8vw, 94px); right: 4%; top: 15%; transform: rotate(13deg); }
-    .paper-pen-art { width: clamp(76px, 6.8vw, 110px); right: 4.5%; left: auto; top: 51%; transform: rotate(-14deg); }
-    .laptop-art { width: clamp(54px, 4.3vw, 70px); left: 20%; top: 12%; transform: rotate(-3deg); }
-    .hero-bottom {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 30px;
-      border-top: 0;
-      padding-top: 0;
-    }
-    .seek-note {
-      margin: 0;
-      max-width: 320px;
-      font-family: var(--display);
-      font-size: clamp(13px, 1.55vw, 19px);
-      line-height: 1.2;
-      letter-spacing: -.035em;
-      text-transform: uppercase;
-    }
-    .hero-stamp {
-      position: absolute;
-      z-index: 1;
-      right: clamp(15%, 17vw, 22%);
-      bottom: 6%;
-      display: block;
-      width: clamp(104px, 8vw, 136px);
-      height: auto;
-      margin: 0;
-      color: var(--orange);
-      overflow: visible;
-      pointer-events: none;
-    }
-    .hero-stamp svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      overflow: visible;
-    }
-    .hero-stamp .stamp-ring {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.15;
-    }
-    .hero-stamp .stamp-curve {
-      fill: currentColor;
-      font-family: var(--display);
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 1.15px;
-    }
-    .hero-stamp .stamp-year {
-      fill: currentColor;
-      font-family: var(--display);
-      font-size: 10px;
-      font-weight: 400;
-      text-anchor: middle;
-    }
-    .hero-stamp .stamp-star-teal,
-    .hero-stamp .stamp-star-orange,
-    .hero-stamp .stamp-star-gold,
-    .hero-stamp .stamp-star-cream,
-    .hero-stamp .stamp-dot { fill: var(--orange); }
-    .hero-stamp { color: var(--orange); }
-
-    .ticker {
-      overflow: hidden;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 12px clamp(12px, 3vw, 44px);
-    }
-    .ticker-track {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: clamp(7px, 1.25vw, 20px);
-      width: 100%;
-      font-family: var(--mono);
-      font-size: clamp(9px, .75vw, 11px);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: clamp(.3px, .08vw, 1px);
-    }
-    .ticker-track span { min-width: 0; white-space: nowrap; }
-    .ticker-track .ticker-star { color: #46c9dc; font-size: 20px; line-height: 1; }
-    .ticker-track span:not(.ticker-star) { color: #ffffff; }
-
-    .section { padding: 76px 8%; border-bottom: 1px solid var(--line); }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 25px;
-      margin-bottom: 32px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-    }
-    .section-heading h2 {
-      margin: 0;
-      font-family: var(--display);
-      font-size: clamp(42px, 6.5vw, 96px);
-      line-height: 1;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .section-number { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; }
-    .work-list { border-top: 1px solid var(--ink); }
-    .work-row {
-      display: grid;
-      grid-template-columns: 75px minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 20px;
-      padding: 23px 0;
-      border-bottom: 1px solid var(--line);
-      transition: background .2s ease;
-    }
-    .work-row:hover { background: rgba(156, 207, 212, .12); }
-    .work-index { font-family: var(--mono); font-size: 11px; color: var(--orange); }
-    .work-label { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
-    .work-title {
-      display: block;
-      width: fit-content;
-      font-size: clamp(21px, 3vw, 34px);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -1.2px;
-    }
-    .work-tagline {
-      display: block;
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 11px;
-      line-height: 1.5;
-      letter-spacing: 0;
-    }
-    /* Short graphic rules under selected category labels, not text underlines. */
-    #work .work-row:nth-child(1) .work-title::after,
-    #work .work-row:nth-child(2) .work-title::after,
-    #work .work-row:nth-child(3) .work-title::after,
-    #collaborations .work-row .work-title::after {
-      content: "";
-      display: block;
-      width: 54px;
-      height: 3px;
-      margin-top: 10px;
-      background: var(--orange);
-    }
-    #work .work-row:nth-child(2) .work-title::after { width: 88px; background: var(--cyan); }
-    #work .work-row:nth-child(3) .work-title::after { width: 106px; background: var(--orange); }
-    #collaborations .work-row .work-title::after { width: 72px; background: var(--cyan); }
-
-    /* Compact five-point star icons beside each work title. */
-    .work-arrow { display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; flex: 0 0 25px; color: var(--cyan); transition: transform .2s ease; }
-    .work-arrow svg { display: none; }
-    .work-arrow::before { content: ""; display: block; width: 17px; height: 17px; background: currentColor; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); }
-    .work-row:hover .work-arrow { transform: rotate(12deg) scale(1.06); }
-    .ticker-track .ticker-star { display: inline-block; width: 12px; height: 12px; flex: 0 0 12px; margin: 0 2px; background: #46c9dc; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); vertical-align: middle; }
-    .about-section { background: var(--cyan); border: 0; box-shadow: none; position: relative; }
-    .about-section::before, .about-section::after { content: none !important; display: none !important; }
-
-    .work-arrow { display: block; width: 25px; height: 25px; transition: transform .2s ease; }
-    .work-arrow svg { display: block; width: 100%; height: 100%; }
-    .work-row:hover .work-arrow { transform: translate(3px, -3px); }
-
-    .references-section { background: var(--cream); color: var(--ink); }
-    .reference-intro {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 28px;
-      margin: 0 0 28px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--line);
-    }
-    .reference-intro p { max-width: 480px; margin: 0; font-size: 16px; }
-    .reference-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .reference-card {
-      min-width: 0;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 18px;
-      border: 1px solid var(--line);
-      background: var(--cream);
-    }
-    .reference-card:nth-child(n) { background: var(--cream); color: var(--ink); }
-    .reference-card h3::after {
-      content: "";
-      display: block;
-      width: 42px;
-      height: 3px;
-      margin-top: 10px;
-      background: var(--orange);
-    }
-    .reference-card:nth-child(even) h3::after { background: var(--cyan); }
-    .reference-card .reference-type { font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
-    .reference-card h3 {
-      margin: 22px 0 8px;
-      font-family: var(--display);
-      font-size: clamp(22px, 3vw, 36px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      text-transform: uppercase;
-      font-weight: 400;
-      overflow-wrap: anywhere;
-    }
-    .reference-card p { margin: 0; font-size: 12px; line-height: 1.45; }
-    .reference-card a { align-self: flex-start; margin-top: 20px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
-
-    .about-section { background: var(--cyan); color: var(--ink); border-bottom: 0; }
-    .about-section .section-label, .about-section .contact-email { color: var(--ink); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-    .about-grid h2 {
-      margin: 8px 0 0;
-      font-family: var(--display);
-      font-size: clamp(37px, 6vw, 70px);
-      line-height: .95;
-      letter-spacing: -.065em;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .about-outro {
-      margin: 0 0 24px;
-      font-family: var(--display);
-      font-size: clamp(27px, 4.2vw, 48px);
-      line-height: 1;
-      letter-spacing: -.055em;
-      text-transform: uppercase;
-    }
-    .about-copy { max-width: 460px; font-size: 17px; line-height: 1.65; }
-    .about-copy p:first-child { margin-top: 0; }
-    .contact-email { display: inline-block; font-size: clamp(17px, 2.5vw, 24px); overflow-wrap: anywhere; }
-    .contact-email:hover { color: var(--orange); }
-
-    .site-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 22px 5%;
-      background: var(--ink);
-      color: var(--cream);
-      font-family: var(--mono);
-      font-size: 10px;
-      text-transform: uppercase;
-    }
-    .site-footer a:hover, .back-to-top { color: var(--cyan); }
-    .back-to-top { display: inline-flex; align-items: center; gap: 6px; }
-    .back-to-top-arrow { display: inline-block; width: 13px; height: 13px; flex: 0 0 auto; }
-
-    /* On wide screens, move the laptop and paper into the side clusters. Mobile keeps its original circular arrangement. */
-    @media (min-width: 1100px) {
-      /* Wide screens get generous gaps between each illustration; the title stays centered. */
-      .star-art { left: 3%; top: 15%; width: clamp(66px, 5.6vw, 92px); }
-      .laptop-art { top: 13%; left: 19%; width: clamp(48px, 3.8vw, 62px); transform: rotate(-4deg); }
-      .magnifier-art { left: 7.5%; top: 44%; width: clamp(52px, 4.1vw, 68px); }
-      .footprints-art { left: 14.2%; top: 63%; width: clamp(46px, 3.8vw, 62px); }
-      .earth-art { top: 11%; right: 18%; width: clamp(70px, 5.7vw, 94px); }
-      .connections-art { top: 15%; right: 4.5%; width: clamp(62px, 5.1vw, 84px); }
-      .music-art { top: 40%; right: 15.5%; width: clamp(44px, 3.6vw, 58px); }
-      .paper-pen-art { top: 52%; left: auto; right: 4.5%; width: clamp(70px, 5.7vw, 94px); transform: rotate(-14deg); }
-      .hero-bottom { padding-right: 0; }
-      .hero-stamp { right: 4.5%; bottom: 5.5%; width: clamp(108px, 8vw, 138px); }
-    }
-
-    /* Keep the headline centered and comfortably inside the viewport on resized desktop windows. */
-    @media (min-width: 761px) and (max-width: 1099px) {
-      .hero h1 { font-size: clamp(58px, 8.1vw, 90px); }
-    }
-
-    @media (max-width: 760px) {
-      .site-header { align-items: flex-start; flex-direction: column; gap: 14px; padding: 16px 6%; }
-      .wordmark { font-size: 25px; }
-      .wordmark-girl { width: 31px; height: 38px; margin-left: 7px; }
-      .navigation { justify-content: flex-start; gap: 10px 16px; font-size: 10px; }
-      .hero { min-height: 540px; padding: 28px 6% 26px; }
-      .hero h1 { margin: 34px auto 28px; font-size: clamp(43px, 10.2vw, 74px); line-height: .98; }
-      .hero h1 .second-line { padding-left: 0; }
-      .earth-art { top: 23%; right: 17%; width: 34px; }
-      .laptop-art { top: 11%; left: 46%; width: 39px; }
-      .footprints-art { left: 18%; top: 61%; width: 23px; transform: rotate(-27deg); }
-      .music-art { right: 18%; top: 61%; width: 25px; }
-      .magnifier-art { left: 10%; top: 43%; width: 22px; }
-      .star-art { left: 22%; top: 23%; width: 18px; }
-      .connections-art { right: 10%; top: 43%; width: 29px; transform: rotate(13deg); }
-      .paper-pen-art { left: 46%; top: 71%; width: 27px; transform: rotate(-14deg); }
-      .seek-note { max-width: 190px; font-size: 12px; }
-      .hero-bottom { gap: 15px; }
-      .hero-stamp { right: 4.5%; bottom: 6%; width: 68px; }
-      .section { padding: clamp(48px, 7vw, 64px) 6%; }
-      .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
-      .section-heading h2 { font-size: clamp(34px, 9vw, 58px); }
-      .work-row { grid-template-columns: 35px minmax(0, 1fr) auto; gap: 12px; padding: clamp(18px, 3.2vw, 23px) 0; }
-      .work-title { font-size: 23px; }
-      .work-tagline { font-size: 10px; }
-      .reference-intro { flex-direction: column; gap: 12px; }
-      .reference-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .reference-card { min-height: 190px; padding: 16px; }
-      .about-grid { grid-template-columns: 1fr; gap: 28px; }
-      .about-copy { font-size: 16px; }
-      .site-footer { align-items: flex-start; flex-direction: column; gap: 10px; padding: 22px 6%; }
-      .back-to-top-arrow { display: none; }
-    }
-    @media (max-width: 420px) {
-      .hero { min-height: 515px; }
-      .hero h1 { font-size: 10.2vw; margin-top: 30px; margin-bottom: 26px; }
-      .hero h1 .second-line { padding-left: 0; }
-      .earth-art { top: 23%; right: 15%; width: 29px; }
-      .laptop-art { top: 12%; left: 45%; width: 34px; }
-      .footprints-art { top: 62%; left: 15%; width: 20px; transform: rotate(-27deg); }
-      .music-art { top: 62%; right: 15%; width: 22px; }
-      .magnifier-art { left: 7%; top: 43%; width: 20px; }
-      .star-art { left: 22%; top: 23%; width: 16px; }
-      .connections-art { right: 7%; top: 43%; width: 26px; transform: rotate(13deg); }
-      .paper-pen-art { left: 45%; top: 71%; width: 24px; transform: rotate(-14deg); }
-      .hero-stamp { right: 3.5%; bottom: 6%; width: 62px; }
-      .reference-board { grid-template-columns: 1fr; }
-      .reference-card { min-height: 175px; }
-      .ticker { padding: 12px 6%; }
-      .ticker-track { justify-content: center; flex-wrap: wrap; gap: 10px 12px; font-size: 9px; letter-spacing: .35px; }
-      .ticker-track .ticker-star { font-size: 15px; }
-    }
-  
-/* Compact, uncropped photo collages: every image keeps its own proportions. */
+/* Compact photo archive: images keep their proportions outside the Eyes collage. */
 .photo-grid{display:block;columns:3;column-gap:10px;}
 .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 10px;vertical-align:top;}
 .photo-card a{display:block;overflow:hidden;background:transparent;}
 .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;transition:none;}
 .photo-card a:hover img{transform:none;}
 .photo-card figcaption{padding:5px 0 9px;font-size:9px;}
-.eyes-preview{margin-top:0;}
 .photo-category-section{margin-bottom:12px;}
-@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
-@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
+/* The Eyes collection is one compact square artwork, not eight separate cards. */
+.eyes-square-collage{width:min(100%,440px);aspect-ratio:1/1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));grid-template-areas:"a a b b e" "a a c d e" "f g g d h" "f i j j h" "f i j j h";gap:4px;margin:10px auto 0;overflow:hidden;background:var(--cream);}
+.eyes-tile{display:block;min-width:0;min-height:0;overflow:hidden;background:var(--ink);}
+.eyes-tile img{display:block;width:100%;height:100%;object-fit:cover;}
+.eyes-tile.tile-a{grid-area:a}.eyes-tile.tile-b{grid-area:b}.eyes-tile.tile-c{grid-area:c}.eyes-tile.tile-d{grid-area:d}.eyes-tile.tile-e{grid-area:e}.eyes-tile.tile-f{grid-area:f}.eyes-tile.tile-g{grid-area:g}.eyes-tile.tile-h{grid-area:h}.eyes-tile.tile-i{grid-area:i}.eyes-tile.tile-j{grid-area:j}
+@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}.eyes-square-collage{width:min(100%,360px);gap:3px;}}
+@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}.eyes-square-collage{width:100%;}}
 
 
-/* Eyes: one connected collage, with every photograph fully visible. */
-.eyes-square-collage{width:min(100%,620px);aspect-ratio:auto;display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;}
-.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 5px;vertical-align:top;}
+/* Eyes collection: a larger, centered photo composition with intact image proportions. */
+.eyes-intro{text-align:center;max-width:none;margin:0 auto 8px;font-size:clamp(17px,1.8vw,23px);}
+.eyes-click-note{text-align:center;margin:0 auto 18px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--muted);}
+.eyes-square-collage{width:min(100%,800px);display:block;columns:3;column-gap:8px;margin:0 auto;overflow:visible;background:transparent;}
+.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 8px;vertical-align:top;}
 .eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;}
-.eyes-tile.tile-a,.eyes-tile.tile-b,.eyes-tile.tile-c,.eyes-tile.tile-d,.eyes-tile.tile-e,.eyes-tile.tile-f,.eyes-tile.tile-g,.eyes-tile.tile-h,.eyes-tile.tile-i,.eyes-tile.tile-j{grid-area:auto;}
-@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
+.eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:6px}.eyes-tile{margin-bottom:6px}.eyes-click-note{margin-bottom:14px}}
 @media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
 
-</style>
-</head>
 
+/* Looking for Clues — soft, breathy title entrance */
+.hero h1{transform-origin:center center;animation:clues-breathe 7.5s ease-in-out 1.45s infinite}
+.hero h1 span{opacity:0;filter:blur(7px);animation:clues-arrive 1.15s cubic-bezier(.2,.75,.25,1) both}
+.hero h1 .for-word{animation-delay:.18s}
+.hero h1 .clues-word{animation-delay:.36s}
+@keyframes clues-arrive{
+  0%{opacity:0;transform:translateY(17px) rotate(-1deg);filter:blur(7px)}
+  72%{opacity:1;transform:translateY(-2px) rotate(.15deg);filter:blur(0)}
+  100%{opacity:1;transform:translateY(0) rotate(0);filter:blur(0)}
+}
+@keyframes clues-breathe{
+  0%,100%{transform:translate(-50%,-50%) scale(1)}
+  50%{transform:translate(-50%,-50%) scale(1.012)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero h1{animation:none;transform:translate(-50%,-50%)}
+  .hero h1 span{opacity:1;filter:none;animation:none;transform:none}
+}
+</style></head>
 <body id="home">
-  <header class="site-header">
-    <a class="wordmark" href="#home">Desani Curbelo
-      <span class="wordmark-girl" aria-hidden="true">
-        <svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="18" cy="21" r="16" fill="#ff8a22"/>
-          <g stroke="#25251f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Slim stick-figure silhouette, with long straight honey-brown blonde hair -->
-            <path d="M18 3.2C11.4 3.2 8.1 8 8.8 14.1L8.8 32.8 12.6 34.5 15 21.8H21L23.4 34.5 27.2 32.8 27.2 14.1C27.9 8 24.6 3.2 18 3.2Z" fill="#b99459"/>
-            <path d="M11.2 8.6C13 5.2 15.3 4.3 18 4.3S23.2 5.2 24.8 8.6" fill="none" stroke="#8d6a3d" stroke-width="1.1"/>
-            <circle cx="18" cy="12.5" r="5.8" fill="#f2ebdd"/>
-            <path d="M12.7 11.1C13.7 7.8 16 6.7 18 6.7s4.3 1.1 5.3 4.4" fill="none" stroke="#25251f" stroke-width="1.5"/>
-            <path d="M13.7 20.2 9.8 30.8 18 34.1 26.2 30.8 22.3 20.2Z" fill="#168d83"/>
-            <path d="M15 32.7 13.3 43.8M21 32.7 22.7 43.8M9.8 30.8 6.5 28.1M26.2 30.8 29.5 28.1" fill="none"/>
-            <path d="M13.3 43.8H10.5M22.7 43.8H25.5" fill="none" stroke-width="2.2"/>
-          </g>
-          <circle cx="16" cy="12.5" r=".8" fill="#25251f"/>
-          <circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
-          <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
-          <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-          <circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-        </svg>
-      </span>
-    </a>
-    <nav class="navigation" aria-label="Main navigation">
-      <a href="#work">My Work</a>
-      <a href="#collaborations">Collaborations</a>
-      <a href="#references">References</a>
-      <a href="#about">Contact</a>
-    </nav>
-  </header>
+<header class="site-header"><a class="wordmark" href="#home">Desani Curbelo <span class="wordmark-girl" aria-hidden="true"><svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg"><g stroke="#25251f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15C7.5 6.8 12 3.5 18 3.5S28.5 6.8 27 15L26.5 31 22 34 21 21H15L14 34 9.5 31Z" fill="#b99459"/><path d="M12.5 10C14 6.5 16 5.5 18 5.5S22 6.5 23.5 10" fill="none" stroke="#8d6a3d" stroke-width="1"/><circle cx="18" cy="13" r="5.6" fill="#25251f" stroke="#25251f"/><path d="M13.5 20 10 30.5 18 34 26 30.5 22.5 20Z" fill="#168d83"/><path d="M15 32.8 13.2 43.5M21 32.8 22.8 43.5M10 30.5 6.8 28M26 30.5 29.2 28" fill="none"/><path d="M13.2 43.5H10.5M22.8 43.5H25.5" fill="none" stroke-width="2"/></g><path d="M13.2 11.2 11.8 9.9M14.7 10.7 13.8 8.9M15.9 10.7 15.6 8.9M20.8 11.2 22.2 9.9M21.3 10.7 22.2 8.9M20.1 10.7 20.4 8.9" fill="none" stroke="#f2ebdd" stroke-width=".7" stroke-linecap="round"/><circle cx="16" cy="13" r=".75" fill="#f2ebdd"/><circle cx="20" cy="13" r=".75" fill="#f2ebdd"/><path d="M16.2 15.2Q18 16.7 19.8 15.2" fill="none" stroke="#f2ebdd" stroke-width="1" stroke-linecap="round"/><circle cx="14.3" cy="14.8" r="1" fill="#e78d83"/><circle cx="21.7" cy="14.8" r="1" fill="#e78d83"/></svg></span></a><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
+<main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
+<div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
+<div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
+<div class="hero-art music-art" aria-hidden="true"><svg viewBox="0 0 100 100"><g fill="#25251f" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round"><path d="M42 18v48c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V34l31-8v30c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V12Z"/><path d="M42 18 81 8v11L42 29Z"/></g></svg></div>
+<div class="hero-art magnifier-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="41" cy="39" r="25" fill="#9ccfd4" fill-opacity=".55" stroke="#25251f" stroke-width="7"/><path d="M59 58 83 83" fill="none" stroke="#ff6200" stroke-width="11" stroke-linecap="round"/><path d="M59 58 83 83" fill="none" stroke="#25251f" stroke-width="3" stroke-linecap="round"/></svg></div>
+<div class="hero-art star-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 5 61 36 94 38 68 58 77 91 50 71 23 91 32 58 6 38 39 36Z" fill="#f4d447" stroke="#25251f" stroke-width="5" stroke-linejoin="round"/></svg></div>
+<div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+<div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
+<div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><p class="seek-note">SEEK, AND YOU SHALL FIND.</p><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
+<div class="ticker" aria-label="Creative interests"><div class="ticker-track"><span>SOUND</span><span class="ticker-star" aria-hidden="true"></span><span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span><span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span><span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span><span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span><span>CONNECTIONS</span></div></div>
+<section class="section" id="work">
+<div class="section-heading" id="my-work"><h2>MY WORK <span class="tiny-star" aria-hidden="true"></span></h2><span class="section-number">SELECTED WORK / 2026</span></div>
+<div class="work-list">
+<a class="work-row" href="#photos"><span class="work-index">01</span><span class="work-label"><span class="work-title">PHOTOGRAPHY</span><span class="work-tagline">Portraits, places, street, fashion, live music, and the details that catch my eye.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
+<a class="work-row" href="#video"><span class="work-index">02</span><span class="work-label"><span class="work-title">VIDEO / FILM</span><span class="work-tagline">Music videos and collaborative moving-image work.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
+<a class="work-row" href="#wishboard"><span class="work-index">03</span><span class="work-label"><span class="work-title">DIGITAL / INTERACTIVE</span><span class="work-tagline">Wishboard — an independently built wishlist and budgeting app.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
+</div>
+<div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY<br>&amp; IMAGE-MAKING <span class="tiny-star" aria-hidden="true"></span></h3><p>A collection of things I’ve seen, things I’ve kept, and things I can’t stop looking at.</p></div>
+<section class="photo-category-section" id="nyc-film"><div class="photo-group-label">01 / NYC ON FILM <span>New York, on film</span></div><p class="category-placeholder">Film photographs from New York. Selected images coming soon.</p></section>
+<section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">02 / FASHION &amp; PORTRAITS <span>California and beyond</span></div><p class="category-placeholder">Fashion shoots, styled portraits, and people in their element. Selected images coming soon.</p></section>
+<section class="photo-category-section" id="live-music"><div class="photo-group-label">03 / LIVE MUSIC <span>Color, light, and movement</span></div><p class="category-placeholder">Concert photographs and live-music moments. Selected images coming soon.</p></section>
+<section class="photo-category-section" id="eyes">
+<div class="photo-group-label">04 / EYES <span>A recurring subject</span></div>
+<p class="eyes-intro">Sometimes the clues are looking right at you.</p><p class="eyes-click-note">EXPAND PHOTO FOR A CLOSER LOOK</p>
+<div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
+<a class="eyes-tile" href="../images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/EYE14.jpg" data-lightbox aria-label="Open photograph"><img src="../images/EYE14.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye1.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye1.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye3.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye3.jpg" alt="Close-up blue-green eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye8.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye8.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye9.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye9.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="../images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/EYE15.jpg" data-lightbox aria-label="Open photograph"><img src="../images/EYE15.jpg" alt="Close-up brown eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="../images/EYE16.jpg" data-lightbox aria-label="Open photograph"><img src="../images/EYE16.jpg" alt="Close-up blue eye photograph" loading="lazy"></a>
+</div>
+</section>
+<section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
+<figure class="photo-card"><a href="../images/000017470004.jpg" data-lightbox><img src="../images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a><figcaption><span>01 / Candid</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="../images/000927340006.jpg" data-lightbox><img src="../images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a><figcaption><span>02 / Portrait</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="../images/000017470009.jpg" data-lightbox><img src="../images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a><figcaption><span>03 / Figure</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="../images/33383553.jpg" data-lightbox><img src="../images/33383553.jpg" alt="Blue-toned portrait with camera metadata" loading="lazy"></a><figcaption><span>04 / Frame</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="../images/000927340025.jpg" data-lightbox><img src="../images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a><figcaption><span>05 / Somewhere</span><span>Street</span></figcaption></figure>
+<figure class="photo-card"><a href="../images/SOUVENIRS.JPG" data-lightbox><img src="../images/SOUVENIRS.JPG" alt="Nighttime street scene with a Souvenirs sign" loading="lazy"></a><figcaption><span>06 / After Hours</span><span>Street</span></figcaption></figure>
+</div><p class="photo-note">Six photographs are shown here for now. Once you choose images for the other collections, we can move them into the right sections and keep each gallery to six featured images.</p></section>
+<div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. Filming, editing, and creative contributions across different kinds of work.</p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article></div>
+<div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
+</section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-top" aria-hidden="true"></div>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM</a></div></div></section></main>
+<footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script>
+(() => {
+  const more = document.getElementById('eyes-more');
+  const toggle = document.getElementById('look-closer');
+  if (more && toggle) {
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      more.hidden = expanded;
+      toggle.innerHTML = expanded
+        ? 'LOOK CLOSER <span class="css-arrow" aria-hidden="true"></span>'
+        : 'SHOW LESS <span class="css-arrow" aria-hidden="true"></span>';
+      if (!expanded) more.scrollIntoView({behavior:'smooth', block:'nearest'});
+    });
+  }
+  let lightbox = document.querySelector('.photo-lightbox');
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.className = 'photo-lightbox';
+    lightbox.setAttribute('role','dialog');
+    lightbox.setAttribute('aria-modal','true');
+    lightbox.setAttribute('aria-label','Photograph viewer');
+    lightbox.innerHTML = '<button class="photo-lightbox-close" type="button">CLOSE ✕</button><img alt="">';
+    document.body.appendChild(lightbox);
+  }
+  const lightboxImage = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('button');
+  function closeLightbox() {
+    lightbox.classList.remove('is-open');
+    lightboxImage.removeAttribute('src');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('a[data-lightbox]').forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      lightboxImage.src = link.href;
+      const source = link.querySelector('img');
+      lightboxImage.alt = source ? source.alt : 'Photograph';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      closeButton.focus();
+    });
+  });
+  closeButton.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
+})();
+</script>
 
-      <div class="hero-art earth-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3" />
-          <path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-          <path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-          <path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="hero-art footprints-art" aria-hidden="true">
-        <svg viewBox="0 0 100 150" role="img">
-          <g fill="#25251f">
-            <!-- two playful sole prints with distinct toe pads, like the reference -->
-            <path d="M25 31c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
-            <path d="M61 66c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
-            <ellipse cx="15" cy="25" rx="3.4" ry="4.4" transform="rotate(-18 15 25)" />
-            <ellipse cx="21" cy="19" rx="3.5" ry="4.2" transform="rotate(-10 21 19)" />
-            <ellipse cx="28" cy="17" rx="3.5" ry="4.2" />
-            <ellipse cx="35" cy="19" rx="3.2" ry="4" transform="rotate(12 35 19)" />
-            <ellipse cx="41" cy="24" rx="2.8" ry="3.5" transform="rotate(20 41 24)" />
-            <ellipse cx="51" cy="60" rx="3.4" ry="4.4" transform="rotate(-18 51 60)" />
-            <ellipse cx="57" cy="54" rx="3.5" ry="4.2" transform="rotate(-10 57 54)" />
-            <ellipse cx="64" cy="52" rx="3.5" ry="4.2" />
-            <ellipse cx="71" cy="54" rx="3.2" ry="4" transform="rotate(12 71 54)" />
-            <ellipse cx="77" cy="59" rx="2.8" ry="3.5" transform="rotate(20 77 59)" />
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art music-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <g fill="#25251f" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round">
-            <path d="M42 18v48c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V34l31-8v30c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V12Z" />
-            <path d="M42 18 81 8v11L42 29Z" fill="#25251f" />
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art magnifier-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <circle cx="41" cy="39" r="25" fill="#9ccfd4" fill-opacity=".55" stroke="#25251f" stroke-width="7" />
-          <path d="M59 58 83 83" fill="none" stroke="#ff6200" stroke-width="11" stroke-linecap="round" />
-          <path d="M59 58 83 83" fill="none" stroke="#25251f" stroke-width="3" stroke-linecap="round" />
-        </svg>
-      </div>
-      <div class="hero-art star-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <path d="M50 5 61 36 94 38 68 58 77 91 50 71 23 91 32 58 6 38 39 36Z" fill="#f4d447" stroke="#25251f" stroke-width="5" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="hero-art laptop-art" aria-hidden="true">
-        <svg viewBox="0 0 100 80" role="img">
-          <rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f" />
-          <rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5" />
-          <circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5" />
-          <path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round" />
-          <path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round" />
-        </svg>
-      </div>
-      <div class="hero-art connections-art" aria-hidden="true">
-        <svg viewBox="0 0 120 100" role="img">
-          <g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round">
-            <path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68" />
-          </g>
-          <g fill="#9ccfd4" stroke="#25251f" stroke-width="4">
-            <circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/>
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art paper-pen-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
-          <path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
-          <path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round" />
-          <g transform="rotate(38 69 66)">
-            <path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
-            <path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3" />
-            <path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
-          </g>
-        </svg>
-      </div>
-
-      <h1 class="clue-title">
-        <span>LOOKING</span>
-        <span class="for-word">FOR</span>
-        <span class="clues-word">CLUES</span>
-      </h1>
-
-      <div class="hero-bottom">
-        <p class="seek-note">SEEK, AND YOU SHALL FIND.</p>
-        <span class="hero-stamp" role="img" aria-label="Made and found, 2026">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61" />
-              <path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61" />
-            </defs>
-            <circle class="stamp-ring" cx="60" cy="60" r="54" />
-            <circle class="stamp-ring" cx="60" cy="60" r="49.5" />
-            <text class="stamp-curve">
-              <textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath>
-            </text>
-            <text class="stamp-curve">
-              <textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath>
-            </text>
-            <circle class="stamp-dot" cx="25" cy="61" r="1.7" />
-            <circle class="stamp-dot" cx="95" cy="61" r="1.7" />
-            <text class="stamp-year" x="40" y="65">20</text>
-            <path class="stamp-star-teal" d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" />
-            <path class="stamp-star-orange" d="M60 51 62.9 57.1 69.6 58.1 64.8 62.8 66 69.5 60 66.3 54 69.5 55.2 62.8 50.4 58.1 57.1 57.1Z" />
-            <path class="stamp-star-gold" d="M60 53.4 62.4 58.3 67.8 59.1 63.9 62.9 64.8 68.3 60 65.7 55.2 68.3 56.1 62.9 52.2 59.1 57.6 58.3Z" />
-            <path class="stamp-star-cream" d="M60 56 61.8 59.7 65.9 60.3 62.9 63.2 63.6 67.3 60 65.3 56.4 67.3 57.1 63.2 54.1 60.3 58.2 59.7Z" />
-            <text class="stamp-year" x="80" y="65">26</text>
-          </svg>
-        </span>
-      </div>
-    </section>
-
-    <div class="ticker" aria-label="Creative interests">
-      <div class="ticker-track">
-        <span>SOUND</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>CONNECTIONS</span>
-      </div>
-    </div>
-
-    <section class="section" id="work">
-      <div class="section-heading">
-        <h2>MY WORK</h2>
-        <span class="section-number">01 / MADE</span>
-      </div>
-      <div class="work-list">
-        <div class="work-row">
-          <span class="work-index">01</span>
-          <div class="work-label">
-            <span class="work-title">VIDEO</span>
-            <span class="work-tagline">Clips, edits, and moving images.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-        <div class="work-row">
-          <span class="work-index">02</span>
-          <div class="work-label">
-            <span class="work-title">PHOTOGRAPHY</span>
-            <span class="work-tagline">Images, places, details, and moments.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-        <div class="work-row">
-          <span class="work-index">03</span>
-          <div class="work-label">
-            <span class="work-title">MUSIC + AUDIO</span>
-            <span class="work-tagline">Demos, experiments, sounds, and ideas.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="collaborations">
-      <div class="section-heading">
-        <h2>COLLABORATIONS</h2>
-        <span class="section-number">02 / MADE TOGETHER</span>
-      </div>
-      <div class="work-list">
-        <div class="work-row">
-          <span class="work-index">01</span>
-          <div class="work-label">
-            <span class="work-title">A SPACE FOR SHARED WORK</span>
-            <span class="work-tagline">A place for ideas to meet and become something new.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section references-section" id="references">
-      <div class="section-heading">
-        <h2>REFERENCE BOARD</h2>
-        <span class="section-number">03 / FOUND</span>
-      </div>
-      <div class="reference-intro">
-        <p>A growing collection of things that caught my eye.</p>
-        <span class="section-label">CLUES / IN PROGRESS</span>
-      </div>
-      <div class="reference-board">
-        <article class="reference-card">
-          <span class="reference-type">01 / SOUND</span>
-          <div>
-            <h3>Music &amp; playlists</h3>
-            <p>Songs for every mood, moment, and memory.</p>
-          </div>
-          <a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=6c0814e0dab14591" target="_blank" rel="noopener noreferrer">Open Spotify ↗</a>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">02 / IMAGE</span>
-          <div>
-            <h3>Images</h3>
-            <p>Visuals, photographs, and frames worth keeping.</p>
-          </div>
-          <span class="section-label">COLLECT / CONNECT</span>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">03 / MOVEMENT</span>
-          <div>
-            <h3>Film &amp; motion</h3>
-            <p>Scenes, gestures, and moving images that leave a trace.</p>
-          </div>
-          <span class="section-label">NOTICE / RETURN</span>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">04 / CONNECTIONS</span>
-          <div>
-            <h3>Following a thread</h3>
-            <p>Fragments, moments, and details I don't want to lose.</p>
-          </div>
-          <span class="section-label">LOOK CLOSER ↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="about-grid">
-        <div>
-          <span class="section-label">04 / CONTACT</span>
-          
-        </div>
-        <div class="about-copy">
-          <p class="about-outro">LET'S SEE WHERE THIS GOES...</p>
-          <a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© <span id="year">2026</span> Desani Curbelo</span>
-    <span>PERSONAL ARCHIVE / EST. 2026</span>
-    <a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html<div class="photo-grid eyes-preview" id="eyes-preview"><figure class="photo-card"><a href="./images/eye3.jpg" data-lightbox><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph from the Eyes collection" loading="lazy"></a><figcaption><span>05 / Blue-green</span><span>Eyes</span></figcaption></figure></div>TYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#F2EBDD" />
-  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-  <link rel="icon" href="./favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png" />
-  <link rel="manifest" href="./manifest.webmanifest" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-title" content="Creative Archive" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-
-  <title>Desani Curbelo | Creative Archive</title>
-  <meta
-    name="description"
-    content="Desani Curbelo — personal creative archive."
-  />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <style>
-    :root {
-      --cream: #f2ebdd;
-      --paper: #eae3d6;
-      --orange: #ff6200;
-      --orange-soft: #ff984d;
-      --cyan: #9ccfd4;
-      --cyan-pale: #c8eef0;
-      --rust: #c44332;
-      --ink: #25251f;
-      --muted: #77746a;
-      --line: rgba(37, 37, 31, .22);
-      --display: "Archivo Black", "Helvetica Neue", Arial, sans-serif;
-      --body: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
-      --mono: "Space Mono", monospace;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: var(--body);
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: var(--orange); }
-    a:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
-    ::selection { background: var(--cyan); color: var(--ink); }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 18px 3.3%;
-      background: var(--cream);
-      border-bottom: 1px solid var(--line);
-    }
-    .wordmark {
-      font-family: var(--display);
-      display: inline-flex;
-      align-items: center;
-      font-size: clamp(25px, 2.7vw, 38px);
-      line-height: 1.05;
-      letter-spacing: -1.2px;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .wordmark-girl {
-      display: inline-block;
-      width: 43px;
-      height: 54px;
-      margin-left: 9px;
-      vertical-align: middle;
-      overflow: visible;
-    }
-    .wordmark-girl svg { display: block; width: 100%; height: 100%; }
-    .navigation {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: clamp(22px, 3.1vw, 48px);
-      font-family: var(--mono);
-      font-size: clamp(10px, .95vw, 14px);
-      text-transform: uppercase;
-    }
-    .navigation a { transition: color .2s ease; }
-
-    .hero {
-      min-height: clamp(620px, 74vh, 760px);
-      padding: 34px 3.3% 32px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-    }
-    .eyebrow, .section-label, .small-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      line-height: 1.6;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-    .eyebrow {
-      display: inline-block;
-      width: fit-content;
-      padding: 6px 8px;
-      background: var(--orange);
-      color: var(--ink);
-      border: 1px solid var(--ink);
-      font-family: var(--display);
-      font-size: clamp(10px, .85vw, 11px);
-      line-height: 1.15;
-      letter-spacing: -.035em;
-    }
-    .hero-top { position: relative; z-index: 2; min-height: 34px; margin-left: -4%; }
-    .hero h1 {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      max-width: 100%;
-      margin: 34px auto 48px;
-      transform: translateY(10px);
-      font-family: var(--display);
-      font-size: clamp(76px, 10.2vw, 142px);
-      line-height: .94;
-      letter-spacing: -.07em;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .hero h1 span { display: block; }
-    .hero h1 .second-line { display: block; padding-left: 0; white-space: nowrap; }
-    .hero h1 .for-word { display: block; }
-    .hero h1 .title-final { display: block; white-space: nowrap; }
-    .hero h1 .clues-word { display: block; color: var(--orange); }
-
-    .hero-art {
-      position: absolute;
-      z-index: 1;
-      pointer-events: none;
-    }
-    .hero-art svg { display: block; width: 100%; height: auto; }
-    /* Small illustrations sit in the open margins around the centered headline. */
-    .earth-art { width: clamp(76px, 6.4vw, 108px); top: 10%; right: 18%; }
-    .footprints-art { width: clamp(58px, 5.2vw, 84px); left: 13%; top: 61%; transform: rotate(-29deg); }
-    .music-art { width: clamp(48px, 4.2vw, 68px); right: 16%; top: 39%; transform: rotate(8deg); }
-    .magnifier-art { width: clamp(60px, 5.2vw, 84px); left: 7%; top: 43%; transform: rotate(-18deg); }
-    .star-art { width: clamp(82px, 7.5vw, 122px); left: 2.5%; top: 13%; transform: rotate(18deg); }
-    .connections-art { width: clamp(68px, 5.8vw, 94px); right: 4%; top: 15%; transform: rotate(13deg); }
-    .paper-pen-art { width: clamp(76px, 6.8vw, 110px); right: 4.5%; left: auto; top: 51%; transform: rotate(-14deg); }
-    .laptop-art { width: clamp(54px, 4.3vw, 70px); left: 20%; top: 12%; transform: rotate(-3deg); }
-    .hero-bottom {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 30px;
-      border-top: 0;
-      padding-top: 0;
-    }
-    .seek-note {
-      margin: 0;
-      max-width: 320px;
-      font-family: var(--display);
-      font-size: clamp(13px, 1.55vw, 19px);
-      line-height: 1.2;
-      letter-spacing: -.035em;
-      text-transform: uppercase;
-    }
-    .hero-stamp {
-      position: absolute;
-      z-index: 1;
-      right: clamp(15%, 17vw, 22%);
-      bottom: 6%;
-      display: block;
-      width: clamp(104px, 8vw, 136px);
-      height: auto;
-      margin: 0;
-      color: var(--orange);
-      overflow: visible;
-      pointer-events: none;
-    }
-    .hero-stamp svg {
-      display: block;
-      width: 100%;
-      height: auto;
-      overflow: visible;
-    }
-    .hero-stamp .stamp-ring {
-      fill: none;
-      stroke: currentColor;
-      stroke-width: 1.15;
-    }
-    .hero-stamp .stamp-curve {
-      fill: currentColor;
-      font-family: var(--display);
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 1.15px;
-    }
-    .hero-stamp .stamp-year {
-      fill: currentColor;
-      font-family: var(--display);
-      font-size: 10px;
-      font-weight: 400;
-      text-anchor: middle;
-    }
-    .hero-stamp .stamp-star-teal,
-    .hero-stamp .stamp-star-orange,
-    .hero-stamp .stamp-star-gold,
-    .hero-stamp .stamp-star-cream,
-    .hero-stamp .stamp-dot { fill: var(--orange); }
-    .hero-stamp { color: var(--orange); }
-
-    .ticker {
-      overflow: hidden;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 12px clamp(12px, 3vw, 44px);
-    }
-    .ticker-track {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: clamp(7px, 1.25vw, 20px);
-      width: 100%;
-      font-family: var(--mono);
-      font-size: clamp(9px, .75vw, 11px);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: clamp(.3px, .08vw, 1px);
-    }
-    .ticker-track span { min-width: 0; white-space: nowrap; }
-    .ticker-track .ticker-star { color: #46c9dc; font-size: 20px; line-height: 1; }
-    .ticker-track span:not(.ticker-star) { color: #ffffff; }
-
-    .section { padding: 76px 8%; border-bottom: 1px solid var(--line); }
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 25px;
-      margin-bottom: 32px;
-      padding-bottom: 14px;
-      border-bottom: 1px solid var(--line);
-    }
-    .section-heading h2 {
-      margin: 0;
-      font-family: var(--display);
-      font-size: clamp(42px, 6.5vw, 96px);
-      line-height: 1;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .section-number { font-family: var(--mono); font-size: 11px; color: var(--muted); flex-shrink: 0; }
-    .work-list { border-top: 1px solid var(--ink); }
-    .work-row {
-      display: grid;
-      grid-template-columns: 75px minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 20px;
-      padding: 23px 0;
-      border-bottom: 1px solid var(--line);
-      transition: background .2s ease;
-    }
-    .work-row:hover { background: rgba(156, 207, 212, .12); }
-    .work-index { font-family: var(--mono); font-size: 11px; color: var(--orange); }
-    .work-label { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
-    .work-title {
-      display: block;
-      width: fit-content;
-      font-size: clamp(21px, 3vw, 34px);
-      font-weight: 600;
-      line-height: 1.1;
-      letter-spacing: -1.2px;
-    }
-    .work-tagline {
-      display: block;
-      color: var(--muted);
-      font-family: var(--mono);
-      font-size: 11px;
-      line-height: 1.5;
-      letter-spacing: 0;
-    }
-    /* Short graphic rules under selected category labels, not text underlines. */
-    #work .work-row:nth-child(1) .work-title::after,
-    #work .work-row:nth-child(2) .work-title::after,
-    #work .work-row:nth-child(3) .work-title::after,
-    #collaborations .work-row .work-title::after {
-      content: "";
-      display: block;
-      width: 54px;
-      height: 3px;
-      margin-top: 10px;
-      background: var(--orange);
-    }
-    #work .work-row:nth-child(2) .work-title::after { width: 88px; background: var(--cyan); }
-    #work .work-row:nth-child(3) .work-title::after { width: 106px; background: var(--orange); }
-    #collaborations .work-row .work-title::after { width: 72px; background: var(--cyan); }
-
-    /* Compact five-point star icons beside each work title. */
-    .work-arrow { display: flex; align-items: center; justify-content: center; width: 25px; height: 25px; flex: 0 0 25px; color: var(--cyan); transition: transform .2s ease; }
-    .work-arrow svg { display: none; }
-    .work-arrow::before { content: ""; display: block; width: 17px; height: 17px; background: currentColor; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); }
-    .work-row:hover .work-arrow { transform: rotate(12deg) scale(1.06); }
-    .ticker-track .ticker-star { display: inline-block; width: 12px; height: 12px; flex: 0 0 12px; margin: 0 2px; background: #46c9dc; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 94%, 50% 72%, 21% 94%, 32% 57%, 2% 35%, 39% 35%); vertical-align: middle; }
-    .about-section { background: var(--cyan); border: 0; box-shadow: none; position: relative; }
-    .about-section::before, .about-section::after { content: none !important; display: none !important; }
-
-    .work-arrow { display: block; width: 25px; height: 25px; transition: transform .2s ease; }
-    .work-arrow svg { display: block; width: 100%; height: 100%; }
-    .work-row:hover .work-arrow { transform: translate(3px, -3px); }
-
-    .references-section { background: var(--cream); color: var(--ink); }
-    .reference-intro {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 28px;
-      margin: 0 0 28px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid var(--line);
-    }
-    .reference-intro p { max-width: 480px; margin: 0; font-size: 16px; }
-    .reference-board { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
-    .reference-card {
-      min-width: 0;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 18px;
-      border: 1px solid var(--line);
-      background: var(--cream);
-    }
-    .reference-card:nth-child(n) { background: var(--cream); color: var(--ink); }
-    .reference-card h3::after {
-      content: "";
-      display: block;
-      width: 42px;
-      height: 3px;
-      margin-top: 10px;
-      background: var(--orange);
-    }
-    .reference-card:nth-child(even) h3::after { background: var(--cyan); }
-    .reference-card .reference-type { font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
-    .reference-card h3 {
-      margin: 22px 0 8px;
-      font-family: var(--display);
-      font-size: clamp(22px, 3vw, 36px);
-      line-height: .98;
-      letter-spacing: -.055em;
-      text-transform: uppercase;
-      font-weight: 400;
-      overflow-wrap: anywhere;
-    }
-    .reference-card p { margin: 0; font-size: 12px; line-height: 1.45; }
-    .reference-card a { align-self: flex-start; margin-top: 20px; font-family: var(--mono); font-size: 10px; text-transform: uppercase; }
-
-    .about-section { background: var(--cyan); color: var(--ink); border-bottom: 0; }
-    .about-section .section-label, .about-section .contact-email { color: var(--ink); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
-    .about-grid h2 {
-      margin: 8px 0 0;
-      font-family: var(--display);
-      font-size: clamp(37px, 6vw, 70px);
-      line-height: .95;
-      letter-spacing: -.065em;
-      text-transform: uppercase;
-      font-weight: 400;
-    }
-    .about-outro {
-      margin: 0 0 24px;
-      font-family: var(--display);
-      font-size: clamp(27px, 4.2vw, 48px);
-      line-height: 1;
-      letter-spacing: -.055em;
-      text-transform: uppercase;
-    }
-    .about-copy { max-width: 460px; font-size: 17px; line-height: 1.65; }
-    .about-copy p:first-child { margin-top: 0; }
-    .contact-email { display: inline-block; font-size: clamp(17px, 2.5vw, 24px); overflow-wrap: anywhere; }
-    .contact-email:hover { color: var(--orange); }
-
-    .site-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 22px 5%;
-      background: var(--ink);
-      color: var(--cream);
-      font-family: var(--mono);
-      font-size: 10px;
-      text-transform: uppercase;
-    }
-    .site-footer a:hover, .back-to-top { color: var(--cyan); }
-    .back-to-top { display: inline-flex; align-items: center; gap: 6px; }
-    .back-to-top-arrow { display: inline-block; width: 13px; height: 13px; flex: 0 0 auto; }
-
-    /* On wide screens, move the laptop and paper into the side clusters. Mobile keeps its original circular arrangement. */
-    @media (min-width: 1100px) {
-      /* Wide screens get generous gaps between each illustration; the title stays centered. */
-      .star-art { left: 3%; top: 15%; width: clamp(66px, 5.6vw, 92px); }
-      .laptop-art { top: 13%; left: 19%; width: clamp(48px, 3.8vw, 62px); transform: rotate(-4deg); }
-      .magnifier-art { left: 7.5%; top: 44%; width: clamp(52px, 4.1vw, 68px); }
-      .footprints-art { left: 14.2%; top: 63%; width: clamp(46px, 3.8vw, 62px); }
-      .earth-art { top: 11%; right: 18%; width: clamp(70px, 5.7vw, 94px); }
-      .connections-art { top: 15%; right: 4.5%; width: clamp(62px, 5.1vw, 84px); }
-      .music-art { top: 40%; right: 15.5%; width: clamp(44px, 3.6vw, 58px); }
-      .paper-pen-art { top: 52%; left: auto; right: 4.5%; width: clamp(70px, 5.7vw, 94px); transform: rotate(-14deg); }
-      .hero-bottom { padding-right: 0; }
-      .hero-stamp { right: 4.5%; bottom: 5.5%; width: clamp(108px, 8vw, 138px); }
-    }
-
-    /* Keep the headline centered and comfortably inside the viewport on resized desktop windows. */
-    @media (min-width: 761px) and (max-width: 1099px) {
-      .hero h1 { font-size: clamp(58px, 8.1vw, 90px); }
-    }
-
-    @media (max-width: 760px) {
-      .site-header { align-items: flex-start; flex-direction: column; gap: 14px; padding: 16px 6%; }
-      .wordmark { font-size: 25px; }
-      .wordmark-girl { width: 31px; height: 38px; margin-left: 7px; }
-      .navigation { justify-content: flex-start; gap: 10px 16px; font-size: 10px; }
-      .hero { min-height: 540px; padding: 28px 6% 26px; }
-      .hero h1 { margin: 34px auto 28px; font-size: clamp(43px, 10.2vw, 74px); line-height: .98; }
-      .hero h1 .second-line { padding-left: 0; }
-      .earth-art { top: 23%; right: 17%; width: 34px; }
-      .laptop-art { top: 11%; left: 46%; width: 39px; }
-      .footprints-art { left: 18%; top: 61%; width: 23px; transform: rotate(-27deg); }
-      .music-art { right: 18%; top: 61%; width: 25px; }
-      .magnifier-art { left: 10%; top: 43%; width: 22px; }
-      .star-art { left: 22%; top: 23%; width: 18px; }
-      .connections-art { right: 10%; top: 43%; width: 29px; transform: rotate(13deg); }
-      .paper-pen-art { left: 46%; top: 71%; width: 27px; transform: rotate(-14deg); }
-      .seek-note { max-width: 190px; font-size: 12px; }
-      .hero-bottom { gap: 15px; }
-      .hero-stamp { right: 4.5%; bottom: 6%; width: 68px; }
-      .section { padding: clamp(48px, 7vw, 64px) 6%; }
-      .section-heading { align-items: flex-start; flex-direction: column; gap: 10px; margin-bottom: 26px; }
-      .section-heading h2 { font-size: clamp(34px, 9vw, 58px); }
-      .work-row { grid-template-columns: 35px minmax(0, 1fr) auto; gap: 12px; padding: clamp(18px, 3.2vw, 23px) 0; }
-      .work-title { font-size: 23px; }
-      .work-tagline { font-size: 10px; }
-      .reference-intro { flex-direction: column; gap: 12px; }
-      .reference-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .reference-card { min-height: 190px; padding: 16px; }
-      .about-grid { grid-template-columns: 1fr; gap: 28px; }
-      .about-copy { font-size: 16px; }
-      .site-footer { align-items: flex-start; flex-direction: column; gap: 10px; padding: 22px 6%; }
-      .back-to-top-arrow { display: none; }
-    }
-    @media (max-width: 420px) {
-      .hero { min-height: 515px; }
-      .hero h1 { font-size: 10.2vw; margin-top: 30px; margin-bottom: 26px; }
-      .hero h1 .second-line { padding-left: 0; }
-      .earth-art { top: 23%; right: 15%; width: 29px; }
-      .laptop-art { top: 12%; left: 45%; width: 34px; }
-      .footprints-art { top: 62%; left: 15%; width: 20px; transform: rotate(-27deg); }
-      .music-art { top: 62%; right: 15%; width: 22px; }
-      .magnifier-art { left: 7%; top: 43%; width: 20px; }
-      .star-art { left: 22%; top: 23%; width: 16px; }
-      .connections-art { right: 7%; top: 43%; width: 26px; transform: rotate(13deg); }
-      .paper-pen-art { left: 45%; top: 71%; width: 24px; transform: rotate(-14deg); }
-      .hero-stamp { right: 3.5%; bottom: 6%; width: 62px; }
-      .reference-board { grid-template-columns: 1fr; }
-      .reference-card { min-height: 175px; }
-      .ticker { padding: 12px 6%; }
-      .ticker-track { justify-content: center; flex-wrap: wrap; gap: 10px 12px; font-size: 9px; letter-spacing: .35px; }
-      .ticker-track .ticker-star { font-size: 15px; }
-    }
-  
-/* Compact, uncropped photo collages: every image keeps its own proportions. */
-.photo-grid{display:block;columns:3;column-gap:10px;}
-.photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 10px;vertical-align:top;}
-.photo-card a{display:block;overflow:hidden;background:transparent;}
-.photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;transition:none;}
-.photo-card a:hover img{transform:none;}
-.photo-card figcaption{padding:5px 0 9px;font-size:9px;}
-.eyes-preview{margin-top:0;}
-.photo-category-section{margin-bottom:12px;}
-@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
-@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
-
-
-/* Eyes: one connected collage, with every photograph fully visible. */
-.eyes-square-collage{width:min(100%,620px);aspect-ratio:auto;display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;}
-.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:hidden;background:transparent;margin:0 0 5px;vertical-align:top;}
-.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;}
-.eyes-tile.tile-a,.eyes-tile.tile-b,.eyes-tile.tile-c,.eyes-tile.tile-d,.eyes-tile.tile-e,.eyes-tile.tile-f,.eyes-tile.tile-g,.eyes-tile.tile-h,.eyes-tile.tile-i,.eyes-tile.tile-j{grid-area:auto;}
-@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
-@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
-
-</style>
-</head>
-
-<body id="home">
-  <header class="site-header">
-    <a class="wordmark" href="#home">Desani Curbelo
-      <span class="wordmark-girl" aria-hidden="true">
-        <svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="18" cy="21" r="16" fill="#ff8a22"/>
-          <g stroke="#25251f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-            <!-- Slim stick-figure silhouette, with long straight honey-brown blonde hair -->
-            <path d="M18 3.2C11.4 3.2 8.1 8 8.8 14.1L8.8 32.8 12.6 34.5 15 21.8H21L23.4 34.5 27.2 32.8 27.2 14.1C27.9 8 24.6 3.2 18 3.2Z" fill="#b99459"/>
-            <path d="M11.2 8.6C13 5.2 15.3 4.3 18 4.3S23.2 5.2 24.8 8.6" fill="none" stroke="#8d6a3d" stroke-width="1.1"/>
-            <circle cx="18" cy="12.5" r="5.8" fill="#f2ebdd"/>
-            <path d="M12.7 11.1C13.7 7.8 16 6.7 18 6.7s4.3 1.1 5.3 4.4" fill="none" stroke="#25251f" stroke-width="1.5"/>
-            <path d="M13.7 20.2 9.8 30.8 18 34.1 26.2 30.8 22.3 20.2Z" fill="#168d83"/>
-            <path d="M15 32.7 13.3 43.8M21 32.7 22.7 43.8M9.8 30.8 6.5 28.1M26.2 30.8 29.5 28.1" fill="none"/>
-            <path d="M13.3 43.8H10.5M22.7 43.8H25.5" fill="none" stroke-width="2.2"/>
-          </g>
-          <circle cx="16" cy="12.5" r=".8" fill="#25251f"/>
-          <circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
-          <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
-          <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-          <circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-        </svg>
-      </span>
-    </a>
-    <nav class="navigation" aria-label="Main navigation">
-      <a href="#work">My Work</a>
-      <a href="#collaborations">Collaborations</a>
-      <a href="#references">References</a>
-      <a href="#about">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-top" aria-hidden="true"></div>
-
-      <div class="hero-art earth-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3" />
-          <path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-          <path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-          <path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="hero-art footprints-art" aria-hidden="true">
-        <svg viewBox="0 0 100 150" role="img">
-          <g fill="#25251f">
-            <!-- two playful sole prints with distinct toe pads, like the reference -->
-            <path d="M25 31c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
-            <path d="M61 66c-7 0-11 7-10 16l3 16c1 7 5 10 11 9 6-1 9-7 8-14l-2-18c-1-6-4-9-10-9Z" />
-            <ellipse cx="15" cy="25" rx="3.4" ry="4.4" transform="rotate(-18 15 25)" />
-            <ellipse cx="21" cy="19" rx="3.5" ry="4.2" transform="rotate(-10 21 19)" />
-            <ellipse cx="28" cy="17" rx="3.5" ry="4.2" />
-            <ellipse cx="35" cy="19" rx="3.2" ry="4" transform="rotate(12 35 19)" />
-            <ellipse cx="41" cy="24" rx="2.8" ry="3.5" transform="rotate(20 41 24)" />
-            <ellipse cx="51" cy="60" rx="3.4" ry="4.4" transform="rotate(-18 51 60)" />
-            <ellipse cx="57" cy="54" rx="3.5" ry="4.2" transform="rotate(-10 57 54)" />
-            <ellipse cx="64" cy="52" rx="3.5" ry="4.2" />
-            <ellipse cx="71" cy="54" rx="3.2" ry="4" transform="rotate(12 71 54)" />
-            <ellipse cx="77" cy="59" rx="2.8" ry="3.5" transform="rotate(20 77 59)" />
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art music-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <g fill="#25251f" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round">
-            <path d="M42 18v48c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V34l31-8v30c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V12Z" />
-            <path d="M42 18 81 8v11L42 29Z" fill="#25251f" />
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art magnifier-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <circle cx="41" cy="39" r="25" fill="#9ccfd4" fill-opacity=".55" stroke="#25251f" stroke-width="7" />
-          <path d="M59 58 83 83" fill="none" stroke="#ff6200" stroke-width="11" stroke-linecap="round" />
-          <path d="M59 58 83 83" fill="none" stroke="#25251f" stroke-width="3" stroke-linecap="round" />
-        </svg>
-      </div>
-      <div class="hero-art star-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <path d="M50 5 61 36 94 38 68 58 77 91 50 71 23 91 32 58 6 38 39 36Z" fill="#f4d447" stroke="#25251f" stroke-width="5" stroke-linejoin="round" />
-        </svg>
-      </div>
-      <div class="hero-art laptop-art" aria-hidden="true">
-        <svg viewBox="0 0 100 80" role="img">
-          <rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f" />
-          <rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5" />
-          <circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5" />
-          <path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round" />
-          <path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round" />
-        </svg>
-      </div>
-      <div class="hero-art connections-art" aria-hidden="true">
-        <svg viewBox="0 0 120 100" role="img">
-          <g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round">
-            <path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68" />
-          </g>
-          <g fill="#9ccfd4" stroke="#25251f" stroke-width="4">
-            <circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/>
-          </g>
-        </svg>
-      </div>
-      <div class="hero-art paper-pen-art" aria-hidden="true">
-        <svg viewBox="0 0 100 100" role="img">
-          <path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
-          <path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4" stroke-linejoin="round" />
-          <path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round" />
-          <g transform="rotate(38 69 66)">
-            <path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
-            <path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3" />
-            <path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3" stroke-linejoin="round" />
-          </g>
-        </svg>
-      </div>
-
-      <h1 class="clue-title">
-        <span>LOOKING</span>
-        <span class="for-word">FOR</span>
-        <span class="clues-word">CLUES</span>
-      </h1>
-
-      <div class="hero-bottom">
-        <p class="seek-note">SEEK, AND YOU SHALL FIND.</p>
-        <span class="hero-stamp" role="img" aria-label="Made and found, 2026">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-              <path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61" />
-              <path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61" />
-            </defs>
-            <circle class="stamp-ring" cx="60" cy="60" r="54" />
-            <circle class="stamp-ring" cx="60" cy="60" r="49.5" />
-            <text class="stamp-curve">
-              <textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath>
-            </text>
-            <text class="stamp-curve">
-              <textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath>
-            </text>
-            <circle class="stamp-dot" cx="25" cy="61" r="1.7" />
-            <circle class="stamp-dot" cx="95" cy="61" r="1.7" />
-            <text class="stamp-year" x="40" y="65">20</text>
-            <path class="stamp-star-teal" d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" />
-            <path class="stamp-star-orange" d="M60 51 62.9 57.1 69.6 58.1 64.8 62.8 66 69.5 60 66.3 54 69.5 55.2 62.8 50.4 58.1 57.1 57.1Z" />
-            <path class="stamp-star-gold" d="M60 53.4 62.4 58.3 67.8 59.1 63.9 62.9 64.8 68.3 60 65.7 55.2 68.3 56.1 62.9 52.2 59.1 57.6 58.3Z" />
-            <path class="stamp-star-cream" d="M60 56 61.8 59.7 65.9 60.3 62.9 63.2 63.6 67.3 60 65.3 56.4 67.3 57.1 63.2 54.1 60.3 58.2 59.7Z" />
-            <text class="stamp-year" x="80" y="65">26</text>
-          </svg>
-        </span>
-      </div>
-    </section>
-
-    <div class="ticker" aria-label="Creative interests">
-      <div class="ticker-track">
-        <span>SOUND</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span>
-        <span>CONNECTIONS</span>
-      </div>
-    </div>
-
-    <section class="section" id="work">
-      <div class="section-heading">
-        <h2>MY WORK</h2>
-        <span class="section-number">01 / MADE</span>
-      </div>
-      <div class="work-list">
-        <div class="work-row">
-          <span class="work-index">01</span>
-          <div class="work-label">
-            <span class="work-title">VIDEO</span>
-            <span class="work-tagline">Clips, edits, and moving images.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-        <div class="work-row">
-          <span class="work-index">02</span>
-          <div class="work-label">
-            <span class="work-title">PHOTOGRAPHY</span>
-            <span class="work-tagline">Images, places, details, and moments.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-        <div class="work-row">
-          <span class="work-index">03</span>
-          <div class="work-label">
-            <span class="work-title">MUSIC + AUDIO</span>
-            <span class="work-tagline">Demos, experiments, sounds, and ideas.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="collaborations">
-      <div class="section-heading">
-        <h2>COLLABORATIONS</h2>
-        <span class="section-number">02 / MADE TOGETHER</span>
-      </div>
-      <div class="work-list">
-        <div class="work-row">
-          <span class="work-index">01</span>
-          <div class="work-label">
-            <span class="work-title">A SPACE FOR SHARED WORK</span>
-            <span class="work-tagline">A place for ideas to meet and become something new.</span>
-          </div>
-          <span class="work-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" focusable="false">
-              <path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section references-section" id="references">
-      <div class="section-heading">
-        <h2>REFERENCE BOARD</h2>
-        <span class="section-number">03 / FOUND</span>
-      </div>
-      <div class="reference-intro">
-        <p>A growing collection of things that caught my eye.</p>
-        <span class="section-label">CLUES / IN PROGRESS</span>
-      </div>
-      <div class="reference-board">
-        <article class="reference-card">
-          <span class="reference-type">01 / SOUND</span>
-          <div>
-            <h3>Music &amp; playlists</h3>
-            <p>Songs for every mood, moment, and memory.</p>
-          </div>
-          <a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=6c0814e0dab14591" target="_blank" rel="noopener noreferrer">Open Spotify ↗</a>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">02 / IMAGE</span>
-          <div>
-            <h3>Images</h3>
-            <p>Visuals, photographs, and frames worth keeping.</p>
-          </div>
-          <span class="section-label">COLLECT / CONNECT</span>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">03 / MOVEMENT</span>
-          <div>
-            <h3>Film &amp; motion</h3>
-            <p>Scenes, gestures, and moving images that leave a trace.</p>
-          </div>
-          <span class="section-label">NOTICE / RETURN</span>
-        </article>
-        <article class="reference-card">
-          <span class="reference-type">04 / CONNECTIONS</span>
-          <div>
-            <h3>Following a thread</h3>
-            <p>Fragments, moments, and details I don't want to lose.</p>
-          </div>
-          <span class="section-label">LOOK CLOSER ↗</span>
-        </article>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="about-grid">
-        <div>
-          <span class="section-label">04 / CONTACT</span>
-          
-        </div>
-        <div class="about-copy">
-          <p class="about-outro">LET'S SEE WHERE THIS GOES...</p>
-          <a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© <span id="year">2026</span> Desani Curbelo</span>
-    <span>PERSONAL ARCHIVE / EST. 2026</span>
-    <a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+</body></html>
