@@ -146,10 +146,6 @@ body.flashlight-mode .flashlight-cursor{display:block}
 .ticker-track .ticker-star{flex-basis:20px !important;width:20px !important;height:22px !important}
 .ticker-track .ticker-star:before{font-size:20px !important;line-height:22px !important}
 @media(max-width:760px){.ticker-track .ticker-star{flex-basis:17px !important;width:17px !important;height:19px !important}.ticker-track .ticker-star:before{font-size:17px !important;line-height:19px !important}}
-/* Keep the footer visually continuous with the cyan contact section. */
-.site-footer{background:var(--cyan) !important;color:var(--ink) !important;border-top:0 !important}
-.site-footer .site-credit-label{color:var(--ink) !important}
-.site-footer a:hover,.site-footer .back-to-top{color:var(--orange) !important}
 /* Hidden clues glow only when the flashlight cursor passes close to them. */
 body.flashlight-mode .flashlight-clue{opacity:0 !important;filter:none;transition:opacity .18s ease,filter .18s ease}
 body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:drop-shadow(0 0 9px currentColor)}
@@ -158,14 +154,15 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 @media(prefers-reduced-motion:reduce){body.flashlight-mode .flashlight-clue{transition:none}}
 
 
-/* Final polish: smooth, frame-synced flashlight and one continuous cyan contact/footer area. */
+/* Final polish: smooth flashlight; remove only the decorative stripe above the footer. */
 .flashlight-cursor{transition:none !important;will-change:transform;backface-visibility:hidden;}
 .flashlight-overlay{will-change:background;}
-.about-section{border-bottom:0 !important;margin-bottom:0 !important;}
-.site-footer{background:var(--cyan) !important;color:var(--ink) !important;border:0 !important;margin-top:0 !important;box-shadow:none !important;}
-.site-footer:before, footer.site-footer:before{content:none !important;display:none !important;height:0 !important;background:none !important;}
-.site-footer .site-credit-label{color:var(--ink) !important;}
-.site-footer a:hover,.site-footer .back-to-top{color:var(--orange) !important;}
+.site-footer:before{content:none !important;display:none !important;height:0 !important;background:none !important;}
+/* On touch screens, keep the page still while flashlight mode is being explored. */
+@media (pointer:coarse) and (max-width:760px){
+  body.flashlight-mode{overscroll-behavior:none;}
+  body.flashlight-mode .flashlight-overlay{touch-action:none;}
+}
 
 </style></head>
 <body id="home">
@@ -319,19 +316,33 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
       pointerFramePending = false;
     });
   }, {passive:true});
-  // Touch devices do not have a persistent hover cursor: follow the active finger while dragging.
+  // On mobile, follow the finger and suppress page scrolling only while flashlight mode is on.
+  let touchFramePending = false;
+  let pendingTouchX = window.innerWidth / 2;
+  let pendingTouchY = window.innerHeight / 2;
   document.addEventListener('touchstart', event => {
     if (event.touches && event.touches.length) {
       const touch = event.touches[0];
-      moveFlashlight(touch.clientX, touch.clientY);
+      pendingTouchX = touch.clientX;
+      pendingTouchY = touch.clientY;
+      moveFlashlight(pendingTouchX, pendingTouchY);
     }
   }, {passive:true});
   document.addEventListener('touchmove', event => {
+    if (!document.body.classList.contains('flashlight-mode')) return;
+    if (event.cancelable) event.preventDefault();
     if (event.touches && event.touches.length) {
       const touch = event.touches[0];
-      moveFlashlight(touch.clientX, touch.clientY);
+      pendingTouchX = touch.clientX;
+      pendingTouchY = touch.clientY;
+      if (touchFramePending) return;
+      touchFramePending = true;
+      requestAnimationFrame(() => {
+        moveFlashlight(pendingTouchX, pendingTouchY);
+        touchFramePending = false;
+      });
     }
-  }, {passive:true});
+  }, {passive:false});
   switchButton.addEventListener('click', () => {
     const enabled = !document.body.classList.contains('flashlight-mode');
     document.body.classList.toggle('flashlight-mode', enabled);
@@ -359,8 +370,19 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
     });
   }
   document.addEventListener('mousemove', e => revealNear(e.clientX, e.clientY), {passive:true});
+  let revealFramePending = false;
+  let revealX = -10000, revealY = -10000;
   document.addEventListener('touchmove', e => {
-    if (e.touches && e.touches.length) revealNear(e.touches[0].clientX, e.touches[0].clientY);
+    if (e.touches && e.touches.length) {
+      revealX = e.touches[0].clientX;
+      revealY = e.touches[0].clientY;
+      if (revealFramePending) return;
+      revealFramePending = true;
+      requestAnimationFrame(() => {
+        revealNear(revealX, revealY);
+        revealFramePending = false;
+      });
+    }
   }, {passive:true});
   document.addEventListener('touchstart', e => {
     if (e.touches && e.touches.length) revealNear(e.touches[0].clientX, e.touches[0].clientY);
@@ -373,3 +395,15 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 </script>
 
 </body></html>
+
+/* Final sizing polish: keep the LIGHTS ON control compact so it doesn't crowd the header. */
+.light-switch{gap:7px;padding:7px 9px;font-size:9px;}
+.switch-track{width:23px;height:13px;}
+.switch-track:after{width:7px;height:7px;top:2px;left:2px;}
+body.flashlight-mode .switch-track:after{left:12px;}
+@media(max-width:760px){
+  .light-switch{gap:6px;padding:6px 8px;font-size:8px;letter-spacing:.04em;}
+  .switch-track{width:21px;height:12px;}
+  .switch-track:after{width:6px;height:6px;top:2px;left:2px;}
+  body.flashlight-mode .switch-track:after{left:11px;}
+}
