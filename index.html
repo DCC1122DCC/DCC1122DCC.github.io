@@ -140,6 +140,23 @@ body.flashlight-mode .flashlight-cursor{display:block}
 .eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 @media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
 @media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
+
+/* Latest requested refinements */
+.tiny-star{display:none !important}
+.ticker-track .ticker-star{flex-basis:20px !important;width:20px !important;height:22px !important}
+.ticker-track .ticker-star:before{font-size:20px !important;line-height:22px !important}
+@media(max-width:760px){.ticker-track .ticker-star{flex-basis:17px !important;width:17px !important;height:19px !important}.ticker-track .ticker-star:before{font-size:17px !important;line-height:19px !important}}
+/* Keep the footer visually continuous with the cyan contact section. */
+.site-footer{background:var(--cyan) !important;color:var(--ink) !important;border-top:0 !important}
+.site-footer .site-credit-label{color:var(--ink) !important}
+.site-footer a:hover,.site-footer .back-to-top{color:var(--orange) !important}
+/* Hidden clues glow only when the flashlight cursor passes close to them. */
+body.flashlight-mode .flashlight-clue{opacity:0 !important;filter:none;transition:opacity .18s ease,filter .18s ease}
+body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:drop-shadow(0 0 9px currentColor)}
+.flashlight-clue.eyes{width:54px;height:34px;color:#b6f8ff;filter:drop-shadow(0 0 7px #73d9e8)}
+.flashlight-clue.eyes svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .flashlight-clue{transition:none}}
+
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -149,7 +166,7 @@ body.flashlight-mode .flashlight-cursor{display:block}
   <span class="flashlight-clue star" style="left:83%;top:67%;animation-delay:-1.3s">✧</span>
   <span class="flashlight-clue question" style="left:19%;top:76%;animation-delay:-2s">?</span>
   <span class="flashlight-clue print" style="left:62%;top:42%;transform:rotate(-18deg)"><svg viewBox="0 0 42 52"><path d="M8 32C3 14 13 4 21 4s18 10 13 28M12 36C8 22 14 10 21 10s13 12 9 26M16 39c-3-10-1-22 5-22s8 12 5 22M20 43c-1-6 0-12 2-12s3 6 2 12M5 28C1 14 10 1 21 1s20 13 16 27"/><path d="M10 43c3 5 7 7 11 7s9-2 12-7"/></svg></span>
-  <span class="flashlight-clue print" style="left:34%;top:57%;transform:rotate(22deg) scale(.8)"><svg viewBox="0 0 42 52"><path d="M8 32C3 14 13 4 21 4s18 10 13 28M12 36C8 22 14 10 21 10s13 12 9 26M16 39c-3-10-1-22 5-22s8 12 5 22M20 43c-1-6 0-12 2-12s3 6 2 12M5 28C1 14 10 1 21 1s20 13 16 27"/><path d="M10 43c3 5 7 7 11 7s9-2 12-7"/></svg></span>
+  <span class="flashlight-clue print" style="left:34%;top:57%;transform:rotate(22deg) scale(.8)"><svg viewBox="0 0 42 52"><path d="M8 32C3 14 13 4 21 4s18 10 13 28M12 36C8 22 14 10 21 10s13 12 9 26M16 39c-3-10-1-22 5-22s8 12 5 22M20 43c-1-6 0-12 2-12s3 6 2 12M5 28C1 14 10 1 21 1s20 13 16 27"/><path d="M10 43c3 5 7 7 11 7s9-2 12-7"/></svg></span><span class="flashlight-clue eyes" style="left:43%;top:31%"><svg viewBox="0 0 64 38"><path d="M3 19C10 7 20 4 29 19 20 34 10 31 3 19Z"/><path d="M35 19C44 4 54 7 61 19 54 31 44 34 35 19Z"/><circle cx="17" cy="19" r="4.5"/><circle cx="47" cy="19" r="4.5"/></svg></span>
 </div>
 <svg class="flashlight-cursor" id="flashlight-cursor" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-28 24 24)" stroke="#25251f" stroke-width="2.4" stroke-linejoin="round"><path d="M17 8h14v7l-2 4v20H19V19l-2-4Z" fill="#ff6200"/><path d="M17 8h14v7H17Z" fill="#f4d447"/><path d="M19 19h10M19 35h10" fill="none"/><path d="M20 39h8l-1 4h-6Z" fill="#25251f"/></g><path d="M23 2 21 6M30 3 28 7M16 4 18 8" stroke="#f4d447" stroke-width="2" stroke-linecap="round"/></svg>
 <header class="site-header"><div class="brand-tools"><a class="wordmark" href="#home">Desani Curbelo <span class="wordmark-girl" aria-hidden="true"><svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
@@ -300,6 +317,35 @@ body.flashlight-mode .flashlight-cursor{display:block}
     switchButton.setAttribute('aria-label', enabled ? 'Turn flashlight dark mode off' : 'Turn flashlight dark mode on');
     switchLabel.textContent = enabled ? 'LIGHTS OFF' : 'LIGHTS ON';
     if (enabled) moveFlashlight(window.innerWidth / 2, window.innerHeight / 2);
+  });
+})();
+</script>
+
+
+<script>
+(() => {
+  const clues = Array.from(document.querySelectorAll('.flashlight-clue'));
+  if (!clues.length) return;
+  let lastX = -10000, lastY = -10000;
+  function revealNear(x, y) {
+    lastX = x; lastY = y;
+    clues.forEach(clue => {
+      const r = clue.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const distance = Math.hypot(cx - x, cy - y);
+      clue.classList.toggle('is-revealed', document.body.classList.contains('flashlight-mode') && distance < 105);
+    });
+  }
+  document.addEventListener('mousemove', e => revealNear(e.clientX, e.clientY), {passive:true});
+  document.addEventListener('touchmove', e => {
+    if (e.touches && e.touches.length) revealNear(e.touches[0].clientX, e.touches[0].clientY);
+  }, {passive:true});
+  document.addEventListener('touchstart', e => {
+    if (e.touches && e.touches.length) revealNear(e.touches[0].clientX, e.touches[0].clientY);
+  }, {passive:true});
+  const switchButton = document.getElementById('light-switch');
+  if (switchButton) switchButton.addEventListener('click', () => {
+    requestAnimationFrame(() => revealNear(lastX, lastY));
   });
 })();
 </script>
