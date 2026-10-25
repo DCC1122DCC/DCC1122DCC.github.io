@@ -153,6 +153,18 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
   body.flashlight-mode .flashlight-overlay{touch-action:none;}
 }
 
+
+/* Final sizing polish: keep the LIGHTS ON control compact so it doesn't crowd the header. */
+.light-switch{gap:7px;padding:7px 9px;font-size:9px;}
+.switch-track{width:23px;height:13px;}
+.switch-track:after{width:7px;height:7px;top:2px;left:2px;}
+body.flashlight-mode .switch-track:after{left:12px;}
+@media(max-width:760px){
+  .light-switch{gap:6px;padding:6px 8px;font-size:8px;letter-spacing:.04em;}
+  .switch-track{width:21px;height:12px;}
+  .switch-track:after{width:6px;height:6px;top:2px;left:2px;}
+  body.flashlight-mode .switch-track:after{left:11px;}
+}
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -385,14 +397,3 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 
 </body></html>
 
-/* Final sizing polish: keep the LIGHTS ON control compact so it doesn't crowd the header. */
-.light-switch{gap:7px;padding:7px 9px;font-size:9px;}
-.switch-track{width:23px;height:13px;}
-.switch-track:after{width:7px;height:7px;top:2px;left:2px;}
-body.flashlight-mode .switch-track:after{left:12px;}
-@media(max-width:760px){
-  .light-switch{gap:6px;padding:6px 8px;font-size:8px;letter-spacing:.04em;}
-  .switch-track{width:21px;height:12px;}
-  .switch-track:after{width:6px;height:6px;top:2px;left:2px;}
-  body.flashlight-mode .switch-track:after{left:11px;}
-}
