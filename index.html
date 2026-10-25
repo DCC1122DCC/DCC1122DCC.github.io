@@ -176,6 +176,9 @@ body.flashlight-mode .switch-track:after{left:11px;}
   .switch-track:after{width:5px;height:5px;top:3px;left:2px;}
   body.flashlight-mode .switch-track:after{left:10px;}
 }
+
+/* Live-music gallery: show the full frame without cropping. */
+#live-music .music-photo-grid .photo-card img{height:auto;aspect-ratio:auto;object-fit:contain;background:var(--paper)}
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -223,9 +226,25 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <a class="work-row" href="#wishboard"><span class="work-index">03</span><span class="work-label"><span class="work-title">DIGITAL / INTERACTIVE</span><span class="work-tagline">Wishboard — an independently built wishlist and budgeting app.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
 </div>
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY<br>&amp; IMAGE-MAKING <span class="tiny-star" aria-hidden="true"></span></h3><p>A collection of things I’ve seen, things I’ve kept, and things I can’t stop looking at.</p></div>
-<section class="photo-category-section" id="nyc-film"><div class="photo-group-label">01 / NYC ON FILM <span>New York, on film</span></div><p class="category-placeholder">Film photographs from New York. Selected images coming soon.</p></section>
-<section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">02 / FASHION &amp; PORTRAITS <span>California and beyond</span></div><p class="category-placeholder">Fashion shoots, styled portraits, and people in their element. Selected images coming soon.</p></section>
-<section class="photo-category-section" id="live-music"><div class="photo-group-label">03 / LIVE MUSIC <span>Color, light, and movement</span></div><p class="category-placeholder">Concert photographs and live-music moments. Selected images coming soon.</p></section>
+<section class="photo-category-section" id="nyc-film"><div class="photo-group-label">01 / NEW YORK ON FILM <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a><figcaption><span>01 / Candid</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a><figcaption><span>02 / Portrait</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a><figcaption><span>03 / Figure</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a><figcaption><span>05 / Somewhere</span><span>Street</span></figcaption></figure></div></section>
+<section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">02 / FASHION &amp; PORTRAITS <span>California and beyond</span></div><div class="photo-grid">
+<figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a><figcaption><span>01 / Olive Study</span><span>Fashion</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a><figcaption><span>02 / Half Face</span><span>Beauty</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a><figcaption><span>03 / Color Shadow</span><span>Editorial</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a><figcaption><span>04 / After Hours</span><span>Portrait</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a><figcaption><span>05 / Blue Gloves</span><span>Editorial</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/33383553.jpg" data-lightbox><img src="./images/33383553.jpg" alt="Blue-toned portrait with camera metadata" loading="lazy"></a><figcaption><span>04 / Frame</span><span>Photography</span></figcaption></figure>
+</div></section>
+<section class="photo-category-section" id="live-music">
+<div class="photo-group-label">03 / LIVE MUSIC <span>Color, light, and movement</span></div>
+<div class="photo-grid music-photo-grid">
+<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand russ performing live"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live" loading="lazy"></a><figcaption><span>01 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a><figcaption><span>02 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-03-daytime-performance.jpg" data-lightbox aria-label="Expand performer on an outdoor stage"><img src="./images/music-03-daytime-performance.jpg" alt="Performer on an outdoor stage" loading="lazy"></a><figcaption><span>03 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a><figcaption><span>04 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a><figcaption><span>05 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a><figcaption><span>06 / Live music</span><span>Photography</span></figcaption></figure>
+</div></section>
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label">04 / EYES <span>A recurring subject</span></div>
 <p class="eyes-intro">Sometimes the clues are looking right at you.</p><p class="eyes-click-note">EXPAND PHOTO FOR A CLOSER LOOK</p>
@@ -243,11 +262,13 @@ body.flashlight-mode .switch-track:after{left:11px;}
 </div>
 </section>
 <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
-<figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a><figcaption><span>01 / Candid</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a><figcaption><span>02 / Portrait</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a><figcaption><span>03 / Figure</span><span>Photography</span></figcaption></figure>
+
+
+
 <figure class="photo-card"><a href="./images/33383553.jpg" data-lightbox><img src="./images/33383553.jpg" alt="Blue-toned portrait with camera metadata" loading="lazy"></a><figcaption><span>04 / Frame</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a><figcaption><span>05 / Somewhere</span><span>Street</span></figcaption></figure>
+
+<figure class="photo-card"><a href="./images/misc-06-water.JPG" data-lightbox><img src="./images/misc-06-water.JPG" alt="Person swimming with a snorkel in sunlit water" loading="lazy"></a><figcaption><span>06 / Water</span><span>Everyday</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a><figcaption><span>07 / In Between</span><span>Everyday</span></figcaption></figure>
 <figure class="photo-card"><a href="./images/SOUVENIRS.JPG" data-lightbox><img src="./images/SOUVENIRS.JPG" alt="Nighttime street scene with a Souvenirs sign" loading="lazy"></a><figcaption><span>06 / After Hours</span><span>Street</span></figcaption></figure>
 </div><p class="photo-note">Six photographs are shown here for now. Once you choose images for the other collections, we can move them into the right sections and keep each gallery to six featured images.</p></section>
 <div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. Filming, editing, and creative contributions across different kinds of work.</p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article></div>
