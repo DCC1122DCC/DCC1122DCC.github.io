@@ -193,17 +193,35 @@ body.flashlight-mode .switch-track:after{left:11px;}
 </style>
 
 <style id="final-banner-refinement">
-/* Light title card that melts into a reversed-sunset dusk at the image archive. */
-.hero{background:linear-gradient(180deg,#fffdf7 0%,#f2ebdd 23%,#ffd0a0 48%,#ff984d 62%,#8b9fca 78%,#36466e 89%,#171d35 100%) !important;}
+/* Keep the original light title card intact; begin the sunset only below the stamp. */
+.hero{
+  min-height:clamp(620px,74vh,760px) !important;
+  background:#f2ebdd !important;
+}
 .hero h1{font-size:clamp(58px,8.4vw,116px) !important;}
-.hero-stamp{left:50% !important;right:auto !important;bottom:4.5% !important;transform:translateX(-50%) !important;width:clamp(86px,6.8vw,112px) !important;}
+.hero-stamp{left:50% !important;right:auto !important;bottom:6% !important;transform:translateX(-50%) !important;width:clamp(86px,6.8vw,112px) !important;}
 .hero-bottom{justify-content:center !important;min-height:0 !important;}
 .hero-stamp svg{filter:drop-shadow(0 1px 1px rgba(255,255,255,.35));}
 .ticker{display:none !important;}
-@media(max-width:760px){.hero h1{font-size:clamp(42px,9vw,66px) !important;}.hero-stamp{width:66px !important;bottom:3.5% !important;}}
-/* The gradient's dark edge carries into the first photo collection. */
-.photo-category-section:first-of-type{background:linear-gradient(180deg,#171d35 0%,#242b45 22%,#f2ebdd 68%) !important;padding-top:clamp(48px,7vw,74px);}
-.photo-category-section:first-of-type .section-label,.photo-category-section:first-of-type .section-heading,.photo-category-section:first-of-type .section-heading h2,.photo-category-section:first-of-type .gallery-intro,.photo-category-section:first-of-type .gallery-intro p,.photo-category-section:first-of-type .gallery-intro em{color:#fffaf0 !important;}
+/* The sunset starts after the stamp, then flows down through the archive. */
+body{background:#171d35 !important;}
+.photo-category-section:first-of-type{
+  background:linear-gradient(180deg,#ffd0a0 0%,#ff984d 13%,#b87591 34%,#52638f 58%,#252b46 78%,#171d35 100%) !important;
+  padding-top:clamp(48px,7vw,74px);
+}
+.photo-category-section:first-of-type .section-label,
+.photo-category-section:first-of-type .section-heading,
+.photo-category-section:first-of-type .section-heading h2,
+.photo-category-section:first-of-type .gallery-intro,
+.photo-category-section:first-of-type .gallery-intro p,
+.photo-category-section:first-of-type .gallery-intro em{color:#fffaf0 !important;}
+/* Keep later sections transparent so the dusk gradient continues down the site. */
+.photo-category-section:not(:first-of-type), .section:not(.hero){background:transparent !important;}
+@media(max-width:760px){
+  .hero{min-height:540px !important;background:#f2ebdd !important;}
+  .hero h1{font-size:clamp(42px,9vw,66px) !important;}
+  .hero-stamp{width:66px !important;bottom:6% !important;}
+}
 </style>
 
 </head>
