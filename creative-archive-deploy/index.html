@@ -193,20 +193,27 @@ body.flashlight-mode .switch-track:after{left:11px;}
 </style>
 
 <style id="final-banner-refinement">
-/* Keep the original light title card intact; begin the sunset only below the stamp. */
+/* One long, restrained sunset: light around the title, warmth after the stamp, dusk at the bottom. */
 .hero{
-  min-height:clamp(620px,74vh,760px) !important;
-  background:#f2ebdd !important;
+  min-height:clamp(980px,145vh,1380px) !important;
+  background:linear-gradient(180deg,
+    #fffdf8 0%,
+    #fffdf8 48%,
+    #f8f0e5 58%,
+    #ffd0a0 70%,
+    #ff984d 78%,
+    #b87591 86%,
+    #52638f 93%,
+    #171d35 100%) !important;
 }
 .hero h1{font-size:clamp(58px,8.4vw,116px) !important;}
-.hero-stamp{left:50% !important;right:auto !important;bottom:6% !important;transform:translateX(-50%) !important;width:clamp(86px,6.8vw,112px) !important;}
+.hero-stamp{left:50% !important;right:auto !important;bottom:15% !important;transform:translateX(-50%) !important;width:clamp(86px,6.8vw,112px) !important;}
 .hero-bottom{justify-content:center !important;min-height:0 !important;}
 .hero-stamp svg{filter:drop-shadow(0 1px 1px rgba(255,255,255,.35));}
 .ticker{display:none !important;}
-/* The sunset starts after the stamp, then flows down through the archive. */
-body{background:#171d35 !important;}
+/* Let the dusk edge breathe into the beginning of the archive instead of abruptly reversing. */
 .photo-category-section:first-of-type{
-  background:linear-gradient(180deg,#ffd0a0 0%,#ff984d 13%,#b87591 34%,#52638f 58%,#252b46 78%,#171d35 100%) !important;
+  background:linear-gradient(180deg,#171d35 0%,#252b46 10%,#f2ebdd 34%) !important;
   padding-top:clamp(48px,7vw,74px);
 }
 .photo-category-section:first-of-type .section-label,
@@ -215,12 +222,10 @@ body{background:#171d35 !important;}
 .photo-category-section:first-of-type .gallery-intro,
 .photo-category-section:first-of-type .gallery-intro p,
 .photo-category-section:first-of-type .gallery-intro em{color:#fffaf0 !important;}
-/* Keep later sections transparent so the dusk gradient continues down the site. */
-.photo-category-section:not(:first-of-type), .section:not(.hero){background:transparent !important;}
 @media(max-width:760px){
-  .hero{min-height:540px !important;background:#f2ebdd !important;}
+  .hero{min-height:900px !important;background:linear-gradient(180deg,#fffdf8 0%,#fffdf8 48%,#f8f0e5 58%,#ffd0a0 70%,#ff984d 78%,#b87591 86%,#52638f 93%,#171d35 100%) !important;}
   .hero h1{font-size:clamp(42px,9vw,66px) !important;}
-  .hero-stamp{width:66px !important;bottom:6% !important;}
+  .hero-stamp{width:66px !important;bottom:15% !important;}
 }
 </style>
 
