@@ -235,6 +235,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY</h3></div>
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / CURIOUS</span><span class="eyes-group-subtitle">A recurring subject</span></div>
+<p class="eyes-intro eyes-intro-under-title">Sometimes the clues are looking right at you.</p>
 <p class="eyes-click-note">EXPAND PHOTO FOR A CLOSER LOOK</p>
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -247,7 +248,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <a class="eyes-tile" href="./images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/EYE15.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE15.jpg" alt="Close-up brown eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/EYE16.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE16.jpg" alt="Close-up blue eye photograph" loading="lazy"></a>
-</div></div><p class="eyes-intro">*Sometimes the clues are looking right at you.</p></div>
+</div></div></div>
 </section> <section class="photo-category-section" id="live-music">
 <div class="photo-group-label">02 / ELECTRIC <span>Color, light, and movement</span></div>
 <div class="photo-grid music-photo-grid">
@@ -258,12 +259,11 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand russ performing live"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live" loading="lazy"></a></figure>
 </div></section> <section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">03 / DRAMA <span>California and beyond</span></div><div class="photo-grid">
+<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a></figure>
-
 </div></section> <section class="photo-category-section" id="nyc-film"><div class="photo-group-label">04 / OBSERVATIONAL <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure></div></section> <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
 
 
@@ -501,4 +501,18 @@ body.flashlight-mode{background-image:none;}
 #misc .photo-card{break-inside:initial;margin:0 0 12px;}
 #misc .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;display:block;}
 @media(max-width:520px){#misc .photo-grid{gap:8px}}
+</style>
+
+<style id="latest-gallery-order-adjustments">
+/* Eyes intro now sits beneath its left-aligned title and subtitle. */
+.eyes-group-label{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:4px!important;}
+.eyes-group-label .eyes-group-subtitle{display:block!important;}
+.eyes-intro-under-title{text-align:left!important;max-width:100%!important;margin:7px 0 10px!important;font-size:clamp(17px,1.8vw,23px)!important;line-height:1.25;font-style:italic;}
+.eyes-click-note{text-align:left!important;margin:0 0 16px!important;}
+#eyes .eyes-layout{display:block!important;width:min(100%,1120px)!important;margin:0 auto!important;}
+#eyes .eyes-layout-images{width:100%!important;}
+#live-music .music-photo-grid{display:grid!important;columns:initial!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start;gap:clamp(10px,1.4vw,18px)!important;}
+#live-music .music-photo-grid .photo-card{break-inside:initial!important;margin:0!important;}
+#live-music .music-photo-grid .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;}
+@media(max-width:760px){#live-music .music-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}}
 </style>
