@@ -180,6 +180,57 @@ body.flashlight-mode .switch-track:after{left:11px;}
 @media(max-width:760px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-card img{height:clamp(135px,42vw,220px);max-height:220px}.site-credit-label{font-size:10px}}
 @media(max-width:420px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.photo-card img{height:clamp(125px,40vw,175px);max-height:175px}}
 
+
+
+/* CHANGE REALITY — three visual worlds, one archive. */
+:root{--world-transition:background-color .45s ease,color .35s ease,border-color .35s ease;}
+body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:var(--world-transition);}
+.reality-switch{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:none;padding:7px 10px;border:1px solid var(--ink);border-radius:999px;background:var(--orange);color:var(--ink);font:700 8px/1.2 var(--mono);letter-spacing:.045em;text-transform:uppercase;cursor:pointer;transition:transform .2s ease,background-color .35s ease,color .35s ease,border-color .35s ease;white-space:nowrap;}
+.reality-switch:hover{transform:translateY(-2px);background:var(--cyan);}
+.reality-switch:focus-visible{outline:2px solid var(--orange);outline-offset:4px;}
+.reality-switch .reality-symbol{font-size:13px;line-height:1;}
+@media(max-width:760px){.brand-tools{flex-wrap:wrap;gap:6px}.reality-switch{font-size:7px;padding:6px 8px;gap:5px}.site-header{gap:10px}.navigation{gap:12px}}
+/* WORLD 2: AFTER HOURS — midnight, acid orange, cinematic contrast. */
+body.world-after-hours{--cream:#111216;--paper:#1d2027;--orange:#ff6a1a;--orange-soft:#ff9b58;--cyan:#8ee8f0;--cyan-pale:#c4fbff;--rust:#ff604c;--ink:#f3eee4;--muted:#a8a8b2;--line:rgba(243,238,228,.23);background:var(--cream);color:var(--ink);}
+body.world-after-hours .site-header{background:rgba(17,18,22,.96);backdrop-filter:blur(12px);}
+body.world-after-hours .ticker{background:var(--orange);color:#111216;}
+body.world-after-hours .ticker-track span:not(.ticker-star){color:#111216;}
+body.world-after-hours .ticker-track .ticker-star:before{color:#111216;}
+body.world-after-hours .hero h1{top:53%;left:55%;width:84%;text-align:right;font-size:clamp(72px,10vw,138px);}
+body.world-after-hours .hero h1 span,body.world-after-hours .hero h1 .for-word,body.world-after-hours .hero h1 .clues-word{text-align:right;}
+body.world-after-hours .hero h1 .clues-word{color:var(--cyan);}
+body.world-after-hours .hero-art{filter:saturate(1.2) drop-shadow(0 0 9px rgba(142,232,240,.12));}
+body.world-after-hours .hero-stamp{color:var(--cyan);}
+body.world-after-hours .stamp-dot{fill:var(--cyan);}
+body.world-after-hours .stamp-year{fill:var(--cyan);}
+body.world-after-hours .work-arrow{border-color:var(--ink);color:var(--ink);}
+body.world-after-hours .work-row:hover .work-arrow{background:var(--orange);color:#111216;}
+body.world-after-hours .photo-card a{background:#1d2027;}
+body.world-after-hours .reality-switch{background:var(--cyan);color:#111216;border-color:var(--cyan);}
+/* WORLD 3: SPECIMEN ROOM — cool paper, catalog marks, measured editorial composition. */
+body.world-specimen-room{--cream:#e7f0f0;--paper:#f8fbf8;--orange:#d34b30;--orange-soft:#e78268;--cyan:#9dbbc7;--cyan-pale:#d2e4e9;--rust:#a64a3a;--ink:#263b46;--muted:#657d86;--line:rgba(38,59,70,.24);background:var(--cream);color:var(--ink);}
+body.world-specimen-room .site-header{background:var(--cream);border-bottom:1px dashed var(--line);}
+body.world-specimen-room .site-header:before{content:"FIELD NOTES / VISUAL INDEX";font-size:8px;letter-spacing:.16em;}
+body.world-specimen-room .hero{min-height:clamp(540px,68vh,700px);padding-left:8%;border-left:1px solid var(--line);margin-left:3.3%;}
+body.world-specimen-room .hero h1{top:49%;left:43%;width:72%;font-size:clamp(66px,9vw,122px);text-align:left;letter-spacing:-.085em;}
+body.world-specimen-room .hero h1 span,body.world-specimen-room .hero h1 .for-word,body.world-specimen-room .hero h1 .clues-word{text-align:left;}
+body.world-specimen-room .hero h1 .clues-word{color:var(--orange);}
+body.world-specimen-room .hero-art{transform-origin:center;filter:saturate(.62);}
+body.world-specimen-room .earth-art{right:11%;top:5%;}
+body.world-specimen-room .star-art{left:auto;right:8%;top:66%;width:clamp(45px,4vw,70px);}
+body.world-specimen-room .hero-stamp{right:8%;bottom:8%;width:clamp(86px,7vw,112px);}
+body.world-specimen-room .ticker{background:var(--cyan-pale);color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+body.world-specimen-room .ticker-track span:not(.ticker-star){color:var(--ink);}
+body.world-specimen-room .ticker-track .ticker-star:before{color:var(--orange);}
+body.world-specimen-room .section{padding-top:64px;padding-bottom:64px;}
+body.world-specimen-room .section-heading,body.world-specimen-room .photo-group-label{border-bottom-style:dashed;}
+body.world-specimen-room .photo-group-label{letter-spacing:.12em;}
+body.world-specimen-room .photo-card a{background:var(--paper);outline:1px solid var(--line);outline-offset:-1px;}
+body.world-specimen-room .photo-card figcaption{letter-spacing:.08em;}
+body.world-specimen-room .reality-switch{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+@media(max-width:760px){body.world-after-hours .hero h1{left:50%;width:90%;text-align:center}body.world-after-hours .hero h1 span,body.world-after-hours .hero h1 .for-word,body.world-after-hours .hero h1 .clues-word{text-align:center}body.world-specimen-room .hero{margin-left:0;padding-left:6%}body.world-specimen-room .hero h1{left:50%;width:88%;text-align:left}body.world-specimen-room .hero h1 span,body.world-specimen-room .hero h1 .for-word,body.world-specimen-room .hero h1 .clues-word{text-align:left}}
+@media(prefers-reduced-motion:reduce){.reality-switch,body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:none!important}}
+
 </style></head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -208,7 +259,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
 <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
 <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
+</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button><button class="reality-switch" id="reality-switch" type="button" aria-label="Change reality. Current world: Original world. Press to switch worlds."><span class="reality-symbol" aria-hidden="true">✳</span><span>CHANGE REALITY</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
 <main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
 <div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
 <div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
@@ -421,6 +472,37 @@ body.flashlight-mode .switch-track:after{left:11px;}
   if (switchButton) switchButton.addEventListener('click', () => {
     requestAnimationFrame(() => revealNear(lastX, lastY));
   });
+})();
+</script>
+
+
+<script>
+(() => {
+  const button = document.getElementById('reality-switch');
+  if (!button) return;
+  const worlds = [
+    {className:'', label:'CHANGE REALITY', name:'Original world'},
+    {className:'world-after-hours', label:'CHANGE REALITY', name:'After Hours'},
+    {className:'world-specimen-room', label:'CHANGE REALITY', name:'Specimen Room'}
+  ];
+  let current = 0;
+  const saved = sessionStorage.getItem('lookingForCluesWorld');
+  if (saved) {
+    const index = worlds.findIndex(world => world.className === saved);
+    if (index >= 0) current = index;
+  }
+  function applyWorld(index) {
+    worlds.forEach(world => { if (world.className) document.body.classList.remove(world.className); });
+    current = index;
+    if (worlds[current].className) document.body.classList.add(worlds[current].className);
+    button.setAttribute('aria-label', 'Change reality. Current world: ' + worlds[current].name + '. Press to switch worlds.');
+    button.setAttribute('title', 'Current world: ' + worlds[current].name);
+    const symbol = button.querySelector('.reality-symbol');
+    if (symbol) symbol.textContent = current === 0 ? '✳' : current === 1 ? '☾' : '⌕';
+    try { sessionStorage.setItem('lookingForCluesWorld', worlds[current].className); } catch (e) {}
+  }
+  button.addEventListener('click', () => applyWorld((current + 1) % worlds.length));
+  applyWorld(current);
 })();
 </script>
 
