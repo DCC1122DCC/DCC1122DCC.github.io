@@ -193,47 +193,6 @@ body.flashlight-mode .switch-track:after{left:11px;}
 
 
 
-/* CHANGE REALITY — same archive layout, different color worlds. */
-:root{--world-transition:background-color .45s ease,color .35s ease,border-color .35s ease;}
-body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:var(--world-transition);}
-.reality-switch{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:none;padding:7px 10px;border:1px solid var(--ink);border-radius:999px;background:var(--orange);color:var(--ink);font:700 8px/1.2 var(--mono);letter-spacing:.045em;text-transform:uppercase;cursor:pointer;transition:transform .2s ease,background-color .35s ease,color .35s ease,border-color .35s ease;white-space:nowrap;}
-.reality-switch:hover{transform:translateY(-2px);background:var(--cyan);}
-.reality-switch:focus-visible{outline:2px solid var(--orange);outline-offset:4px;}
-.reality-switch .reality-symbol{font-size:13px;line-height:1;}
-@media(max-width:760px){.brand-tools{flex-wrap:wrap;gap:6px}.reality-switch{font-size:7px;padding:6px 8px;gap:5px}.site-header{gap:10px}.navigation{gap:12px}}
-/* WORLD 2: INDIE STATIC — inverted dark paper, acid green, electric purple and pink. */
-body.world-after-hours{--cream:#17131d;--paper:#241b2d;--orange:#c5ff35;--orange-soft:#e0ff7a;--cyan:#ff4fd8;--cyan-pale:#f6b6ff;--rust:#8b4dff;--ink:#f7f0ff;--muted:#c0adc9;--line:rgba(247,240,255,.25);background:var(--cream);color:var(--ink);}
-body.world-after-hours .site-header{background:rgba(23,19,29,.96);backdrop-filter:blur(12px);}
-body.world-after-hours .ticker{background:var(--orange);color:#17131d;}
-body.world-after-hours .ticker-track span:not(.ticker-star){color:#17131d;}
-body.world-after-hours .ticker-track .ticker-star:before{color:#17131d;}
-body.world-after-hours .hero h1 .clues-word{color:var(--cyan);}
-body.world-after-hours .hero-art{filter:saturate(1.25) contrast(1.08);}
-body.world-after-hours .hero-stamp,body.world-after-hours .stamp-dot,body.world-after-hours .stamp-year{color:var(--cyan);fill:var(--cyan);}
-body.world-after-hours .work-arrow{border-color:var(--ink);color:var(--ink);}
-body.world-after-hours .work-row:hover .work-arrow{background:var(--orange);color:#17131d;}
-body.world-after-hours .photo-card a{background:var(--paper);}
-body.world-after-hours .photo-group-label span{color:var(--muted);}
-body.world-after-hours .reality-switch{background:var(--cyan);color:#17131d;border-color:var(--cyan);}
-body.world-after-hours .site-footer{background:var(--paper);}
-/* WORLD 3: WONDERLAND — sky blue, living green, soft clouds and little butterflies. */
-body.world-specimen-room{--cream:#dff5ff;--paper:#f7fff5;--orange:#2eaa62;--orange-soft:#7bdc91;--cyan:#58bde9;--cyan-pale:#bceeff;--rust:#e88bc9;--ink:#183b42;--muted:#527a7d;--line:rgba(24,59,66,.22);background:linear-gradient(180deg,#bfeaff 0%,#e6f8ff 40%,#e9f7d9 100%);color:var(--ink);}
-body.world-specimen-room .site-header{background:rgba(223,245,255,.92);backdrop-filter:blur(8px);}
-body.world-specimen-room .hero,body.world-specimen-room .section,body.world-specimen-room .site-footer{background-color:transparent;}
-body.world-specimen-room .hero{background-image:radial-gradient(ellipse at 15% 16%,rgba(255,255,255,.78) 0 5%,transparent 15%),radial-gradient(ellipse at 82% 12%,rgba(255,255,255,.72) 0 4%,transparent 13%),linear-gradient(180deg,rgba(119,211,248,.12),rgba(174,224,133,.12));}
-body.world-specimen-room .section:nth-of-type(even){background-image:repeating-linear-gradient(105deg,rgba(46,170,98,.035) 0 2px,transparent 2px 7px);}
-body.world-specimen-room .ticker{background:var(--cyan-pale);color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-body.world-specimen-room .ticker-track span:not(.ticker-star){color:var(--ink);}
-body.world-specimen-room .ticker-track .ticker-star:before{color:var(--orange);}
-body.world-specimen-room .hero h1 .clues-word{color:var(--orange);}
-body.world-specimen-room .hero-art{filter:saturate(1.08);}
-body.world-specimen-room .hero-stamp{color:var(--orange);}
-body.world-specimen-room .photo-card a{background:var(--paper);box-shadow:0 2px 12px rgba(37,112,117,.08);}
-body.world-specimen-room .photo-group-label span{color:var(--muted);}
-body.world-specimen-room .reality-switch{background:var(--orange);color:#fff;border-color:var(--orange);}
-body.world-specimen-room .site-header:after{content:"🦋";position:absolute;right:5%;top:70px;font-size:20px;opacity:.82;pointer-events:none;}
-body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute;right:8%;bottom:12%;font-size:clamp(16px,2vw,26px);letter-spacing:14px;opacity:.85;pointer-events:none;}
-@media(prefers-reduced-motion:reduce){.reality-switch,body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:none!important}}
 </style><style>
 /* Gallery polish: centered collection headers, no numbered labels under individual photographs. */
 .photo-group-label{justify-content:center;text-align:center;margin:24px 0 18px;padding-top:12px;border-top:0;gap:10px;}
@@ -270,7 +229,7 @@ body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute
 <circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
 <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
 <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button><button class="reality-switch" id="reality-switch" type="button" aria-label="Change reality. Current world: Original world. Press to switch worlds."><span class="reality-symbol" aria-hidden="true">✳</span><span>CHANGE REALITY</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
+</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
 <main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
 <div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
 <div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
@@ -283,12 +242,6 @@ body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute
 <h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><p class="seek-note">SEEK, AND YOU SHALL FIND.</p><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
 <div class="ticker" aria-label="Creative interests"><div class="ticker-track"><span>SOUND</span><span class="ticker-star" aria-hidden="true"></span><span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span><span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span><span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span><span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span><span>CONNECTIONS</span></div></div>
 <section class="section" id="work">
-<div class="section-heading" id="my-work"><h2>MY WORK <span class="tiny-star" aria-hidden="true"></span></h2><span class="section-number">SELECTED WORK / 2026</span></div>
-<div class="work-list">
-<a class="work-row" href="#photos"><span class="work-index">01</span><span class="work-label"><span class="work-title">PHOTOGRAPHY</span><span class="work-tagline">Portraits, places, street, fashion, live music, and the details that catch my eye.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
-<a class="work-row" href="#video"><span class="work-index">02</span><span class="work-label"><span class="work-title">VIDEO / FILM</span><span class="work-tagline">Music videos and collaborative moving-image work.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
-<a class="work-row" href="#wishboard"><span class="work-index">03</span><span class="work-label"><span class="work-title">DIGITAL / INTERACTIVE</span><span class="work-tagline">Wishboard — an independently built wishlist and budgeting app.</span></span><span class="work-arrow" aria-hidden="true"></span></a>
-</div>
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY<br>&amp; IMAGE-MAKING <span class="tiny-star" aria-hidden="true"></span></h3><p>A collection of things I’ve seen, things I’ve kept, and things I can’t stop looking at.</p></div>
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label">01 / CURIOUS <span>A recurring subject</span></div>
@@ -330,7 +283,6 @@ body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute
 
 <figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/misc-06-water.JPG" data-lightbox><img src="./images/misc-06-water.JPG" alt="A swimmer looking through a snorkel mask in clear water" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/SOUVENIRS.JPG" data-lightbox><img src="./images/SOUVENIRS.JPG" alt="Nighttime street scene with a Souvenirs sign" loading="lazy"></a></figure>
 </div><p class="photo-note">A few photographs that do not belong to a larger collection live here for now.</p></section>
 <div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. Filming, editing, and creative contributions across different kinds of work.</p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article></div>
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
@@ -489,35 +441,53 @@ body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute
 </script>
 
 
-<script>
-(() => {
-  const button = document.getElementById('reality-switch');
-  if (!button) return;
-  const worlds = [
-    {className:'', label:'CHANGE REALITY', name:'Original world'},
-    {className:'world-after-hours', label:'CHANGE REALITY', name:'Indie Static'},
-    {className:'world-specimen-room', label:'CHANGE REALITY', name:'Wonderland'}
-  ];
-  let current = 0;
-  const saved = sessionStorage.getItem('lookingForCluesWorld');
-  if (saved) {
-    const index = worlds.findIndex(world => world.className === saved);
-    if (index >= 0) current = index;
-  }
-  function applyWorld(index) {
-    worlds.forEach(world => { if (world.className) document.body.classList.remove(world.className); });
-    current = index;
-    if (worlds[current].className) document.body.classList.add(worlds[current].className);
-    button.setAttribute('aria-label', 'Change reality. Current world: ' + worlds[current].name + '. Press to switch worlds.');
-    button.setAttribute('title', 'Current world: ' + worlds[current].name);
-    const symbol = button.querySelector('.reality-symbol');
-    if (symbol) symbol.textContent = current === 0 ? '✳' : current === 1 ? '☾' : '⌕';
-    try { sessionStorage.setItem('lookingForCluesWorld', worlds[current].className); } catch (e) {}
-  }
-  button.addEventListener('click', () => applyWorld((current + 1) % worlds.length));
-  applyWorld(current);
-})();
-</script>
+
+
+
+<style>
+/* Photo collections: centered, larger natural-proportion masonry galleries, matching Eyes. */
+.photo-category-section .photo-grid{display:block;width:min(100%,1120px);margin:0 auto;columns:3;column-gap:clamp(12px,1.6vw,20px);}
+.photo-category-section .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 clamp(12px,1.6vw,20px);vertical-align:top;}
+.photo-category-section .photo-card a{display:block;width:100%;min-height:0;height:auto;overflow:hidden;background:transparent;}
+.photo-category-section .photo-card img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;transition:transform .35s ease;}
+.photo-category-section .photo-card a:hover img{transform:scale(1.015);}
+.photo-category-section .photo-card figcaption{display:none!important;}
+@media(max-width:760px){.photo-category-section .photo-grid{columns:2;column-gap:10px}.photo-category-section .photo-card{margin-bottom:10px}}
+@media(max-width:380px){.photo-category-section .photo-grid{column-gap:7px}.photo-category-section .photo-card{margin-bottom:7px}}
+</style>
+
+<style>
+/* A quiet pearly sheen: keep the original cream palette, with soft gloss and tiny glints. */
+body:not(.flashlight-mode){
+  background-color:var(--cream);
+  background-image:
+    radial-gradient(ellipse at 14% 3%, rgba(255,255,255,.92) 0, rgba(255,255,255,.48) 15%, transparent 39%),
+    radial-gradient(ellipse at 88% 18%, rgba(255,255,255,.72) 0, transparent 31%),
+    radial-gradient(ellipse at 52% 58%, rgba(255,255,255,.26) 0, transparent 45%),
+    linear-gradient(118deg, rgba(255,255,255,.16), transparent 34%, rgba(255,255,255,.22) 52%, transparent 72%);
+  background-attachment:fixed;
+}
+body:not(.flashlight-mode) .site-header{
+  background:rgba(250,247,239,.88);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+body:not(.flashlight-mode) .photo-category-section .photo-card img{
+  filter:drop-shadow(0 3px 5px rgba(78,62,39,.09));
+}
+body:not(.flashlight-mode) .photo-category-section .photo-card a:hover img{
+  filter:drop-shadow(0 6px 10px rgba(78,62,39,.13));
+}
+/* Sparse four-point glints, deliberately faint so the photography stays the focus. */
+body:not(.flashlight-mode) .section-heading h2,
+body:not(.flashlight-mode) .gallery-intro h3{
+  text-shadow:0 1px 0 rgba(255,255,255,.62);
+}
+body.flashlight-mode{background-image:none;}
+@media(prefers-reduced-motion:reduce){
+  body:not(.flashlight-mode) .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;}
+}
+</style>
 
 </body></html>
 
