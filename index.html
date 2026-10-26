@@ -202,6 +202,21 @@ body.flashlight-mode .switch-track:after{left:11px;}
 .photo-card figcaption{display:none !important;}
 @media(max-width:760px){.photo-group-label{flex-wrap:wrap;gap:6px;margin:20px 0 14px;}}
 </style>
+
+<style id="final-banner-refinement">
+/* Light title card that melts into a reversed-sunset dusk at the image archive. */
+.hero{background:linear-gradient(180deg,#fffdf7 0%,#f2ebdd 23%,#ffd0a0 48%,#ff984d 62%,#8b9fca 78%,#36466e 89%,#171d35 100%) !important;}
+.hero h1{font-size:clamp(58px,8.4vw,116px) !important;}
+.hero-stamp{left:50% !important;right:auto !important;bottom:4.5% !important;transform:translateX(-50%) !important;width:clamp(86px,6.8vw,112px) !important;}
+.hero-bottom{justify-content:center !important;min-height:0 !important;}
+.hero-stamp svg{filter:drop-shadow(0 1px 1px rgba(255,255,255,.35));}
+.ticker{display:none !important;}
+@media(max-width:760px){.hero h1{font-size:clamp(42px,9vw,66px) !important;}.hero-stamp{width:66px !important;bottom:3.5% !important;}}
+/* The gradient's dark edge carries into the first photo collection. */
+.photo-category-section:first-of-type{background:linear-gradient(180deg,#171d35 0%,#242b45 22%,#f2ebdd 68%) !important;padding-top:clamp(48px,7vw,74px);}
+.photo-category-section:first-of-type .section-label,.photo-category-section:first-of-type .section-heading,.photo-category-section:first-of-type .section-heading h2,.photo-category-section:first-of-type .gallery-intro,.photo-category-section:first-of-type .gallery-intro p,.photo-category-section:first-of-type .gallery-intro em{color:#fffaf0 !important;}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -239,8 +254,8 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
 <div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
 <div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
-<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><p class="seek-note">SEEK, AND YOU SHALL FIND.</p><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
-<div class="ticker" aria-label="Creative interests"><div class="ticker-track"><span>SOUND</span><span class="ticker-star" aria-hidden="true"></span><span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span><span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span><span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span><span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span><span>CONNECTIONS</span></div></div>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
+
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY</h3></div>
 <section class="photo-category-section" id="eyes">
