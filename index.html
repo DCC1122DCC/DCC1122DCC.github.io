@@ -161,7 +161,7 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 /* On touch screens, keep the page still while flashlight mode is being explored. */
 @media (pointer:coarse) and (max-width:760px){
   body.flashlight-mode{overscroll-behavior:none;}
-  body.flashlight-mode .flashlight-overlay{touch-action:none;}
+  body.flashlight-mode .flashlight-overlay{touch-action:auto;}
 }
 
 
@@ -205,8 +205,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 
 <style>
 /* Refinements requested for the archive update */
-.ticker-rule-set{display:flex;flex-direction:column;gap:7px;padding:15px 3.3%;background:var(--cream);border:0}
-.ticker-rule-set span{display:block;width:100%;border-top:1px dotted var(--cyan)}
+.ticker-rule-set{display:none!important}
 .photo-group-label{justify-content:flex-start!important;text-align:left!important;align-items:baseline!important;flex-wrap:wrap;margin:24px 0 18px!important;padding-top:12px!important;gap:10px!important}
 .photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-family:var(--display);font-size:clamp(19px,2.2vw,28px)!important;font-weight:900;letter-spacing:-.035em}
 .photo-group-label>span{font-size:11px!important;font-family:var(--mono);font-weight:400;letter-spacing:.04em}
@@ -216,7 +215,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 .hero h1{font-size:clamp(46px,7vw,96px);width:90%;line-height:.96}
 .hero h1 span,.hero h1 .for-word,.hero h1 .clues-word{text-align:center}
 .hero-bottom{justify-content:center;min-height:40px}
-@media(max-width:760px){.ticker-rule-set{padding:12px 6%;gap:6px}.photo-group-label{gap:6px!important;margin:20px 0 14px!important}.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-size:clamp(18px,5.2vw,24px)!important}.hero{min-height:460px}.hero h1{font-size:clamp(40px,8.5vw,62px);width:94%;padding:0 2%}.hero-bottom{min-height:18px}.hero-stamp{width:60px;right:12px;bottom:5%}}
+@media(max-width:760px){.ticker-rule-set{display:none!important}.photo-group-label{gap:6px!important;margin:20px 0 14px!important}.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-size:clamp(18px,5.2vw,24px)!important}.hero{min-height:460px}.hero h1{font-size:clamp(40px,8.5vw,62px);width:94%;padding:0 2%}.hero-bottom{min-height:18px}.hero-stamp{width:60px;right:12px;bottom:5%}}
 </style>
 </head>
 <body id="home">
@@ -256,7 +255,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
 <div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
 <h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
-<div class="ticker-rule-set" aria-hidden="true"><span></span><span></span><span></span></div>
+
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY</h3></div>
 <section class="photo-category-section" id="eyes">
@@ -281,7 +280,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
-</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / New York <span></span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-streetwork.jpg" data-lightbox><img src="./images/nyc-streetwork.jpg" alt="Street construction equipment on a New York sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
+</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-streetwork.jpg" data-lightbox><img src="./images/nyc-streetwork.jpg" alt="Street construction equipment on a New York sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
 <div class="photo-group-label">04 / Concerts <span></span></div>
 <div class="photo-grid music-photo-grid">
 <figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
@@ -310,229 +309,42 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script>
 (() => {
-  const more = document.getElementById('eyes-more');
-  const toggle = document.getElementById('look-closer');
-  if (more && toggle) {
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      more.hidden = expanded;
-      toggle.innerHTML = expanded
-        ? 'LOOK CLOSER <span class="css-arrow" aria-hidden="true"></span>'
-        : 'SHOW LESS <span class="css-arrow" aria-hidden="true"></span>';
-      if (!expanded) more.scrollIntoView({behavior:'smooth', block:'nearest'});
-    });
-  }
-  let lightbox = document.querySelector('.photo-lightbox');
-  if (!lightbox) {
-    lightbox = document.createElement('div');
-    lightbox.className = 'photo-lightbox';
-    lightbox.setAttribute('role','dialog');
-    lightbox.setAttribute('aria-modal','true');
-    lightbox.setAttribute('aria-label','Photograph viewer');
-    lightbox.innerHTML = '<button class="photo-lightbox-close" type="button">CLOSE ✕</button><img alt="">';
-    document.body.appendChild(lightbox);
-  }
-  const lightboxImage = lightbox.querySelector('img');
-  const closeButton = lightbox.querySelector('button');
-  function closeLightbox() {
-    lightbox.classList.remove('is-open');
-    lightboxImage.removeAttribute('src');
-    document.body.style.overflow = '';
-  }
-  document.querySelectorAll('a[data-lightbox]').forEach(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      lightboxImage.src = link.href;
-      const source = link.querySelector('img');
-      lightboxImage.alt = source ? source.alt : 'Photograph';
-      lightbox.classList.add('is-open');
-      document.body.style.overflow = 'hidden';
-      closeButton.focus();
-    });
-  });
-  closeButton.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
-  document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
-  const switchButton = document.getElementById('light-switch');
-  const switchLabel = document.getElementById('switch-label');
-  const flashlightCursor = document.getElementById('flashlight-cursor');
-  function moveFlashlight(x, y) {
-    document.body.style.setProperty('--flash-x', x + 'px');
-    document.body.style.setProperty('--flash-y', y + 'px');
-    if (flashlightCursor) {
-      const touchLayout = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-      flashlightCursor.style.transform = touchLayout ? `translate3d(${x - 22}px, ${y - 52}px, 0)` : `translate3d(${x - 12}px, ${y - 12}px, 0)`;
-    }
-  }
-  // Track the latest pointer position and update once per frame to avoid jitter.
-  let pointerFramePending = false;
-  let pendingPointerX = window.innerWidth / 2;
-  let pendingPointerY = window.innerHeight / 2;
-  document.addEventListener('pointermove', event => {
-    if (event.pointerType === 'touch') return;
-    pendingPointerX = event.clientX;
-    pendingPointerY = event.clientY;
-    if (pointerFramePending) return;
-    pointerFramePending = true;
-    requestAnimationFrame(() => {
-      moveFlashlight(pendingPointerX, pendingPointerY);
-      pointerFramePending = false;
-    });
-  }, {passive:true});
-  // Touch scrolling remains native; on mobile the beam is guided automatically by the page.
-  // Desktop keeps the pointer-following flashlight above, while touch users can scroll normally.
-  document.addEventListener('touchstart', event => {
-    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
-    if (event.touches && event.touches.length) moveFlashlight(event.touches[0].clientX, event.touches[0].clientY);
-  }, {passive:true});
-  switchButton.addEventListener('click', () => {
-    const enabled = !document.body.classList.contains('flashlight-mode');
-    document.body.classList.toggle('flashlight-mode', enabled);
-    switchButton.setAttribute('aria-pressed', String(enabled));
-    switchButton.setAttribute('aria-label', enabled ? 'Turn flashlight dark mode off' : 'Turn flashlight dark mode on');
-    switchLabel.textContent = enabled ? 'LIGHTS OFF' : 'LIGHTS ON';
-    if (enabled) moveFlashlight(window.innerWidth / 2, window.innerHeight / 2);
-  });
-})();
-</script>
-
-
-<script>
-(() => {
-  const clues = Array.from(document.querySelectorAll('.flashlight-clue'));
-  if (!clues.length) return;
-  let lastX = -10000, lastY = -10000;
-  function revealNear(x, y) {
-    lastX = x; lastY = y;
-    clues.forEach(clue => {
-      const r = clue.getBoundingClientRect();
-      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      const distance = Math.hypot(cx - x, cy - y);
-      clue.classList.toggle('is-revealed', document.body.classList.contains('flashlight-mode') && distance < 105);
-    });
-  }
-  document.addEventListener('mousemove', e => revealNear(e.clientX, e.clientY), {passive:true});
-  let revealFramePending = false;
-  let revealX = -10000, revealY = -10000;
-  document.addEventListener('touchmove', e => {
-    if (e.touches && e.touches.length) {
-      revealX = e.touches[0].clientX;
-      revealY = e.touches[0].clientY;
-      if (revealFramePending) return;
-      revealFramePending = true;
-      requestAnimationFrame(() => {
-        revealNear(revealX, revealY);
-        revealFramePending = false;
-      });
-    }
-  }, {passive:true});
-  document.addEventListener('touchstart', e => {
-    if (e.touches && e.touches.length) revealNear(e.touches[0].clientX, e.touches[0].clientY);
-  }, {passive:true});
-  const switchButton = document.getElementById('light-switch');
-  if (switchButton) switchButton.addEventListener('click', () => {
-    requestAnimationFrame(() => revealNear(lastX, lastY));
-  });
-})();
-</script>
-
-
-
-
-
-<style>
-/* Photo collections: centered, larger natural-proportion masonry galleries, matching Eyes. */
-.photo-category-section .photo-grid{display:block;width:min(100%,1120px);margin:0 auto;columns:3;column-gap:clamp(12px,1.6vw,20px);}
-.photo-category-section .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 clamp(12px,1.6vw,20px);vertical-align:top;}
-.photo-category-section .photo-card a{display:block;width:100%;min-height:0;height:auto;overflow:hidden;background:transparent;}
-.photo-category-section .photo-card img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;transition:transform .35s ease;}
-.photo-category-section .photo-card a:hover img{transform:scale(1.015);}
-.photo-category-section .photo-card figcaption{display:none!important;}
-@media(max-width:760px){.photo-category-section .photo-grid{columns:2;column-gap:10px}.photo-category-section .photo-card{margin-bottom:10px}}
-@media(max-width:380px){.photo-category-section .photo-grid{column-gap:7px}.photo-category-section .photo-card{margin-bottom:7px}}
-</style>
-
-<style>
-/* A quiet pearly sheen: keep the original cream palette, with soft gloss and tiny glints. */
-body:not(.flashlight-mode){
-  background-color:var(--cream);
-  background-image:
-    radial-gradient(ellipse at 14% 3%, rgba(255,255,255,.92) 0, rgba(255,255,255,.48) 15%, transparent 39%),
-    radial-gradient(ellipse at 88% 18%, rgba(255,255,255,.72) 0, transparent 31%),
-    radial-gradient(ellipse at 52% 58%, rgba(255,255,255,.26) 0, transparent 45%),
-    linear-gradient(118deg, rgba(255,255,255,.16), transparent 34%, rgba(255,255,255,.22) 52%, transparent 72%);
-  background-attachment:fixed;
-}
-body:not(.flashlight-mode) .site-header{
-  background:rgba(250,247,239,.88);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-}
-body:not(.flashlight-mode) .photo-category-section .photo-card img{
-  filter:drop-shadow(0 3px 5px rgba(78,62,39,.09));
-}
-body:not(.flashlight-mode) .photo-category-section .photo-card a:hover img{
-  filter:drop-shadow(0 6px 10px rgba(78,62,39,.13));
-}
-/* Sparse four-point glints, deliberately faint so the photography stays the focus. */
-body:not(.flashlight-mode) .section-heading h2,
-body:not(.flashlight-mode) .gallery-intro h3{
-  text-shadow:0 1px 0 rgba(255,255,255,.62);
-}
-body.flashlight-mode{background-image:none;}
-@media(prefers-reduced-motion:reduce){
-  body:not(.flashlight-mode) .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;}
-}
-</style>
-
-
-<script>
-(() => {
   const coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)');
+  const switchButton = document.getElementById('light-switch');
+  const clue = document.querySelector('.flashlight-clue.eyes');
   const targets = [
-    document.querySelector('.flashlight-clue.eyes'),
     document.querySelector('#eyes img[src*="EYE16"]'),
     document.querySelector('#fashion-portraits img[src*="fashion-05-blue-gloves"]'),
     document.querySelector('#misc img[src*="misc-07-trampoline"]')
   ].filter(Boolean);
-  const switchButton = document.getElementById('light-switch');
-  if (!targets.length || !switchButton) return;
-
+  if (!switchButton || !clue || !targets.length) return;
   let framePending = false;
   function guideBeam() {
     framePending = false;
     if (!document.body.classList.contains('flashlight-mode') || !(coarsePointer && coarsePointer.matches)) return;
-
-    const viewportHeight = window.innerHeight;
-    const focusY = viewportHeight * 0.48;
-    // At the top of the page, start on the glowing-eyes clue. As the user scrolls,
-    // the beam moves to the next photographic clue when it enters the viewport.
-    let chosen = targets[0];
-    // Respect the intended discovery order: blue eye, blue gloves, then trampoline.
-    for (const target of targets.slice(1)) {
-      const rect = target.getBoundingClientRect();
-      if (rect.bottom < viewportHeight * 0.08 || rect.top > viewportHeight * 0.92) continue;
-      chosen = target;
-      break;
-    }
-
-    let x = window.innerWidth * 0.5;
-    let y = viewportHeight * 0.34;
-    if (chosen === targets[0]) {
-      const r = chosen.getBoundingClientRect();
-      x = r.left + r.width / 2;
-      y = r.top + r.height / 2;
+    const vh = window.innerHeight;
+    const focusY = vh * 0.48;
+    const visible = targets.map(el => {
+      const r = el.getBoundingClientRect();
+      const cy = r.top + r.height / 2;
+      return {el, r, cy, visible: r.bottom > 0 && r.top < vh, distance: Math.abs(cy - focusY)};
+    }).filter(item => item.visible);
+    let x, y;
+    if (visible.length) {
+      visible.sort((a,b) => a.distance - b.distance);
+      const r = visible[0].r;
+      x = Math.max(24, Math.min(window.innerWidth - 24, r.left + r.width / 2));
+      y = Math.max(30, Math.min(vh - 30, r.top + r.height / 2));
     } else {
-      const r = chosen.getBoundingClientRect();
-      x = Math.max(28, Math.min(window.innerWidth - 28, r.left + r.width / 2));
-      y = Math.max(36, Math.min(viewportHeight - 36, r.top + r.height / 2));
-    }
-    moveFlashlight(x, y);
-    document.querySelectorAll('.flashlight-clue').forEach(clue => {
       const r = clue.getBoundingClientRect();
-      const distance = Math.hypot(r.left + r.width / 2 - x, r.top + r.height / 2 - y);
-      clue.classList.toggle('is-revealed', distance < 105);
+      x = Math.max(24, Math.min(window.innerWidth - 24, r.left + r.width / 2));
+      y = Math.max(30, Math.min(vh - 30, r.top + r.height / 2));
+    }
+    if (typeof window.moveFlashlight === 'function') window.moveFlashlight(x, y);
+    document.querySelectorAll('.flashlight-clue').forEach(el => {
+      const r = el.getBoundingClientRect();
+      const d = Math.hypot(r.left + r.width/2 - x, r.top + r.height/2 - y);
+      el.classList.toggle('is-revealed', d < 105);
     });
   }
   function scheduleGuide() {
@@ -542,7 +354,9 @@ body.flashlight-mode{background-image:none;}
   }
   window.addEventListener('scroll', scheduleGuide, {passive:true});
   window.addEventListener('resize', scheduleGuide, {passive:true});
-  switchButton.addEventListener('click', () => requestAnimationFrame(scheduleGuide));
+  switchButton.addEventListener('click', () => { requestAnimationFrame(scheduleGuide); setTimeout(scheduleGuide, 120); });
+  window.addEventListener('load', scheduleGuide, {once:true});
+  if (document.readyState === 'complete') scheduleGuide();
 })();
 </script>
 </body></html>
@@ -582,4 +396,22 @@ body.flashlight-mode{background-image:none;}
 #live-music .music-photo-grid .photo-card{break-inside:initial!important;margin:0!important;}
 #live-music .music-photo-grid .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;}
 @media(max-width:760px){#live-music .music-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}}
+</style>
+
+<style>
+/* Final request: center the Made & Found stamp beneath the hero title on desktop; omit on mobile. */
+@media (min-width:761px) {
+  .hero-stamp { left:50%!important; right:auto!important; bottom:3%!important; transform:translateX(-50%); }
+}
+@media (max-width:760px) {
+  .hero-stamp { display:none!important; }
+}
+</style>
+
+<style>
+/* Final refinements */
+.eyes-group-title,.eyes-group-label .eyes-group-title{color:#000!important;}
+.ticker-rule-set{display:none!important}
+@media(min-width:761px){.hero-stamp{left:50%!important;right:auto!important;bottom:3%!important;transform:translateX(-50%)}}
+@media(max-width:760px){.hero-stamp{display:none!important}}
 </style>
