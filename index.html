@@ -202,6 +202,22 @@ body.flashlight-mode .switch-track:after{left:11px;}
 .photo-card figcaption{display:none !important;}
 @media(max-width:760px){.photo-group-label{flex-wrap:wrap;gap:6px;margin:20px 0 14px;}}
 </style>
+
+<style>
+/* Refinements requested for the archive update */
+.ticker-rule-set{display:flex;flex-direction:column;gap:7px;padding:15px 3.3%;background:var(--cream);border:0}
+.ticker-rule-set span{display:block;width:100%;border-top:1px dotted var(--cyan)}
+.photo-group-label{justify-content:flex-start!important;text-align:left!important;align-items:baseline!important;flex-wrap:wrap;margin:24px 0 18px!important;padding-top:12px!important;gap:10px!important}
+.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-family:var(--display);font-size:clamp(19px,2.2vw,28px)!important;font-weight:900;letter-spacing:-.035em}
+.photo-group-label>span{font-size:11px!important;font-family:var(--mono);font-weight:400;letter-spacing:.04em}
+.photo-group-label .eyes-group-title{font-size:clamp(19px,2.2vw,28px)!important}
+.photo-group-label .eyes-group-subtitle{font-size:11px!important}
+.hero{min-height:clamp(480px,60vh,620px)}
+.hero h1{font-size:clamp(46px,7vw,96px);width:90%;line-height:.96}
+.hero h1 span,.hero h1 .for-word,.hero h1 .clues-word{text-align:center}
+.hero-bottom{justify-content:center;min-height:40px}
+@media(max-width:760px){.ticker-rule-set{padding:12px 6%;gap:6px}.photo-group-label{gap:6px!important;margin:20px 0 14px!important}.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-size:clamp(18px,5.2vw,24px)!important}.hero{min-height:460px}.hero h1{font-size:clamp(40px,8.5vw,62px);width:94%;padding:0 2%}.hero-bottom{min-height:18px}.hero-stamp{width:60px;right:12px;bottom:5%}}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -239,8 +255,8 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
 <div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
 <div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
-<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><p class="seek-note">SEEK, AND YOU SHALL FIND.</p><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
-<div class="ticker" aria-label="Creative interests"><div class="ticker-track"><span>SOUND</span><span class="ticker-star" aria-hidden="true"></span><span>IMAGE</span><span class="ticker-star" aria-hidden="true"></span><span>MEMORY</span><span class="ticker-star" aria-hidden="true"></span><span>MOVEMENT</span><span class="ticker-star" aria-hidden="true"></span><span>REFERENCES</span><span class="ticker-star" aria-hidden="true"></span><span>CONNECTIONS</span></div></div>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
+<div class="ticker-rule-set" aria-hidden="true"><span></span><span></span><span></span></div>
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY</h3></div>
 <section class="photo-category-section" id="eyes">
@@ -263,18 +279,18 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="photo-group-label">02 / ELECTRIC <span>Color, light, and movement</span></div>
 <div class="photo-grid music-photo-grid">
 <figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/music-03-daytime-performance.jpg" data-lightbox aria-label="Expand performer on an outdoor stage"><img src="./images/music-03-daytime-performance.jpg" alt="Performer on an outdoor stage" loading="lazy"></a></figure>
+
 <figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand russ performing live"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
+
 </div></section> <section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">03 / DRAMA <span>California and beyond</span></div><div class="photo-grid">
 <figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
-</div></section> <section class="photo-category-section" id="nyc-film"><div class="photo-group-label">04 / OBSERVATIONAL <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure></div></section> <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
+</div></section> <section class="photo-category-section" id="nyc-film"><div class="photo-group-label">04 / OBSERVATIONAL <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-streetwork.jpg" data-lightbox><img src="./images/nyc-streetwork.jpg" alt="Street construction equipment on a New York sidewalk" loading="lazy"></a></figure></div></section> <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
 
 
 
@@ -362,33 +378,12 @@ body.flashlight-mode .switch-track:after{left:11px;}
       pointerFramePending = false;
     });
   }, {passive:true});
-  // On mobile, follow the finger and suppress page scrolling only while flashlight mode is on.
-  let touchFramePending = false;
-  let pendingTouchX = window.innerWidth / 2;
-  let pendingTouchY = window.innerHeight / 2;
+  // Touch scrolling remains native; on mobile the beam is guided automatically by the page.
+  // Desktop keeps the pointer-following flashlight above, while touch users can scroll normally.
   document.addEventListener('touchstart', event => {
-    if (event.touches && event.touches.length) {
-      const touch = event.touches[0];
-      pendingTouchX = touch.clientX;
-      pendingTouchY = touch.clientY;
-      moveFlashlight(pendingTouchX, pendingTouchY);
-    }
+    if (window.matchMedia && window.matchMedia('(pointer: coarse)').matches) return;
+    if (event.touches && event.touches.length) moveFlashlight(event.touches[0].clientX, event.touches[0].clientY);
   }, {passive:true});
-  document.addEventListener('touchmove', event => {
-    if (!document.body.classList.contains('flashlight-mode')) return;
-    if (event.cancelable) event.preventDefault();
-    if (event.touches && event.touches.length) {
-      const touch = event.touches[0];
-      pendingTouchX = touch.clientX;
-      pendingTouchY = touch.clientY;
-      if (touchFramePending) return;
-      touchFramePending = true;
-      requestAnimationFrame(() => {
-        moveFlashlight(pendingTouchX, pendingTouchY);
-        touchFramePending = false;
-      });
-    }
-  }, {passive:false});
   switchButton.addEventListener('click', () => {
     const enabled = !document.body.classList.contains('flashlight-mode');
     document.body.classList.toggle('flashlight-mode', enabled);
@@ -489,6 +484,65 @@ body.flashlight-mode{background-image:none;}
 }
 </style>
 
+
+<script>
+(() => {
+  const coarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)');
+  const targets = [
+    document.querySelector('.flashlight-clue.eyes'),
+    document.querySelector('#eyes img[src*="EYE16"]'),
+    document.querySelector('#fashion-portraits img[src*="fashion-05-blue-gloves"]'),
+    document.querySelector('#misc img[src*="misc-07-trampoline"]')
+  ].filter(Boolean);
+  const switchButton = document.getElementById('light-switch');
+  if (!targets.length || !switchButton) return;
+
+  let framePending = false;
+  function guideBeam() {
+    framePending = false;
+    if (!document.body.classList.contains('flashlight-mode') || !(coarsePointer && coarsePointer.matches)) return;
+
+    const viewportHeight = window.innerHeight;
+    const focusY = viewportHeight * 0.48;
+    // At the top of the page, start on the glowing-eyes clue. As the user scrolls,
+    // the beam moves to the next photographic clue when it enters the viewport.
+    let chosen = targets[0];
+    // Respect the intended discovery order: blue eye, blue gloves, then trampoline.
+    for (const target of targets.slice(1)) {
+      const rect = target.getBoundingClientRect();
+      if (rect.bottom < viewportHeight * 0.08 || rect.top > viewportHeight * 0.92) continue;
+      chosen = target;
+      break;
+    }
+
+    let x = window.innerWidth * 0.5;
+    let y = viewportHeight * 0.34;
+    if (chosen === targets[0]) {
+      const r = chosen.getBoundingClientRect();
+      x = r.left + r.width / 2;
+      y = r.top + r.height / 2;
+    } else {
+      const r = chosen.getBoundingClientRect();
+      x = Math.max(28, Math.min(window.innerWidth - 28, r.left + r.width / 2));
+      y = Math.max(36, Math.min(viewportHeight - 36, r.top + r.height / 2));
+    }
+    moveFlashlight(x, y);
+    document.querySelectorAll('.flashlight-clue').forEach(clue => {
+      const r = clue.getBoundingClientRect();
+      const distance = Math.hypot(r.left + r.width / 2 - x, r.top + r.height / 2 - y);
+      clue.classList.toggle('is-revealed', distance < 105);
+    });
+  }
+  function scheduleGuide() {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(guideBeam);
+  }
+  window.addEventListener('scroll', scheduleGuide, {passive:true});
+  window.addEventListener('resize', scheduleGuide, {passive:true});
+  switchButton.addEventListener('click', () => requestAnimationFrame(scheduleGuide));
+})();
+</script>
 </body></html>
 
 
