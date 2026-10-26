@@ -157,6 +157,17 @@ body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:dr
 /* Final polish: smooth flashlight; remove only the decorative stripe above the footer. */
 .flashlight-cursor{transition:none !important;will-change:transform;backface-visibility:hidden;}
 .flashlight-overlay{will-change:background;}
+/* A luminous thread guides the flashlight between subjects. */
+.flashlight-guide-line{display:none;position:fixed;inset:0;width:100%;height:100%;z-index:1102;pointer-events:none;overflow:visible}
+body.flashlight-mode .flashlight-guide-line{display:block}
+.flashlight-guide-line path{fill:none;stroke:#9be7ee;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5 9;filter:drop-shadow(0 0 4px #73d9e8) drop-shadow(0 0 10px rgba(115,217,232,.9));animation:guide-drift 1.8s linear infinite}
+.flashlight-guide-line circle{fill:#c8fbff;filter:drop-shadow(0 0 5px #73d9e8) drop-shadow(0 0 12px #73d9e8)}
+@keyframes guide-drift{to{stroke-dashoffset:-28}}
+.flashlight-scroll-prompt{display:none;position:fixed;z-index:1202;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);padding:10px 14px;border:1px solid rgba(155,231,238,.75);border-radius:999px;background:rgba(8,18,18,.82);color:#c8fbff;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 12px rgba(115,217,232,.3),inset 0 0 12px rgba(115,217,232,.08);pointer-events:none;animation:prompt-glow 2s ease-in-out infinite alternate}
+body.flashlight-mode .flashlight-scroll-prompt{display:block}
+@keyframes prompt-glow{from{box-shadow:0 0 7px rgba(115,217,232,.22)}to{box-shadow:0 0 19px rgba(115,217,232,.65)}}
+@media(min-width:761px){.flashlight-scroll-prompt{display:none !important}}
+@media(prefers-reduced-motion:reduce){.flashlight-guide-line path,.flashlight-scroll-prompt{animation:none}}
 .site-footer:before{content:none !important;display:none !important;height:0 !important;background:none !important;}
 /* On touch screens, keep the page still while flashlight mode is being explored. */
 @media (pointer:coarse) and (max-width:760px){
@@ -240,9 +251,25 @@ body.flashlight-mode .switch-track:after{left:11px;}
  #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}
 }
 </style>
+
+<style id="archive-requested-fixes">
+/* Keep the Made & Found stamp fully visible as the bridge between the title card and photography. */
+.hero{padding-bottom:32px!important;overflow:visible;}
+.hero + .archive-stamp-separator{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;z-index:3;display:flex!important;justify-content:center;align-items:center;min-height:0;padding:18px 0 26px;margin:0;background:var(--cream);}
+.hero + .archive-stamp-separator .hero-stamp{position:relative!important;inset:auto!important;transform:none!important;display:block!important;width:clamp(82px,7vw,108px)!important;height:auto;margin:0 auto;z-index:3;}
+.eyes-group-title{color:var(--muted)!important;text-transform:none!important;font-family:var(--display);font-weight:900;}
+/* Match the Eye collection's masonry treatment: equal-width columns and uncropped, naturally proportioned images. */
+#fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{display:block!important;columns:3;column-gap:clamp(10px,1.4vw,18px);}
+#fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{display:inline-block!important;width:100%!important;break-inside:avoid;vertical-align:top;margin:0 0 clamp(10px,1.4vw,18px)!important;}
+#fashion-portraits .photo-card a,#nyc-film .photo-card a,#live-music .photo-card a,#misc .photo-card a{display:block!important;height:auto!important;min-height:0;background:transparent;overflow:hidden;}
+#fashion-portraits .photo-card img,#nyc-film .photo-card img,#live-music .photo-card img,#misc .photo-card img{display:block;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center;}
+#photos .photography-heading{display:flex;flex-direction:column;align-items:flex-start;gap:7px;}
+#photos .eyes-click-note{display:block;margin:0!important;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.12em;line-height:1.5;}
+@media(max-width:760px){.hero{padding-bottom:28px!important;min-height:460px;} .hero + .archive-stamp-separator{padding:12px 0 20px;} .hero + .archive-stamp-separator .hero-stamp{width:68px!important;} #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{columns:2;column-gap:9px;} #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}}
+</style>
 </head>
 <body id="home">
-<div class="flashlight-overlay" aria-hidden="true"></div>
+<div class="flashlight-overlay" aria-hidden="true"></div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
 <div class="flashlight-clues" aria-hidden="true">
   <span class="flashlight-clue star" style="left:12%;top:24%">✦</span>
   <span class="flashlight-clue question" style="left:77%;top:18%">?</span>
@@ -277,14 +304,12 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
 <div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
 <div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
-<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1></section><div class="hero-bottom archive-stamp-separator"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div>
 
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
-<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Who's There?</span><span class="eyes-group-subtitle"></span></div>
-<p class="eyes-intro eyes-intro-under-title">Sometimes the clues are looking right at you.</p>
-
+<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">knock knock, who's there?</span><span class="eyes-group-subtitle"></span></div>
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -383,7 +408,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 })();
 </script>
 <script id="flashlight-controller">
-(() => {
+const initFlashlightController = () => {
   const body = document.body;
   const toggle = document.getElementById('light-switch');
   const label = document.getElementById('switch-label');
@@ -395,6 +420,42 @@ body.flashlight-mode .switch-track:after{left:11px;}
   let guideFrame = 0;
   let lastX = window.innerWidth / 2;
   let lastY = window.innerHeight / 2;
+  const guidePath = document.getElementById('flashlight-guide-path');
+  const guideDot = document.getElementById('flashlight-guide-dot');
+  const guideTargets = [
+    '#eyes img[src*="EYE16"]',
+    '#fashion-portraits img[src*="fashion-05-blue-gloves"]',
+    '#nyc-film img[src*="000017470004"]',
+    '#live-music img[src*="music-02-confetti-stage"]',
+    '#misc img[src*="misc-07-trampoline"]'
+  ].map(sel => document.querySelector(sel)).filter(Boolean);
+
+  function updateGuideLine() {
+    if (!enabled || !coarse.matches || !guidePath || !guideDot) {
+      if (guidePath) guidePath.setAttribute('d', '');
+      return;
+    }
+    const visible = guideTargets.map((el, index) => ({el, index, r:el.getBoundingClientRect()}))
+      .filter(o => o.r.bottom > 0 && o.r.top < window.innerHeight && o.r.right > 0 && o.r.left < window.innerWidth)
+      .sort((a,b) => Math.abs((a.r.top+a.r.height/2)-lastY)-Math.abs((b.r.top+b.r.height/2)-lastY));
+    if (!visible.length) { guidePath.setAttribute('d', ''); return; }
+    const current = visible[0];
+    const next = guideTargets[(current.index + 1) % guideTargets.length];
+    const a = current.r;
+    const sx = Math.max(8, Math.min(window.innerWidth-8, a.left+a.width/2));
+    const sy = Math.max(8, Math.min(window.innerHeight-8, a.top+a.height/2));
+    let ex = sx, ey = sy;
+    if (next) {
+      const b = next.getBoundingClientRect();
+      ex = Math.max(8, Math.min(window.innerWidth-8, b.left+b.width/2));
+      ey = Math.max(8, Math.min(window.innerHeight-8, b.top+b.height/2));
+      if (b.bottom < 0) ey = 12;
+      else if (b.top > window.innerHeight) ey = window.innerHeight-12;
+    }
+    const bendX = (sx+ex)/2 + (ey-sy)*.12;
+    guidePath.setAttribute('d', `M ${sx} ${sy} Q ${bendX} ${(sy+ey)/2} ${ex} ${ey}`);
+    guideDot.setAttribute('cx', sx); guideDot.setAttribute('cy', sy);
+  }
 
   function setBeam(x, y) {
     lastX = Math.max(0, Math.min(window.innerWidth, x));
@@ -409,6 +470,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
       const cy = r.top + r.height / 2;
       clue.classList.toggle('is-revealed', Math.hypot(cx-lastX, cy-lastY) < 115);
     });
+    updateGuideLine();
   }
   function toggleMode() {
     enabled = !enabled;
@@ -421,6 +483,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
       if (coarse.matches) scheduleGuide();
     } else {
       document.querySelectorAll('.flashlight-clue.is-revealed').forEach(clue => clue.classList.remove('is-revealed'));
+      if (guidePath) guidePath.setAttribute('d', '');
     }
   }
   function scheduleGuide() {
@@ -450,11 +513,14 @@ body.flashlight-mode .switch-track:after{left:11px;}
   }
   toggle.addEventListener('click', toggleMode);
   window.addEventListener('pointermove', e => { if (enabled && !coarse.matches) setBeam(e.clientX,e.clientY); }, {passive:true});
-  window.addEventListener('touchstart', e => { if (enabled && e.touches && e.touches[0] && !coarse.matches) setBeam(e.touches[0].clientX,e.touches[0].clientY); }, {passive:true});
+  window.addEventListener('pointerdown', e => { if (enabled) setBeam(e.clientX,e.clientY); }, {passive:true});
+  window.addEventListener('touchstart', e => { if (enabled && e.touches && e.touches[0]) setBeam(e.touches[0].clientX,e.touches[0].clientY); }, {passive:true});
   window.addEventListener('scroll', scheduleGuide, {passive:true});
   window.addEventListener('resize', () => { if (enabled && coarse.matches) scheduleGuide(); }, {passive:true});
   window.addEventListener('load', scheduleGuide, {once:true});
   setBeam(lastX,lastY);
-})();
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFlashlightController, {once:true});
+else initFlashlightController();
 </script>
 </body></html>
