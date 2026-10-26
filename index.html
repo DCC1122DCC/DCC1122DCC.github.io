@@ -217,6 +217,29 @@ body.flashlight-mode .switch-track:after{left:11px;}
 .hero-bottom{justify-content:center;min-height:40px}
 @media(max-width:760px){.ticker-rule-set{display:none!important}.photo-group-label{gap:6px!important;margin:20px 0 14px!important}.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-size:clamp(18px,5.2vw,24px)!important}.hero{min-height:460px}.hero h1{font-size:clamp(40px,8.5vw,62px);width:94%;padding:0 2%}.hero-bottom{min-height:18px}.hero-stamp{width:60px;right:12px;bottom:5%}}
 </style>
+<style id="final-visual-fixes">
+/* Photography heading and instruction stay together; instruction sits directly below the heading. */
+#photos.gallery-intro{display:block;margin:46px 0 20px;}
+.photography-heading{display:flex;flex-direction:column;align-items:flex-start;gap:7px;}
+.photography-heading h3{margin:0;}
+#photos .eyes-click-note{margin:0!important;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.12em;line-height:1.5;}
+/* Keep each collection visually consistent with the eyes collage: equal-width columns, full image frames, no cropping. */
+#fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{display:block!important;columns:3;column-gap:clamp(10px,1.4vw,18px);}
+#fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 clamp(10px,1.4vw,18px)!important;vertical-align:top;}
+#fashion-portraits .photo-card a,#nyc-film .photo-card a,#live-music .photo-card a,#misc .photo-card a{height:auto;background:transparent;}
+#fashion-portraits .photo-card img,#nyc-film .photo-card img,#live-music .photo-card img,#misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
+/* The stamp is a visible bridge between the title card and photography, on desktop and mobile. */
+.hero{padding-bottom:150px;}
+.hero-bottom{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;align-items:center;min-height:0;}
+.hero-stamp{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;display:block!important;width:clamp(78px,7vw,106px)!important;height:auto;margin:0 auto;}
+@media(max-width:760px){
+ .hero{padding-bottom:100px;min-height:520px;}
+ .hero-bottom{bottom:14px;}
+ .hero-stamp{display:block!important;width:68px!important;}
+ #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{columns:2;column-gap:9px;}
+ #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
@@ -257,11 +280,11 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1><div class="hero-bottom"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div></section>
 
 <section class="section" id="work">
-<div class="gallery-intro" id="photos"><h3>PHOTOGRAPHY</h3></div>
+<div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Who's There?</span><span class="eyes-group-subtitle"></span></div>
 <p class="eyes-intro eyes-intro-under-title">Sometimes the clues are looking right at you.</p>
-<p class="eyes-click-note">EXPAND PHOTO FOR A CLOSER LOOK</p>
+
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -359,59 +382,79 @@ body.flashlight-mode .switch-track:after{left:11px;}
   if (document.readyState === 'complete') scheduleGuide();
 })();
 </script>
+<script id="flashlight-controller">
+(() => {
+  const body = document.body;
+  const toggle = document.getElementById('light-switch');
+  const label = document.getElementById('switch-label');
+  const overlay = document.querySelector('.flashlight-overlay');
+  const cursor = document.getElementById('flashlight-cursor');
+  const coarse = window.matchMedia('(pointer: coarse)');
+  if (!toggle || !overlay || !cursor) return;
+  let enabled = false;
+  let guideFrame = 0;
+  let lastX = window.innerWidth / 2;
+  let lastY = window.innerHeight / 2;
+
+  function setBeam(x, y) {
+    lastX = Math.max(0, Math.min(window.innerWidth, x));
+    lastY = Math.max(0, Math.min(window.innerHeight, y));
+    body.style.setProperty('--flash-x', lastX + 'px');
+    body.style.setProperty('--flash-y', lastY + 'px');
+    cursor.style.left = lastX + 'px';
+    cursor.style.top = lastY + 'px';
+    document.querySelectorAll('.flashlight-clue').forEach(clue => {
+      const r = clue.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      clue.classList.toggle('is-revealed', Math.hypot(cx-lastX, cy-lastY) < 115);
+    });
+  }
+  function toggleMode() {
+    enabled = !enabled;
+    body.classList.toggle('flashlight-mode', enabled);
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.setAttribute('aria-label', enabled ? 'Turn flashlight dark mode off' : 'Turn flashlight dark mode on');
+    if (label) label.textContent = enabled ? 'LIGHTS OFF' : 'LIGHTS ON';
+    if (enabled) {
+      setBeam(window.innerWidth / 2, window.innerHeight * .38);
+      if (coarse.matches) scheduleGuide();
+    } else {
+      document.querySelectorAll('.flashlight-clue.is-revealed').forEach(clue => clue.classList.remove('is-revealed'));
+    }
+  }
+  function scheduleGuide() {
+    if (!enabled || !coarse.matches || guideFrame) return;
+    guideFrame = requestAnimationFrame(() => {
+      guideFrame = 0;
+      if (!enabled) return;
+      const vh = window.innerHeight;
+      const focusY = vh * .48;
+      const targetSelectors = [
+        '#eyes img[src*="EYE16"]',
+        '#fashion-portraits img[src*="fashion-05-blue-gloves"]',
+        '#misc img[src*="misc-07-trampoline"]'
+      ];
+      const targets = targetSelectors.map(sel => document.querySelector(sel)).filter(Boolean);
+      const visible = targets.map(el => ({el, r:el.getBoundingClientRect()}))
+        .filter(o => o.r.bottom > 0 && o.r.top < vh)
+        .sort((a,b) => Math.abs((a.r.top+a.r.height/2)-focusY)-Math.abs((b.r.top+b.r.height/2)-focusY));
+      if (visible.length) {
+        const r = visible[0].r;
+        setBeam(r.left + r.width/2, Math.max(28, Math.min(vh-28, r.top+r.height/2)));
+      } else {
+        const clue = document.querySelector('.flashlight-clue.eyes');
+        if (clue) { const r=clue.getBoundingClientRect(); setBeam(r.left+r.width/2,r.top+r.height/2); }
+      }
+    });
+  }
+  toggle.addEventListener('click', toggleMode);
+  window.addEventListener('pointermove', e => { if (enabled && !coarse.matches) setBeam(e.clientX,e.clientY); }, {passive:true});
+  window.addEventListener('touchstart', e => { if (enabled && e.touches && e.touches[0] && !coarse.matches) setBeam(e.touches[0].clientX,e.touches[0].clientY); }, {passive:true});
+  window.addEventListener('scroll', scheduleGuide, {passive:true});
+  window.addEventListener('resize', () => { if (enabled && coarse.matches) scheduleGuide(); }, {passive:true});
+  window.addEventListener('load', scheduleGuide, {once:true});
+  setBeam(lastX,lastY);
+})();
+</script>
 </body></html>
-
-
-<style>
-/* Eyes: editorial left-aligned label, image field, and a small note to the right. */
-#photos.gallery-intro{margin-bottom:22px;}
-#photos.gallery-intro h3{margin:0;}
-.eyes-group-label{justify-content:flex-start!important;text-align:left!important;align-items:baseline!important;flex-wrap:wrap;margin:24px 0 5px!important;gap:10px!important;}
-.eyes-group-label .eyes-group-title{font-family:var(--display);font-size:clamp(19px,2.2vw,28px);font-weight:900;letter-spacing:-.035em;}
-.eyes-group-label .eyes-group-subtitle{font-size:11px!important;font-style:italic;}
-.eyes-click-note{text-align:left!important;margin:0 0 16px!important;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--muted);}
-.eyes-layout{display:grid;grid-template-columns:minmax(0, 1fr) minmax(150px, 220px);align-items:center;gap:clamp(22px,4vw,56px);width:min(100%,1120px);margin:0 auto;}
-.eyes-layout-images{min-width:0;}
-.eyes-square-collage{width:100%!important;margin:0!important;}
-.eyes-intro{text-align:left!important;max-width:210px!important;margin:0!important;font-size:clamp(19px,2.2vw,28px)!important;line-height:1.2;font-style:italic;}
-@media(max-width:760px){.eyes-layout{grid-template-columns:minmax(0,1fr) minmax(90px,31%);gap:14px;align-items:center}.eyes-intro{font-size:clamp(15px,4vw,19px)!important}.eyes-group-label{margin-top:20px!important}.eyes-click-note{font-size:8px!important;letter-spacing:.08em}}
-@media(max-width:420px){.eyes-layout{grid-template-columns:minmax(0,1fr) 88px;gap:10px}.eyes-intro{font-size:14px!important}.eyes-square-collage{columns:2!important}}
-
-/* Keep the two Misc photos side by side: trampoline + water */
-#misc .photo-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));columns:initial!important;gap:clamp(12px,1.6vw,20px);align-items:start;}
-#misc .photo-card{break-inside:initial;margin:0 0 12px;}
-#misc .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;display:block;}
-@media(max-width:520px){#misc .photo-grid{gap:8px}}
-</style>
-
-<style id="latest-gallery-order-adjustments">
-/* Eyes intro now sits beneath its left-aligned title and subtitle. */
-.eyes-group-label{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:4px!important;}
-.eyes-group-label .eyes-group-subtitle{display:block!important;}
-.eyes-intro-under-title{text-align:left!important;max-width:100%!important;margin:7px 0 10px!important;font-size:clamp(17px,1.8vw,23px)!important;line-height:1.25;font-style:italic;}
-.eyes-click-note{text-align:left!important;margin:0 0 16px!important;}
-#eyes .eyes-layout{display:block!important;width:min(100%,1120px)!important;margin:0 auto!important;}
-#eyes .eyes-layout-images{width:100%!important;}
-#live-music .music-photo-grid{display:grid!important;columns:initial!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:start;gap:clamp(10px,1.4vw,18px)!important;}
-#live-music .music-photo-grid .photo-card{break-inside:initial!important;margin:0!important;}
-#live-music .music-photo-grid .photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;}
-@media(max-width:760px){#live-music .music-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important;}}
-</style>
-
-<style>
-/* Final request: center the Made & Found stamp beneath the hero title on desktop; omit on mobile. */
-@media (min-width:761px) {
-  .hero-stamp { left:50%!important; right:auto!important; bottom:3%!important; transform:translateX(-50%); }
-}
-@media (max-width:760px) {
-  .hero-stamp { display:none!important; }
-}
-</style>
-
-<style>
-/* Final refinements */
-.eyes-group-title,.eyes-group-label .eyes-group-title{color:#000!important;}
-.ticker-rule-set{display:none!important}
-@media(min-width:761px){.hero-stamp{left:50%!important;right:auto!important;bottom:3%!important;transform:translateX(-50%)}}
-@media(max-width:760px){.hero-stamp{display:none!important}}
-</style>
