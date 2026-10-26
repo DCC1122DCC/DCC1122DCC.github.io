@@ -267,6 +267,18 @@ body.flashlight-mode .switch-track:after{left:11px;}
 #photos .eyes-click-note{display:block;margin:0!important;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.12em;line-height:1.5;}
 @media(max-width:760px){.hero{padding-bottom:28px!important;min-height:460px;} .hero + .archive-stamp-separator{padding:12px 0 20px;} .hero + .archive-stamp-separator .hero-stamp{width:68px!important;} #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{columns:2;column-gap:9px;} #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}}
 </style>
+<style id="requested-collection-adjustments">
+/* Editorial heading and subtitle treatment for the recurring-subject collection. */
+#eyes .eyes-group-title{color:#25251f!important;}
+#eyes .eyes-group-subtitle{color:var(--muted)!important;font-family:var(--mono)!important;font-size:11px!important;font-weight:400;letter-spacing:.04em;text-transform:none;}
+/* Bring the Made & Found mark closer to the hero headline and tighten the handoff to photography. */
+.hero + .archive-stamp-separator{padding:8px 0 10px!important;}
+#photos.gallery-intro{margin:22px 0 16px!important;}
+@media(max-width:760px){
+  .hero + .archive-stamp-separator{padding:7px 0 9px!important;}
+  #photos.gallery-intro{margin:18px 0 14px!important;}
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -309,7 +321,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
-<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">knock knock, who's there?</span><span class="eyes-group-subtitle"></span></div>
+<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">knock knock, who's there?</span><span class="eyes-group-subtitle">01/ Reoccurring Subject</span></div>
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -328,14 +340,16 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
-</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-streetwork.jpg" data-lightbox><img src="./images/nyc-streetwork.jpg" alt="Street construction equipment on a New York sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
+<figure class="photo-card"><a href="./images/supplied-portrait.jpg" data-lightbox><img src="./images/supplied-portrait.jpg" alt="Portrait of a man in a light beige jacket and blue shirt against a blue background" loading="lazy"></a></figure>
+</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/supplied-portrait.jpg" data-lightbox><img src="./images/supplied-portrait.jpg" alt="Portrait of a man in a light beige jacket and blue shirt against a blue background" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
 <div class="photo-group-label">04 / Concerts <span></span></div>
 <div class="photo-grid music-photo-grid">
+<figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
 
 <figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure>
 
 </div></section><section class="photo-category-section" id="misc"><div class="photo-group-label">05 / Florida <span></span></div><div class="photo-grid">
 
