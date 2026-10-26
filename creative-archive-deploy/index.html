@@ -182,7 +182,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 
 
 
-/* CHANGE REALITY — three visual worlds, one archive. */
+/* CHANGE REALITY — same archive layout, different color worlds. */
 :root{--world-transition:background-color .45s ease,color .35s ease,border-color .35s ease;}
 body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:var(--world-transition);}
 .reality-switch{display:inline-flex;align-items:center;justify-content:center;gap:7px;flex:none;padding:7px 10px;border:1px solid var(--ink);border-radius:999px;background:var(--orange);color:var(--ink);font:700 8px/1.2 var(--mono);letter-spacing:.045em;text-transform:uppercase;cursor:pointer;transition:transform .2s ease,background-color .35s ease,color .35s ease,border-color .35s ease;white-space:nowrap;}
@@ -190,48 +190,49 @@ body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker
 .reality-switch:focus-visible{outline:2px solid var(--orange);outline-offset:4px;}
 .reality-switch .reality-symbol{font-size:13px;line-height:1;}
 @media(max-width:760px){.brand-tools{flex-wrap:wrap;gap:6px}.reality-switch{font-size:7px;padding:6px 8px;gap:5px}.site-header{gap:10px}.navigation{gap:12px}}
-/* WORLD 2: AFTER HOURS — midnight, acid orange, cinematic contrast. */
-body.world-after-hours{--cream:#111216;--paper:#1d2027;--orange:#ff6a1a;--orange-soft:#ff9b58;--cyan:#8ee8f0;--cyan-pale:#c4fbff;--rust:#ff604c;--ink:#f3eee4;--muted:#a8a8b2;--line:rgba(243,238,228,.23);background:var(--cream);color:var(--ink);}
-body.world-after-hours .site-header{background:rgba(17,18,22,.96);backdrop-filter:blur(12px);}
-body.world-after-hours .ticker{background:var(--orange);color:#111216;}
-body.world-after-hours .ticker-track span:not(.ticker-star){color:#111216;}
-body.world-after-hours .ticker-track .ticker-star:before{color:#111216;}
-body.world-after-hours .hero h1{top:53%;left:55%;width:84%;text-align:right;font-size:clamp(72px,10vw,138px);}
-body.world-after-hours .hero h1 span,body.world-after-hours .hero h1 .for-word,body.world-after-hours .hero h1 .clues-word{text-align:right;}
+/* WORLD 2: INDIE STATIC — inverted dark paper, acid green, electric purple and pink. */
+body.world-after-hours{--cream:#17131d;--paper:#241b2d;--orange:#c5ff35;--orange-soft:#e0ff7a;--cyan:#ff4fd8;--cyan-pale:#f6b6ff;--rust:#8b4dff;--ink:#f7f0ff;--muted:#c0adc9;--line:rgba(247,240,255,.25);background:var(--cream);color:var(--ink);}
+body.world-after-hours .site-header{background:rgba(23,19,29,.96);backdrop-filter:blur(12px);}
+body.world-after-hours .ticker{background:var(--orange);color:#17131d;}
+body.world-after-hours .ticker-track span:not(.ticker-star){color:#17131d;}
+body.world-after-hours .ticker-track .ticker-star:before{color:#17131d;}
 body.world-after-hours .hero h1 .clues-word{color:var(--cyan);}
-body.world-after-hours .hero-art{filter:saturate(1.2) drop-shadow(0 0 9px rgba(142,232,240,.12));}
-body.world-after-hours .hero-stamp{color:var(--cyan);}
-body.world-after-hours .stamp-dot{fill:var(--cyan);}
-body.world-after-hours .stamp-year{fill:var(--cyan);}
+body.world-after-hours .hero-art{filter:saturate(1.25) contrast(1.08);}
+body.world-after-hours .hero-stamp,body.world-after-hours .stamp-dot,body.world-after-hours .stamp-year{color:var(--cyan);fill:var(--cyan);}
 body.world-after-hours .work-arrow{border-color:var(--ink);color:var(--ink);}
-body.world-after-hours .work-row:hover .work-arrow{background:var(--orange);color:#111216;}
-body.world-after-hours .photo-card a{background:#1d2027;}
-body.world-after-hours .reality-switch{background:var(--cyan);color:#111216;border-color:var(--cyan);}
-/* WORLD 3: SPECIMEN ROOM — cool paper, catalog marks, measured editorial composition. */
-body.world-specimen-room{--cream:#e7f0f0;--paper:#f8fbf8;--orange:#d34b30;--orange-soft:#e78268;--cyan:#9dbbc7;--cyan-pale:#d2e4e9;--rust:#a64a3a;--ink:#263b46;--muted:#657d86;--line:rgba(38,59,70,.24);background:var(--cream);color:var(--ink);}
-body.world-specimen-room .site-header{background:var(--cream);border-bottom:1px dashed var(--line);}
-body.world-specimen-room .site-header:before{content:"FIELD NOTES / VISUAL INDEX";font-size:8px;letter-spacing:.16em;}
-body.world-specimen-room .hero{min-height:clamp(540px,68vh,700px);padding-left:8%;border-left:1px solid var(--line);margin-left:3.3%;}
-body.world-specimen-room .hero h1{top:49%;left:43%;width:72%;font-size:clamp(66px,9vw,122px);text-align:left;letter-spacing:-.085em;}
-body.world-specimen-room .hero h1 span,body.world-specimen-room .hero h1 .for-word,body.world-specimen-room .hero h1 .clues-word{text-align:left;}
-body.world-specimen-room .hero h1 .clues-word{color:var(--orange);}
-body.world-specimen-room .hero-art{transform-origin:center;filter:saturate(.62);}
-body.world-specimen-room .earth-art{right:11%;top:5%;}
-body.world-specimen-room .star-art{left:auto;right:8%;top:66%;width:clamp(45px,4vw,70px);}
-body.world-specimen-room .hero-stamp{right:8%;bottom:8%;width:clamp(86px,7vw,112px);}
+body.world-after-hours .work-row:hover .work-arrow{background:var(--orange);color:#17131d;}
+body.world-after-hours .photo-card a{background:var(--paper);}
+body.world-after-hours .photo-group-label span{color:var(--muted);}
+body.world-after-hours .reality-switch{background:var(--cyan);color:#17131d;border-color:var(--cyan);}
+body.world-after-hours .site-footer{background:var(--paper);}
+/* WORLD 3: WONDERLAND — sky blue, living green, soft clouds and little butterflies. */
+body.world-specimen-room{--cream:#dff5ff;--paper:#f7fff5;--orange:#2eaa62;--orange-soft:#7bdc91;--cyan:#58bde9;--cyan-pale:#bceeff;--rust:#e88bc9;--ink:#183b42;--muted:#527a7d;--line:rgba(24,59,66,.22);background:linear-gradient(180deg,#bfeaff 0%,#e6f8ff 40%,#e9f7d9 100%);color:var(--ink);}
+body.world-specimen-room .site-header{background:rgba(223,245,255,.92);backdrop-filter:blur(8px);}
+body.world-specimen-room .hero,body.world-specimen-room .section,body.world-specimen-room .site-footer{background-color:transparent;}
+body.world-specimen-room .hero{background-image:radial-gradient(ellipse at 15% 16%,rgba(255,255,255,.78) 0 5%,transparent 15%),radial-gradient(ellipse at 82% 12%,rgba(255,255,255,.72) 0 4%,transparent 13%),linear-gradient(180deg,rgba(119,211,248,.12),rgba(174,224,133,.12));}
+body.world-specimen-room .section:nth-of-type(even){background-image:repeating-linear-gradient(105deg,rgba(46,170,98,.035) 0 2px,transparent 2px 7px);}
 body.world-specimen-room .ticker{background:var(--cyan-pale);color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 body.world-specimen-room .ticker-track span:not(.ticker-star){color:var(--ink);}
 body.world-specimen-room .ticker-track .ticker-star:before{color:var(--orange);}
-body.world-specimen-room .section{padding-top:64px;padding-bottom:64px;}
-body.world-specimen-room .section-heading,body.world-specimen-room .photo-group-label{border-bottom-style:dashed;}
-body.world-specimen-room .photo-group-label{letter-spacing:.12em;}
-body.world-specimen-room .photo-card a{background:var(--paper);outline:1px solid var(--line);outline-offset:-1px;}
-body.world-specimen-room .photo-card figcaption{letter-spacing:.08em;}
-body.world-specimen-room .reality-switch{background:var(--ink);color:var(--cream);border-color:var(--ink);}
-@media(max-width:760px){body.world-after-hours .hero h1{left:50%;width:90%;text-align:center}body.world-after-hours .hero h1 span,body.world-after-hours .hero h1 .for-word,body.world-after-hours .hero h1 .clues-word{text-align:center}body.world-specimen-room .hero{margin-left:0;padding-left:6%}body.world-specimen-room .hero h1{left:50%;width:88%;text-align:left}body.world-specimen-room .hero h1 span,body.world-specimen-room .hero h1 .for-word,body.world-specimen-room .hero h1 .clues-word{text-align:left}}
+body.world-specimen-room .hero h1 .clues-word{color:var(--orange);}
+body.world-specimen-room .hero-art{filter:saturate(1.08);}
+body.world-specimen-room .hero-stamp{color:var(--orange);}
+body.world-specimen-room .photo-card a{background:var(--paper);box-shadow:0 2px 12px rgba(37,112,117,.08);}
+body.world-specimen-room .photo-group-label span{color:var(--muted);}
+body.world-specimen-room .reality-switch{background:var(--orange);color:#fff;border-color:var(--orange);}
+body.world-specimen-room .site-header:after{content:"🦋";position:absolute;right:5%;top:70px;font-size:20px;opacity:.82;pointer-events:none;}
+body.world-specimen-room .hero:after{content:"🦋  ✧  🦋";position:absolute;right:8%;bottom:12%;font-size:clamp(16px,2vw,26px);letter-spacing:14px;opacity:.85;pointer-events:none;}
 @media(prefers-reduced-motion:reduce){.reality-switch,body,.site-header,.section,.photo-group-label,.photo-card a,.site-footer,.ticker,.work-row,.photo-categories a,.light-switch{transition:none!important}}
-
-</style></head>
+</style><style>
+/* Gallery polish: centered collection headers, no numbered labels under individual photographs. */
+.photo-group-label{justify-content:center;text-align:center;margin:24px 0 18px;padding-top:12px;border-top:0;gap:10px;}
+.photo-group-label span{font-size:10px;}
+.photo-grid{max-width:100%;margin-left:auto;margin-right:auto;}
+.photo-card{margin-bottom:12px;}
+.photo-card figcaption{display:none !important;}
+@media(max-width:760px){.photo-group-label{flex-wrap:wrap;gap:6px;margin:20px 0 14px;}}
+</style>
+</head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div>
 <div class="flashlight-clues" aria-hidden="true">
@@ -297,28 +298,29 @@ body.world-specimen-room .reality-switch{background:var(--ink);color:var(--cream
 </section> <section class="photo-category-section" id="live-music">
 <div class="photo-group-label">02 / ELECTRIC <span>Color, light, and movement</span></div>
 <div class="photo-grid music-photo-grid">
-<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand russ performing live"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live" loading="lazy"></a><figcaption><span>01 / Live music</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a><figcaption><span>02 / Live music</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/music-03-daytime-performance.jpg" data-lightbox aria-label="Expand performer on an outdoor stage"><img src="./images/music-03-daytime-performance.jpg" alt="Performer on an outdoor stage" loading="lazy"></a><figcaption><span>03 / Live music</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a><figcaption><span>04 / Live music</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a><figcaption><span>05 / Live music</span><span>Photography</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a><figcaption><span>06 / Live music</span><span>Photography</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand russ performing live"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-03-daytime-performance.jpg" data-lightbox aria-label="Expand performer on an outdoor stage"><img src="./images/music-03-daytime-performance.jpg" alt="Performer on an outdoor stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure>
 </div></section> <section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">03 / DRAMATIC <span>California and beyond</span></div><div class="photo-grid">
-<figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a><figcaption><span>01 / Olive Study</span><span>Fashion</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a><figcaption><span>02 / Half Face</span><span>Beauty</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a><figcaption><span>03 / Color Shadow</span><span>Editorial</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a><figcaption><span>04 / After Hours</span><span>Portrait</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a><figcaption><span>05 / Blue Gloves</span><span>Editorial</span></figcaption></figure>
+<figure class="photo-card"><a href="./images/fashion-01-olive-study.png" data-lightbox><img src="./images/fashion-01-olive-study.png" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-03-color-shadow.png" data-lightbox><img src="./images/fashion-03-color-shadow.png" alt="Styled portrait with blue and orange shadows" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.png" data-lightbox><img src="./images/fashion-05-blue-gloves.png" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a></figure>
 
-</div></section> <section class="photo-category-section" id="nyc-film"><div class="photo-group-label">04 / OBSERVATIONAL <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a><figcaption><span>01 / Candid</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a><figcaption><span>02 / Portrait</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a><figcaption><span>03 / Figure</span><span>Photography</span></figcaption></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a><figcaption><span>05 / Somewhere</span><span>Street</span></figcaption></figure></div></section> <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
-
-
+</div></section> <section class="photo-category-section" id="nyc-film"><div class="photo-group-label">04 / OBSERVATIONAL <span>New York, on film</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure></div></section> <section class="photo-category-section" id="misc"><div class="photo-group-label">05 / MISC. <span>Selected photographs · current gallery</span></div><div class="photo-grid">
 
 
 
 
-<figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a><figcaption><span>07 / In Between</span><span>Everyday</span></figcaption></figure>
-<figure class="photo-card"><a href="./images/SOUVENIRS.JPG" data-lightbox><img src="./images/SOUVENIRS.JPG" alt="Nighttime street scene with a Souvenirs sign" loading="lazy"></a><figcaption><span>06 / After Hours</span><span>Street</span></figcaption></figure>
+
+
+<figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/misc-06-water.JPG" data-lightbox><img src="./images/misc-06-water.JPG" alt="A swimmer looking through a snorkel mask in clear water" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/SOUVENIRS.JPG" data-lightbox><img src="./images/SOUVENIRS.JPG" alt="Nighttime street scene with a Souvenirs sign" loading="lazy"></a></figure>
 </div><p class="photo-note">A few photographs that do not belong to a larger collection live here for now.</p></section>
 <div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. Filming, editing, and creative contributions across different kinds of work.</p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article></div>
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
@@ -482,8 +484,8 @@ body.world-specimen-room .reality-switch{background:var(--ink);color:var(--cream
   if (!button) return;
   const worlds = [
     {className:'', label:'CHANGE REALITY', name:'Original world'},
-    {className:'world-after-hours', label:'CHANGE REALITY', name:'After Hours'},
-    {className:'world-specimen-room', label:'CHANGE REALITY', name:'Specimen Room'}
+    {className:'world-after-hours', label:'CHANGE REALITY', name:'Indie Static'},
+    {className:'world-specimen-room', label:'CHANGE REALITY', name:'Wonderland'}
   ];
   let current = 0;
   const saved = sessionStorage.getItem('lookingForCluesWorld');
