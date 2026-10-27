@@ -204,6 +204,19 @@ body.flashlight-mode .switch-track:after{left:11px;}
 
 
 
+
+/* My Work: an oversized cyan banner using the same display face as the hero. */
+.my-work-banner{width:100%;overflow:hidden;text-align:center;color:var(--cyan);font-family:var(--display);font-size:clamp(48px,11.8vw,168px);font-weight:900;line-height:.88;letter-spacing:-.075em;white-space:nowrap;padding:clamp(22px,4vw,52px) 1.5% clamp(28px,4.5vw,58px);}
+/* The Made and Found stamp sits beside the light switch without adding a new row. */
+.header-stamp{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:36px;height:36px;margin-left:2px;}
+.header-stamp .hero-stamp{position:static;display:block;width:100%;height:100%;max-width:100%;}
+.header-stamp .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+.search-continues{display:none;position:relative;z-index:1103;text-align:center;padding:clamp(48px,8vw,100px) 20px clamp(54px,9vw,112px);color:#c8fbff;}
+body.flashlight-mode .search-continues{display:block;}
+.search-continues p{margin:0 auto 14px;font:900 clamp(28px,6.5vw,76px)/.95 var(--display);letter-spacing:-.055em;text-shadow:0 0 5px #73d9e8,0 0 18px rgba(115,217,232,.9),0 0 36px rgba(115,217,232,.45);}
+.search-continues a{display:inline-block;font:700 clamp(10px,1.3vw,13px) var(--mono);letter-spacing:.09em;color:#c8fbff;text-shadow:0 0 5px #73d9e8,0 0 15px rgba(115,217,232,.9);border-bottom:1px solid currentColor;padding-bottom:5px;pointer-events:auto;}
+.search-continues a:hover{color:#fff;}
+@media(max-width:760px){.my-work-banner{font-size:clamp(40px,12.4vw,88px);letter-spacing:-.075em;padding:22px 1% 30px;}.header-stamp{width:28px;height:28px;margin-left:0;}.search-continues{padding:54px 14px 76px}.search-continues p{font-size:clamp(27px,8vw,46px);}}
 </style><style>
 /* Gallery polish: centered collection headers, no numbered labels under individual photographs. */
 .photo-group-label{justify-content:center;text-align:center;margin:24px 0 18px;padding-top:12px;border-top:0;gap:10px;}
@@ -307,7 +320,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
 <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
 <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
+</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button><span class="header-stamp" role="img" aria-label="Made and found, 2026"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></span></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
 <main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
 <div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
 <div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
@@ -317,8 +330,9 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
 <div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
 <div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
-<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1></section><div class="hero-bottom archive-stamp-separator"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></div>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1></section>
 
+<div class="my-work-banner" aria-label="My work">MY WORK</div>
 <section class="section" id="work">
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
@@ -342,7 +356,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <figure class="photo-card"><a href="./images/fashion-02-half-face.png" data-lightbox><img src="./images/fashion-02-half-face.png" alt="Close-up beauty portrait with pearl details and a pale contact lens" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/supplied-portrait.jpg" data-lightbox><img src="./images/supplied-portrait.jpg" alt="Portrait of a man in a light beige jacket and blue shirt against a blue background" loading="lazy"></a></figure>
-</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
+</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000927340020.jpg" data-lightbox aria-label="Open construction sign with a painted happy face"><img src="./images/000927340020.jpg" alt="A worn construction barrier marked with a bright orange happy face on a New York sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/nyc-winter-stroller.jpg" data-lightbox><img src="./images/nyc-winter-stroller.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
 <div class="photo-group-label">04 / Concerts <span></span></div>
 <div class="photo-grid music-photo-grid">
 <figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
@@ -368,6 +382,7 @@ body.flashlight-mode .switch-track:after{left:11px;}
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
+<section class="search-continues" aria-label="Final clue"><p>THE SEARCH CONTINUES...</p><a href="mailto:DCURBELO121@GMAIL.COM" aria-label="Continue the search by email">FOLLOW THE CLUE TO MY EMAIL ↗</a></section>
 <section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM</a></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script>
@@ -376,9 +391,13 @@ body.flashlight-mode .switch-track:after{left:11px;}
   const switchButton = document.getElementById('light-switch');
   const clue = document.querySelector('.flashlight-clue.eyes');
   const targets = [
+    document.querySelector('.magnifier-art'),
     document.querySelector('#eyes img[src*="EYE16"]'),
     document.querySelector('#fashion-portraits img[src*="fashion-05-blue-gloves"]'),
-    document.querySelector('#misc img[src*="misc-07-trampoline"]')
+    document.querySelector('#nyc-film img[src*="000927340020"]'),
+    document.querySelector('#live-music img[src*="music-02-confetti-stage"]'),
+    document.querySelector('#misc img[src*="misc-07-trampoline"]'),
+    document.querySelector('.search-continues')
   ].filter(Boolean);
   if (!switchButton || !clue || !targets.length) return;
   let framePending = false;
@@ -438,15 +457,17 @@ const initFlashlightController = () => {
   const guidePath = document.getElementById('flashlight-guide-path');
   const guideDot = document.getElementById('flashlight-guide-dot');
   const guideTargets = [
+    '.magnifier-art',
     '#eyes img[src*="EYE16"]',
     '#fashion-portraits img[src*="fashion-05-blue-gloves"]',
-    '#nyc-film img[src*="000017470004"]',
+    '#nyc-film img[src*="000927340020"]',
     '#live-music img[src*="music-02-confetti-stage"]',
-    '#misc img[src*="misc-07-trampoline"]'
+    '#misc img[src*="misc-07-trampoline"]',
+    '.search-continues'
   ].map(sel => document.querySelector(sel)).filter(Boolean);
 
   function updateGuideLine() {
-    if (!enabled || !coarse.matches || !guidePath || !guideDot) {
+    if (!enabled || !guidePath || !guideDot) {
       if (guidePath) guidePath.setAttribute('d', '');
       return;
     }
@@ -509,9 +530,13 @@ const initFlashlightController = () => {
       const vh = window.innerHeight;
       const focusY = vh * .48;
       const targetSelectors = [
+        '.magnifier-art',
         '#eyes img[src*="EYE16"]',
         '#fashion-portraits img[src*="fashion-05-blue-gloves"]',
-        '#misc img[src*="misc-07-trampoline"]'
+        '#nyc-film img[src*="000927340020"]',
+        '#live-music img[src*="music-02-confetti-stage"]',
+        '#misc img[src*="misc-07-trampoline"]',
+        '.search-continues'
       ];
       const targets = targetSelectors.map(sel => document.querySelector(sel)).filter(Boolean);
       const visible = targets.map(el => ({el, r:el.getBoundingClientRect()}))
