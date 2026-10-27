@@ -333,7 +333,7 @@ body.flashlight-mode .search-continues{display:block;}
 <h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1></section>
 
 
-<div class="clues-work-divider" aria-hidden="true"><svg viewBox="0 0 1440 36" preserveAspectRatio="none"><path d="M-10 18 C 70 -2, 125 38, 205 18 S 345 -2, 425 18 S 565 38, 645 18 S 785 -2, 865 18 S 1005 38, 1085 18 S 1225 -2, 1305 18 S 1390 32, 1450 14" /></svg></div>
+<div class="clues-work-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M-10 7 C 70 -5, 125 19, 205 7 S 345 -5, 425 7 S 565 19, 645 7 S 785 -5, 865 7 S 1005 19, 1085 7 S 1225 -5, 1305 7 S 1390 16, 1450 5" /><path d="M-10 24 C 70 12, 125 36, 205 24 S 345 12, 425 24 S 565 36, 645 24 S 785 12, 865 24 S 1005 36, 1085 24 S 1225 12, 1305 24 S 1390 33, 1450 22" /><path d="M-10 41 C 70 29, 125 53, 205 41 S 345 29, 425 41 S 565 53, 645 41 S 785 29, 865 41 S 1005 53, 1085 41 S 1225 29, 1305 41 S 1390 50, 1450 39" /></svg></div>
 <section class="section" id="work">
 <div class="my-work-banner" aria-label="My work">MY WORK</div>
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
@@ -567,13 +567,15 @@ else initFlashlightController();
 </script>
 
 <style id="requested-my-work-updates">
-/* Orange wavy divider between Looking for Clues and the work archive. */
-.clues-work-divider{width:100%;height:clamp(17px,2.5vw,30px);overflow:hidden;line-height:0;margin:0 0 clamp(8px,1.5vw,18px);}
+/* Three hand-drawn wavy lines divide Looking for Clues from the work archive. */
+.clues-work-divider{width:100%;height:clamp(28px,3.4vw,44px);overflow:hidden;line-height:0;margin:0 0 clamp(6px,1vw,12px);}
 .clues-work-divider svg{display:block;width:100%;height:100%;overflow:visible;}
-.clues-work-divider path{fill:none;stroke:var(--orange);stroke-width:5;stroke-linecap:round;vector-effect:non-scaling-stroke;}
-/* Orange MY WORK lettering with cyan polka dots, close to Photography. */
-#work .my-work-banner{color:var(--orange);background-image:radial-gradient(circle, var(--cyan) 2px, transparent 2.5px),linear-gradient(var(--orange),var(--orange));background-size:14px 14px,100% 100%;background-position:2px 2px,0 0;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:clamp(4px,1vw,12px) 1.5% clamp(8px,1.2vw,16px);margin:0;}
+.clues-work-divider path{fill:none;stroke-width:4.5;stroke-linecap:round;vector-effect:non-scaling-stroke;}
+.clues-work-divider path:nth-child(1),.clues-work-divider path:nth-child(3){stroke:var(--orange);}
+.clues-work-divider path:nth-child(2){stroke:var(--cyan);}
+/* Slightly smaller cyan MY WORK lettering with orange polka dots, close to Photography. */
+#work .my-work-banner{font-size:clamp(42px,10.2vw,142px);color:var(--cyan);background-image:radial-gradient(circle, var(--orange) 2px, transparent 2.5px),linear-gradient(var(--cyan),var(--cyan));background-size:14px 14px,100% 100%;background-position:2px 2px,0 0;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:clamp(3px,.7vw,8px) 1.5% clamp(5px,.8vw,10px);margin:0;}
 #work #photos.gallery-intro{margin-top:0;}
-@media(max-width:760px){.clues-work-divider{margin-bottom:7px}.clues-work-divider path{stroke-width:4}}
+@media(max-width:760px){.clues-work-divider{margin-bottom:6px}.clues-work-divider path{stroke-width:3.5}#work .my-work-banner{font-size:clamp(36px,11.5vw,78px);}}
 </style>
 </body></html>
