@@ -334,6 +334,53 @@ body.flashlight-mode .flashlight-found-clue{opacity:1!important;}
 }
 @media(min-width:761px){.flashlight-scroll-hint{max-width:calc(100vw - 32px);}}
 </style>
+
+<style id="contact-and-work-final-adjustments">
+/* Keep the final clue beside the email instead of creating a large extra block near the page bottom. */
+.about-copy .contact-email{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;vertical-align:middle;}
+.about-copy .search-continues{display:inline-block;margin:12px 0 0 0;color:#b6f8ff;font:700 10px/1.5 var(--mono);letter-spacing:.12em;text-shadow:0 0 5px rgba(115,217,232,.9),0 0 12px rgba(115,217,232,.65);}
+body.flashlight-mode .about-copy .search-continues{animation:clue-glow 2s ease-in-out infinite alternate;}
+/* Give the stamp a clear, larger presence in the upper-right without pushing Photography down awkwardly. */
+#work .work-stamp-row{position:relative;display:flex;justify-content:flex-end;align-items:center;box-sizing:border-box;width:100%;height:clamp(118px,13vw,158px);padding:0 clamp(18px,3vw,44px);margin:0 0 -30px;}
+#work .work-stamp{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:clamp(112px,12vw,150px);height:clamp(112px,12vw,150px);margin:0;}
+#work .work-stamp .hero-stamp{position:static!important;inset:auto!important;transform:none!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;margin:0!important;}
+#work .work-stamp .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+/* Pull MY WORK toward the cyan divider while preserving a deliberate gap before Photography. */
+#work .my-work-banner{margin-top:-12px!important;padding-top:0!important;padding-bottom:clamp(42px,5vw,66px)!important;line-height:.9;}
+#work #photos.gallery-intro{margin-top:0!important;padding-top:0!important;}
+@media(max-width:760px){
+  #work .work-stamp-row{height:clamp(94px,27vw,118px);padding:0 12px;margin-bottom:-22px;}
+  #work .work-stamp{width:clamp(88px,24vw,108px);height:clamp(88px,24vw,108px);}
+  #work .my-work-banner{margin-top:-8px!important;padding-bottom:clamp(32px,8vw,44px)!important;}
+  .about-copy .search-continues{display:block;margin-top:10px;}
+}
+@media(prefers-reduced-motion:reduce){.about-copy .search-continues{animation:none!important;}}
+</style>
+
+
+<style id="latest-contact-and-work-polish">
+/* Keep the email clue compact and useful, rather than creating a large block at the page bottom. */
+#about .about-copy .search-continues{display:none!important;margin:10px 0 0!important;max-width:38em;color:#bffaff;font:700 clamp(10px,1.2vw,12px)/1.65 var(--mono);letter-spacing:.035em;text-shadow:0 0 5px rgba(115,217,232,.95),0 0 12px rgba(115,217,232,.7);}
+body.flashlight-mode #about .about-copy .search-continues{display:block!important;animation:clue-glow 2s ease-in-out infinite alternate;}
+#about .contact-email{gap:10px;}
+#about .contact-email-icon{width:clamp(25px,3vw,34px);height:clamp(25px,3vw,34px);color:#73d9e8;stroke:#73d9e8;filter:drop-shadow(0 0 5px rgba(115,217,232,.9)) drop-shadow(0 0 12px rgba(115,217,232,.55));}
+body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9e8) drop-shadow(0 0 17px rgba(115,217,232,.95));}
+/* Rebalance the My Work title card: large legible stamp at right, title near the cyan dotted divider, then a clean gap before Photography. */
+#work .work-stamp-row{position:relative;z-index:2;display:flex;justify-content:flex-end;align-items:center;box-sizing:border-box;width:100%;height:clamp(130px,14vw,170px);padding:0 clamp(18px,3vw,44px);margin:0 0 -24px;overflow:visible;}
+#work .work-stamp{width:clamp(126px,13vw,164px);height:clamp(126px,13vw,164px);}
+#work .work-stamp .hero-stamp{width:100%!important;height:100%!important;}
+#work .my-work-banner{position:relative;z-index:1;margin-top:-8px!important;padding-top:0!important;padding-bottom:clamp(24px,3.2vw,38px)!important;line-height:.9;}
+#work #photos.gallery-intro{margin-top:clamp(10px,1.5vw,18px)!important;padding-top:0!important;}
+@media(max-width:760px){
+ #work .work-stamp-row{height:clamp(104px,29vw,126px);padding:0 12px;margin-bottom:-16px;}
+ #work .work-stamp{width:clamp(94px,25vw,116px);height:clamp(94px,25vw,116px);}
+ #work .my-work-banner{margin-top:-5px!important;padding-bottom:clamp(18px,5vw,28px)!important;}
+ #work #photos.gallery-intro{margin-top:10px!important;}
+ #about .about-copy .search-continues{max-width:30em;}
+}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode #about .about-copy .search-continues{animation:none!important;}}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -426,7 +473,7 @@ body.flashlight-mode .flashlight-found-clue{opacity:1!important;}
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="flashlight-found-clue" aria-hidden="true">✦ CLUE FOUND ✦</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -446,15 +493,20 @@ const initFlashlightController = () => {
   let lastY = window.innerHeight * .38;
   // Each selector is a deliberate stop in the exact requested discovery trail.
   const targetSelectors = [
-    '.magnifier-art',
-    '#eyes img[src*="EYE16.jpg"]',
-    '#fashion-portraits img[src*="fashion-05-blue-gloves"]',
-    '#nyc-film img[src*="000927340017"]',
-    '#live-music img[src*="music-02-confetti-stage"]',
-    '.flashlight-found-clue',
-    '.contact-email-icon'
+    '.magnifier-art',                                      // 1. Magnifying glass
+    '#eyes img[src*="EYE16.jpg"]',                    // 2. Eye photograph
+    '#fashion-portraits img[src*="fashion-05-blue-gloves"]', // 3. Fashion collection
+    '#nyc-film img[src*="000927340017"]',              // 4. New York collection
+    '#nyc-film img[src*="000927340006"]',              // 5. Woman on the Street collection
+    '#live-music img[src*="music-02-confetti-stage"]', // 6. Concert collection
+    '#about .contact-email-icon'                           // 7. Email clue
   ];
-  const targets = targetSelectors.map(selector => document.querySelector(selector)).filter(Boolean);
+  // Keep target order intentional; ignore missing elements but never invent a stop.
+  const targets = targetSelectors.map(selector => document.querySelector(selector)).filter(el => {
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0;
+  });
 
   function setBeam(x, y) {
     lastX = Math.max(8, Math.min(window.innerWidth - 8, x));
@@ -483,7 +535,9 @@ const initFlashlightController = () => {
     // Pause at each clue while it is near the reader's scroll focus. Between
     // stops, move smoothly along the route instead of jumping across the page.
     const stopRadius = Math.max(85, Math.min(175, window.innerHeight * .22));
-    let snapped = points.find(p => Math.abs(focusY - p.y) <= stopRadius);
+    const snapped = points
+      .filter(p => Math.abs(focusY - p.y) <= stopRadius)
+      .sort((p1, p2) => Math.abs(focusY - p1.y) - Math.abs(focusY - p2.y))[0];
     if (snapped) {
       setBeam(snapped.x, snapped.y - window.scrollY);
       return;
