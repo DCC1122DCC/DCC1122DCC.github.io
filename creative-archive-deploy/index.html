@@ -314,7 +314,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 
 </head>
 <body id="home">
-<div class="flashlight-overlay" aria-hidden="true"></div><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
+<div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
 <div class="flashlight-clues" aria-hidden="true">
 <span class="flashlight-clue star" style="left:12%;top:24%">✦</span>
 <span class="flashlight-clue question" style="left:77%;top:18%">?</span>
@@ -454,6 +454,22 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
   if (document.readyState === 'complete') scheduleGuide();
 })();
 </script>
+
+<style id="night-email-and-zigzag-polish">
+/* Keep a separate, easy-to-click email destination visible in flashlight mode. */
+.night-email-shortcut{display:none;position:fixed;right:clamp(14px,3vw,34px);bottom:clamp(16px,3vh,30px);z-index:1305;align-items:center;gap:8px;padding:10px 12px;border:1px solid rgba(115,217,232,.8);border-radius:999px;background:rgba(20,29,29,.94);color:#c8fbff;text-decoration:none;font:700 10px/1 var(--mono);letter-spacing:.1em;cursor:pointer;pointer-events:auto;box-shadow:0 0 10px rgba(115,217,232,.45),inset 0 0 10px rgba(115,217,232,.12);text-shadow:0 0 8px rgba(115,217,232,.85);}
+.night-email-shortcut svg{display:block;width:23px;height:23px;fill:none;stroke:#73d9e8;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px #73d9e8);}
+body.flashlight-mode .night-email-shortcut{display:inline-flex;}
+.night-email-shortcut:hover,.night-email-shortcut:focus-visible{background:rgba(24,42,43,.98);color:#fff;outline:2px solid #9be7ee;outline-offset:3px;box-shadow:0 0 18px rgba(115,217,232,.8);}
+/* Make the custom flashlight graphic visible while preserving the real system pointer on links. */
+body.flashlight-mode .flashlight-cursor{filter:drop-shadow(0 0 5px #73d9e8) drop-shadow(0 2px 3px rgba(0,0,0,.9));}
+body.flashlight-mode a,body.flashlight-mode button{cursor:pointer!important;}
+/* MY WORK aligns with the left edge of the section, not the center. */
+#work .my-work-banner{text-align:left!important;padding-left:0!important;padding-right:0!important;}
+@media(max-width:760px){.night-email-shortcut{right:12px;bottom:calc(14px + env(safe-area-inset-bottom));padding:9px 10px;font-size:9px}.night-email-shortcut svg{width:21px;height:21px}#work .my-work-banner{padding-left:0!important;}}
+@media(prefers-reduced-motion:reduce){.night-email-shortcut{transition:none!important;}}
+</style>
+
 </body></html>
 
 
