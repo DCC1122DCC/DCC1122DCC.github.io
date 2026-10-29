@@ -626,6 +626,22 @@ body.flashlight-mode .night-email-shortcut { display:none!important; }
 @media(max-width:760px) { .hero .work-stamp-row { bottom:12px!important; right:10px!important; } #work .my-work-banner { padding-left:0!important; } }
 </style>
 
+
+<style id="desktop-stamp-and-single-final-clue-fix">
+/* On desktop, shift the Made & Found stamp left so it no longer covers the icons.
+   Mobile positioning is intentionally left unchanged. */
+@media (min-width:761px){
+  .hero .work-stamp-row{right:clamp(78px,10vw,150px)!important;}
+}
+/* In lights-off mode, keep the newly added clue near Interactive Digital as the
+   only final clue; hide the older contact/email treatment at the page bottom. */
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email,
+body.flashlight-mode #about .search-continues,
+body.flashlight-mode #about .flashlight-found-clue,
+body.flashlight-mode .night-email-shortcut{display:none!important;opacity:0!important;pointer-events:none!important;}
+</style>
+
 </body></html>
 
 
