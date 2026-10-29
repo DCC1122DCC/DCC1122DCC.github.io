@@ -447,9 +447,9 @@ const initFlashlightController = () => {
       document.querySelector('.magnifier-art'),
       document.querySelector('#eyes img[src*="EYE16"]') || document.querySelector('#eyes img[alt*="blue-green eye"]'),
       document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
-      document.querySelector('#nyc-film img[src*="000927340006.jpg"]'),
-      document.querySelector('#live-music img[src*="music-05-red-stage"]'),
-      document.querySelector('#misc img[src*="florida-thanksgiving"]'),
+      document.querySelector('#nyc-film img[src*="000927340006.jpg.jpg"]'),
+      document.querySelector('#live-music img[src*="music-04-purple-stage"]'),
+      document.querySelector('#misc img[src*="florida-family"]'),
       document.querySelector('#flashlight-end-clue p'),
       document.querySelector('#flashlight-end-clue .digital-clue-email svg')
     ];
@@ -480,8 +480,26 @@ const initFlashlightController = () => {
     if (!points.length) return;
     const focusY = window.scrollY + window.innerHeight * .48;
     if (guidePath) {
-      const route = points.map((p, i) => `${i ? 'L' : 'M'} ${p.x.toFixed(1)} ${(p.y - window.scrollY).toFixed(1)}`).join(' ');
-      guidePath.setAttribute('d', route);
+      // Add short alternating bends between stops so the guide feels like a playful zigzag,
+      // not one long straight connector. The actual clue stops remain unchanged.
+      const routeParts = [];
+      points.forEach((p, i) => {
+        const y = p.y - window.scrollY;
+        if (i === 0) { routeParts.push(`M ${p.x.toFixed(1)} ${y.toFixed(1)}`); return; }
+        const prev = points[i - 1];
+        const prevY = prev.y - window.scrollY;
+        const distance = Math.abs(y - prevY);
+        const bends = Math.max(1, Math.ceil(distance / 220));
+        for (let b = 1; b < bends; b++) {
+          const t = b / bends;
+          const bendX = Math.max(18, Math.min(window.innerWidth - 18,
+            prev.x + (p.x - prev.x) * t + (b % 2 ? -1 : 1) * Math.min(76, window.innerWidth * .11)));
+          const bendY = prevY + (y - prevY) * t;
+          routeParts.push(`L ${bendX.toFixed(1)} ${bendY.toFixed(1)}`);
+        }
+        routeParts.push(`L ${p.x.toFixed(1)} ${y.toFixed(1)}`);
+      });
+      guidePath.setAttribute('d', routeParts.join(' '));
     }
 
     // Reveal the only final clue as the contact section enters view.
@@ -640,6 +658,26 @@ body.flashlight-mode #about .contact-email,
 body.flashlight-mode #about .search-continues,
 body.flashlight-mode #about .flashlight-found-clue,
 body.flashlight-mode .night-email-shortcut{display:none!important;opacity:0!important;pointer-events:none!important;}
+</style>
+
+
+<style id="latest-desktop-zigzag-polish">
+/* Desktop-only refinements; leave the already-good mobile layout untouched. */
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(130px,17vw,250px)!important; }
+  #flashlight-end-clue { width:100%; max-width:100%; padding-left:24px; padding-right:24px; overflow:visible; }
+  #flashlight-end-clue p { width:100%; max-width:100%; white-space:nowrap; font-size:clamp(22px,3.15vw,44px)!important; letter-spacing:-.025em!important; text-align:center; text-shadow:0 0 8px #73d9e8,0 0 22px rgba(115,217,232,1),0 0 42px rgba(115,217,232,.75)!important; }
+}
+/* Let the switch glow in flashlight mode so it is obvious that it can be turned back off. */
+body.flashlight-mode .light-switch { color:#c8fbff!important; border-color:#9be7ee!important; box-shadow:0 0 8px rgba(115,217,232,.7),0 0 18px rgba(115,217,232,.45),inset 0 0 8px rgba(115,217,232,.12); text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,.9); animation:clue-glow 2s ease-in-out infinite alternate; }
+body.flashlight-mode .light-switch:hover { box-shadow:0 0 12px #73d9e8,0 0 24px rgba(115,217,232,.8); }
+/* Center the title and four arrows close to the cyan dotted divider. */
+#work .my-work-banner { text-align:center!important; padding-left:1.5%!important; padding-right:1.5%!important; }
+#work .my-work-banner:after { content:"↓  ↓  ↓  ↓"; display:block; text-align:center; color:var(--cyan); -webkit-text-fill-color:var(--cyan); font:700 clamp(16px,2.5vw,26px)/1 var(--mono); letter-spacing:.18em; margin-top:clamp(3px,.55vw,7px)!important; }
+@media(max-width:760px) {
+  #work .my-work-banner { text-align:center!important; }
+  #work .my-work-banner:after { margin-top:4px!important; }
+}
 </style>
 
 </body></html>
