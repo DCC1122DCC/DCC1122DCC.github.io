@@ -700,6 +700,29 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
 @media(prefers-reduced-motion:reduce) { body.flashlight-mode #light-switch,body.flashlight-mode .light-switch { animation:none!important; } }
 </style>
 
+
+<div class="photo-lightbox" id="photo-lightbox-runtime" role="dialog" aria-modal="true" aria-label="Expanded photograph" aria-hidden="true">
+  <button class="photo-lightbox-close" type="button" aria-label="Close expanded photograph">CLOSE ✕</button>
+  <img alt="" src="" />
+</div>
+<style id="mobile-lightbox-close-fix">
+#photo-lightbox-runtime{touch-action:manipulation;z-index:2000;padding: max(18px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));}
+#photo-lightbox-runtime .photo-lightbox-close{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2;min-height:42px;min-width:76px;touch-action:manipulation;}
+#photo-lightbox-runtime img{max-width:92vw;max-height:82vh;max-height:82dvh;object-fit:contain;touch-action:manipulation;}
+</style>
+<script id="photo-lightbox-runtime">
+(()=>{
+ const box=document.getElementById('photo-lightbox-runtime'); if(!box)return;
+ const image=box.querySelector('img'); const close=box.querySelector('.photo-lightbox-close'); let previousFocus=null;
+ function closeBox(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow='';if(previousFocus&&previousFocus.focus)previousFocus.focus();}
+ document.querySelectorAll('a[data-lightbox]').forEach(link=>{link.addEventListener('click',event=>{const href=link.getAttribute('href');if(!href)return;event.preventDefault();previousFocus=link;image.src=href;image.alt=link.querySelector('img')?.alt||'Expanded photograph';box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus({preventScroll:true});});});
+ close.addEventListener('click',closeBox);
+ box.addEventListener('click',event=>{if(event.target===box)closeBox();});
+ image.addEventListener('click',closeBox);
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&box.classList.contains('is-open'))closeBox();});
+})();
+</script>
+
 </body></html>
 
 
@@ -755,4 +778,8 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
 .ticker-rule-set{display:none!important}
 @media(min-width:761px){.hero-stamp{left:50%!important;right:auto!important;bottom:3%!important;transform:translateX(-50%)}}
 @media(max-width:760px){.hero-stamp{display:none!important}}
+</style>
+
+<style id="mobile-stamp-right-adjustment">
+@media(max-width:760px){.hero .work-stamp-row,.hero .hero-bottom.archive-stamp-separator{right:0!important;}}
 </style>
