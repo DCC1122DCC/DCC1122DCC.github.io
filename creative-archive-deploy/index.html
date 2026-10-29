@@ -488,15 +488,8 @@ const initFlashlightController = () => {
         if (i === 0) { routeParts.push(`M ${p.x.toFixed(1)} ${y.toFixed(1)}`); return; }
         const prev = points[i - 1];
         const prevY = prev.y - window.scrollY;
-        const distance = Math.abs(y - prevY);
-        const bends = Math.max(1, Math.ceil(distance / 220));
-        for (let b = 1; b < bends; b++) {
-          const t = b / bends;
-          const bendX = Math.max(18, Math.min(window.innerWidth - 18,
-            prev.x + (p.x - prev.x) * t + (b % 2 ? -1 : 1) * Math.min(76, window.innerWidth * .11)));
-          const bendY = prevY + (y - prevY) * t;
-          routeParts.push(`L ${bendX.toFixed(1)} ${bendY.toFixed(1)}`);
-        }
+        // Connect the actual photo targets directly. Their real positions create
+        // the natural zigzag; avoid adding artificial/random bends between them.
         routeParts.push(`L ${p.x.toFixed(1)} ${y.toFixed(1)}`);
       });
       guidePath.setAttribute('d', routeParts.join(' '));
@@ -678,6 +671,33 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 12px #73d9e8,0 0 24px 
   #work .my-work-banner { text-align:center!important; }
   #work .my-work-banner:after { margin-top:4px!important; }
 }
+</style>
+
+
+<style id="user-request-final-polish-2026-10-29">
+/* Desktop: make the Made & Found stamp smaller and shift it farther left; mobile stays as-is. */
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(175px,22vw,320px)!important; }
+  .hero .work-stamp-row .work-stamp { width:clamp(70px,8vw,112px)!important; height:clamp(70px,8vw,112px)!important; }
+  .hero .work-stamp-row .hero-stamp { width:100%!important; height:100%!important; }
+  #work .my-work-banner { font-size:clamp(42px,6.5vw,96px)!important; margin-top:-14px!important; padding-top:0!important; padding-bottom:clamp(8px,1.2vw,14px)!important; line-height:.92!important; }
+  #work .my-work-banner:after { margin-top:2px!important; font-size:clamp(14px,1.8vw,20px)!important; }
+}
+/* Keep the four arrows and heading centered, tucked close to the cyan divider. */
+#work .my-work-banner { text-align:center!important; }
+#work .my-work-banner:after { margin-top:2px!important; }
+/* Always make the lights toggle visibly glow while the page is dark, so users can switch it back on. */
+body.flashlight-mode #light-switch,
+body.flashlight-mode .light-switch { position:relative!important; z-index:1205!important; color:#e5fcff!important; background:#182525!important; border-color:#b6f8ff!important; box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important; text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important; animation:clue-glow 1.8s ease-in-out infinite alternate!important; }
+body.flashlight-mode #light-switch:hover,
+body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #73d9e8,0 0 34px rgba(115,217,232,1)!important; }
+@media(max-width:760px) {
+  /* Preserve the current mobile stamp and My Work sizing/placement. */
+  .hero .work-stamp-row { right:clamp(78px,10vw,150px)!important; }
+  .hero .work-stamp-row .work-stamp { width:clamp(68px,19vw,94px)!important; height:clamp(68px,19vw,94px)!important; }
+  #work .my-work-banner { margin-top:-5px!important; padding-top:6px!important; padding-bottom:clamp(14px,3.5vw,21px)!important; }
+}
+@media(prefers-reduced-motion:reduce) { body.flashlight-mode #light-switch,body.flashlight-mode .light-switch { animation:none!important; } }
 </style>
 
 </body></html>
