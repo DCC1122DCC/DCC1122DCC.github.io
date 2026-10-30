@@ -723,6 +723,27 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
 })();
 </script>
 
+
+<style id="october-30-cyan-night-sparkles-and-layout">
+/* Preserve the existing flashlight route; add only page-wide cyan starlight. */
+body.flashlight-mode::after{content:"";position:fixed;inset:0;z-index:1100;pointer-events:none;opacity:.58;background-image:radial-gradient(circle,rgba(190,249,255,.95) 0 1px,transparent 1.9px),radial-gradient(circle,rgba(115,217,232,.95) 0 1.2px,transparent 2.2px),radial-gradient(circle,rgba(200,251,255,.85) 0 .8px,transparent 1.8px),conic-gradient(from 0deg at 50% 50%,transparent 0 43%,rgba(115,217,232,.9) 46% 54%,transparent 57% 100%),conic-gradient(from 0deg at 50% 50%,transparent 0 43%,rgba(115,217,232,.9) 46% 54%,transparent 57% 100%);background-size:137px 173px,211px 229px,97px 131px,137px 173px,211px 229px;background-position:19px 27px,83px 61px,47px 103px,19px 27px,83px 61px;animation:cyan-starlight 3.8s ease-in-out infinite alternate;}
+@keyframes cyan-starlight{0%{opacity:.34;filter:drop-shadow(0 0 2px rgba(115,217,232,.45));}45%{opacity:.62;}100%{opacity:.46;filter:drop-shadow(0 0 5px rgba(115,217,232,.8));}}
+/* Three matching cyan dotted rules, stacked in the existing divider position. */
+.clues-work-divider{position:relative!important;box-sizing:border-box!important;height:18px!important;margin:0 0 2px!important;padding:0!important;border:0!important;border-top:4px dotted var(--cyan)!important;overflow:visible!important;background:none!important;}
+.clues-work-divider::before,.clues-work-divider::after{content:"";position:absolute;left:0;right:0;height:0;border-top:4px dotted var(--cyan);pointer-events:none;}
+.clues-work-divider::before{top:7px;}.clues-work-divider::after{top:14px;}.clues-work-divider>svg{display:none!important;}
+/* Latest direction: align MY WORK to the left edge. */
+#work .my-work-banner{text-align:left!important;padding-left:0!important;padding-right:0!important;}
+#work .my-work-banner::after{text-align:left!important;}
+/* Keep the same toggle easy to find and use on desktop and mobile. */
+body.flashlight-mode #light-switch,body.flashlight-mode .light-switch{position:relative!important;z-index:1205!important;color:#e5fcff!important;background:#182525!important;border-color:#b6f8ff!important;box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Reduce the Made and Found stamp, keeping its current right-side placement. */
+.hero .work-stamp-row .work-stamp{width:clamp(58px,6.2vw,78px)!important;height:clamp(58px,6.2vw,78px)!important;}
+.hero .work-stamp-row .hero-stamp{width:100%!important;height:100%!important;}
+@media(max-width:760px){.clues-work-divider{height:16px!important;}.clues-work-divider::before{top:6px;}.clues-work-divider::after{top:12px;}.hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}#work .my-work-banner{text-align:left!important;padding-left:0!important;}#work .my-work-banner::after{text-align:left!important;}}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode::after{animation:none!important;opacity:.48;}}
+</style>
+
 </body></html>
 
 
