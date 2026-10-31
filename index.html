@@ -639,7 +639,7 @@ body.flashlight-mode .light-switch {
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">SEARCH CONTINUES...</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">SEARCH CONTINUES...</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -1362,5 +1362,36 @@ body:not(.flashlight-mode) #about .contact-email-icon {
   .press-me-cue { font-size:7.5px !important; }
   .press-me-arrow::after { font-size:12px !important; }
 }
+</style>
+<style id="keep-site-made-by-fixed-top-right-mobile">
+/* Keep SITE MADE BY anchored at the top-right on mobile, independent of the light controls. */
+@media (max-width:760px) {
+  .site-header { position:sticky !important; }
+  .site-header:before {
+    position:absolute !important;
+    top:9px !important;
+    right:6% !important;
+    left:auto !important;
+    z-index:31 !important;
+    transform:none !important;
+    pointer-events:none !important;
+    white-space:nowrap !important;
+  }
+  .light-switch-hint {
+    position:absolute !important;
+    top:2px !important;
+    left:6% !important;
+    right:auto !important;
+    transform:none !important;
+    z-index:30 !important;
+  }
+}
+</style>
+
+<style id="clickable-final-email-clue">
+/* The final envelope clue is part of the mailto link: clicking or tapping it opens the user's email app. */
+#about .contact-email { cursor:pointer!important; touch-action:manipulation; }
+#about .contact-email-icon { cursor:pointer!important; pointer-events:none!important; }
+body.flashlight-mode #about .contact-email { position:relative!important; z-index:1202!important; pointer-events:auto!important; }
 </style>
 </body></html>

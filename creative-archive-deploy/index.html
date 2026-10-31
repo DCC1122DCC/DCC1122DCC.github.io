@@ -406,7 +406,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -883,6 +883,13 @@ body.flashlight-mode::after { content:none !important; display:none !important; 
 })();
 </script>
 
+
+<style id="clickable-final-email-clue">
+/* The final envelope clue is part of the mailto link: clicking or tapping it opens the user's email app. */
+#about .contact-email { cursor:pointer!important; touch-action:manipulation; }
+#about .contact-email-icon { cursor:pointer!important; pointer-events:none!important; }
+body.flashlight-mode #about .contact-email { position:relative!important; z-index:1202!important; pointer-events:auto!important; }
+</style>
 </body></html>
 
 
