@@ -313,6 +313,74 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </style>
 
 
+
+<style id="october-31-followup-adjustments">
+/* Restore the Made & Found stamp to its previous lower-right position on the title card. */
+.hero{position:relative!important;}
+.hero .work-stamp-row{
+  position:absolute!important;top:auto!important;bottom:clamp(14px,3vw,38px)!important;
+  right:clamp(78px,10vw,150px)!important;left:auto!important;
+  width:auto!important;height:auto!important;margin:0!important;padding:0!important;
+  display:flex!important;justify-content:flex-end!important;align-items:flex-end!important;
+  z-index:8!important;pointer-events:none!important;
+}
+.hero .work-stamp-row .work-stamp{width:clamp(58px,6.2vw,78px)!important;height:clamp(58px,6.2vw,78px)!important;}
+@media(max-width:760px){
+  .hero .work-stamp-row{bottom:12px!important;right:10px!important;}
+  .hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}
+}
+
+/* Restore the normal, lights-on switch appearance. The glow remains exclusive to lights-off mode. */
+body:not(.flashlight-mode) .light-switch{
+  position:static!important;z-index:1200!important;
+  display:flex!important;align-items:center!important;gap:6px!important;
+  padding:6px 8px!important;border:1px solid var(--ink)!important;border-radius:999px!important;
+  background:var(--cream)!important;color:var(--ink)!important;
+  font:8.5px var(--mono)!important;text-transform:uppercase!important;letter-spacing:.06em!important;
+  box-shadow:0 3px 0 rgba(37,37,31,.15)!important;text-shadow:none!important;
+  animation:none!important;filter:none!important;
+}
+body:not(.flashlight-mode) .light-switch:before{content:none!important;}
+body:not(.flashlight-mode) .light-switch .switch-track{
+  background:var(--cyan)!important;border:1px solid currentColor!important;box-shadow:none!important;
+}
+body:not(.flashlight-mode) .light-switch .switch-track:after{
+  left:2px!important;background:var(--ink)!important;box-shadow:none!important;
+}
+
+/* Slightly enlarge the scattered stars in lights-off mode without bringing back the triangle texture. */
+body.flashlight-mode::after{
+  background-image:
+    radial-gradient(circle,rgba(255,248,218,.98) 0 1.25px,transparent 2.3px),
+    radial-gradient(circle,rgba(255,226,170,.9) 0 1.1px,transparent 2.2px),
+    radial-gradient(circle,rgba(255,255,239,.86) 0 1px,transparent 2px)!important;
+  background-size:173px 191px,239px 223px,127px 149px!important;
+}
+body.flashlight-mode .flashlight-clue.star{font-size:clamp(23px,3.3vw,38px)!important;}
+
+/* Keep the full search phrase legible outside the narrow flashlight beam. */
+body.flashlight-mode #about{position:relative!important;z-index:1203!important;}
+body.flashlight-mode #about .search-continues{
+  display:block!important;position:relative!important;z-index:1204!important;
+  width:100%!important;max-width:none!important;box-sizing:border-box!important;
+  margin:18px auto 0!important;padding:8px 12px!important;
+  text-align:center!important;white-space:normal!important;
+  color:#fff8df!important;font-size:clamp(11px,1.15vw,15px)!important;
+  letter-spacing:.075em!important;line-height:1.6!important;
+  text-shadow:0 0 4px #fff0bd,0 0 10px rgba(255,220,145,.98),0 0 22px rgba(255,190,105,.85),0 0 36px rgba(255,170,80,.55)!important;
+}
+
+/* Center MY WORK, reduce its scale, and remove the decorative arrows beneath it. */
+#work .my-work-banner{
+  text-align:center!important;padding-left:1.5%!important;padding-right:1.5%!important;
+  font-size:clamp(34px,6.5vw,90px)!important;line-height:.95!important;
+}
+#work .my-work-banner:after{content:none!important;display:none!important;}
+@media(max-width:760px){
+  #work .my-work-banner{font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
+}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
