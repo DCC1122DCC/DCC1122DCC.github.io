@@ -383,6 +383,27 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 
 
 
+
+<style id="final-requested-polish">
+/* Remove the extra search-continues copy everywhere. */
+.search-continues,.flashlight-end-clue{display:none!important;visibility:hidden!important;opacity:0!important;}
+/* Keep the actual email address visible in the Contact section in both modes. */
+#about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;color:var(--ink)!important;position:relative!important;z-index:1202!important;}
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email,
+body.flashlight-mode #about .search-continues{display:initial!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
+body.flashlight-mode #about .contact-email{display:inline-flex!important;color:#c8fbff!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95)!important;}
+/* The LIGHTS ON state is cyan, not black; preserve the glowing LIGHTS OFF state. */
+body:not(.flashlight-mode) .light-switch{background:#9ccfd4!important;color:#25251f!important;border:1px solid #25251f!important;box-shadow:0 3px 0 rgba(37,37,31,.15)!important;text-shadow:none!important;filter:none!important;animation:none!important;}
+body:not(.flashlight-mode) .light-switch .switch-track{background:#ff984d!important;border-color:#25251f!important;}
+body:not(.flashlight-mode) .light-switch .switch-track:after{background:#25251f!important;box-shadow:none!important;}
+body.flashlight-mode .light-switch{background:#182525!important;color:#e5fcff!important;border:1px solid #b6f8ff!important;box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Tiny four-point stars with the same cyan glow as the lights-off control. */
+@keyframes night-stars-twinkle{0%{opacity:.48;filter:drop-shadow(0 0 2px rgba(115,217,232,.55));}100%{opacity:.92;filter:drop-shadow(0 0 5px rgba(115,217,232,.95)) drop-shadow(0 0 11px rgba(115,217,232,.55));}}
+body.flashlight-mode::after{content:""!important;position:fixed!important;inset:0!important;z-index:1100!important;pointer-events:none!important;opacity:1!important;background-image:radial-gradient(circle,rgba(210,250,255,.98) 0 1px,transparent 1.8px),conic-gradient(from 0deg at 50% 50%,transparent 0deg 38deg,rgba(182,248,255,.98) 43deg 47deg,transparent 52deg 128deg,rgba(182,248,255,.98) 133deg 137deg,transparent 142deg 218deg,rgba(182,248,255,.98) 223deg 227deg,transparent 232deg 308deg,rgba(182,248,255,.98) 313deg 317deg,transparent 322deg 360deg),radial-gradient(circle,rgba(115,217,232,.95) 0 .9px,transparent 1.8px)!important;background-size:151px 167px,151px 167px,223px 197px!important;background-position:0 0,0 0,73px 41px!important;animation:night-stars-twinkle 3.1s ease-in-out infinite alternate!important;}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch,body.flashlight-mode::after{animation:none!important;}}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -410,7 +431,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 <circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
 <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
 <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
+</svg></span></a><span class="light-switch-hint"><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button><span class="press-me-cue" aria-hidden="true"><span class="press-me-arrow">↙</span><span>PRESS ME</span></span></span></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></nav></header>
 <main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
 <div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
 <div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
@@ -427,7 +448,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 <div class="clues-work-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M-10 7 C 70 -5, 125 19, 205 7 S 345 -5, 425 7 S 565 19, 645 7 S 785 -5, 865 7 S 1005 19, 1085 7 S 1225 -5, 1305 7 S 1390 16, 1450 5" /><path d="M-10 24 C 70 12, 125 36, 205 24 S 345 12, 425 24 S 565 36, 645 24 S 785 12, 865 24 S 1005 36, 1085 24 S 1225 12, 1305 24 S 1390 33, 1450 22" /><path d="M-10 41 C 70 29, 125 53, 205 41 S 345 29, 425 41 S 565 53, 645 41 S 785 29, 865 41 S 1005 53, 1085 41 S 1225 29, 1305 41 S 1390 50, 1450 39" /></svg></div>
 <section class="section" id="work">
 
-<div class="my-work-banner" aria-label="My work">MY WORK</div>
+
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
 <div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Knock knock, who’s there?</span><span class="eyes-group-subtitle">Reoccurring Subject</span></div>
@@ -453,6 +474,8 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid"><figure class="photo-card"><a href="./images/000927340017.jpg" data-lightbox aria-label="Open photograph of a pigeon on a New York sidewalk"><img src="./images/000927340017.jpg" alt="A pigeon standing on a city sidewalk near a storefront, with a passerby’s sneakers in the background" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340020.jpg" data-lightbox aria-label="Open construction sign with a painted happy face"><img src="./images/000927340020.jpg" alt="A worn construction barrier marked with a bright orange happy face on a New York sidewalk" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/000927340006.jpg.jpg" data-lightbox><img src="./images/000927340006.jpg.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure></div></section><section class="photo-category-section" id="live-music">
 <div class="photo-group-label">04 / Concerts <span></span></div>
 <div class="photo-grid music-photo-grid">
+<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand Russ performing live in concert"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live on stage" loading="lazy"></a></figure>
+
 <figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
 
@@ -474,13 +497,9 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </div></section>    
 <div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. Filming, editing, and creative contributions across different kinds of work.</p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article></div>
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
-<div class="flashlight-end-clue" id="flashlight-end-clue" aria-label="Final flashlight clue">
-  <p>THE SEARCH CONTINUES</p>
-  <a class="digital-clue-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL</span></a>
-</div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -986,5 +1005,11 @@ body.flashlight-mode #about .search-continues{
 @media(max-width:760px){
   #work .my-work-banner{font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
 }
+
+/* Small cyan prompt beside the flashlight toggle. */
+.light-switch-hint{display:inline-flex;align-items:center;gap:7px;flex:none;}
+.press-me-cue{display:inline-flex;align-items:center;gap:3px;color:#73d9e8;font:700 8px/1 var(--mono);letter-spacing:.12em;white-space:nowrap;text-shadow:0 0 5px rgba(115,217,232,.65);transform:translateY(-1px);}
+.press-me-arrow{display:inline-block;color:#73d9e8;font:700 14px/1 var(--mono);text-shadow:0 0 5px #73d9e8,0 0 10px rgba(115,217,232,.8);}
+@media(max-width:420px){.light-switch-hint{gap:5px}.press-me-cue{font-size:7px;letter-spacing:.08em}.press-me-arrow{font-size:12px}}
 </style>
 
