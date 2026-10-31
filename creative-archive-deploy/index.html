@@ -1013,6 +1013,25 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="final-october-31-layout-lowering">
+/* Lower the top utility row so the maker credit and light controls have breathing room. */
+@media (min-width:761px) {
+  .site-header { padding-top:72px !important; }
+  .site-header:before { top:18px !important; }
+  .site-header .brand-tools { transform:translateY(10px) !important; }
+}
+@media (max-width:760px) {
+  .site-header { padding-top:72px !important; }
+  .site-header:before { top:18px !important; }
+  .site-header .light-switch-hint { top:18px !important; }
+}
+/* Bring the footer maker name closer to its SITE MADE BY label. */
+.site-footer .site-credit { gap:0 !important; }
+.site-footer .site-credit-label { line-height:.8 !important; margin:0 0 -3px !important; }
+.site-footer .site-credit > span:last-child { line-height:1 !important; margin:0 !important; }
+</style>
+
 </body></html>
 
 
