@@ -404,6 +404,146 @@ body.flashlight-mode::after{content:""!important;position:fixed!important;inset:
 @media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch,body.flashlight-mode::after{animation:none!important;}}
 </style>
 
+
+<style id="creative-archive-precision-update">
+/* Remove the cyan dotted divider treatment without replacing it with another rule. */
+.clues-work-divider,
+.clues-work-divider::before,
+.clues-work-divider::after {
+  display:none!important;
+  border:0!important;
+  background:none!important;
+  content:none!important;
+}
+/* Keep My Work centered and tighten the transition into Photography. */
+#work .my-work-banner {
+  text-align:center!important;
+  margin-top:0!important;
+  padding-top:0!important;
+  padding-bottom:clamp(8px,1.2vw,14px)!important;
+}
+#work .my-work-banner::after {content:none!important;display:none!important;}
+#work {padding-top:clamp(6px,1vw,12px)!important;}
+#work #photos.gallery-intro {
+  margin-top:0!important;
+  padding-top:0!important;
+  margin-bottom:8px!important;
+}
+@media(max-width:760px) {
+  #work .my-work-banner {font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
+  #work #photos.gallery-intro {margin-top:0!important;margin-bottom:7px!important;}
+}
+/* The stamp is inside .hero; anchor it at the card's upper-right, not below it. */
+.hero {position:relative!important;}
+.hero .work-stamp-row {
+  position:absolute!important;
+  top:clamp(12px,2.2vw,26px)!important;
+  right:clamp(12px,2.5vw,34px)!important;
+  bottom:auto!important;
+  left:auto!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:flex-start!important;
+  z-index:9!important;
+  pointer-events:none!important;
+}
+.hero .work-stamp-row .work-stamp {
+  width:clamp(58px,6.2vw,78px)!important;
+  height:clamp(58px,6.2vw,78px)!important;
+}
+@media(max-width:760px) {
+  .hero .work-stamp-row {top:10px!important;right:10px!important;bottom:auto!important;}
+  .hero .work-stamp-row .work-stamp {width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}
+}
+/* Restore the original orange address in LIGHTS ON; leave the email icon untouched. */
+body:not(.flashlight-mode) #about .contact-email {
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  color:#ff6200!important;
+  position:relative!important;
+  z-index:1202!important;
+}
+body:not(.flashlight-mode) #about .contact-email-icon {
+  /* No icon styling changes: retain its existing artwork and appearance. */
+}
+/* The existing email icon is the sixth and final flashlight target.
+   The phrase follows the link so it cannot alter the icon's measured position. */
+#about .search-continues {
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+body.flashlight-mode #about .search-continues {
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  z-index:1204!important;
+  width:max-content!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  margin:10px 0 0!important;
+  padding:0!important;
+  color:#c8fbff!important;
+  font:700 clamp(11px,1.2vw,14px)/1.5 var(--mono)!important;
+  letter-spacing:.12em!important;
+  text-align:left!important;
+  text-shadow:0 0 4px #73d9e8,0 0 12px rgba(115,217,232,.95),0 0 22px rgba(115,217,232,.65)!important;
+  pointer-events:none!important;
+}
+/* Sparse, tiny cyan points only: no conic-gradient or geometric sparkle layers. */
+body.flashlight-mode::after {
+  content:""!important;
+  position:fixed!important;
+  inset:0!important;
+  z-index:1100!important;
+  pointer-events:none!important;
+  opacity:.78!important;
+  background-image:
+    radial-gradient(circle,rgba(210,250,255,.98) 0 .8px,transparent 1.6px),
+    radial-gradient(circle,rgba(115,217,232,.9) 0 .7px,transparent 1.5px),
+    radial-gradient(circle,rgba(200,251,255,.82) 0 .6px,transparent 1.4px)!important;
+  background-size:151px 167px,223px 197px,107px 131px!important;
+  background-position:0 0,73px 41px,29px 67px!important;
+  animation:creative-archive-stars 3.4s ease-in-out infinite alternate!important;
+}
+@keyframes creative-archive-stars {
+  from {opacity:.48;filter:drop-shadow(0 0 1px rgba(115,217,232,.4));}
+  to {opacity:.82;filter:drop-shadow(0 0 3px rgba(115,217,232,.72));}
+}
+/* Preserve the existing dotted zigzag path; do not add glow or alter its geometry. */
+#flashlight-guide-path {
+  filter:none!important;
+}
+/* Keep the existing LIGHTS ON control above the decorative layer and visibly glowing in dark mode. */
+body.flashlight-mode #light-switch,
+body.flashlight-mode .light-switch {
+  position:relative!important;
+  z-index:1205!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  color:#e5fcff!important;
+  background:#182525!important;
+  border:1px solid #b6f8ff!important;
+  box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;
+  text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;
+  animation:clue-glow 1.8s ease-in-out infinite alternate!important;
+}
+@media(prefers-reduced-motion:reduce) {
+  body.flashlight-mode::after,
+  body.flashlight-mode #light-switch,
+  body.flashlight-mode .light-switch {animation:none!important;}
+}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -499,7 +639,7 @@ body.flashlight-mode::after{content:""!important;position:fixed!important;inset:
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">SEARCH CONTINUES...</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -536,17 +676,16 @@ const initFlashlightController = () => {
   }
 
   function getTargets() {
-    // A deliberate, fixed clue trail: magnifier, then the requested collection images,
-    // then the glowing message and its email icon beside Digital / Interactive.
+    // Preserve the original dynamic positioning and route interpolation.
+    // The six intended stops are the magnifier, four collection images, and the
+    // existing email icon as the final landing point.
     const candidates = [
       document.querySelector('.magnifier-art'),
-      document.querySelector('#eyes img[src*="EYE16"]') || document.querySelector('#eyes img[alt*="blue-green eye"]'),
+      document.querySelector('#eyes img[src*="EYE16"]'),
       document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
       document.querySelector('#nyc-film img[src*="000927340006.jpg.jpg"]'),
       document.querySelector('#live-music img[src*="music-04-purple-stage"]'),
-      document.querySelector('#misc img[src*="florida-family"]'),
-      document.querySelector('#flashlight-end-clue p'),
-      document.querySelector('#flashlight-end-clue .digital-clue-email svg')
+      document.querySelector('#about .contact-email-icon')
     ];
     return candidates.filter(el => {
       if (!el) return false;
@@ -963,74 +1102,3 @@ body.flashlight-mode::after{content:""!important;position:fixed!important;inset:
 </style>
 
 </body></html>
-<style id="mobile-stamp-right-adjustment">
-@media(max-width:760px){.hero .work-stamp-row,.hero .hero-bottom.archive-stamp-separator{right:0!important;}}
-</style>
-
-
-<style id="october31-final-overrides">
-/* Final overrides are intentionally placed after all existing styles so earlier rules cannot undo them. */
-/* Stamp restored to the bottom-right of the hero/title card. */
-.hero{position:relative!important;}
-.hero>.work-stamp-row,.hero .work-stamp-row{
-  position:absolute!important;top:auto!important;bottom:clamp(14px,3vw,38px)!important;
-  right:clamp(78px,10vw,150px)!important;left:auto!important;
-  width:auto!important;height:auto!important;margin:0!important;padding:0!important;
-  display:flex!important;justify-content:flex-end!important;align-items:flex-end!important;
-  z-index:8!important;pointer-events:none!important;
-}
-.hero .work-stamp-row .work-stamp{width:clamp(58px,6.2vw,78px)!important;height:clamp(58px,6.2vw,78px)!important;}
-@media(max-width:760px){
-  .hero .work-stamp-row{bottom:12px!important;right:10px!important;}
-  .hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}
-}
-
-/* Do not restyle the switch in lights-on mode: its original site styling remains intact.
-   Preserve the approved glow only while flashlight/lights-off mode is active. */
-body.flashlight-mode #light-switch,body.flashlight-mode .light-switch{
-  position:relative!important;z-index:1205!important;
-  color:#e5fcff!important;background:#182525!important;border-color:#b6f8ff!important;
-  box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;
-  text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;
-  animation:clue-glow 1.8s ease-in-out infinite alternate!important;
-}
-
-/* Slightly larger sparse stars in lights-off mode. */
-body.flashlight-mode::after{
-  background-image:
-    radial-gradient(circle,rgba(255,248,218,.98) 0 1.25px,transparent 2.3px),
-    radial-gradient(circle,rgba(255,226,170,.9) 0 1.1px,transparent 2.2px),
-    radial-gradient(circle,rgba(255,255,239,.86) 0 1px,transparent 2px)!important;
-  background-size:173px 191px,239px 223px,127px 149px!important;
-}
-body.flashlight-mode .flashlight-clue.star{font-size:clamp(23px,3.3vw,38px)!important;}
-
-/* The full phrase glows beyond the flashlight beam and remains visible on desktop. */
-body.flashlight-mode #about .search-continues{
-  display:block!important;visibility:visible!important;opacity:1!important;
-  position:relative!important;z-index:1204!important;
-  width:100%!important;max-width:none!important;box-sizing:border-box!important;
-  margin:18px auto 0!important;padding:8px 12px!important;
-  text-align:center!important;white-space:normal!important;
-  color:#fff8df!important;font-size:clamp(11px,1.15vw,15px)!important;
-  letter-spacing:.075em!important;line-height:1.6!important;
-  text-shadow:0 0 4px #fff0bd,0 0 10px rgba(255,220,145,.98),0 0 22px rgba(255,190,105,.85),0 0 36px rgba(255,170,80,.55)!important;
-}
-
-/* MY WORK centered and smaller, with arrows removed. */
-#work .my-work-banner{
-  text-align:center!important;padding-left:1.5%!important;padding-right:1.5%!important;
-  font-size:clamp(34px,6.5vw,90px)!important;line-height:.95!important;
-}
-#work .my-work-banner:after{content:none!important;display:none!important;}
-@media(max-width:760px){
-  #work .my-work-banner{font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
-}
-
-/* Small cyan prompt beside the flashlight toggle. */
-.light-switch-hint{display:inline-flex;align-items:center;gap:7px;flex:none;}
-.press-me-cue{display:inline-flex;align-items:center;gap:3px;color:#73d9e8;font:700 8px/1 var(--mono);letter-spacing:.12em;white-space:nowrap;text-shadow:0 0 5px rgba(115,217,232,.65);transform:translateY(-1px);}
-.press-me-arrow{display:inline-block;color:#73d9e8;font:700 14px/1 var(--mono);text-shadow:0 0 5px #73d9e8,0 0 10px rgba(115,217,232,.8);}
-@media(max-width:420px){.light-switch-hint{gap:5px}.press-me-cue{font-size:7px;letter-spacing:.08em}.press-me-arrow{font-size:12px}}
-</style>
-
