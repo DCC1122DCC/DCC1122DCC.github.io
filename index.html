@@ -1613,4 +1613,78 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="aligned-header-refinement-oct31">
+/* Preserve full-size navigation; tighten the maker credit and light-control cluster. */
+@media (min-width:761px) {
+  .site-header { padding-top:76px !important; gap:clamp(14px,1.8vw,26px) !important; }
+  .site-header:before {
+    position:fixed !important; top:15px !important; left:3.3% !important; right:auto !important;
+    z-index:1302 !important; font-size:6px !important; line-height:1 !important;
+    letter-spacing:.10em !important; white-space:nowrap !important;
+  }
+  .site-header .wordmark {
+    position:fixed !important; top:26px !important; left:3.3% !important;
+    z-index:1301 !important; margin:0 !important;
+    font-size:clamp(14px,1.35vw,19px) !important; line-height:1 !important;
+    letter-spacing:-.45px !important;
+  }
+  .site-header .wordmark-girl { width:25px !important; height:32px !important; margin-left:5px !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:49px !important; left:3.3% !important; right:auto !important;
+    z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:5px !important;
+    width:max-content !important; max-width:90vw !important; margin:0 !important; transform:none !important;
+  }
+  .site-header .light-switch {
+    gap:4px !important; padding:3px 5px !important; font-size:7px !important;
+    line-height:1 !important; letter-spacing:.04em !important; box-shadow:none !important;
+  }
+  .site-header .switch-track { width:15px !important; height:9px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:8px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; letter-spacing:.04em !important; }
+  .site-header .press-me-arrow { display:inline-block !important; font-size:9px !important; line-height:1 !important; }
+  /* Keep navigation links at their original full size; only tighten their spacing. */
+  .site-header .navigation {
+    display:flex !important; flex-wrap:nowrap !important; align-items:center !important;
+    justify-content:flex-end !important; gap:clamp(12px,1.5vw,22px) !important;
+    font-size:clamp(10px,.95vw,14px) !important; white-space:nowrap !important; min-width:0 !important;
+  }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex-wrap:nowrap !important; align-items:center !important;
+    gap:clamp(12px,1.5vw,22px) !important; white-space:nowrap !important;
+  }
+}
+@media (max-width:760px) {
+  .site-header { padding-top:76px !important; }
+  .site-header:before {
+    position:fixed !important; top:15px !important; left:6% !important; right:auto !important;
+    z-index:1302 !important; font-size:6px !important; letter-spacing:.10em !important;
+  }
+  .site-header .wordmark {
+    position:fixed !important; top:26px !important; left:6% !important;
+    z-index:1301 !important; margin:0 !important; font-size:clamp(14px,4vw,18px) !important;
+    line-height:1 !important; letter-spacing:-.45px !important;
+  }
+  .site-header .wordmark-girl { width:24px !important; height:30px !important; margin-left:5px !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:49px !important; left:6% !important; right:auto !important;
+    z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:5px !important;
+    width:max-content !important; max-width:88vw !important; margin:0 !important; transform:none !important;
+  }
+  .site-header .light-switch { gap:4px !important; padding:3px 5px !important; font-size:7px !important; line-height:1 !important; box-shadow:none !important; }
+  .site-header .switch-track { width:15px !important; height:9px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:8px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; }
+  .site-header .press-me-arrow { display:inline-block !important; font-size:9px !important; line-height:1 !important; }
+}
+/* There is one arrow in the markup; remove the extra CSS-generated arrow. */
+.site-header .press-me-arrow::after { content:none !important; display:none !important; }
+</style>
+
 </body></html>
