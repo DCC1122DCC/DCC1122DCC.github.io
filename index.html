@@ -890,13 +890,42 @@ body.flashlight-mode .light-switch {
 }
 </style>
 
-<style id="final-contact-lights-off-black-fix">
-/* Keep the Contact band black in lights-off mode, including when the flashlight
-   lands on the email icon. The email icon and its flashlight target are unchanged. */
+<style id="contact-section-match-lights-on">
+/* Keep the complete Contact section looking exactly like its Lights On state.
+   The flashlight continues moving normally and the email icon stays in place. */
 body.flashlight-mode #about,
 body.flashlight-mode #about.about-section {
-  background: #000 !important;
-  background-color: #000 !important;
+  position: relative !important;
+  z-index: 1101 !important;
+  background: var(--cyan) !important;
+  background-color: var(--cyan) !important;
+  color: var(--ink) !important;
+}
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email {
+  display: revert !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  color: var(--ink) !important;
+  text-shadow: none !important;
+}
+/* Keep the email symbol in its normal Lights On cyan treatment. */
+body.flashlight-mode #about .contact-email-icon {
+  color: var(--cyan) !important;
+  stroke: var(--cyan) !important;
+  filter: drop-shadow(0 0 4px rgba(115,217,232,.7)) !important;
+  animation: none !important;
+}
+/* The extra flashlight-only bottom clue is not part of the Lights On layout. */
+body.flashlight-mode #about .search-continues,
+body.flashlight-mode #about .flashlight-found-clue {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 </style>
 
