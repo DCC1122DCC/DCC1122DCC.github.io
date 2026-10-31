@@ -1085,6 +1085,30 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="compact-lights-and-inline-top-navigation">
+/* Compact the light control so the navigation has room to remain one clean row on desktop. */
+@media (min-width:761px) {
+  .site-header { gap:clamp(12px,2vw,26px) !important; }
+  .site-header .light-switch-hint { gap:5px !important; }
+  .site-header .light-switch { gap:4px !important; padding:4px 6px !important; font-size:7px !important; line-height:1 !important; }
+  .site-header .switch-track { width:17px !important; height:10px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:9px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; }
+  .site-header .press-me-arrow, .site-header .press-me-arrow:after { font-size:9px !important; line-height:1 !important; }
+  .site-header .navigation { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; justify-content:flex-end !important; gap:clamp(10px,1.45vw,20px) !important; font-size:clamp(8px,.72vw,10px) !important; white-space:nowrap !important; min-width:0 !important; }
+  .site-header .navigation > a, .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair { display:inline-flex !important; flex-wrap:nowrap !important; align-items:center !important; gap:clamp(10px,1.45vw,20px) !important; white-space:nowrap !important; }
+}
+/* Keep the compact controls legible on smaller screens without forcing the nav into a cramped row. */
+@media (max-width:760px) {
+  .site-header .light-switch { font-size:7px !important; padding:4px 6px !important; gap:4px !important; }
+  .site-header .press-me-cue { font-size:6px !important; gap:2px !important; }
+  .site-header .press-me-arrow, .site-header .press-me-arrow:after { font-size:9px !important; }
+}
+</style>
+
 </body></html>
 
 
