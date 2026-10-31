@@ -1353,7 +1353,10 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
 
 <div class="photo-lightbox" id="photo-lightbox-runtime" role="dialog" aria-modal="true" aria-label="Expanded photograph" aria-hidden="true">
   <button class="photo-lightbox-close" type="button" aria-label="Close expanded photograph">CLOSE ✕</button>
+  <button class="photo-lightbox-nav photo-lightbox-prev" type="button" aria-label="Previous photo">‹</button>
   <img alt="" src="" />
+  <button class="photo-lightbox-nav photo-lightbox-next" type="button" aria-label="Next photo">›</button>
+  <span class="photo-lightbox-count" aria-live="polite"></span>
 </div>
 <style id="mobile-lightbox-close-fix">
 #photo-lightbox-runtime{touch-action:manipulation;z-index:2000;padding: max(18px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));}
@@ -1363,13 +1366,32 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
 <script id="photo-lightbox-runtime">
 (()=>{
  const box=document.getElementById('photo-lightbox-runtime'); if(!box)return;
- const image=box.querySelector('img'); const close=box.querySelector('.photo-lightbox-close'); let previousFocus=null;
+ const image=box.querySelector('img'), close=box.querySelector('.photo-lightbox-close');
+ const prev=box.querySelector('.photo-lightbox-prev'), next=box.querySelector('.photo-lightbox-next'), count=box.querySelector('.photo-lightbox-count');
+ let previousFocus=null, photos=[], current=0, touchStartX=0;
+ function show(index){
+   if(!photos.length)return;
+   current=(index+photos.length)%photos.length;
+   const link=photos[current], href=link.getAttribute('href');
+   image.src=href; image.alt=link.querySelector('img')?.alt||'Expanded photograph';
+   count.textContent=(current+1)+' / '+photos.length;
+   prev.disabled=photos.length<2; next.disabled=photos.length<2;
+ }
  function closeBox(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow='';if(previousFocus&&previousFocus.focus)previousFocus.focus();}
- document.querySelectorAll('a[data-lightbox]').forEach(link=>{link.addEventListener('click',event=>{const href=link.getAttribute('href');if(!href)return;event.preventDefault();previousFocus=link;image.src=href;image.alt=link.querySelector('img')?.alt||'Expanded photograph';box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus({preventScroll:true});});});
+ document.querySelectorAll('a[data-lightbox]').forEach(link=>link.addEventListener('click',event=>{
+   const href=link.getAttribute('href'); if(!href)return; event.preventDefault();
+   const collection=link.closest('.photo-category-section')||link.closest('.photo-grid')||link.parentElement;
+   photos=Array.from(collection.querySelectorAll('a[data-lightbox]')).filter(a=>a.getAttribute('href'));
+   current=Math.max(0,photos.indexOf(link)); previousFocus=link; show(current);
+   box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus({preventScroll:true});
+ }));
+ prev.addEventListener('click',()=>show(current-1)); next.addEventListener('click',()=>show(current+1));
  close.addEventListener('click',closeBox);
  box.addEventListener('click',event=>{if(event.target===box)closeBox();});
- image.addEventListener('click',closeBox);
- document.addEventListener('keydown',event=>{if(event.key==='Escape'&&box.classList.contains('is-open'))closeBox();});
+ image.addEventListener('click',()=>show(current+1));
+ box.addEventListener('touchstart',event=>{if(event.touches.length===1)touchStartX=event.touches[0].clientX;},{passive:true});
+ box.addEventListener('touchend',event=>{if(!box.classList.contains('is-open')||!touchStartX)return;const dx=event.changedTouches[0].clientX-touchStartX;touchStartX=0;if(Math.abs(dx)>45)show(current+(dx<0?1:-1));},{passive:true});
+ document.addEventListener('keydown',event=>{if(!box.classList.contains('is-open'))return;if(event.key==='Escape')closeBox();else if(event.key==='ArrowRight')show(current+1);else if(event.key==='ArrowLeft')show(current-1);});
 })();
 </script>
 
@@ -2162,4 +2184,33 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
   #about .about-copy { grid-column:1 !important; }
 }
 </style>
+
+<style id="compact-contact-and-collection-slideshow">
+/* Make the contact band intentionally slimmer without changing its left alignment. */
+#about.section { padding: clamp(24px,3.2vw,38px) 8% !important; }
+#about .about-grid { gap: 12px !important; }
+#about .about-outro { margin: 0 0 12px !important; font-size: clamp(23px,3.1vw,36px) !important; line-height: .98 !important; }
+#about .contact-heading-inline { font-size: clamp(22px,3vw,34px) !important; line-height: .98 !important; margin: 0 0 5px !important; }
+#about .contact-email { font-size: clamp(14px,1.65vw,19px) !important; line-height: 1.25 !important; }
+#about .contact-email-icon { width: clamp(20px,2.2vw,27px) !important; height: clamp(20px,2.2vw,27px) !important; }
+@media (max-width:760px) {
+  #about.section { padding: 22px 6% !important; }
+  #about .about-outro { font-size: clamp(21px,6vw,29px) !important; margin-bottom: 9px !important; }
+  #about .contact-heading-inline { font-size: clamp(21px,6vw,28px) !important; margin-bottom: 4px !important; }
+  #about .contact-email { font-size: clamp(13px,3.8vw,17px) !important; }
+  #about .contact-email-icon { width:21px !important; height:21px !important; }
+}
+/* Collection lightbox controls: each collection is navigated independently. */
+#photo-lightbox-runtime .photo-lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:3; display:grid; place-items:center; width:48px; height:64px; border:1px solid rgba(242,235,221,.45); border-radius:2px; background:rgba(20,20,18,.25); color:var(--cream); font:400 48px/1 var(--body); cursor:pointer; touch-action:manipulation; }
+#photo-lightbox-runtime .photo-lightbox-prev { left:max(14px,env(safe-area-inset-left)); }
+#photo-lightbox-runtime .photo-lightbox-next { right:max(14px,env(safe-area-inset-right)); }
+#photo-lightbox-runtime .photo-lightbox-nav:hover { color:var(--cyan); border-color:var(--cyan); }
+#photo-lightbox-runtime .photo-lightbox-nav:disabled { opacity:.35; cursor:default; }
+#photo-lightbox-runtime .photo-lightbox-count { position:absolute; bottom:max(14px,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); color:rgba(242,235,221,.8); font:10px var(--mono); letter-spacing:.08em; }
+@media(max-width:600px) {
+  #photo-lightbox-runtime .photo-lightbox-nav { width:38px; height:52px; font-size:40px; background:rgba(20,20,18,.48); }
+  #photo-lightbox-runtime img { max-width:calc(100vw - 84px); }
+}
+</style>
+
 </body></html>
