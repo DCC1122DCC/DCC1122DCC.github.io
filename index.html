@@ -583,6 +583,34 @@ body.flashlight-mode .light-switch {
   #about .about-grid { grid-template-columns: 1fr !important; }
 }
 </style>
+
+<style id="final-contact-title-and-credit-spacing">
+/* FINAL: CONTACT matches the site's large display-style section titles. */
+#about .contact-heading-column .section-label {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #9ccfd4 !important;
+  font-family: var(--display) !important;
+  font-size: clamp(28px, 4.5vw, 48px) !important;
+  font-weight: 400 !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+  text-transform: uppercase !important;
+}
+/* Tighten the two footer-credit lines so the maker's name sits closer to its label. */
+.site-footer .site-credit {
+  gap: 0 !important;
+}
+.site-footer .site-credit-label {
+  line-height: .85 !important;
+  margin: 0 0 -2px !important;
+}
+.site-footer .site-credit > span:last-child {
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
