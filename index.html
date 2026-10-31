@@ -1394,4 +1394,40 @@ body:not(.flashlight-mode) #about .contact-email-icon {
 #about .contact-email-icon { cursor:pointer!important; pointer-events:none!important; }
 body.flashlight-mode #about .contact-email { position:relative!important; z-index:1202!important; pointer-events:auto!important; }
 </style>
+
+<style id="october-31-top-left-fixed-controls-and-larger-stamp">
+/* Keep both small labels fixed in the top-left corner, with the controls just below the credit. */
+.site-header { padding-top:58px !important; }
+.site-header:before {
+  position:fixed !important; top:8px !important; left:3.3% !important; right:auto !important;
+  z-index:1301 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:23px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:6px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important;
+}
+/* A small size increase only; keep the stamp in its existing lower-right position. */
+.hero .work-stamp-row .work-stamp {
+  width:clamp(64px,6.8vw,84px) !important;
+  height:clamp(64px,6.8vw,84px) !important;
+}
+.hero .work-stamp-row .hero-stamp { width:100% !important; height:100% !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:60px !important; }
+  .site-header:before { top:8px !important; left:6% !important; right:auto !important; }
+  .site-header .light-switch-hint {
+    top:23px !important; left:6% !important; right:auto !important;
+    flex-direction:row !important; align-items:center !important; gap:6px !important;
+  }
+  .press-me-cue { font-size:7px !important; }
+  .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+  .hero .work-stamp-row { right:10px !important; bottom:12px !important; }
+  .hero .work-stamp-row .work-stamp {
+    width:clamp(52px,14vw,66px) !important;
+    height:clamp(52px,14vw,66px) !important;
+  }
+}
+</style>
 </body></html>
