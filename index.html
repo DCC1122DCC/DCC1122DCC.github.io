@@ -1341,4 +1341,26 @@ body:not(.flashlight-mode) #about .contact-email-icon {
 }
 @media (prefers-reduced-motion:reduce) { body.flashlight-mode #about .contact-email-icon { animation:none !important; } }
 </style>
+
+<style id="mobile-top-left-controls-and-desktop-press-me-size">
+/* Mobile: float the controls at the top-left without taking up space or shifting the page. */
+@media (max-width:760px) {
+  .site-header { position:sticky !important; }
+  .site-header:before { left:auto !important; right:6% !important; }
+  .light-switch-hint {
+    position:absolute !important; top:2px !important; left:6% !important;
+    display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:6px !important; width:max-content !important; max-width:88vw !important;
+    margin:0 !important; z-index:30 !important;
+  }
+  .press-me-cue { font-size:7px !important; gap:3px !important; opacity:.9 !important; }
+  .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+}
+/* Desktop: make PRESS ME slightly easier to read without changing its placement. */
+@media (min-width:761px) {
+  .press-me-cue { font-size:7.5px !important; }
+  .press-me-arrow::after { font-size:12px !important; }
+}
+</style>
 </body></html>
