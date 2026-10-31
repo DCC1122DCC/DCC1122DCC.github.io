@@ -1430,4 +1430,24 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
   }
 }
 </style>
+
+<style id="corrected-controls-placement-final">
+/* Desktop: keep LIGHTS ON / PRESS ME in the brand row beside the name and girl icon. */
+@media (min-width:761px) {
+  .site-header { padding-top:58px !important; }
+  .site-header:before { position:fixed !important; top:8px !important; left:3.3% !important; right:auto !important; z-index:1301 !important; }
+  .site-header .brand-tools { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; gap:10px !important; width:auto !important; max-width:none !important; }
+  .site-header .light-switch-hint { position:static !important; display:inline-flex !important; flex-direction:row !important; align-items:center !important; justify-content:flex-start !important; gap:6px !important; width:max-content !important; max-width:none !important; margin:0 !important; transform:none !important; z-index:auto !important; }
+}
+/* Mobile: put the controls in the top-right; SITE MADE BY remains top-left. */
+@media (max-width:760px) {
+  .site-header { padding-top:60px !important; }
+  .site-header:before { position:fixed !important; top:8px !important; left:6% !important; right:auto !important; z-index:1301 !important; white-space:nowrap !important; }
+  .site-header .brand-tools { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; }
+  .site-header .light-switch-hint { position:fixed !important; top:8px !important; left:auto !important; right:6% !important; transform:none !important; z-index:1300 !important; display:inline-flex !important; flex-direction:row !important; align-items:center !important; justify-content:flex-end !important; gap:6px !important; width:max-content !important; max-width:58vw !important; margin:0 !important; }
+  .site-header .press-me-cue { font-size:7px !important; }
+  .site-header .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+}
+</style>
+
 </body></html>
