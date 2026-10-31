@@ -324,6 +324,35 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 /* Tighten the two-line footer credit without changing its alignment. */
 .site-footer .site-credit{gap:0!important;}
 </style>
+
+<style id="verified-contact-left-column-fix">
+/* CONTACT belongs in the left-hand section-title column, matching the other section labels.
+   Use the visible cyan accent directly: this page remaps --cyan for its dark theme. */
+#about .about-grid {
+  grid-template-columns: minmax(110px, 1fr) minmax(0, 1fr) !important;
+  align-items: start !important;
+}
+#about .contact-heading-column {
+  display: block !important;
+  align-self: start !important;
+  justify-self: start !important;
+  text-align: left !important;
+}
+#about .contact-heading-column .section-label {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #9ccfd4 !important;
+  font-family: var(--mono) !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  letter-spacing: .5px !important;
+  text-transform: uppercase !important;
+}
+@media (max-width: 760px) {
+  #about .about-grid { grid-template-columns: 1fr !important; }
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
@@ -416,7 +445,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div class="contact-heading-column"><span class="section-label">CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
