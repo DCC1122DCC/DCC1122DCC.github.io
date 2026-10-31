@@ -381,6 +381,130 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
   margin: 0 !important;
 }
 </style>
+
+<style id="header-controls-and-mobile-navigation-final-fix">
+/* Desktop: keep the light control immediately beside the name and illustrated girl. */
+@media (min-width:761px) {
+  .site-header {
+    position:sticky !important; top:0 !important; min-height:112px !important;
+    padding:72px 3.3% 18px !important; display:flex !important;
+    flex-direction:row !important; align-items:center !important;
+    justify-content:space-between !important; gap:18px !important;
+  }
+  .site-header:before {
+    position:fixed !important; top:16px !important; left:3.3% !important;
+    right:auto !important; z-index:1302 !important; white-space:nowrap !important;
+  }
+  .site-header .brand-tools {
+    position:fixed !important; top:31px !important; left:3.3% !important;
+    z-index:1301 !important; display:flex !important; flex-direction:row !important;
+    flex-wrap:nowrap !important; align-items:center !important; gap:12px !important;
+    width:max-content !important; max-width:48vw !important; margin:0 !important;
+    transform:none !important;
+  }
+  .site-header .wordmark {
+    position:static !important; margin:0 !important; white-space:nowrap !important;
+    font-size:clamp(23px,2.4vw,34px) !important; line-height:1.05 !important;
+  }
+  .site-header .wordmark-girl { width:31px !important; height:38px !important; margin-left:7px !important; }
+  .site-header .light-switch-hint {
+    position:static !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:7px !important;
+    width:max-content !important; max-width:none !important; margin:0 !important;
+    transform:none !important; z-index:auto !important;
+  }
+  .site-header .light-switch {
+    font-size:9px !important; line-height:1 !important; padding:6px 8px !important;
+    gap:6px !important; white-space:nowrap !important;
+  }
+  .site-header .press-me-cue {
+    display:inline-flex !important; flex-direction:row !important; align-items:center !important;
+    gap:3px !important; font-size:7.5px !important; line-height:1 !important;
+    white-space:nowrap !important;
+  }
+  .site-header .press-me-arrow { font-size:0 !important; line-height:1 !important; }
+  .site-header .press-me-arrow:after {
+    content:"←" !important; display:inline-block !important;
+    font:700 12px/1 Arial,sans-serif !important;
+  }
+  .site-header .navigation {
+    position:absolute !important; top:45px !important; right:3.3% !important;
+    display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important;
+    align-items:center !important; justify-content:flex-end !important;
+    gap:clamp(14px,1.8vw,26px) !important;
+    font-size:clamp(10px,.95vw,14px) !important; white-space:nowrap !important;
+    min-width:max-content !important; margin:0 !important;
+  }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex-direction:row !important; flex-wrap:nowrap !important;
+    align-items:center !important; gap:clamp(14px,1.8vw,26px) !important;
+    white-space:nowrap !important;
+  }
+}
+/* Mobile: brand, then the light control, then the section links in a clean nav row. */
+@media (max-width:760px) {
+  .site-header {
+    position:sticky !important; top:0 !important; display:flex !important;
+    flex-direction:column !important; align-items:flex-start !important;
+    justify-content:flex-start !important; gap:0 !important;
+    padding:48px 6% 15px !important; min-height:0 !important;
+  }
+  .site-header:before {
+    position:fixed !important; top:16px !important; left:6% !important; right:auto !important;
+    z-index:1302 !important; font-size:8px !important; white-space:nowrap !important;
+  }
+  .site-header .brand-tools {
+    position:static !important; display:flex !important; flex-direction:column !important;
+    flex-wrap:nowrap !important; align-items:flex-start !important; gap:9px !important;
+    width:100% !important; max-width:100% !important; margin:0 !important;
+    transform:none !important;
+  }
+  .site-header .wordmark {
+    position:static !important; margin:0 !important;
+    font-size:clamp(20px,5.2vw,25px) !important; line-height:1.05 !important;
+    letter-spacing:-.8px !important; white-space:nowrap !important;
+  }
+  .site-header .wordmark-girl { width:27px !important; height:34px !important; margin-left:5px !important; }
+  .site-header .light-switch-hint {
+    position:static !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:7px !important;
+    width:max-content !important; max-width:100% !important; margin:0 !important;
+    transform:none !important; z-index:auto !important;
+  }
+  .site-header .light-switch {
+    font-size:8.5px !important; line-height:1 !important; padding:5px 7px !important;
+    gap:5px !important; white-space:nowrap !important;
+  }
+  .site-header .press-me-cue {
+    display:inline-flex !important; flex-direction:row !important; align-items:center !important;
+    gap:3px !important; font-size:7px !important; line-height:1 !important;
+    white-space:nowrap !important;
+  }
+  .site-header .press-me-arrow { font-size:0 !important; line-height:1 !important; }
+  .site-header .press-me-arrow:after {
+    content:"←" !important; display:inline-block !important;
+    font:700 11px/1 Arial,sans-serif !important;
+  }
+  .site-header .navigation {
+    position:static !important; display:flex !important; flex-direction:row !important;
+    flex-wrap:wrap !important; align-items:center !important; justify-content:flex-start !important;
+    gap:10px 17px !important; width:100% !important; min-width:0 !important;
+    margin:13px 0 0 !important; padding:0 !important;
+    font-family:var(--mono) !important; font-size:clamp(10px,2.65vw,12px) !important;
+    line-height:1.5 !important; letter-spacing:0 !important;
+    text-transform:uppercase !important; white-space:normal !important;
+  }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex-direction:row !important; flex-wrap:nowrap !important;
+    align-items:center !important; gap:17px !important; white-space:nowrap !important;
+  }
+}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
