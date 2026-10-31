@@ -1063,14 +1063,25 @@ const initFlashlightController = () => {
       guidePath.setAttribute('d', routeParts.join(' '));
     }
 
-    // Reveal the only final clue as the contact section enters view.
-    const endClue = document.getElementById('flashlight-end-clue');
-    const finalStage = !!endClue && (window.scrollY + window.innerHeight >= endClue.offsetTop + Math.min(100, endClue.offsetHeight * .2));
+    // The final landing point is the orange envelope icon beside the contact email.
+    const endClue = document.querySelector('#about .contact-email-icon');
+    const endRect = endClue ? endClue.getBoundingClientRect() : null;
+    const endPageY = endRect ? endRect.top + window.scrollY + endRect.height / 2 : Infinity;
+    const finalStage = !!endRect && endRect.width > 0 &&
+      window.scrollY + window.innerHeight >= endPageY + Math.min(80, endRect.height * .2);
     body.classList.toggle('flashlight-final-stop', finalStage);
+
+    // Once the final email clue is reached, pin the beam to the center of its
+    // orange envelope icon instead of letting the route drift past it.
+    const stopRadius = Math.max(95, Math.min(190, window.innerHeight * .24));
+    if (endRect && endRect.width > 0 && endRect.bottom > 0 && endRect.top < window.innerHeight &&
+        (finalStage || Math.abs(focusY - endPageY) <= stopRadius)) {
+      setBeam(endRect.left + endRect.width / 2, endRect.top + endRect.height / 2);
+      return;
+    }
 
     // Snap to each target as it reaches the reading zone; otherwise interpolate
     // between adjacent target centers. The alternating image columns create a zigzag.
-    const stopRadius = Math.max(95, Math.min(190, window.innerHeight * .24));
     const nearby = points.filter(p => Math.abs(focusY - p.y) <= stopRadius)
       .sort((a,b) => Math.abs(focusY-a.y) - Math.abs(focusY-b.y))[0];
     if (nearby) {
