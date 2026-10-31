@@ -963,7 +963,7 @@ body.flashlight-mode .light-switch {
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform—using AI-assisted tools to design, build, and shape something new.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div class="contact-heading-column"><span class="section-label">CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">SEARCH CONTINUES...</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><span class="section-label contact-heading-inline">CONTACT</span><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">SEARCH CONTINUES...</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -2035,7 +2035,7 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 /* Match the desktop name-to-controls spacing on mobile (45px baseline-to-baseline). */
 @media (max-width:760px) {
   .site-header .wordmark { top:26px !important; }
-  .site-header .light-switch-hint { top:71px !important; }
+  .site-header .light-switch-hint { top:65px !important; }
   /* The cue sits to the right of the switch, so point left toward LIGHTS ON. */
   .site-header .press-me-arrow { font-size:0 !important; }
   .site-header .press-me-arrow::after {
@@ -2045,4 +2045,15 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="contact-label-above-email-alignment">
+/* CONTACT sits directly above the email, aligned with the copy column. */
+#about .about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }
+#about .about-copy { grid-column: 2 !important; justify-self: start !important; }
+#about .contact-heading-inline { display: block !important; margin: 0 0 10px !important; padding: 0 !important; color: #9ccfd4 !important; font-family: var(--display) !important; font-size: clamp(28px, 4.5vw, 48px) !important; font-weight: 400 !important; line-height: .98 !important; letter-spacing: -.055em !important; text-transform: uppercase !important; }
+@media (max-width: 760px) {
+  #about .about-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #about .about-copy { grid-column: 1 !important; }
+}
+</style>
 </body></html>
