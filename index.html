@@ -381,6 +381,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 @media(prefers-reduced-motion:reduce){body.flashlight-mode #about .about-copy .search-continues{animation:none!important;}}
 </style>
 
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -854,6 +855,70 @@ body.flashlight-mode #light-switch,body.flashlight-mode .light-switch{position:r
 .hero .work-stamp-row .hero-stamp{width:100%!important;height:100%!important;}
 @media(max-width:760px){.clues-work-divider{height:16px!important;}.clues-work-divider::before{top:6px;}.clues-work-divider::after{top:12px;}.hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}#work .my-work-banner{text-align:left!important;padding-left:0!important;}#work .my-work-banner::after{text-align:left!important;}}
 @media(prefers-reduced-motion:reduce){body.flashlight-mode::after{animation:none!important;opacity:.48;}}
+</style>
+
+
+<style id="october-2026-requested-visual-cleanup">
+/* Remove the cyan rule treatment and bring the work/photography content upward. */
+:root{--cyan:#25251f;--cyan-pale:#eae3d6;}
+.work-row:nth-child(2) .work-title:after,
+.reference-card:nth-child(even) h3:after{background:var(--ink)!important;}
+.work-row:hover .work-arrow{background:var(--paper)!important;}
+.clues-work-divider{display:none!important;height:0!important;border:0!important;margin:0!important;padding:0!important;}
+#work{padding-top:clamp(8px,1.2vw,16px)!important;}
+#work .my-work-banner{margin-top:0!important;padding-top:0!important;padding-bottom:clamp(8px,1.2vw,14px)!important;}
+#work #photos.gallery-intro{margin-top:0!important;padding-top:0!important;margin-bottom:10px!important;}
+#photos .photography-heading{gap:5px!important;}
+/* Neutralize remaining cyan linework in decorative SVG artwork. */
+svg [stroke="#9ccfd4"],svg [stroke="#9CCFD4"],svg [stroke="#73d9e8"],svg [stroke="#73D9E8"]{stroke:var(--ink)!important;}
+svg [fill="#9ccfd4"],svg [fill="#9CCFD4"]{fill:var(--paper)!important;}
+/* Made & Found belongs at the top-right of the LOOKING FOR CLUES title card. */
+.hero{position:relative!important;}
+.hero .work-stamp-row{
+  position:absolute!important;top:clamp(14px,2.4vw,30px)!important;
+  right:clamp(12px,2.5vw,36px)!important;left:auto!important;bottom:auto!important;
+  width:auto!important;height:auto!important;margin:0!important;padding:0!important;
+  display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;
+  z-index:8!important;pointer-events:none!important;
+}
+.hero .work-stamp-row .work-stamp{width:clamp(58px,7.2vw,92px)!important;height:clamp(58px,7.2vw,92px)!important;}
+@media(max-width:760px){
+  .hero .work-stamp-row{top:12px!important;right:10px!important;}
+  .hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,64px)!important;height:clamp(48px,13vw,64px)!important;}
+}
+/* Replace the busy triangle/conic texture with sparse, tiny glowing stars. */
+body.flashlight-mode::after{
+  content:"";position:fixed;inset:0;z-index:1100;pointer-events:none;opacity:.72;
+  background-image:
+    radial-gradient(circle,rgba(255,248,218,.98) 0 .8px,transparent 1.8px),
+    radial-gradient(circle,rgba(255,226,170,.9) 0 .7px,transparent 1.7px),
+    radial-gradient(circle,rgba(255,255,239,.86) 0 .6px,transparent 1.5px);
+  background-size:173px 191px,239px 223px,127px 149px;
+  background-position:17px 31px,91px 73px,48px 109px;
+  animation:soft-star-twinkle 4.2s ease-in-out infinite alternate;
+}
+@keyframes soft-star-twinkle{from{opacity:.42}to{opacity:.78}}
+/* Keep the LIGHTS ON control visibly locatable above the dark overlay. */
+body.flashlight-mode .site-header{z-index:1200!important;}
+body.flashlight-mode .light-switch{
+  position:relative!important;z-index:1202!important;isolation:isolate;
+  color:#fff7dc!important;background:rgba(30,29,24,.94)!important;
+  border:1px solid rgba(255,239,190,.98)!important;border-radius:999px!important;
+  box-shadow:0 0 5px rgba(255,239,190,.95),0 0 13px rgba(255,220,145,.82),0 0 27px rgba(255,220,145,.48),inset 0 0 9px rgba(255,239,190,.22)!important;
+  text-shadow:0 0 5px rgba(255,239,190,.95),0 0 12px rgba(255,220,145,.9)!important;
+  animation:lights-switch-beacon 1.8s ease-in-out infinite alternate!important;
+}
+body.flashlight-mode .light-switch:before{
+  content:"";position:absolute;inset:-7px;border-radius:999px;z-index:-1;
+  background:radial-gradient(ellipse,rgba(255,229,166,.34),rgba(255,229,166,0) 72%);
+  pointer-events:none;
+}
+body.flashlight-mode .light-switch .switch-track{border-color:#fff1c9!important;box-shadow:0 0 8px rgba(255,235,190,.95)!important;}
+body.flashlight-mode .light-switch:hover{
+  box-shadow:0 0 8px #fff1c9,0 0 20px rgba(255,220,145,.95),0 0 34px rgba(255,220,145,.6)!important;
+}
+@keyframes lights-switch-beacon{from{filter:brightness(1);box-shadow:0 0 5px rgba(255,239,190,.85),0 0 13px rgba(255,220,145,.65),0 0 22px rgba(255,220,145,.35),inset 0 0 9px rgba(255,239,190,.2)}to{filter:brightness(1.2);box-shadow:0 0 8px rgba(255,248,218,1),0 0 18px rgba(255,220,145,.95),0 0 32px rgba(255,220,145,.62),inset 0 0 11px rgba(255,239,190,.3)}}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch{animation:none!important}body.flashlight-mode::after{animation:none!important}}
 </style>
 
 </body></html>
