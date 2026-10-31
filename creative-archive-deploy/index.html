@@ -1058,6 +1058,33 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="site-credit-stacked-above-name">
+/* Stack the creator credit immediately above the site owner's name. */
+.site-header { padding-top:150px !important; }
+.site-header:before {
+  position:fixed !important; top:28px !important; left:3.3% !important; right:auto !important;
+  z-index:1302 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .wordmark {
+  position:fixed !important; top:43px !important; left:3.3% !important;
+  z-index:1301 !important; margin:0 !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:101px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:8px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important; transform:none !important;
+}
+.site-header .brand-tools { transform:none !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:150px !important; }
+  .site-header:before { top:28px !important; left:6% !important; }
+  .site-header .wordmark { top:43px !important; left:6% !important; }
+  .site-header .light-switch-hint { top:101px !important; left:6% !important; max-width:88vw !important; }
+}
+</style>
+
 </body></html>
 
 
