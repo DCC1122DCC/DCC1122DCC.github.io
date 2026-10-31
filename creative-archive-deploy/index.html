@@ -406,7 +406,7 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 </div>
 </section>
 
-<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
+<section class="section about-section" id="about"><div class="about-grid"><div><span class="section-label">04 / CONTACT</span></div><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">THE SEARCH CONTINUES — CLICK THE EMAIL TO GET IN TOUCH.</span></div></div></section></main>
 <footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
 <script id="flashlight-controller">
 const initFlashlightController = () => {
@@ -808,6 +808,27 @@ body.flashlight-mode .light-switch:hover{
 }
 @keyframes lights-switch-beacon{from{filter:brightness(1);box-shadow:0 0 5px rgba(255,239,190,.85),0 0 13px rgba(255,220,145,.65),0 0 22px rgba(255,220,145,.35),inset 0 0 9px rgba(255,239,190,.2)}to{filter:brightness(1.2);box-shadow:0 0 8px rgba(255,248,218,1),0 0 18px rgba(255,220,145,.95),0 0 32px rgba(255,220,145,.62),inset 0 0 11px rgba(255,239,190,.3)}}
 @media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch{animation:none!important}body.flashlight-mode::after{animation:none!important}}
+</style>
+
+
+<style id="final-user-request-overrides">
+/* Restore the flashlight's original final destination: the contact email icon. */
+#about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:relative!important;z-index:1202!important;}
+body.flashlight-mode #about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;color:#c8fbff!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95)!important;}
+#about .contact-email-icon{position:relative;z-index:1204!important;}
+#about .search-continues{display:none!important;}
+body.flashlight-mode.flashlight-final-stop #about .search-continues{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:1205!important;margin:12px 0 0!important;color:#c8fbff!important;font:700 clamp(11px,1.25vw,14px)/1.5 var(--mono)!important;letter-spacing:.12em!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 25px rgba(115,217,232,.7)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Lights ON: cream pill with a cyan outlined oval and cyan knob. */
+body:not(.flashlight-mode) #light-switch,body:not(.flashlight-mode) .light-switch{background:#f2ebdd!important;color:#25251f!important;border:1px solid #25251f!important;box-shadow:0 3px 0 rgba(37,37,31,.15)!important;text-shadow:none!important;filter:none!important;animation:none!important;}
+body:not(.flashlight-mode) #light-switch .switch-track,body:not(.flashlight-mode) .light-switch .switch-track{background:#f2ebdd!important;border:1px solid #73d9e8!important;}
+body:not(.flashlight-mode) #light-switch .switch-track:after,body:not(.flashlight-mode) .light-switch .switch-track:after{background:#73d9e8!important;box-shadow:0 0 3px rgba(115,217,232,.45)!important;}
+/* Keep the PRESS ME cue black, separate from the cyan switch detail. */
+.press-me-cue{color:#25251f!important;text-shadow:none!important;}
+.press-me-arrow{color:#25251f!important;text-shadow:none!important;}
+/* Tiny four-point cyan stars replace plain dots in lights-off mode. */
+@keyframes restored-cyan-stars{0%{opacity:.58;filter:drop-shadow(0 0 2px rgba(115,217,232,.65));}100%{opacity:.95;filter:drop-shadow(0 0 4px rgba(115,217,232,.95)) drop-shadow(0 0 9px rgba(115,217,232,.65));}}
+body.flashlight-mode::after{content:""!important;position:fixed!important;inset:0!important;z-index:1100!important;pointer-events:none!important;opacity:1!important;background-image:radial-gradient(circle,rgba(210,250,255,.95) 0 .7px,transparent 1.4px),conic-gradient(from 0deg at 50% 50%,transparent 0deg 38deg,rgba(182,248,255,.98) 43deg 47deg,transparent 52deg 128deg,rgba(182,248,255,.98) 133deg 137deg,transparent 142deg 218deg,rgba(182,248,255,.98) 223deg 227deg,transparent 232deg 308deg,rgba(182,248,255,.98) 313deg 317deg,transparent 322deg 360deg),radial-gradient(circle,rgba(115,217,232,.92) 0 .7px,transparent 1.5px)!important;background-size:151px 167px,151px 167px,223px 197px!important;background-position:0 0,0 0,73px 41px!important;animation:restored-cyan-stars 3.1s ease-in-out infinite alternate!important;}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode::after,body.flashlight-mode.flashlight-final-stop #about .search-continues{animation:none!important;}}
 </style>
 
 </body></html>
