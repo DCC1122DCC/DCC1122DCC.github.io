@@ -638,6 +638,27 @@ body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9
 }
 </style>
 
+
+<style id="wordmark-black-back-to-top-orange">
+/* Keep the name link black in every interaction state; reserve orange for the top-navigation link. */
+.site-header a.wordmark,
+.site-header a.wordmark:link,
+.site-header a.wordmark:visited,
+.site-header a.wordmark:hover,
+.site-header a.wordmark:active,
+.site-header a.wordmark:focus,
+.site-header a.wordmark:focus-visible {
+  color: var(--ink) !important;
+}
+.site-footer a.back-to-top,
+.site-footer a.back-to-top:link,
+.site-footer a.back-to-top:visited,
+.site-footer a.back-to-top:hover,
+.site-footer a.back-to-top:active,
+.site-footer a.back-to-top:focus-visible {
+  color: var(--orange) !important;
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
@@ -1600,6 +1621,41 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="final-mobile-navigation-and-contact-left-alignment">
+/* Mobile navigation now uses the same single-row, uppercase mono treatment as desktop.
+   On exceptionally narrow screens it can scroll horizontally rather than wrap or distort the header. */
+@media (max-width:760px) {
+  .site-header .navigation {
+    display:flex !important; flex:0 0 auto !important; flex-wrap:nowrap !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:clamp(8px,2.4vw,14px) !important; width:100% !important; max-width:100% !important;
+    min-width:0 !important; margin:12px 0 0 !important; padding:0 0 3px !important;
+    overflow-x:auto !important; overflow-y:hidden !important; white-space:nowrap !important;
+    font-family:var(--mono) !important; font-size:clamp(8px,2.5vw,10px) !important;
+    line-height:1.5 !important; text-transform:uppercase !important;
+    scrollbar-width:none !important; -webkit-overflow-scrolling:touch !important;
+  }
+  .site-header .navigation::-webkit-scrollbar { display:none !important; }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { flex:0 0 auto !important; white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex:0 0 auto !important; flex-wrap:nowrap !important;
+    align-items:center !important; gap:clamp(8px,2.4vw,14px) !important; white-space:nowrap !important;
+  }
+}
+/* The Contact copy column starts at the left edge on desktop as it already does on mobile. */
+#about .about-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important; }
+#about .about-copy {
+  grid-column:1 !important; justify-self:start !important;
+  text-align:left !important; margin-left:0 !important; margin-right:auto !important;
+}
+#about .contact-heading-inline { display:block !important; width:100% !important; text-align:left !important; }
+@media (max-width:760px) {
+  #about .about-grid { grid-template-columns:minmax(0,1fr) !important; }
+  #about .about-copy { grid-column:1 !important; }
+}
+</style>
 </body></html>
 
 
