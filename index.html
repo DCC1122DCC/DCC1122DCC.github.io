@@ -1536,4 +1536,30 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 .site-footer .site-credit > span:last-child { line-height:1 !important; margin:0 !important; }
 </style>
 
+
+<style id="final-top-edge-spacing-correction">
+/* Give the top utility labels real breathing room; keep them in a deliberate vertical stack. */
+.site-header { padding-top:122px !important; }
+.site-header:before {
+  position:fixed !important; top:42px !important; left:3.3% !important; right:auto !important;
+  z-index:1301 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:70px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:8px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important;
+  transform:none !important;
+}
+.site-header .brand-tools { transform:none !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:122px !important; }
+  .site-header:before { top:42px !important; left:6% !important; right:auto !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:70px !important; left:6% !important; right:auto !important;
+    max-width:88vw !important; justify-content:flex-start !important;
+  }
+}
+</style>
+
 </body></html>
