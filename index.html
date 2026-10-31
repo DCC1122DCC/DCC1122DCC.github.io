@@ -2030,4 +2030,19 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="mobile-lights-spacing-and-arrow-fix">
+/* Match the desktop name-to-controls spacing on mobile (45px baseline-to-baseline). */
+@media (max-width:760px) {
+  .site-header .wordmark { top:26px !important; }
+  .site-header .light-switch-hint { top:71px !important; }
+  /* The cue sits to the right of the switch, so point left toward LIGHTS ON. */
+  .site-header .press-me-arrow { font-size:0 !important; }
+  .site-header .press-me-arrow::after {
+    content:"←" !important; display:inline-block !important;
+    font:700 11px/1 Arial,sans-serif !important;
+  }
+}
+</style>
+
 </body></html>
