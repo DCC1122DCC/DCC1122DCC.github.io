@@ -2335,4 +2335,31 @@ body.flashlight-mode #about .contact-email-icon {
   z-index: 1204 !important;
 }
 </style>
+
+<style id="final-lights-off-email-address-glow-fix">
+/* Final override: keep the real email address visible and glowing with its
+   envelope icon in Lights Off, above the dimming overlay. */
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 1202 !important;
+  color: #ffb36b !important;
+  -webkit-text-fill-color: #ffb36b !important;
+  text-shadow: 0 0 5px #ff7a18, 0 0 12px rgba(255,122,24,.98), 0 0 24px rgba(255,122,24,.72) !important;
+  animation: actual-email-address-glow 1.8s ease-in-out infinite alternate !important;
+}
+@keyframes actual-email-address-glow {
+  from { text-shadow: 0 0 4px #ff7a18, 0 0 10px rgba(255,122,24,.82), 0 0 18px rgba(255,122,24,.55); }
+  to   { text-shadow: 0 0 7px #ff7a18, 0 0 16px rgba(255,122,24,1), 0 0 29px rgba(255,122,24,.82); }
+}
+/* Preserve the existing orange envelope beacon and its final-clue layering. */
+body.flashlight-mode #about .contact-email-icon {
+  position: relative !important;
+  z-index: 1204 !important;
+}
+</style>
+
 </body></html>
