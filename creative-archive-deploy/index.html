@@ -845,6 +845,7 @@ body.flashlight-mode .site-footer {
 
 <figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/misc-06-water.JPG" data-lightbox><img src="./images/misc-06-water.JPG" alt="A swimmer looking through a snorkel mask in clear water" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/florida-11.jpg" data-lightbox aria-label="Open Florida sunset and pier photograph"><img src="./images/florida-11.jpg" alt="Sunset over the ocean with a pier stretching across the horizon" loading="lazy"></a></figure>
 
 
 </div></section>    
@@ -1985,10 +1986,9 @@ body.flashlight-mode #about .search-continues{
   #work .my-work-banner{font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
 }
 
-/* Florida collection only: compact the gallery so the photographs sit together without dominating the page. */
-#misc .photo-grid{columns:4!important;column-gap:clamp(8px,1vw,13px)!important;}
-#misc .photo-card{margin-bottom:clamp(7px,.8vw,11px)!important;}
+/* Florida uses the same compact three-column photo flow as the other collections. */
+#misc .photo-grid{columns:3!important;column-gap:clamp(10px,1.4vw,18px)!important;}
+#misc .photo-card{margin-bottom:clamp(10px,1.4vw,18px)!important;}
 #misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
-@media(min-width:761px) and (max-width:1099px){#misc .photo-grid{columns:3!important;}}
 @media(max-width:760px){#misc .photo-grid{columns:2!important;column-gap:8px!important;}#misc .photo-card{margin-bottom:8px!important;}}
 </style>
