@@ -2296,4 +2296,30 @@ body.flashlight-mode #about .contact-email { position:relative!important; z-inde
 }
 </style>
 
+
+<style id="final-lights-off-contact-overlay-fix">
+/* Lights Off: let the Contact section sit in the same darkened layer as the rest
+   of the page. The previous z-index put the entire section above the flashlight
+   overlay, which made its background stay visibly different. */
+body.flashlight-mode #about,
+body.flashlight-mode #about.about-section {
+  position: relative !important;
+  z-index: auto !important;
+  isolation: auto !important;
+  background: var(--cream) !important;
+  background-color: var(--cream) !important;
+  background-image: none !important;
+  color: var(--ink) !important;
+}
+/* Keep only the final email icon above the dimming layer as the flashlight clue.
+   The email text itself remains in the same lighting as the rest of the section. */
+body.flashlight-mode #about .contact-email {
+  position: relative !important;
+  z-index: auto !important;
+}
+body.flashlight-mode #about .contact-email-icon {
+  position: relative !important;
+  z-index: 1204 !important;
+}
+</style>
 </body></html>
