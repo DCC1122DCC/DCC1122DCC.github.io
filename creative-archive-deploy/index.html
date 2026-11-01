@@ -742,6 +742,19 @@ body.flashlight-mode #about .search-continues {
 }
 </style>
 
+
+<style id="final-footer-lights-off-background-fix">
+/* The footer used var(--ink), but Lights Off swaps --ink to the light cream text color.
+   Pin only the final footer banner to the same near-black as the rest of the night screen. */
+body.flashlight-mode footer.site-footer,
+body.flashlight-mode .site-footer {
+  background: #111311 !important;
+  background-color: #111311 !important;
+  background-image: none !important;
+  color: #f2ebdd !important;
+}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
