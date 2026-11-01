@@ -1072,6 +1072,8 @@ body.flashlight-mode .site-footer {
 
 <figure class="photo-card"><a href="./images/nightlife.jpg" data-lightbox aria-label="Open photograph of a bottle pouring a drink"><img src="./images/nightlife.jpg" alt="A drink being poured from a glass bottle into a shot glass" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/music-red-concert.jpg" data-lightbox aria-label="Open red-lit concert photograph"><img src="./images/music-red-concert.jpg" alt="A performer onstage before a crowd under intense red concert lighting" loading="lazy"></a></figure>
+
+<figure class="photo-card"><a href="./images/music-studio.jpg" data-lightbox aria-label="Open red-lit music studio photograph"><img src="./images/music-studio.jpg" alt="Music producer working at a mixing desk in a red-lit recording studio" loading="lazy"></a></figure>
 </div></section><section class="photo-category-section" id="misc"><div class="photo-group-label">05 / Florida <span></span></div><div class="photo-grid">
 <figure class="photo-card"><a href="./images/florida-07.jpg" data-lightbox aria-label="Open Florida river photograph"><img src="./images/florida-07.jpg" alt="A swimmer in a clear Florida river surrounded by trees" loading="lazy"></a></figure><figure class="photo-card"><a href="./images/florida-10.jpg" data-lightbox aria-label="Open Florida beach sunset photograph"><img src="./images/florida-10.jpg" alt="Sunset over a crowded beach with floating bubbles" loading="lazy"></a></figure>
 
@@ -2370,5 +2372,12 @@ body.flashlight-mode #about .contact-email-icon {
   position: relative !important;
   z-index: 1204 !important;
 }
+
+/* Florida collection only: compact the gallery so the photographs sit together without dominating the page. */
+#misc .photo-grid{columns:4!important;column-gap:clamp(8px,1vw,13px)!important;}
+#misc .photo-card{margin-bottom:clamp(7px,.8vw,11px)!important;}
+#misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
+@media(min-width:761px) and (max-width:1099px){#misc .photo-grid{columns:3!important;}}
+@media(max-width:760px){#misc .photo-grid{columns:2!important;column-gap:8px!important;}#misc .photo-card{margin-bottom:8px!important;}}
 </style>
 </body></html>
