@@ -752,15 +752,20 @@ body.flashlight-mode .site-footer {
 
 
 
-<style id="center-all-desktop-collections">
-/* Center every collection gallery consistently; preserve the existing masonry sizing and mobile layout. */
+<style id="center-dressup-florida-desktop">
+/* Explicitly center the Dress-up and Florida galleries in the viewport on desktop.
+   Keep their existing masonry columns, image sizing, and all mobile rules unchanged. */
 @media (min-width:761px) {
-  .photo-category-section .photo-grid,
-  #fashion-portraits .photo-grid, #nyc-film .photo-grid,
-  #live-music .photo-grid, #misc .photo-grid {
-    margin-left:auto!important;
-    margin-right:auto!important;
-    justify-self:center;
+  #fashion-portraits .photo-grid,
+  #misc .photo-grid {
+    position:relative!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:min(900px, 88vw)!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    box-sizing:border-box!important;
   }
 }
 </style>
