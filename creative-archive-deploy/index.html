@@ -1865,6 +1865,49 @@ body.flashlight-mode #about .contact-email-icon {
   z-index: 1204 !important;
 }
 </style>
+
+<style id="desktop-compact-masonry-only">
+/* Desktop-only compact masonry: keep photographs uncropped and preserve the existing mobile layout. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid,
+  #misc .photo-grid {
+    display:block!important;
+    width:100%;
+    max-width:1040px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    columns:4;
+    column-gap:12px;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card,
+  #misc .photo-card {
+    display:inline-block!important;
+    width:100%!important;
+    break-inside:avoid;
+    margin:0 0 12px!important;
+    vertical-align:top;
+  }
+  #fashion-portraits .photo-card a,
+  #nyc-film .photo-card a,
+  #live-music .photo-card a,
+  #misc .photo-card a {height:auto!important;min-height:0!important;}
+  #fashion-portraits .photo-card img,
+  #nyc-film .photo-card img,
+  #live-music .photo-card img,
+  #misc .photo-card img {
+    display:block;width:100%!important;height:auto!important;max-height:none!important;
+    object-fit:contain!important;object-position:center;
+  }
+}
+@media (min-width:761px) and (max-width:1099px) {
+  #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid {max-width:900px;columns:3;}
+}
+</style>
+
 </body></html>
 
 

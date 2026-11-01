@@ -1130,16 +1130,15 @@ const initFlashlightController = () => {
   }
 
   function getTargets() {
-    // Preserve the original dynamic positioning and route interpolation.
-    // The six intended stops are the magnifier, four collection images, and the
-    // existing email icon as the final landing point.
+    // Keep one flashlight stop in every photo collection, using the current
+    // collection images. The email icon remains the final landing point.
     const candidates = [
       document.querySelector('.magnifier-art'),
-      document.querySelector('#eyes img[src*="EYE16"]'),
+      document.querySelector('#eyes img[src*="EYE16.jpg"]'),
       document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
-      document.querySelector('#nyc-film img[src*="000927340006.jpg.jpg"]'),
-      document.querySelector('#live-music img[src*="music-01-russ-live"]'),
-      document.querySelector('#misc img[src*="florida-family"]'),
+      document.querySelector('#nyc-film img[src*="nyc-woman-night.jpg"]'),
+      document.querySelector('#live-music img[src*="nightlife.jpg"]'),
+      document.querySelector('#misc img[src*="florida-11.jpg"]'),
       document.querySelector('#about .contact-email-icon')
     ];
     return candidates.filter(el => {
@@ -1180,7 +1179,7 @@ const initFlashlightController = () => {
         // Connect the actual photo targets directly. Their real positions create
         // the natural zigzag; avoid adding artificial/random bends between them.
         if (i === 5) {
-          // Give the single left-side concert stop a curved, diagonal route into Florida.
+          // Give the Nightlife stop a curved, diagonal route into Florida.
           const bend = Math.max(90, Math.min(170, window.innerWidth * .14));
           const direction = p.x >= prev.x ? 1 : -1;
           const cx = (prev.x + p.x) / 2 + bend * direction;
@@ -1226,7 +1225,7 @@ const initFlashlightController = () => {
     const span = b.y - a.y;
     const t = span <= 0 ? 1 : Math.max(0, Math.min(1, (focusY-a.y)/span));
     if (points.indexOf(a) === 4 && points.indexOf(b) === 5) {
-      // Match the curved SVG guide between the concert photo and Florida photo.
+      // Match the curved SVG guide between the Nightlife and Florida photo stops.
       const bend = Math.max(90, Math.min(170, window.innerWidth * .14));
       const direction = b.x >= a.x ? 1 : -1;
       const cx = (a.x + b.x) / 2 + bend * direction;
@@ -2380,4 +2379,47 @@ body.flashlight-mode #about .contact-email-icon {
 #misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
 @media(max-width:760px){#misc .photo-grid{columns:2!important;column-gap:8px!important;}#misc .photo-card{margin-bottom:8px!important;}}
 </style>
+
+<style id="desktop-compact-masonry-only">
+/* Desktop-only compact masonry: keep photographs uncropped and preserve the existing mobile layout. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid,
+  #misc .photo-grid {
+    display:block!important;
+    width:100%;
+    max-width:1040px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    columns:4;
+    column-gap:12px;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card,
+  #misc .photo-card {
+    display:inline-block!important;
+    width:100%!important;
+    break-inside:avoid;
+    margin:0 0 12px!important;
+    vertical-align:top;
+  }
+  #fashion-portraits .photo-card a,
+  #nyc-film .photo-card a,
+  #live-music .photo-card a,
+  #misc .photo-card a {height:auto!important;min-height:0!important;}
+  #fashion-portraits .photo-card img,
+  #nyc-film .photo-card img,
+  #live-music .photo-card img,
+  #misc .photo-card img {
+    display:block;width:100%!important;height:auto!important;max-height:none!important;
+    object-fit:contain!important;object-position:center;
+  }
+}
+@media (min-width:761px) and (max-width:1099px) {
+  #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid {max-width:900px;columns:3;}
+}
+</style>
+
 </body></html>
