@@ -930,15 +930,48 @@ body.flashlight-mode #about .flashlight-found-clue {
 </style>
 
 
-<style id="contact-background-consistency-fix">
-/* Keep Contact's original Lights On cyan in both lighting modes.
-   Lights Off changes the global --cyan variable for flashlight effects;
-   this section should not inherit that mode-specific color shift. */
-#about.about-section {
-  background: #9ccfd4 !important;
-  background-color: #9ccfd4 !important;
+<style id="final-contact-heading-and-color-override">
+/* Final contact presentation: match the site's dark footer band in both light modes,
+   keep the closing line legible, and preserve the email icon as the final clue. */
+#about.about-section,
+body.flashlight-mode #about.about-section,
+body.flashlight-mode #about {
+  background: #25251f !important;
+  background-color: #25251f !important;
+  background-image: none !important;
+  color: #f2ebdd !important;
+}
+#about .about-outro,
+body.flashlight-mode #about .about-outro {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #f2ebdd !important;
+}
+/* CONTACT was a separate label; it must not replace the requested closing line. */
+#about .contact-heading-inline,
+body.flashlight-mode #about .contact-heading-inline {
+  display: none !important;
+  visibility: hidden !important;
+}
+/* Keep the email link/icon visible and reachable as the last flashlight clue. */
+#about .contact-email,
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  color: #f2ebdd !important;
+  text-shadow: none !important;
+}
+#about .search-continues,
+body.flashlight-mode #about .search-continues {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 </style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
