@@ -1032,7 +1032,7 @@ body.flashlight-mode .site-footer {
 
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
-<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Knock knock, who’s there?</span><span>Reoccurring Subject</span></div>
+<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Knock knock, who’s there?</span><span class="eyes-group-subtitle">Reoccurring Subject</span></div>
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -2362,25 +2362,48 @@ body.flashlight-mode #about .contact-email-icon {
 }
 </style>
 
-</body></html>
 
-<style id="eyes-label-match-location-labels">
-/* Use the same inline title + subtitle layout as the other photo collection labels. */
-#eyes .eyes-group-label {
+<style id="eyes-subtitle-exact-location-label-override">
+/* Match “Reoccurring Subject” to the subtitle used by “Los Angeles, California”.
+   This is deliberately the final in-document rule so older Eyes-specific CSS
+   cannot override its typography, color, or inline placement. */
+#eyes .photo-group-label.eyes-group-label {
   display: flex !important;
   flex-direction: row !important;
   justify-content: flex-start !important;
   align-items: baseline !important;
   flex-wrap: wrap !important;
   text-align: left !important;
-  gap: 10px !important;
-  margin: 24px 0 18px !important;
-  padding-top: 12px !important;
+  gap: 6px !important;
+}
+#eyes .photo-group-label.eyes-group-label > .eyes-group-subtitle {
+  display: inline !important;
+  position: static !important;
+  order: initial !important;
+  align-self: baseline !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--muted) !important;
+  font-family: var(--mono) !important;
+  font-size: 11px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  letter-spacing: .04em !important;
+  line-height: normal !important;
+  text-transform: uppercase !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  transform: none !important;
 }
 @media (max-width: 760px) {
-  #eyes .eyes-group-label {
+  #eyes .photo-group-label.eyes-group-label {
+    flex-direction: row !important;
+    align-items: baseline !important;
     gap: 6px !important;
-    margin: 20px 0 14px !important;
+  }
+  #eyes .photo-group-label.eyes-group-label > .eyes-group-subtitle {
+    display: inline !important;
   }
 }
 </style>
+</body></html>
