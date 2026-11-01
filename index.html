@@ -234,7 +234,6 @@ body.flashlight-mode .search-continues{display:block;}
 .photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-family:var(--display);font-size:clamp(19px,2.2vw,28px)!important;font-weight:900;letter-spacing:-.035em}
 .photo-group-label>span{font-size:11px!important;font-family:var(--mono);font-weight:400;letter-spacing:.04em}
 .photo-group-label .eyes-group-title{font-size:clamp(19px,2.2vw,28px)!important}
-.photo-group-label .eyes-group-subtitle{font-size:11px!important}
 .hero{min-height:clamp(480px,60vh,620px)}
 .hero h1{font-size:clamp(46px,7vw,96px);width:90%;line-height:.96}
 .hero h1 span,.hero h1 .for-word,.hero h1 .clues-word{text-align:center}
@@ -283,7 +282,6 @@ body.flashlight-mode .search-continues{display:block;}
 <style id="requested-collection-adjustments">
 /* Editorial heading and subtitle treatment for the recurring-subject collection. */
 #eyes .eyes-group-title{color:#25251f!important;}
-#eyes .eyes-group-subtitle{color:#77746a!important;font-family:var(--mono)!important;font-size:11px!important;font-weight:400;letter-spacing:.04em;text-transform:none;}
 /* Bring the Made & Found mark closer to the hero headline and tighten the handoff to photography. */
 .hero + .archive-stamp-separator{padding:4px 0 5px!important;}
 #photos.gallery-intro{margin:12px 0 10px!important;}
@@ -986,18 +984,6 @@ body.flashlight-mode .site-footer {
 </style>
 
 
-<style id="final-eyes-subtitle-match">
-/* Match “Reoccurring Subject” to the location subtitles used by the other photo collections. */
-#eyes .eyes-group-label .eyes-group-subtitle {
-  color: var(--muted) !important;
-  font-family: var(--mono) !important;
-  font-size: 11px !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  letter-spacing: .04em !important;
-  text-transform: uppercase !important;
-}
-</style>
 
 </head>
 <body id="home">
@@ -1046,7 +1032,7 @@ body.flashlight-mode .site-footer {
 
 <div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
 <section class="photo-category-section" id="eyes">
-<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Knock knock, who’s there?</span><span class="eyes-group-subtitle">Reoccurring Subject</span></div>
+<div class="photo-group-label eyes-group-label"><span class="eyes-group-title">01 / Knock knock, who’s there?</span><span>Reoccurring Subject</span></div>
 <div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
 <a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
 <a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
@@ -2377,3 +2363,24 @@ body.flashlight-mode #about .contact-email-icon {
 </style>
 
 </body></html>
+
+<style id="eyes-label-match-location-labels">
+/* Use the same inline title + subtitle layout as the other photo collection labels. */
+#eyes .eyes-group-label {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: flex-start !important;
+  align-items: baseline !important;
+  flex-wrap: wrap !important;
+  text-align: left !important;
+  gap: 10px !important;
+  margin: 24px 0 18px !important;
+  padding-top: 12px !important;
+}
+@media (max-width: 760px) {
+  #eyes .eyes-group-label {
+    gap: 6px !important;
+    margin: 20px 0 14px !important;
+  }
+}
+</style>
