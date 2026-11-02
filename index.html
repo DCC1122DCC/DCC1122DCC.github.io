@@ -1526,6 +1526,7 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
  const image=box.querySelector('img'), close=box.querySelector('.photo-lightbox-close');
  const prev=box.querySelector('.photo-lightbox-prev'), next=box.querySelector('.photo-lightbox-next'), count=box.querySelector('.photo-lightbox-count');
  let previousFocus=null, photos=[], current=0, touchStartX=0;
+ let previousBodyOverflow='', previousBodyPaddingRight='';
  function show(index){
    if(!photos.length)return;
    current=(index+photos.length)%photos.length;
@@ -1534,12 +1535,16 @@ body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #
    count.textContent=(current+1)+' / '+photos.length;
    prev.disabled=photos.length<2; next.disabled=photos.length<2;
  }
- function closeBox(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow='';if(previousFocus&&previousFocus.focus)previousFocus.focus();}
+ function closeBox(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow=previousBodyOverflow;document.body.style.paddingRight=previousBodyPaddingRight;if(previousFocus&&previousFocus.focus)previousFocus.focus();}
  document.querySelectorAll('a[data-lightbox]').forEach(link=>link.addEventListener('click',event=>{
    const href=link.getAttribute('href'); if(!href)return; event.preventDefault();
    const collection=link.closest('.photo-category-section')||link.closest('.photo-grid')||link.parentElement;
    photos=Array.from(collection.querySelectorAll('a[data-lightbox]')).filter(a=>a.getAttribute('href'));
    current=Math.max(0,photos.indexOf(link)); previousFocus=link; show(current);
+   previousBodyOverflow=document.body.style.overflow;
+   previousBodyPaddingRight=document.body.style.paddingRight;
+   const scrollbarWidth=Math.max(0,window.innerWidth-document.documentElement.clientWidth);
+   if(scrollbarWidth)document.body.style.paddingRight=scrollbarWidth+'px';
    box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus({preventScroll:true});
  }));
  prev.addEventListener('click',()=>show(current-1)); next.addEventListener('click',()=>show(current+1));
