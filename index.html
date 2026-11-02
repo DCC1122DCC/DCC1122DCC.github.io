@@ -2461,20 +2461,34 @@ body.flashlight-mode #about .contact-email-icon {
 </style>
 
 
-<style id="desktop-mobile-style-collections">
-/* Bring Dress-up, New York, and Nightlife desktop galleries closer to the more spacious mobile presentation.
-   Eye and Florida collections are deliberately excluded so their layouts remain exactly as they are. */
-@media (min-width:761px) {
+<style id="desktop-balanced-masonry-collections">
+/* A middle ground between the oversized two-column desktop view and the denser original grid.
+   Three columns let visitors see more photographs together without making them feel tiny.
+   Eye and Florida are deliberately excluded; mobile styling remains untouched. */
+@media (min-width:1100px) {
   #fashion-portraits .photo-grid,
   #nyc-film .photo-grid,
   #live-music .photo-grid {
-    columns:2!important;
-    column-gap:clamp(12px,1.5vw,18px)!important;
+    columns:3!important;
+    column-gap:14px!important;
   }
   #fashion-portraits .photo-card,
   #nyc-film .photo-card,
   #live-music .photo-card {
-    margin-bottom:clamp(12px,1.5vw,18px)!important;
+    margin-bottom:14px!important;
+  }
+}
+@media (min-width:761px) and (max-width:1099px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid {
+    columns:2!important;
+    column-gap:12px!important;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card {
+    margin-bottom:12px!important;
   }
 }
 </style>
