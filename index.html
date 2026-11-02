@@ -1172,10 +1172,10 @@ const initFlashlightController = () => {
     // collection images. The email icon remains the final landing point.
     const candidates = [
       document.querySelector('.magnifier-art'),
-      document.querySelector('#eyes img[src*="EYE16.jpg"]'),
+      document.querySelector('#eyes img[src*="EYE16.jpg"]') || document.querySelector('#eyes img[src*="EYE16"]'),
       document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
-      document.querySelector('#nyc-film img[src*="000927340017.jpg"]'),
-      document.querySelector('#live-music img[src*="nightlife.jpg"]'),
+      document.querySelector('#nyc-film img[src*="000927340006.jpg.jpg"]'),
+      document.querySelector('#live-music img[src*="music-red-concert.jpg"]'),
       document.querySelector('#misc img[src*="florida-11.jpg"]'),
       document.querySelector('#about .contact-email-icon')
     ];
@@ -2493,4 +2493,23 @@ body.flashlight-mode #about .contact-email-icon {
 }
 </style>
 
+
+<style id="final-centered-collections-and-flashlight-route">
+/* Keep each collection gallery centered within its own content area. This changes alignment only,
+   not the established photo order, proportions, column counts, or Florida/Eyes styling. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid,
+  #misc .photo-grid,
+  #eyes .eyes-preview,
+  #eyes .eyes-more .photo-grid {
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid { width:100%; max-width:960px; }
+}
+</style>
 </body></html>
