@@ -1174,7 +1174,7 @@ const initFlashlightController = () => {
       document.querySelector('.magnifier-art'),
       document.querySelector('#eyes img[src*="EYE16.jpg"]'),
       document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
-      document.querySelector('#nyc-film img[src*="new-york-park-piano.jpg"]'),
+      document.querySelector('#nyc-film img[src*="000927340017.jpg"]'),
       document.querySelector('#live-music img[src*="nightlife.jpg"]'),
       document.querySelector('#misc img[src*="florida-11.jpg"]'),
       document.querySelector('#about .contact-email-icon')
@@ -2457,6 +2457,25 @@ body.flashlight-mode #about .contact-email-icon {
 }
 @media (min-width:761px) and (max-width:1099px) {
   #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid {max-width:960px;columns:3;}
+}
+</style>
+
+
+<style id="desktop-mobile-style-collections">
+/* Bring Dress-up, New York, and Nightlife desktop galleries closer to the more spacious mobile presentation.
+   Eye and Florida collections are deliberately excluded so their layouts remain exactly as they are. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid {
+    columns:2!important;
+    column-gap:clamp(12px,1.5vw,18px)!important;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card {
+    margin-bottom:clamp(12px,1.5vw,18px)!important;
+  }
 }
 </style>
 
