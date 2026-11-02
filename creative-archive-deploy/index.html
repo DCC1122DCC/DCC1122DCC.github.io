@@ -2035,22 +2035,26 @@ body.flashlight-mode #about .contact-email-icon {
 </style>
 
 <style id="florida-collection-true-center-final">
-/* Florida: center the whole collection block in the viewport, even if its
-   surrounding section has inherited alignment/offset rules. Keep masonry intact. */
-#work #misc.photo-category-section {
+/* Florida centering fix (inspected): the former left:50% + translateX(-50%)
+   shifted the section relative to #work's padded content box. Center the
+   section as a normal layout item instead; keep its existing photo layout. */
+#work > section#misc.photo-category-section {
   display:block !important;
-  position:relative !important;
-  left:50% !important;
+  position:static !important;
+  inset:auto !important;
+  left:auto !important;
   right:auto !important;
-  transform:translateX(-50%) !important;
+  transform:none !important;
   float:none !important;
-  width:min(960px, calc(100vw - 48px)) !important;
-  max-width:none !important;
-  margin-left:0 !important;
-  margin-right:0 !important;
+  width:min(960px, 100%) !important;
+  max-width:960px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  justify-self:center !important;
+  align-self:stretch !important;
   box-sizing:border-box !important;
 }
-#work #misc.photo-category-section > .photo-grid {
+#work > section#misc.photo-category-section > .photo-grid {
   display:block !important;
   width:100% !important;
   max-width:none !important;
@@ -2059,8 +2063,9 @@ body.flashlight-mode #about .contact-email-icon {
   box-sizing:border-box !important;
 }
 @media (max-width:760px) {
-  #work #misc.photo-category-section {
-    width:calc(100vw - 32px) !important;
+  #work > section#misc.photo-category-section {
+    width:100% !important;
+    max-width:none !important;
   }
 }
 </style>
