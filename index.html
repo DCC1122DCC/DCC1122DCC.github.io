@@ -2565,4 +2565,35 @@ body.flashlight-mode #about .contact-email-icon {
   #live-music .photo-grid { width:100%; max-width:960px; }
 }
 </style>
+
+<style id="florida-collection-true-center-final">
+/* Florida: center the whole collection block in the viewport, even if its
+   surrounding section has inherited alignment/offset rules. Keep masonry intact. */
+#work #misc.photo-category-section {
+  display:block !important;
+  position:relative !important;
+  left:50% !important;
+  right:auto !important;
+  transform:translateX(-50%) !important;
+  float:none !important;
+  width:min(960px, calc(100vw - 48px)) !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  box-sizing:border-box !important;
+}
+#work #misc.photo-category-section > .photo-grid {
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  box-sizing:border-box !important;
+}
+@media (max-width:760px) {
+  #work #misc.photo-category-section {
+    width:calc(100vw - 32px) !important;
+  }
+}
+</style>
 </body></html>
