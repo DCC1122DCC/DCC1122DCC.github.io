@@ -2601,4 +2601,32 @@ body.flashlight-mode #about .contact-email-icon {
   }
 }
 </style>
+
+<style id="florida-desktop-alignment-final-2026">
+/* Align Florida with the centered desktop collection column. Keep the mobile layout unchanged. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section {
+    grid-column:1 / -1 !important;
+    justify-self:center !important;
+    align-self:center !important;
+    width:min(960px, 100%) !important;
+    max-width:960px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    inset:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+  #work > section#misc.photo-category-section > .photo-group-label,
+  #work > section#misc.photo-category-section > .photo-grid {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
 </body></html>
