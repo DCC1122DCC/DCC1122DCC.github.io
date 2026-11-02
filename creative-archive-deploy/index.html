@@ -799,6 +799,43 @@ body.flashlight-mode .site-footer {
   }
 }
 </style>
+
+
+<style id="actual-centered-collection-sections-final-fix">
+/* Center the COLLECTION SECTION itself, not only its inner photo grid.
+   Earlier rules centered the grid while its parent remained full-width/right-shifted. */
+#work > .photo-category-section {
+  display:block !important;
+  float:none !important;
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:960px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  box-sizing:border-box !important;
+}
+#work > .photo-category-section > .photo-grid {
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  box-sizing:border-box !important;
+}
+#work > .photo-category-section > .eyes-layout {
+  width:100% !important;
+  max-width:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+@media (max-width:760px) {
+  #work > .photo-category-section { max-width:100% !important; }
+}
+</style>
+
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div>
