@@ -864,7 +864,7 @@ body.flashlight-mode .site-footer {
 <circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
 <path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
 <circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
-</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><span class="navigation-social-pair"><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="#about">Contact</a></span></nav></header>
+</svg></span></a><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><span class="navigation-social-pair"><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=4266e609feca4c02" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="#about">Contact</a></span></nav></header>
 <main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
 <div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
 <div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
@@ -2223,4 +2223,45 @@ body.flashlight-mode #about .search-continues{
 #misc .photo-card{margin-bottom:clamp(10px,1.4vw,18px)!important;}
 #misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
 @media(max-width:760px){#misc .photo-grid{columns:2!important;column-gap:8px!important;}#misc .photo-card{margin-bottom:8px!important;}}
+</style>
+
+<style id="final-florida-centered-and-navigation">
+/* Final Florida alignment override: center the complete collection block in the same
+   desktop column as the other collections, without changing its image layout. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section {
+    display:block !important;
+    position:relative !important;
+    float:none !important;
+    inset:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    grid-column:1 / -1 !important;
+    justify-self:center !important;
+    align-self:center !important;
+    width:min(960px, calc(100% - 40px)) !important;
+    max-width:960px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    box-sizing:border-box !important;
+  }
+  #work > section#misc.photo-category-section > .photo-group-label,
+  #work > section#misc.photo-category-section > .photo-grid {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+  }
+}
+@media (max-width:760px) {
+  #work > section#misc.photo-category-section {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
 </style>
