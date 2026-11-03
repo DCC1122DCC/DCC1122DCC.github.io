@@ -2265,3 +2265,24 @@ body.flashlight-mode #about .search-continues{
   }
 }
 </style>
+
+<style id="florida-visual-balance-center-final">
+/* Florida has fewer photographs, so center a narrower two-column photo composition
+   beneath its full-width heading instead of stretching a sparse three-column grid. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section > .photo-grid {
+    display:block !important;
+    width: min(680px, 72%) !important;
+    max-width:680px !important;
+    columns:2 !important;
+    column-gap:clamp(12px, 1.5vw, 20px) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #work > section#misc.photo-category-section > .photo-grid > .photo-card {
+    display:inline-block !important;
+    width:100% !important;
+    break-inside:avoid !important;
+  }
+}
+</style>
