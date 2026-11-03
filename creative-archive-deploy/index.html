@@ -2097,6 +2097,26 @@ body.flashlight-mode #about .contact-email-icon {
   }
 }
 </style>
+
+<style id="florida-final-horizontal-centering-adjustment">
+/* Center the actual Florida photo grid itself. Cancel the older relative left/translate
+   positioning so the narrower two-column composition is centered in its parent. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section > .photo-grid {
+    position:static !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    float:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    width:min(680px, 72%) !important;
+    max-width:680px !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+
 </body></html>
 
 
