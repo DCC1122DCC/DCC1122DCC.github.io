@@ -1069,6 +1069,28 @@ body.flashlight-mode .site-footer {
 }
 </style>
 
+
+<style id="wishboard-player-and-nyc-balance">
+/* Slightly reduce the Wishboard player footprint while preserving the full video frame. */
+#wishboard .wishboard-tutorial {
+  width: 88%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Eight New York street photographs sit in two balanced masonry columns. */
+@media (min-width: 761px) {
+  #nyc-film > .photo-grid {
+    columns: 2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 760px) {
+  #wishboard .wishboard-tutorial { width: 100%; }
+}
+</style>
 </head>
 <body id="home">
 <div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
@@ -1143,7 +1165,7 @@ body.flashlight-mode .site-footer {
 <figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure>
-<figure class="photo-card"><a href="./images/000927340017.jpg" data-lightbox aria-label="Open photograph of a pigeon on a New York sidewalk"><img src="./images/000927340017.jpg" alt="A pigeon standing on a city sidewalk near a storefront, with a passerby’s sneakers in the background" loading="lazy"></a></figure>
+
 <figure class="photo-card"><a href="./images/000927340020.jpg" data-lightbox aria-label="Open construction sign with a painted happy face"><img src="./images/000927340020.jpg" alt="A worn construction barrier marked with a bright orange happy face on a New York sidewalk" loading="lazy"></a></figure>
 <figure class="photo-card"><a href="./images/000927340006.jpg.jpg" data-lightbox><img src="./images/000927340006.jpg.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure>
 </div></section><section class="photo-category-section" id="live-music">
@@ -1175,7 +1197,7 @@ body.flashlight-mode .site-footer {
 
 
 </div></section>    
-<div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. </p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><div class="embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/5VJyGdAp63c" title="Right Now — EDM Remix" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><a class="instagram-preview" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer" aria-label="Watch Soul Never Dies Collective on Instagram"><img class="instagram-preview-image" src="./images/soul-never-dies-thumbnail.webp" alt="" loading="lazy"><span class="instagram-preview-play" aria-hidden="true">▶</span><span class="instagram-preview-label">WATCH ON INSTAGRAM ↗</span></a><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article><article class="project-card"><div class="project-type">03 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/visual-study-poster.jpg"><source src="./videos/visual-study.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>Visual Study</h3><p>An experimental visual piece I directed and edited, shaping the lighting, location, and atmosphere.</p></article><article class="project-card"><div class="project-type">04 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/ryan-kj-poster.jpg"><source src="./videos/ryan-kj-best-moments.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>CR-V / Free — Ryan KJ</h3><p>Directed a music video for rapper Ryan KJ, bringing the shoot together and guiding its visual direction.</p></article></div>
+<div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. </p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><div class="embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/5VJyGdAp63c" title="Right Now — EDM Remix" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h3>“Right Now” — EDM Remix</h3><p>Collaborated on a music project, filming and editing the accompanying video.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><a class="instagram-preview" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer" aria-label="Watch Soul Never Dies Collective on Instagram"><img class="instagram-preview-image" src="./images/soul-never-dies-thumbnail.webp" alt="" loading="lazy"><span class="instagram-preview-play" aria-hidden="true">▶</span><span class="instagram-preview-label">WATCH ON INSTAGRAM ↗</span></a><h3>Soul Never Dies Collective</h3><p>Collaborated with Soul Never Dies Collective to film and edit a video project.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article><article class="project-card"><div class="project-type">03 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/visual-study-poster.jpg"><source src="./videos/visual-study.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>Visual Study</h3><p>An experimental visual piece I directed and edited, shaping the lighting, location, and atmosphere.</p></article><article class="project-card"><div class="project-type">04 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/ryan-kj-poster.jpg"><source src="./videos/ryan-kj-best-moments.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>&quot;CR-V / Free&quot; — Ryan KJ</h3><p>A short selection of clips from the full music video for rapper Ryan KJ, edited together as a highlights reel.</p></article></div>
 <div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform with AI-assisted tools.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="embed-frame wishboard-tutorial"><video controls playsinline preload="metadata"><source src="./videos/wishboard-tutorial.mp4" type="video/mp4">Your browser does not support the video element.</video></div><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
 </section>
 
