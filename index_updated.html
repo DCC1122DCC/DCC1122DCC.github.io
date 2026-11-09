@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#F2EBDD">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg"><link rel="icon" href="./favicon.ico" sizes="any"><link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png"><link rel="icon" type="image/png" sizes="512x512" href="./icon-512.png"><link rel="manifest" href="./manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Creative Archive"><meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Desani Curbelo | Photography & Video</title><meta name="description" content="Desani Curbelo — photography, music videos, and collaborative creative work.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f2ebdd;--paper:#eae3d6;--orange:#ff6200;--orange-soft:#ff984d;--cyan:#9ccfd4;--cyan-pale:#c8eef0;--rust:#c44332;--ink:#25251f;--muted:#77746a;--line:rgba(37,37,31,.22);--display:"Archivo Black","Helvetica Neue",Arial,sans-serif;--body:"Space Grotesk","Helvetica Neue",Arial,sans-serif;--mono:"Space Mono",monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5}a{color:inherit;text-decoration:none}a:hover{color:var(--orange)}a:focus-visible{outline:2px solid var(--orange);outline-offset:4px}::selection{background:var(--orange);color:var(--ink)}::-moz-selection{background:var(--orange);color:var(--ink)}
+.brand-tools{display:flex;align-items:center;gap:10px;min-width:0}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 3.3%;background:var(--cream);border-bottom:1px solid var(--line)}.site-header:before{content:"SITE MADE BY";position:absolute;top:9px;left:3.3%;font-family:var(--mono);font-size:8px;line-height:1;letter-spacing:.12em;color:var(--muted)}.site-header{padding-top:27px}.wordmark{font-family:var(--display);display:inline-flex;align-items:center;font-size:clamp(23px,2.4vw,34px);line-height:1.05;letter-spacing:-1.2px;text-transform:uppercase;white-space:nowrap}.wordmark-girl{display:inline-block;position:relative;isolation:isolate;width:43px;height:54px;margin-left:9px;vertical-align:middle;overflow:visible}.wordmark-girl:before{content:none}.wordmark-girl svg{position:relative;display:block;width:100%;height:100%}.navigation{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:clamp(22px,3.1vw,48px);font-family:var(--mono);font-size:clamp(10px,.95vw,14px);text-transform:uppercase}.navigation a{transition:color .2s ease}
+.hero{min-height:clamp(620px,74vh,760px);padding:34px 3.3% 32px;display:flex;flex-direction:column;justify-content:space-between;position:relative;isolation:isolate;overflow:hidden}.eyebrow,.section-label,.small-label{font-family:var(--mono);font-size:10px;line-height:1.6;text-transform:uppercase;letter-spacing:.5px}.hero-top{position:relative;z-index:2;min-height:34px;margin-left:-4%}.hero h1{position:absolute;z-index:2;top:48%;left:50%;width:94%;max-width:100%;margin:0;padding:0;transform:translate(-50%,-50%);font-family:var(--display);font-size:clamp(76px,10.2vw,142px);line-height:.94;letter-spacing:-.07em;text-align:center;text-transform:uppercase;font-weight:400}.hero h1 span{display:block;width:100%;text-align:center}.hero h1 .for-word{display:block;width:100%;text-align:center}.hero h1 .clues-word{display:block;width:100%;color:var(--orange);text-align:center}.hero-art{position:absolute;z-index:1;pointer-events:none}.hero-art svg{display:block;width:100%;height:auto}.earth-art{width:clamp(76px,6.4vw,108px);top:10%;right:18%}.handprint-art{width:clamp(52px,4.7vw,76px);left:13%;top:60%;transform:rotate(-20deg)}.music-art{width:clamp(48px,4.2vw,68px);right:16%;top:39%;transform:rotate(8deg)}.magnifier-art{width:clamp(60px,5.2vw,84px);left:7%;top:43%;transform:rotate(-18deg)}.star-art{width:clamp(82px,7.5vw,122px);left:2.5%;top:13%;transform:rotate(18deg)}.connections-art{width:clamp(68px,5.8vw,94px);right:4%;top:15%;transform:rotate(13deg)}.paper-pen-art{width:clamp(76px,6.8vw,110px);right:4.5%;top:51%;transform:rotate(-14deg)}.laptop-art{width:clamp(54px,4.3vw,70px);left:20%;top:12%;transform:rotate(-3deg)}.hero-bottom{position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:space-between;gap:30px}.seek-note{margin:0;max-width:320px;font-family:var(--display);font-size:clamp(13px,1.55vw,19px);line-height:1.2;letter-spacing:-.035em;text-transform:uppercase}.hero-stamp{position:absolute;z-index:3;right:clamp(12px,3.3vw,48px);left:auto;bottom:6%;display:block;width:clamp(104px,8vw,136px);height:auto;color:var(--orange);pointer-events:none}.hero-stamp svg{display:block;width:100%;height:auto;overflow:visible}.stamp-ring{fill:none;stroke:currentColor;stroke-width:1.15}.stamp-curve{fill:currentColor;font-family:var(--display);font-size:10px;letter-spacing:1.15px}.stamp-year{fill:currentColor;font-family:var(--display);font-size:10px;text-anchor:middle}.stamp-dot{fill:var(--orange)}
+.ticker{overflow:hidden;background:var(--ink);color:var(--cream);padding:12px clamp(12px,3vw,44px)}.ticker-track{display:flex;align-items:center;justify-content:space-between;gap:clamp(7px,1.25vw,20px);width:100%;font-family:var(--mono);font-size:clamp(9px,.75vw,11px);text-align:center;text-transform:uppercase;letter-spacing:clamp(.3px,.08vw,1px)}.ticker-track span{min-width:0;white-space:nowrap}.ticker-track .ticker-star{position:relative;display:inline-block;flex:0 0 13px;width:13px;height:14px;color:#9ccfd4;font-size:0;line-height:1}.ticker-track .ticker-star:before{content:"★";position:absolute;inset:0;color:#9ccfd4;font-size:14px;line-height:12px;text-align:center}.ticker-track span:not(.ticker-star){color:#fff}
+.section{padding:76px 8%;border-bottom:1px solid var(--line)}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:32px;padding-bottom:14px;border-bottom:1px solid var(--line)}.section-heading h2{margin:0;font-family:var(--display);font-size:clamp(42px,6.5vw,96px);line-height:1;letter-spacing:-.06em;text-transform:uppercase;font-weight:400}.section-number{font-family:var(--mono);font-size:11px;color:var(--muted);flex-shrink:0}.work-list{border-top:1px solid var(--ink)}.work-row{display:grid;grid-template-columns:75px minmax(0,1fr) auto;align-items:center;gap:20px;padding:23px 0;border-bottom:1px solid var(--line);transition:background .2s ease}.work-row:hover{background:rgba(156,207,212,.12)}.work-index{font-family:var(--mono);font-size:11px;color:var(--orange)}.work-label{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}.work-title{display:block;width:fit-content;font-size:clamp(21px,3vw,34px);font-weight:600;line-height:1.1;letter-spacing:-1.2px}.work-tagline{display:block;color:var(--muted);font-family:var(--mono);font-size:11px;line-height:1.5}.work-row .work-title:after{content:"";display:block;width:54px;height:3px;margin-top:10px;background:var(--orange)}.work-row:nth-child(2) .work-title:after{width:88px;background:var(--cyan)}.work-row:nth-child(3) .work-title:after{width:106px;background:var(--orange)}.work-arrow{display:inline-flex;align-items:center;justify-content:center;min-width:66px;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--ink);font-weight:400;transition:background .2s,color .2s}.work-arrow:before{content:"VIEW";position:static;font-size:10px;line-height:1;text-align:center;color:inherit}.work-row:hover .work-arrow{background:var(--cyan);color:var(--ink);transform:none}
+.gallery-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:46px 0 20px}.gallery-intro h3{margin:0;font-family:var(--display);font-size:clamp(28px,4.5vw,48px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase}.tiny-star{color:var(--orange)}.gallery-intro p{max-width:340px;margin:0;font-size:14px;line-height:1.5}.photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.photo-group-label{display:flex;align-items:center;gap:12px;margin:30px 0 14px;padding-top:15px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}.photo-group-label span{color:var(--muted);font-size:10px}.photo-note{max-width:600px;margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.6}.photo-categories{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.photo-categories a{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:8px 12px;font-family:var(--mono);font-size:10px;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}.photo-categories a:hover{background:var(--ink);color:var(--cream);border-color:var(--ink)}.photo-category-section{scroll-margin-top:100px}.category-placeholder{margin:0 0 18px;color:var(--muted);font-size:12px;line-height:1.6}.photo-group-label a{color:var(--orange);text-decoration:underline;text-underline-offset:3px}.photo-card{min-width:0;margin:0}.photo-card a{display:block;overflow:hidden;background:var(--paper)}.photo-card img{display:block;width:100%;height:clamp(220px,32vw,420px);object-fit:cover;transition:transform .35s ease}.photo-card a:hover img{transform:scale(1.035)}.photo-card figcaption{display:flex;justify-content:space-between;gap:10px;padding:10px 0 18px;font-family:var(--mono);font-size:10px;line-height:1.5;text-transform:uppercase}.photo-card figcaption span:last-child{color:var(--muted);text-align:right}.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px;border-top:1px solid var(--ink)}.project-card{display:flex;flex-direction:column;align-items:flex-start;padding:24px 0;border-bottom:1px solid var(--line)}.project-type,.project-number{font-family:var(--mono);font-size:10px;text-transform:uppercase}.project-card h3{margin:24px 0 10px;font-family:var(--body);font-size:clamp(21px,3vw,34px);font-weight:700;line-height:1.1;letter-spacing:-1.2px;text-transform:none}.project-card p{max-width:440px;margin:0 0 20px;font-size:14px;line-height:1.55}.project-link{display:inline-flex;gap:10px;align-items:center;margin-top:auto;font-family:var(--mono);font-size:11px;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px}.embed-frame{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:var(--paper);margin:0 0 18px}.embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.instagram-preview{position:relative;aspect-ratio:16/9;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--paper);border:1px solid var(--line);color:var(--ink);text-decoration:none;transition:background .2s ease,color .2s ease}.instagram-preview:hover{background:var(--ink);color:var(--cream)}.instagram-preview-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.instagram-preview:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.42));pointer-events:none}.instagram-preview-play,.instagram-preview-label{position:relative;z-index:1;color:#fff}.instagram-preview-play{background:rgba(0,0,0,.28)}.instagram-preview-play{width:42px;height:42px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center}.instagram-preview-play svg{display:block;width:14px;height:14px;fill:currentColor;margin-left:2px}.instagram-preview-label{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase}.instagram-frame{aspect-ratio:4/5;max-height:620px;overflow:auto;background:transparent}.instagram-frame blockquote{min-height:420px!important}.video-projects .project-card h3{margin-top:20px}.video-projects .project-card{min-width:0}.embed-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:var(--paper)}.wishboard-media{display:flex;gap:10px;width:100%;margin:0 0 20px;align-items:flex-start;justify-content:flex-start}.wishboard-media img{display:block;width:72px;height:72px;object-fit:cover;background:var(--paper);border:1px solid var(--line)}.wishboard-media .wishboard-app-icon{height:72px;object-fit:cover;border-radius:14px}
+.references-section{background:var(--cream);color:var(--ink)}.reference-intro{display:flex;justify-content:space-between;align-items:flex-start;gap:28px;margin:0 0 28px;padding-bottom:24px;border-bottom:1px solid var(--line)}.reference-intro p{max-width:480px;margin:0;font-size:16px}.reference-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.reference-card{min-width:0;min-height:200px;display:flex;flex-direction:column;justify-content:space-between;padding:18px;border:1px solid var(--line);background:var(--cream)}.reference-card h3:after{content:"";display:block;width:42px;height:3px;margin-top:10px;background:var(--orange)}.reference-card:nth-child(even) h3:after{background:var(--cyan)}.reference-card .reference-type{font-family:var(--mono);font-size:10px;text-transform:uppercase}.reference-card h3{margin:22px 0 8px;font-family:var(--display);font-size:clamp(22px,3vw,36px);line-height:.98;letter-spacing:-.055em;text-transform:uppercase;font-weight:400;overflow-wrap:anywhere}.reference-card p{margin:0;font-size:12px;line-height:1.45}.reference-card a{align-self:flex-start;margin-top:20px;font-family:var(--mono);font-size:10px;text-transform:uppercase}.about-section{background:var(--cyan);color:var(--ink)}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.about-copy{max-width:460px;font-size:17px;line-height:1.65}.about-outro{margin:0 0 24px;font-family:var(--display);font-size:clamp(27px,4.2vw,48px);line-height:1;letter-spacing:-.055em;text-transform:uppercase}.contact-email{display:inline-block;font-size:clamp(17px,2.5vw,24px);overflow-wrap:anywhere}.contact-email:hover{color:var(--orange)}.site-footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 5%;background:var(--ink);color:var(--cream);font-family:var(--mono);font-size:10px;text-transform:uppercase}.site-credit{display:flex;flex-direction:column;gap:5px}.site-credit-label{font-size:8px;letter-spacing:.12em;color:var(--cyan)}.wishboard-wrap{margin-top:44px}.wishboard-wrap .gallery-intro{margin-top:0}.wishboard-links{display:flex;flex-wrap:wrap;gap:18px}.site-footer a:hover,.back-to-top{color:var(--cyan)}.back-to-top{display:inline-flex;align-items:center;gap:6px}.back-to-top-arrow{display:inline-block;width:13px;height:13px;flex:0 0 auto}
+@media(min-width:1100px){.star-art{left:3%;top:15%;width:clamp(66px,5.6vw,92px)}.laptop-art{top:13%;left:19%;width:clamp(48px,3.8vw,62px);transform:rotate(-4deg)}.magnifier-art{left:7.5%;top:44%;width:clamp(52px,4.1vw,68px)}.handprint-art{left:14.2%;top:62%;width:clamp(42px,3.5vw,58px)}.earth-art{top:11%;right:18%;width:clamp(70px,5.7vw,94px)}.connections-art{top:15%;right:4.5%;width:clamp(62px,5.1vw,84px)}.music-art{top:40%;right:15.5%;width:clamp(44px,3.6vw,58px)}.paper-pen-art{top:52%;right:4.5%;width:clamp(70px,5.7vw,94px)}.hero-stamp{right:clamp(12px,3.3vw,48px);left:auto;bottom:10%;width:clamp(108px,8vw,138px)}}@media(min-width:761px) and (max-width:1099px){.hero h1{font-size:clamp(58px,8.1vw,90px)}}
+@media(max-width:760px){.site-header{align-items:flex-start;flex-direction:column;gap:14px;padding:25px 6% 16px}.brand-tools{max-width:100%;gap:8px}.brand-tools .light-switch{flex:none}.site-header:before{left:6%}.wordmark{font-size:25px}.wordmark-girl{width:31px;height:38px;margin-left:7px}.wordmark-girl:before{content:none}.navigation{justify-content:flex-start;gap:10px 16px;font-size:10px}.hero{min-height:540px;padding:28px 6% 26px}.hero h1{padding:0 6%;font-size:clamp(43px,10.2vw,74px);line-height:.98}.earth-art{top:23%;right:17%;width:34px}.laptop-art{top:11%;left:46%;width:39px}.handprint-art{left:18%;top:61%;width:24px}.music-art{right:18%;top:61%;width:25px}.magnifier-art{left:10%;top:43%;width:22px}.star-art{left:22%;top:23%;width:18px}.connections-art{right:10%;top:43%;width:29px}.paper-pen-art{left:46%;top:71%;width:27px}.seek-note{max-width:190px;font-size:12px}.hero-bottom{gap:15px}.hero-stamp{right:12px;left:auto;bottom:6%;width:68px}.section{padding:clamp(48px,7vw,64px) 6%}.section-heading{align-items:flex-start;flex-direction:column;gap:10px;margin-bottom:26px}.section-heading h2{font-size:clamp(34px,9vw,58px)}.work-row{grid-template-columns:35px minmax(0,1fr) auto;gap:12px;padding:clamp(18px,3.2vw,23px) 0}.work-title{font-size:23px}.work-tagline{font-size:10px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-card img{height:clamp(180px,57vw,330px)}.photo-card figcaption{font-size:8px}.gallery-intro{align-items:flex-start;flex-direction:column;gap:12px}.project-grid{grid-template-columns:1fr}.reference-intro{flex-direction:column;gap:12px}.reference-board{grid-template-columns:repeat(2,minmax(0,1fr))}.reference-card{min-height:190px;padding:16px}.about-grid{grid-template-columns:1fr;gap:28px}.about-copy{font-size:16px}.site-footer{align-items:flex-start;flex-direction:column;gap:10px;padding:22px 6%}.back-to-top-arrow{display:none}}@media(max-width:420px){.hero{min-height:515px}.hero h1{font-size:10.2vw}.earth-art{top:23%;right:15%;width:29px}.laptop-art{top:12%;left:45%;width:34px}.handprint-art{top:62%;left:15%;width:21px}.music-art{top:62%;right:15%;width:22px}.magnifier-art{left:7%;top:43%;width:20px}.star-art{left:22%;top:23%;width:16px}.connections-art{right:7%;top:43%;width:26px}.paper-pen-art{left:45%;top:71%;width:24px}.hero-stamp{right:0;bottom:6%;width:62px}.reference-board{grid-template-columns:1fr}.reference-card{min-height:175px}.ticker{padding:12px 6%}.ticker-track{display:grid;grid-template-columns:auto auto auto auto auto auto auto auto auto auto auto;justify-content:space-between;align-items:center;gap:4px;font-size:clamp(6px,1.75vw,9px);letter-spacing:0}.ticker-track .ticker-star{font-size:clamp(10px,2.8vw,15px)}}
+
+/* Looking for Clues — small, targeted archive updates */
+.tiny-star{display:inline-block;width:8px;height:8px;position:relative;vertical-align:middle;color:var(--orange);font-size:0}
+.tiny-star:before{content:"★";position:absolute;inset:0;color:var(--orange);font-size:9px;line-height:8px;text-align:center}
+.tiny-star:after{content:none}
+/* Use a real five-point star for the cyan separators; never the old cross-shaped CSS mark. */
+.ticker-track .ticker-star{display:inline-block;position:relative;flex:0 0 10px;width:10px;height:12px;color:var(--cyan);font-size:0;line-height:1}
+.ticker-track .ticker-star:before{content:"★";position:absolute;inset:0;color:var(--cyan);font-size:11px;line-height:12px;text-align:center;background:none;transform:none}
+.ticker-track .ticker-star:after{content:none;background:none;transform:none}
+/* Legacy arrow styling removed from the VIEW buttons. */
+.back-to-top-arrow{position:relative;font-size:0}
+.back-to-top-arrow:before{content:"";position:absolute;width:8px;height:8px;left:2px;top:4px;border-left:1.5px solid currentColor;border-top:1.5px solid currentColor;transform:rotate(45deg)}
+.back-to-top-arrow:after{content:"";position:absolute;width:1.5px;height:11px;left:6px;top:4px;background:currentColor}
+.eyes-intro{font-size:clamp(15px,1.5vw,20px);font-style:italic;margin:0 0 18px;color:var(--ink);max-width:600px}
+.eyes-more-link-wrap{display:flex;justify-content:flex-end;margin-top:14px}
+.look-closer{display:inline-flex;align-items:center;gap:10px;border:0;background:none;padding:10px 0;color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.04em;cursor:pointer}
+.look-closer:hover{color:var(--orange)}
+.css-arrow{display:inline-block;width:12px;height:12px;position:relative}
+.css-arrow:before{content:"";position:absolute;right:1px;top:1px;width:7px;height:7px;border-top:1.5px solid currentColor;border-right:1.5px solid currentColor}
+.css-arrow:after{content:"";position:absolute;right:1px;top:5px;width:11px;height:1.5px;background:currentColor;transform:rotate(-45deg);transform-origin:right center}
+.photo-card a[data-lightbox]{cursor:zoom-in}
+.photo-lightbox{position:fixed;inset:0;z-index:1000;background:rgba(20,20,18,.94);display:none;align-items:center;justify-content:center;padding:5vw}
+.photo-lightbox.is-open{display:flex}
+.photo-lightbox img{display:block;max-width:92vw;max-height:88vh;object-fit:contain}
+.photo-lightbox-close{position:absolute;right:22px;top:15px;border:1px solid rgba(242,235,221,.5);background:transparent;color:var(--cream);font:12px var(--mono);padding:9px 12px;cursor:pointer}
+.photo-lightbox-close:hover{color:var(--cyan);border-color:var(--cyan)}
+footer{position:relative}
+footer:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,var(--orange) 0 24%,var(--cyan) 24% 48%,var(--rust) 48% 62%,var(--ink) 62%)}
+@media(max-width:700px){.eyes-preview,.eyes-more .photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.eyes-intro{font-size:15px}.eyes-more-link-wrap{justify-content:flex-start}}
+
+
+/* Compact photo archive: images keep their proportions outside the Eyes collage. */
+.photo-grid{display:block;columns:3;column-gap:10px;}
+.photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 10px;vertical-align:top;}
+.photo-card a{display:block;overflow:hidden;background:transparent;}
+.photo-card img{width:100%;height:auto;max-height:none;object-fit:contain;transition:none;}
+.photo-card a:hover img{transform:none;}
+.photo-card figcaption{padding:5px 0 9px;font-size:9px;}
+.photo-category-section{margin-bottom:12px;}
+/* The Eyes collection is one compact square artwork, not eight separate cards. */
+@media(max-width:760px){.photo-grid{columns:2;column-gap:8px;}.photo-card{margin-bottom:8px;}.photo-card figcaption{font-size:8px;padding:4px 0 7px;}}
+@media(max-width:380px){.photo-grid{columns:2;column-gap:6px;}.photo-card{margin-bottom:6px;}}
+
+
+/* Eyes collection: a larger, centered photo composition with intact image proportions. */
+.eyes-intro{text-align:center;max-width:none;margin:0 auto 8px;font-size:clamp(17px,1.8vw,23px);}
+.eyes-click-note{text-align:center;margin:0 auto 18px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--muted);}
+.eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:760px){.eyes-click-note{margin-bottom:14px}}
+
+
+/* Looking for Clues — soft, breathy title entrance */
+.hero h1{transform-origin:center center;animation:clues-breathe 7.5s ease-in-out 1.45s infinite}
+.hero h1 span{opacity:0;filter:blur(7px);animation:clues-arrive 1.15s cubic-bezier(.2,.75,.25,1) both}
+.hero h1 .for-word{animation-delay:.18s}
+.hero h1 .clues-word{animation-delay:.36s}
+@keyframes clues-arrive{
+  0%{opacity:0;transform:translateY(17px) rotate(-1deg);filter:blur(7px)}
+  72%{opacity:1;transform:translateY(-2px) rotate(.15deg);filter:blur(0)}
+  100%{opacity:1;transform:translateY(0) rotate(0);filter:blur(0)}
+}
+@keyframes clues-breathe{
+  0%,100%{transform:translate(-50%,-50%) scale(1)}
+  50%{transform:translate(-50%,-50%) scale(1.012)}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero h1{animation:none;transform:translate(-50%,-50%)}
+  .hero h1 span{opacity:1;filter:none;animation:none;transform:none}
+}
+
+/* Decorative marks use the same five-point star as the Made & Found stamp. */
+.tiny-star{display:inline-block;width:.55em;height:.55em;line-height:.55;vertical-align:middle;color:var(--orange);font-size:.62em}
+.tiny-star:before{content:"★";position:static;display:inline-block;background:none;transform:none;font-size:1em;color:currentColor}
+.tiny-star:after{content:none}
+.work-arrow{display:inline-flex;align-items:center;justify-content:center;min-width:66px;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font-family:var(--mono);font-size:10px;letter-spacing:.05em;color:var(--ink);font-weight:400;transition:background .2s,color .2s}.work-arrow:before{content:"VIEW";position:static;font-size:10px;line-height:1;text-align:center;color:inherit}.work-row:hover .work-arrow{background:var(--cyan);color:var(--ink);transform:none}
+/* Eyes collage: eye2, eye6 and EYE14 form the central focal cluster; images remain uncropped. */
+/* Soft spring from the center, then settle into the existing breathing motion. */
+.hero h1 span{transform-origin:50% 50%;animation:clues-spring 1.2s cubic-bezier(.18,.9,.22,1.22) both}
+.hero h1 .for-word{animation-delay:.12s}.hero h1 .clues-word{animation-delay:.24s}
+@keyframes clues-spring{0%{opacity:0;filter:blur(14px);transform:scale(.58)}62%{opacity:1;filter:blur(1px);transform:scale(1.055)}82%{opacity:1;filter:blur(0);transform:scale(.985)}100%{opacity:1;filter:blur(0);transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.hero h1 span{animation:none;opacity:1;filter:none;transform:none}}
+/* Optional flashlight mode: the page stays interactive underneath the non-blocking spotlight. */
+.light-switch{position:static;z-index:1200;right:auto;bottom:auto;display:flex;align-items:center;gap:9px;padding:9px 12px;border:1px solid var(--ink);border-radius:999px;background:var(--cream);color:var(--ink);font:10px var(--mono);text-transform:uppercase;letter-spacing:.06em;cursor:pointer;box-shadow:0 3px 0 rgba(37,37,31,.15);transition:transform .2s ease,background .2s ease}
+.light-switch:hover{transform:translateY(-2px)}.switch-track{width:27px;height:15px;border-radius:99px;background:var(--cyan);border:1px solid currentColor;position:relative;display:inline-block;flex:none}.switch-track:after{content:"";position:absolute;width:9px;height:9px;top:2px;left:2px;border-radius:50%;background:var(--ink);transition:left .2s ease}
+body.flashlight-mode{--cream:#111311;--paper:#20231f;--ink:#f2ebdd;--muted:#aaa99d;--line:rgba(242,235,221,.22);--cyan:#73d9e8;--cyan-pale:#2b4749;background:var(--cream);color:var(--ink);cursor:none}
+body.flashlight-mode a,body.flashlight-mode button{cursor:none}
+body.flashlight-mode .site-header,body.flashlight-mode .references-section{background:var(--cream);color:var(--ink)}
+body.flashlight-mode .ticker{background:#050605;color:#f2ebdd}
+body.flashlight-mode .light-switch{background:#242720;color:#f2ebdd;border-color:#f2ebdd}
+body.flashlight-mode .switch-track{background:var(--orange)}body.flashlight-mode .switch-track:after{left:14px;background:#f2ebdd}
+.flashlight-overlay{display:none;position:fixed;inset:0;z-index:1100;pointer-events:none;background:radial-gradient(circle 145px at var(--flash-x,50vw) var(--flash-y,50vh),rgba(0,0,0,0) 0 88px,rgba(0,0,0,.9) 155px,rgba(0,0,0,.97) 260px)}
+body.flashlight-mode .flashlight-overlay{display:block}
+/* Little glow-in-the-dark clues: hidden completely until Lights Off is active. */
+.flashlight-clues{display:none;position:fixed;inset:0;z-index:1101;pointer-events:none;overflow:hidden;color:#9be7ee}
+body.flashlight-mode .flashlight-clues{display:block}
+.flashlight-clue{position:absolute;display:block;user-select:none;text-shadow:0 0 5px #73d9e8,0 0 15px rgba(115,217,232,.8);opacity:.88}
+.flashlight-clue.star{font-size:clamp(20px,3vw,34px);color:#b6f8ff;animation:clue-glow 3.2s ease-in-out infinite alternate}
+.flashlight-clue.question{font:700 clamp(28px,4vw,46px) var(--display);color:#ffb36e;text-shadow:0 0 5px #ff6200,0 0 16px rgba(255,98,0,.8);animation:clue-glow 4s ease-in-out infinite alternate-reverse}
+.flashlight-clue.print{width:42px;height:52px;opacity:.58;filter:drop-shadow(0 0 7px #73d9e8)}
+.flashlight-clue.print svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round}
+@keyframes clue-glow{from{opacity:.42;filter:drop-shadow(0 0 2px currentColor)}to{opacity:1;filter:drop-shadow(0 0 10px currentColor)}}
+@media(prefers-reduced-motion:reduce){.flashlight-clue{animation:none}}
+body.flashlight-mode .light-switch{z-index:1201;position:relative}
+.flashlight-cursor{position:fixed;z-index:1199;left:0;top:0;width:42px;height:42px;pointer-events:none;display:none;transform:translate(-12px,-12px);filter:drop-shadow(0 2px 2px rgba(0,0,0,.55));transition:transform .025s linear}
+body.flashlight-mode .flashlight-cursor{display:block}
+@media (pointer:coarse){.flashlight-cursor{width:46px;height:46px}body.flashlight-mode .flashlight-cursor{transform:translate(-22px,-52px)}}
+@media(max-width:760px){.light-switch{font-size:9px;padding:7px 9px}.wordmark-girl{width:31px;height:38px;margin-left:7px}}
+@media(prefers-reduced-motion:reduce){.light-switch,.switch-track:after{transition:none}}
+
+
+/* Clean VIEW pills: text only, no inherited arrow pseudo-elements. */
+.work-row .work-arrow{position:static;display:inline-flex;align-items:center;justify-content:center;min-width:66px;width:auto;height:auto;padding:9px 13px;border:1px solid var(--ink);border-radius:999px;font-family:var(--mono);font-size:10px!important;letter-spacing:.05em;color:var(--ink);font-weight:400;line-height:1;}
+.work-row .work-arrow:before{content:"VIEW";position:static;display:block;width:auto;height:auto;inset:auto;border:0;background:none;transform:none;font-size:10px;line-height:1;text-align:center;color:inherit;}
+.work-row .work-arrow:after{content:none;display:none;}
+
+/* Eyes collage — restored to the original natural-photo masonry layout.
+   One canonical rule set avoids competing CSS; no forced tile sizes or image crops. */
+.eyes-square-collage{width:min(100%,620px);display:block;columns:3;column-gap:5px;margin:10px auto 0;overflow:visible;background:transparent;aspect-ratio:auto;grid-template-columns:none;grid-template-rows:none;grid-template-areas:none}
+.eyes-tile{display:inline-block;width:100%;height:auto;min-width:0;min-height:0;break-inside:avoid;overflow:visible;background:transparent;margin:0 0 5px;padding:0;vertical-align:top;grid-area:auto}
+.eyes-tile img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.eyes-tile.focal-eye{background:transparent;padding:0}
+.eyes-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+@media(max-width:760px){.eyes-square-collage{width:100%;columns:2;column-gap:5px}.eyes-tile{margin-bottom:5px}}
+@media(max-width:380px){.eyes-square-collage{columns:2;column-gap:4px}.eyes-tile{margin-bottom:4px}}
+
+/* Latest requested refinements */
+.tiny-star{display:none !important}
+.ticker-track .ticker-star{flex-basis:20px !important;width:20px !important;height:22px !important}
+.ticker-track .ticker-star:before{font-size:20px !important;line-height:22px !important}
+@media(max-width:760px){.ticker-track .ticker-star{flex-basis:17px !important;width:17px !important;height:19px !important}.ticker-track .ticker-star:before{font-size:17px !important;line-height:19px !important}}
+/* Hidden clues glow only when the flashlight cursor passes close to them. */
+body.flashlight-mode .flashlight-clue{opacity:0 !important;filter:none;transition:opacity .18s ease,filter .18s ease}
+body.flashlight-mode .flashlight-clue.is-revealed{opacity:1 !important;filter:drop-shadow(0 0 9px currentColor)}
+.flashlight-clue.eyes{width:54px;height:34px;color:#b6f8ff;filter:drop-shadow(0 0 7px #73d9e8)}
+.flashlight-clue.eyes svg{display:block;width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .flashlight-clue{transition:none}}
+
+
+/* Final polish: smooth flashlight; remove only the decorative stripe above the footer. */
+.flashlight-cursor{transition:none !important;will-change:transform;backface-visibility:hidden;}
+.flashlight-overlay{will-change:background;}
+/* A luminous thread guides the flashlight between subjects. */
+.flashlight-guide-line{display:none;position:fixed;inset:0;width:100%;height:100%;z-index:1102;pointer-events:none;overflow:visible}
+body.flashlight-mode .flashlight-guide-line{display:block}
+.flashlight-guide-line path{fill:none;stroke:#9be7ee;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:5 9;filter:drop-shadow(0 0 4px #73d9e8) drop-shadow(0 0 10px rgba(115,217,232,.9));animation:guide-drift 1.8s linear infinite}
+.flashlight-guide-line circle{fill:#c8fbff;filter:drop-shadow(0 0 5px #73d9e8) drop-shadow(0 0 12px #73d9e8)}
+@keyframes guide-drift{to{stroke-dashoffset:-28}}
+.flashlight-scroll-prompt{display:none;position:fixed;z-index:1202;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);padding:10px 14px;border:1px solid rgba(155,231,238,.75);border-radius:999px;background:rgba(8,18,18,.82);color:#c8fbff;font:10px var(--mono);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;box-shadow:0 0 12px rgba(115,217,232,.3),inset 0 0 12px rgba(115,217,232,.08);pointer-events:none;animation:prompt-glow 2s ease-in-out infinite alternate}
+body.flashlight-mode .flashlight-scroll-prompt{display:block}
+@keyframes prompt-glow{from{box-shadow:0 0 7px rgba(115,217,232,.22)}to{box-shadow:0 0 19px rgba(115,217,232,.65)}}
+@media(min-width:761px){.flashlight-scroll-prompt{display:none !important}}
+@media(prefers-reduced-motion:reduce){.flashlight-guide-line path,.flashlight-scroll-prompt{animation:none}}
+.site-footer:before{content:none !important;display:none !important;height:0 !important;background:none !important;}
+/* On touch screens, keep the page still while flashlight mode is being explored. */
+@media (pointer:coarse) and (max-width:760px){
+  body.flashlight-mode{overscroll-behavior:none;}
+  body.flashlight-mode .flashlight-overlay{touch-action:auto;}
+}
+
+
+/* Final sizing polish: make LIGHTS ON just a touch smaller without changing the header layout. */
+.light-switch{gap:6px;padding:6px 8px;font-size:8.5px;}
+.switch-track{width:21px;height:12px;}
+.switch-track:after{width:6px;height:6px;top:3px;left:2px;}
+body.flashlight-mode .switch-track:after{left:11px;}
+@media(max-width:760px){
+  .light-switch{gap:5px;padding:5px 7px;font-size:7.5px;letter-spacing:.035em;}
+  .switch-track{width:19px;height:11px;}
+  .switch-track:after{width:5px;height:5px;top:3px;left:2px;}
+  body.flashlight-mode .switch-track:after{left:10px;}
+}
+
+/* Live-music gallery: show the full frame without cropping. */
+#live-music .music-photo-grid .photo-card img{height:auto;aspect-ratio:auto;object-fit:contain;background:var(--paper)}
+
+/* Gallery polish: compact, side-by-side photographs with the full image visible. */
+.photo-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:start;gap:clamp(10px,1.4vw,18px)}
+.photo-card a{display:flex;align-items:center;justify-content:center;min-height:0;background:transparent;overflow:hidden}
+.photo-card img{display:block;width:100%;height:clamp(150px,22vw,285px);max-height:285px;object-fit:contain;object-position:center;transition:transform .35s ease}
+.photo-card figcaption{padding:7px 0 12px}
+.site-credit{align-items:flex-start;gap:3px;min-width:190px}
+.site-credit-label{font-size:11px;line-height:1.25;letter-spacing:.10em;color:var(--ink)}
+.site-credit>span:last-child{font-size:10px;line-height:1.4;letter-spacing:.035em}
+@media(max-width:760px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.photo-card img{height:clamp(135px,42vw,220px);max-height:220px}.site-credit-label{font-size:10px}}
+@media(max-width:420px){.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.photo-card img{height:clamp(125px,40vw,175px);max-height:175px}}
+
+
+
+
+/* My Work: an oversized cyan banner using the same display face as the hero. */
+.my-work-banner{width:100%;overflow:hidden;text-align:center;color:var(--cyan);font-family:var(--display);font-size:clamp(48px,11.8vw,168px);font-weight:900;line-height:.88;letter-spacing:-.075em;white-space:nowrap;padding:clamp(22px,4vw,52px) 1.5% clamp(28px,4.5vw,58px);}
+/* The Made and Found stamp sits beside the light switch without adding a new row. */
+.header-stamp{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;width:36px;height:36px;margin-left:2px;}
+.header-stamp .hero-stamp{position:static;display:block;width:100%;height:100%;max-width:100%;}
+.header-stamp .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+.search-continues{display:none;position:relative;z-index:1103;text-align:center;padding:clamp(48px,8vw,100px) 20px clamp(54px,9vw,112px);color:#c8fbff;}
+body.flashlight-mode .search-continues{display:block;}
+.search-continues p{margin:0 auto 14px;font:900 clamp(28px,6.5vw,76px)/.95 var(--display);letter-spacing:-.055em;text-shadow:0 0 5px #73d9e8,0 0 18px rgba(115,217,232,.9),0 0 36px rgba(115,217,232,.45);}
+.search-continues a{display:inline-block;font:700 clamp(10px,1.3vw,13px) var(--mono);letter-spacing:.09em;color:#c8fbff;text-shadow:0 0 5px #73d9e8,0 0 15px rgba(115,217,232,.9);border-bottom:1px solid currentColor;padding-bottom:5px;pointer-events:auto;}
+.search-continues a:hover{color:#fff;}
+@media(max-width:760px){.my-work-banner{font-size:clamp(40px,12.4vw,88px);letter-spacing:-.075em;padding:22px 1% 30px;}.header-stamp{width:28px;height:28px;margin-left:0;}.search-continues{padding:54px 14px 76px}.search-continues p{font-size:clamp(27px,8vw,46px);}}
+</style><style>
+/* Gallery polish: centered collection headers, no numbered labels under individual photographs. */
+.photo-group-label{justify-content:center;text-align:center;margin:24px 0 18px;padding-top:12px;border-top:0;gap:10px;}
+.photo-group-label span{font-size:10px;}
+.photo-grid{max-width:100%;margin-left:auto;margin-right:auto;}
+.photo-card{margin-bottom:12px;}
+.photo-card figcaption{display:none !important;}
+@media(max-width:760px){.photo-group-label{flex-wrap:wrap;gap:6px;margin:20px 0 14px;}}
+</style>
+
+<style>
+/* Refinements requested for the archive update */
+.ticker-rule-set{display:none!important}
+.photo-group-label{justify-content:flex-start!important;text-align:left!important;align-items:baseline!important;flex-wrap:wrap;margin:24px 0 18px!important;padding-top:12px!important;gap:10px!important}
+.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-family:var(--display);font-size:clamp(19px,2.2vw,28px)!important;font-weight:900;letter-spacing:-.035em}
+.photo-group-label>span{font-size:11px!important;font-family:var(--mono);font-weight:400;letter-spacing:.04em}
+.photo-group-label .eyes-group-title{font-size:clamp(19px,2.2vw,28px)!important}
+.hero{min-height:clamp(480px,60vh,620px)}
+.hero h1{font-size:clamp(46px,7vw,96px);width:90%;line-height:.96}
+.hero h1 span,.hero h1 .for-word,.hero h1 .clues-word{text-align:center}
+.hero-bottom{justify-content:center;min-height:40px}
+@media(max-width:760px){.ticker-rule-set{display:none!important}.photo-group-label{gap:6px!important;margin:20px 0 14px!important}.photo-group-label>span:first-child,.photo-group-label:not(.eyes-group-label){font-size:clamp(18px,5.2vw,24px)!important}.hero{min-height:460px}.hero h1{font-size:clamp(40px,8.5vw,62px);width:94%;padding:0 2%}.hero-bottom{min-height:18px}.hero-stamp{width:60px;right:12px;bottom:5%}}
+</style>
+<style id="final-visual-fixes">
+/* Photography heading and instruction stay together; instruction sits directly below the heading. */
+#photos.gallery-intro{display:block;margin:46px 0 20px;}
+.photography-heading{display:flex;flex-direction:column;align-items:flex-start;gap:7px;}
+.photography-heading h3{margin:0;}
+#photos .eyes-click-note{margin:0!important;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.12em;line-height:1.5;}
+/* Keep each collection visually consistent with the eyes collage: equal-width columns, full image frames, no cropping. */
+#fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{display:block!important;columns:3;column-gap:clamp(10px,1.4vw,18px);}
+#fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{display:inline-block;width:100%;break-inside:avoid;margin:0 0 clamp(10px,1.4vw,18px)!important;vertical-align:top;}
+#fashion-portraits .photo-card a,#nyc-film .photo-card a,#live-music .photo-card a,#misc .photo-card a{height:auto;background:transparent;}
+#fashion-portraits .photo-card img,#nyc-film .photo-card img,#live-music .photo-card img,#misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
+/* The stamp is a visible bridge between the title card and photography, on desktop and mobile. */
+.hero{padding-bottom:150px;}
+.hero-bottom{position:absolute;left:0;right:0;bottom:22px;display:flex;justify-content:center;align-items:center;min-height:0;}
+.hero-stamp{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;display:block!important;width:clamp(78px,7vw,106px)!important;height:auto;margin:0 auto;}
+@media(max-width:760px){
+ .hero{padding-bottom:100px;min-height:520px;}
+ .hero-bottom{bottom:14px;}
+ .hero-stamp{display:block!important;width:68px!important;}
+ #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{columns:2;column-gap:9px;}
+ #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}
+}
+</style>
+
+<style id="archive-requested-fixes">
+/* Keep the Made & Found stamp fully visible as the bridge between the title card and photography. */
+.hero{padding-bottom:18px!important;min-height:clamp(390px,48vh,520px)!important;overflow:visible;}
+.hero + .archive-stamp-separator{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;z-index:3;display:flex!important;justify-content:center;align-items:center;min-height:0;padding:18px 0 26px;margin:0;background:var(--cream);}
+.hero + .archive-stamp-separator .hero-stamp{position:relative!important;inset:auto!important;transform:none!important;display:block!important;width:clamp(82px,7vw,108px)!important;height:auto;margin:0 auto;z-index:3;}
+.eyes-group-title{color:var(--muted)!important;text-transform:none!important;font-family:var(--display);font-weight:900;}
+/* Match the Eye collection's masonry treatment: equal-width columns and uncropped, naturally proportioned images. */
+#fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{display:block!important;columns:3;column-gap:clamp(10px,1.4vw,18px);}
+#fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{display:inline-block!important;width:100%!important;break-inside:avoid;vertical-align:top;margin:0 0 clamp(10px,1.4vw,18px)!important;}
+#fashion-portraits .photo-card a,#nyc-film .photo-card a,#live-music .photo-card a,#misc .photo-card a{display:block!important;height:auto!important;min-height:0;background:transparent;overflow:hidden;}
+#fashion-portraits .photo-card img,#nyc-film .photo-card img,#live-music .photo-card img,#misc .photo-card img{display:block;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center;}
+#photos .photography-heading{display:flex;flex-direction:column;align-items:flex-start;gap:7px;}
+#photos .eyes-click-note{display:block;margin:0!important;color:var(--muted);font-family:var(--mono);font-size:9px;letter-spacing:.12em;line-height:1.5;}
+@media(max-width:760px){.hero{padding-bottom:28px!important;min-height:460px;} .hero + .archive-stamp-separator{padding:12px 0 20px;} .hero + .archive-stamp-separator .hero-stamp{width:68px!important;} #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid{columns:2;column-gap:9px;} #fashion-portraits .photo-card,#nyc-film .photo-card,#live-music .photo-card,#misc .photo-card{margin-bottom:9px!important;}}
+</style>
+<style id="requested-collection-adjustments">
+/* Editorial heading and subtitle treatment for the recurring-subject collection. */
+/* Bring the Made & Found mark closer to the hero headline and tighten the handoff to photography. */
+.hero + .archive-stamp-separator{padding:4px 0 5px!important;}
+#photos.gallery-intro{margin:12px 0 10px!important;}
+@media(max-width:760px){
+  .hero{min-height:410px!important;padding-bottom:14px!important;}
+  .hero + .archive-stamp-separator{padding:4px 0 5px!important;}
+  #photos.gallery-intro{margin:10px 0 9px!important;}
+}
+</style>
+
+<style id="flashlight-scroll-hint-style">
+/* Brief, glowing instruction shown when flashlight mode is activated. */
+.flashlight-scroll-hint{display:none;position:fixed;left:50%;bottom:clamp(22px,5vh,48px);transform:translateX(-50%);z-index:1205;pointer-events:none;white-space:nowrap;padding:10px 15px;border:1px solid rgba(155,231,238,.65);border-radius:999px;background:rgba(18,25,25,.52);color:#c8fbff;font:700 clamp(10px,1.8vw,13px)/1 var(--mono);letter-spacing:.12em;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95);box-shadow:0 0 12px rgba(115,217,232,.35),inset 0 0 10px rgba(115,217,232,.12);animation:flashHintGlow 1.8s ease-in-out infinite alternate;opacity:0;transition:opacity .35s ease;}
+body.flashlight-mode .flashlight-scroll-hint{display:block;opacity:1;}
+body.flashlight-mode .flashlight-scroll-hint.is-hidden{opacity:0;}
+@keyframes flashHintGlow{from{text-shadow:0 0 4px #73d9e8,0 0 9px rgba(115,217,232,.65);box-shadow:0 0 7px rgba(115,217,232,.25)}to{text-shadow:0 0 7px #73d9e8,0 0 18px rgba(115,217,232,1);box-shadow:0 0 16px rgba(115,217,232,.5)}}
+@media(prefers-reduced-motion:reduce){.flashlight-scroll-hint{animation:none;}}
+</style>
+<style id="flashlight-desktop-and-contact-clue">
+/* A final glowing clue and cyan mail symbol complete the flashlight trail. */
+.contact-email{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.contact-email-icon{width:clamp(20px,2.5vw,30px);height:clamp(20px,2.5vw,30px);fill:none;stroke:var(--cyan);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(115,217,232,.7));transition:filter .2s ease,transform .2s ease}
+.contact-email:hover .contact-email-icon{filter:drop-shadow(0 0 9px #73d9e8);transform:translateY(-2px)}
+.flashlight-found-clue{display:block;width:max-content;margin-top:clamp(26px,5vw,58px);font:700 clamp(12px,1.8vw,18px) var(--mono);letter-spacing:.16em;color:#b6f8ff;text-shadow:0 0 5px #73d9e8,0 0 16px rgba(115,217,232,.9);opacity:0;transition:opacity .4s ease}
+body.flashlight-mode .flashlight-found-clue{opacity:1;animation:clue-glow 2s ease-in-out infinite alternate}
+@media (hover:none){body.flashlight-mode{cursor:auto}body.flashlight-mode a,body.flashlight-mode button{cursor:pointer}}
+@media (min-width:761px){.flashlight-overlay{background:radial-gradient(circle 170px at var(--flash-x,50vw) var(--flash-y,50vh),rgba(0,0,0,0) 0 105px,rgba(0,0,0,.9) 180px,rgba(0,0,0,.97) 290px)}}
+@media(prefers-reduced-motion:reduce){.contact-email-icon,.flashlight-found-clue{transition:none;animation:none}}
+</style>
+<style id="flashlight-final-fixes">
+/* Restore the scroll instruction on desktop and mobile when flashlight mode starts. */
+body.flashlight-mode .flashlight-scroll-hint{display:block!important;opacity:1;}
+body.flashlight-mode .flashlight-scroll-hint.is-hidden{opacity:0;}
+.flashlight-scroll-prompt{display:none!important;}
+/* Make the requested trail visible and let the route connect every deliberate stop. */
+body.flashlight-mode .flashlight-guide-line{display:block!important;}
+body.flashlight-mode .flashlight-found-clue{opacity:1!important;}
+/* The Made and Found stamp is a prominent mark in the upper-right of My Work. */
+#work .work-stamp-row{height:clamp(88px,10vw,126px);padding-right:clamp(16px,3vw,42px);margin:0 0 -8px;}
+#work .work-stamp{width:clamp(82px,9vw,116px);height:clamp(82px,9vw,116px);}
+/* Keep MY WORK close to the cyan dotted divider, with breathing room before Photography. */
+#work .my-work-banner{padding-top:0!important;padding-bottom:clamp(22px,3.6vw,42px)!important;margin-top:-2px!important;line-height:.9;}
+#work #photos.gallery-intro{margin-top:0!important;padding-top:0!important;}
+@media(max-width:760px){
+  #work .work-stamp-row{height:clamp(70px,20vw,92px);padding-right:10px;margin-bottom:-4px;}
+  #work .work-stamp{width:clamp(64px,18vw,78px);height:clamp(64px,18vw,78px);}
+  #work .my-work-banner{padding-bottom:clamp(20px,6vw,30px)!important;}
+}
+@media(min-width:761px){.flashlight-scroll-hint{max-width:calc(100vw - 32px);}}
+</style>
+
+<style id="contact-and-work-final-adjustments">
+/* Keep the final clue beside the email instead of creating a large extra block near the page bottom. */
+.about-copy .contact-email{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;vertical-align:middle;}
+.about-copy .search-continues{display:inline-block;margin:12px 0 0 0;color:#b6f8ff;font:700 10px/1.5 var(--mono);letter-spacing:.12em;text-shadow:0 0 5px rgba(115,217,232,.9),0 0 12px rgba(115,217,232,.65);}
+body.flashlight-mode .about-copy .search-continues{animation:clue-glow 2s ease-in-out infinite alternate;}
+/* Give the stamp a clear, larger presence in the upper-right without pushing Photography down awkwardly. */
+#work .work-stamp-row{position:relative;display:flex;justify-content:flex-end;align-items:center;box-sizing:border-box;width:100%;height:clamp(118px,13vw,158px);padding:0 clamp(18px,3vw,44px);margin:0 0 -30px;}
+#work .work-stamp{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:clamp(112px,12vw,150px);height:clamp(112px,12vw,150px);margin:0;}
+#work .work-stamp .hero-stamp{position:static!important;inset:auto!important;transform:none!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;margin:0!important;}
+#work .work-stamp .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+/* Pull MY WORK toward the cyan divider while preserving a deliberate gap before Photography. */
+#work .my-work-banner{margin-top:-12px!important;padding-top:0!important;padding-bottom:clamp(42px,5vw,66px)!important;line-height:.9;}
+#work #photos.gallery-intro{margin-top:0!important;padding-top:0!important;}
+@media(max-width:760px){
+  #work .work-stamp-row{height:clamp(94px,27vw,118px);padding:0 12px;margin-bottom:-22px;}
+  #work .work-stamp{width:clamp(88px,24vw,108px);height:clamp(88px,24vw,108px);}
+  #work .my-work-banner{margin-top:-8px!important;padding-bottom:clamp(32px,8vw,44px)!important;}
+  .about-copy .search-continues{display:block;margin-top:10px;}
+}
+@media(prefers-reduced-motion:reduce){.about-copy .search-continues{animation:none!important;}}
+</style>
+
+
+<style id="latest-contact-and-work-polish">
+/* Keep the email clue compact and useful, rather than creating a large block at the page bottom. */
+#about .about-copy .search-continues{display:none!important;margin:10px 0 0!important;max-width:38em;color:#bffaff;font:700 clamp(10px,1.2vw,12px)/1.65 var(--mono);letter-spacing:.035em;text-shadow:0 0 5px rgba(115,217,232,.95),0 0 12px rgba(115,217,232,.7);}
+body.flashlight-mode #about .about-copy .search-continues{display:block!important;animation:clue-glow 2s ease-in-out infinite alternate;}
+#about .contact-email{gap:10px;}
+#about .contact-email-icon{width:clamp(25px,3vw,34px);height:clamp(25px,3vw,34px);color:#73d9e8;stroke:#73d9e8;filter:drop-shadow(0 0 5px rgba(115,217,232,.9)) drop-shadow(0 0 12px rgba(115,217,232,.55));}
+body.flashlight-mode #about .contact-email-icon{filter:drop-shadow(0 0 7px #73d9e8) drop-shadow(0 0 17px rgba(115,217,232,.95));}
+/* Rebalance the My Work title card: large legible stamp at right, title near the cyan dotted divider, then a clean gap before Photography. */
+#work .work-stamp-row{position:relative;z-index:2;display:flex;justify-content:flex-end;align-items:center;box-sizing:border-box;width:100%;height:clamp(130px,14vw,170px);padding:0 clamp(18px,3vw,44px);margin:0 0 -24px;overflow:visible;}
+#work .work-stamp{width:clamp(126px,13vw,164px);height:clamp(126px,13vw,164px);}
+#work .work-stamp .hero-stamp{width:100%!important;height:100%!important;}
+#work .my-work-banner{position:relative;z-index:1;margin-top:-8px!important;padding-top:0!important;padding-bottom:clamp(24px,3.2vw,38px)!important;line-height:.9;}
+#work #photos.gallery-intro{margin-top:clamp(10px,1.5vw,18px)!important;padding-top:0!important;}
+@media(max-width:760px){
+ #work .work-stamp-row{height:clamp(104px,29vw,126px);padding:0 12px;margin-bottom:-16px;}
+ #work .work-stamp{width:clamp(94px,25vw,116px);height:clamp(94px,25vw,116px);}
+ #work .my-work-banner{margin-top:-5px!important;padding-bottom:clamp(18px,5vw,28px)!important;}
+ #work #photos.gallery-intro{margin-top:10px!important;}
+ #about .about-copy .search-continues{max-width:30em;}
+}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode #about .about-copy .search-continues{animation:none!important;}}
+</style>
+
+
+
+
+<style id="final-requested-polish">
+/* Remove the extra search-continues copy everywhere. */
+.search-continues,.flashlight-end-clue{display:none!important;visibility:hidden!important;opacity:0!important;}
+/* Keep the actual email address visible in the Contact section in both modes. */
+#about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;color:var(--ink)!important;position:relative!important;z-index:1202!important;}
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email,
+body.flashlight-mode #about .search-continues{display:initial!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
+body.flashlight-mode #about .contact-email{display:inline-flex!important;color:#c8fbff!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95)!important;}
+/* The LIGHTS ON state is cyan, not black; preserve the glowing LIGHTS OFF state. */
+body:not(.flashlight-mode) .light-switch{background:#9ccfd4!important;color:#25251f!important;border:1px solid #25251f!important;box-shadow:0 3px 0 rgba(37,37,31,.15)!important;text-shadow:none!important;filter:none!important;animation:none!important;}
+body:not(.flashlight-mode) .light-switch .switch-track{background:#ff984d!important;border-color:#25251f!important;}
+body:not(.flashlight-mode) .light-switch .switch-track:after{background:#25251f!important;box-shadow:none!important;}
+body.flashlight-mode .light-switch{background:#182525!important;color:#e5fcff!important;border:1px solid #b6f8ff!important;box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Tiny four-point stars with the same cyan glow as the lights-off control. */
+@keyframes night-stars-twinkle{0%{opacity:.48;filter:drop-shadow(0 0 2px rgba(115,217,232,.55));}100%{opacity:.92;filter:drop-shadow(0 0 5px rgba(115,217,232,.95)) drop-shadow(0 0 11px rgba(115,217,232,.55));}}
+body.flashlight-mode::after{content:""!important;position:fixed!important;inset:0!important;z-index:1100!important;pointer-events:none!important;opacity:1!important;background-image:radial-gradient(circle,rgba(210,250,255,.98) 0 1px,transparent 1.8px),conic-gradient(from 0deg at 50% 50%,transparent 0deg 38deg,rgba(182,248,255,.98) 43deg 47deg,transparent 52deg 128deg,rgba(182,248,255,.98) 133deg 137deg,transparent 142deg 218deg,rgba(182,248,255,.98) 223deg 227deg,transparent 232deg 308deg,rgba(182,248,255,.98) 313deg 317deg,transparent 322deg 360deg),radial-gradient(circle,rgba(115,217,232,.95) 0 .9px,transparent 1.8px)!important;background-size:151px 167px,151px 167px,223px 197px!important;background-position:0 0,0 0,73px 41px!important;animation:night-stars-twinkle 3.1s ease-in-out infinite alternate!important;}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch,body.flashlight-mode::after{animation:none!important;}}
+</style>
+
+
+<style id="creative-archive-precision-update">
+/* Remove the cyan dotted divider treatment without replacing it with another rule. */
+.clues-work-divider,
+.clues-work-divider::before,
+.clues-work-divider::after {
+  display:none!important;
+  border:0!important;
+  background:none!important;
+  content:none!important;
+}
+/* Keep My Work centered and tighten the transition into Photography. */
+#work .my-work-banner {
+  text-align:center!important;
+  margin-top:0!important;
+  padding-top:0!important;
+  padding-bottom:clamp(8px,1.2vw,14px)!important;
+}
+#work .my-work-banner::after {content:none!important;display:none!important;}
+#work {padding-top:clamp(6px,1vw,12px)!important;}
+#work #photos.gallery-intro {
+  margin-top:0!important;
+  padding-top:0!important;
+  margin-bottom:8px!important;
+}
+@media(max-width:760px) {
+  #work .my-work-banner {font-size:clamp(32px,9vw,58px)!important;text-align:center!important;}
+  #work #photos.gallery-intro {margin-top:0!important;margin-bottom:7px!important;}
+}
+/* The stamp is inside .hero; anchor it at the card's upper-right, not below it. */
+.hero {position:relative!important;}
+.hero .work-stamp-row {
+  position:absolute!important;
+  top:clamp(12px,2.2vw,26px)!important;
+  right:clamp(12px,2.5vw,34px)!important;
+  bottom:auto!important;
+  left:auto!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex!important;
+  justify-content:flex-end!important;
+  align-items:flex-start!important;
+  z-index:9!important;
+  pointer-events:none!important;
+}
+.hero .work-stamp-row .work-stamp {
+  width:clamp(58px,6.2vw,78px)!important;
+  height:clamp(58px,6.2vw,78px)!important;
+}
+@media(max-width:760px) {
+  .hero .work-stamp-row {top:10px!important;right:10px!important;bottom:auto!important;}
+  .hero .work-stamp-row .work-stamp {width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}
+}
+/* Restore the original orange address in LIGHTS ON; leave the email icon untouched. */
+body:not(.flashlight-mode) #about .contact-email {
+  display:inline-flex!important;
+  visibility:visible!important;
+  opacity:1!important;
+  pointer-events:auto!important;
+  color:#ff6200!important;
+  position:relative!important;
+  z-index:1202!important;
+}
+body:not(.flashlight-mode) #about .contact-email-icon {
+  /* No icon styling changes: retain its existing artwork and appearance. */
+}
+/* The existing email icon is the sixth and final flashlight target.
+   The phrase follows the link so it cannot alter the icon's measured position. */
+#about .search-continues {
+  display:none!important;
+  visibility:hidden!important;
+  opacity:0!important;
+  pointer-events:none!important;
+}
+body.flashlight-mode #about .search-continues {
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  position:relative!important;
+  z-index:1204!important;
+  width:max-content!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  margin:10px 0 0!important;
+  padding:0!important;
+  color:#c8fbff!important;
+  font:700 clamp(11px,1.2vw,14px)/1.5 var(--mono)!important;
+  letter-spacing:.12em!important;
+  text-align:left!important;
+  text-shadow:0 0 4px #73d9e8,0 0 12px rgba(115,217,232,.95),0 0 22px rgba(115,217,232,.65)!important;
+  pointer-events:none!important;
+}
+/* Sparse, tiny cyan points only: no conic-gradient or geometric sparkle layers. */
+body.flashlight-mode::after {
+  content:""!important;
+  position:fixed!important;
+  inset:0!important;
+  z-index:1100!important;
+  pointer-events:none!important;
+  opacity:.78!important;
+  background-image:
+    radial-gradient(circle,rgba(210,250,255,.98) 0 .8px,transparent 1.6px),
+    radial-gradient(circle,rgba(115,217,232,.9) 0 .7px,transparent 1.5px),
+    radial-gradient(circle,rgba(200,251,255,.82) 0 .6px,transparent 1.4px)!important;
+  background-size:151px 167px,223px 197px,107px 131px!important;
+  background-position:0 0,73px 41px,29px 67px!important;
+  animation:creative-archive-stars 3.4s ease-in-out infinite alternate!important;
+}
+@keyframes creative-archive-stars {
+  from {opacity:.48;filter:drop-shadow(0 0 1px rgba(115,217,232,.4));}
+  to {opacity:.82;filter:drop-shadow(0 0 3px rgba(115,217,232,.72));}
+}
+/* Preserve the existing dotted zigzag path; do not add glow or alter its geometry. */
+#flashlight-guide-path {
+  filter:none!important;
+}
+/* Keep the existing LIGHTS ON control above the decorative layer and visibly glowing in dark mode. */
+body.flashlight-mode #light-switch,
+body.flashlight-mode .light-switch {
+  position:relative!important;
+  z-index:1205!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  color:#e5fcff!important;
+  background:#182525!important;
+  border:1px solid #b6f8ff!important;
+  box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;
+  text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;
+  animation:clue-glow 1.8s ease-in-out infinite alternate!important;
+}
+@media(prefers-reduced-motion:reduce) {
+  body.flashlight-mode::after,
+  body.flashlight-mode #light-switch,
+  body.flashlight-mode .light-switch {animation:none!important;}
+}
+</style>
+
+
+<style id="contact-title-navigation-and-credit-refinement">
+/* Contact label uses the site's mono section-title typography and cyan accent. */
+#about .contact-title{display:block;margin:0 0 9px;font-family:var(--mono);font-size:10px;line-height:1.6;letter-spacing:.5px;text-transform:uppercase;color:var(--cyan);}
+/* Keep Instagram and Contact together as one item when the mobile nav wraps. */
+.navigation-social-pair{display:inline-flex;align-items:center;gap:clamp(12px,3.1vw,48px);white-space:nowrap;}
+@media(max-width:760px){.navigation-social-pair{gap:16px;}}
+/* Tighten the two-line footer credit without changing its alignment. */
+.site-footer .site-credit{gap:0!important;}
+</style>
+
+<style id="verified-contact-left-column-fix">
+/* CONTACT belongs in the left-hand section-title column, matching the other section labels.
+   Use the visible cyan accent directly: this page remaps --cyan for its dark theme. */
+#about .about-grid {
+  grid-template-columns: minmax(110px, 1fr) minmax(0, 1fr) !important;
+  align-items: start !important;
+}
+#about .contact-heading-column {
+  display: block !important;
+  align-self: start !important;
+  justify-self: start !important;
+  text-align: left !important;
+}
+#about .contact-heading-column .section-label {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #9ccfd4 !important;
+  font-family: var(--mono) !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  letter-spacing: .5px !important;
+  text-transform: uppercase !important;
+}
+@media (max-width: 760px) {
+  #about .about-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<style id="final-contact-title-and-credit-spacing">
+/* FINAL: CONTACT matches the site's large display-style section titles. */
+#about .contact-heading-column .section-label {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #9ccfd4 !important;
+  font-family: var(--display) !important;
+  font-size: clamp(28px, 4.5vw, 48px) !important;
+  font-weight: 400 !important;
+  line-height: .98 !important;
+  letter-spacing: -.055em !important;
+  text-transform: uppercase !important;
+}
+/* Tighten the two footer-credit lines so the maker's name sits closer to its label. */
+.site-footer .site-credit {
+  gap: 0 !important;
+}
+.site-footer .site-credit-label {
+  line-height: .85 !important;
+  margin: 0 0 -2px !important;
+}
+.site-footer .site-credit > span:last-child {
+  line-height: 1.05 !important;
+  margin: 0 !important;
+}
+</style>
+
+<style id="site-header-layout-authoritative-override">
+/* AUTHORITATIVE HEADER LAYOUT: intentionally last in the document so it wins over legacy rules. */
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 22px !important;
+  padding: 34px 3.3% 16px !important;
+  min-height: 0 !important;
+}
+.site-header::before {
+  position: absolute !important;
+  top: 9px !important;
+  left: 3.3% !important;
+  right: auto !important;
+  z-index: 2 !important;
+}
+.site-header .brand-tools {
+  position: static !important;
+  display: flex !important;
+  flex: 0 1 auto !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 12px !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+.site-header .wordmark {
+  position: static !important;
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+}
+.site-header .wordmark-girl {
+  flex: 0 0 auto !important;
+  width: 34px !important;
+  height: 42px !important;
+  margin-left: 7px !important;
+}
+.site-header .light-switch-hint {
+  position: static !important;
+  display: inline-flex !important;
+  flex: 0 0 auto !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 7px !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  z-index: auto !important;
+}
+.site-header .light-switch {
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: 6px 9px !important;
+  font-size: 9px !important;
+  line-height: 1 !important;
+}
+.site-header .press-me-cue {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 4px !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  font-size: 8px !important;
+  line-height: 1 !important;
+}
+.site-header .press-me-arrow {
+  display: inline-block !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+}
+.site-header .press-me-arrow::after {
+  content: "←" !important;
+  display: inline-block !important;
+  font: 700 13px/1 Arial, sans-serif !important;
+}
+.site-header .navigation {
+  position: static !important;
+  display: flex !important;
+  flex: 0 1 auto !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 10px clamp(14px, 2vw, 28px) !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: var(--mono) !important;
+  font-size: clamp(10px, .95vw, 14px) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+  white-space: normal !important;
+}
+.site-header .navigation > a,
+.site-header .navigation-social-pair > a {
+  display: inline-block !important;
+  white-space: nowrap !important;
+}
+.site-header .navigation-social-pair {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  gap: clamp(14px, 2vw, 28px) !important;
+  white-space: nowrap !important;
+}
+
+/* Mid-size desktop/tablet: retain desktop-style horizontal links on a second line. */
+@media (min-width: 761px) and (max-width: 999px) {
+  .site-header {
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    row-gap: 12px !important;
+    padding-top: 38px !important;
+  }
+  .site-header .navigation {
+    flex: 1 0 100% !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* Mobile: name first, LIGHTS ON in its own lowered row, then desktop-style section links. */
+@media (max-width: 760px) {
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    width: 100% !important;
+    padding: 39px 6% 14px !important;
+    min-height: 0 !important;
+  }
+  .site-header::before {
+    position: absolute !important;
+    top: 9px !important;
+    left: 6% !important;
+    right: auto !important;
+    font-size: 8px !important;
+    white-space: nowrap !important;
+  }
+  .site-header .brand-tools {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: column !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 9px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+  .site-header .wordmark {
+    display: inline-flex !important;
+    max-width: 100% !important;
+    font-size: clamp(20px, 5.2vw, 25px) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -.8px !important;
+    white-space: nowrap !important;
+  }
+  .site-header .wordmark-girl {
+    width: 27px !important;
+    height: 34px !important;
+    margin-left: 5px !important;
+  }
+  .site-header .light-switch-hint {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 7px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 1px 0 0 !important;
+    transform: none !important;
+  }
+  .site-header .light-switch {
+    padding: 5px 8px !important;
+    font-size: 8.5px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+  .site-header .press-me-cue {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 3px !important;
+    font-size: 7px !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+  .site-header .press-me-arrow::after {
+    font-size: 11px !important;
+  }
+  .site-header .navigation {
+    position: static !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 8px 16px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 12px 0 0 !important;
+    padding: 0 !important;
+    font-family: var(--mono) !important;
+    font-size: 10px !important;
+    line-height: 1.5 !important;
+    letter-spacing: 0 !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+  }
+  .site-header .navigation-social-pair {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 16px !important;
+    white-space: nowrap !important;
+  }
+}
+
+/* Very narrow phones: let links wrap naturally instead of squeezing or overflowing. */
+@media (max-width: 360px) {
+  .site-header .navigation { column-gap: 12px !important; font-size: 9px !important; }
+  .site-header .wordmark { font-size: 19px !important; }
+}
+</style>
+
+
+<style id="wordmark-black-back-to-top-orange">
+/* Keep the name link black in every interaction state; reserve orange for the top-navigation link. */
+.site-header a.wordmark,
+.site-header a.wordmark:link,
+.site-header a.wordmark:visited,
+.site-header a.wordmark:hover,
+.site-header a.wordmark:active,
+.site-header a.wordmark:focus,
+.site-header a.wordmark:focus-visible {
+  color: var(--ink) !important;
+}
+.site-footer a.back-to-top,
+.site-footer a.back-to-top:link,
+.site-footer a.back-to-top:visited,
+.site-footer a.back-to-top:hover,
+.site-footer a.back-to-top:active,
+.site-footer a.back-to-top:focus-visible {
+  color: var(--orange) !important;
+}
+</style>
+
+<style id="contact-section-match-lights-on">
+/* Keep the complete Contact section looking exactly like its Lights On state.
+   The flashlight continues moving normally and the email icon stays in place. */
+body.flashlight-mode #about,
+body.flashlight-mode #about.about-section {
+  position: relative !important;
+  z-index: 1101 !important;
+  background: var(--cyan) !important;
+  background-color: var(--cyan) !important;
+  color: var(--ink) !important;
+}
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email {
+  display: revert !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  color: var(--ink) !important;
+  text-shadow: none !important;
+}
+/* Keep the email symbol in its normal Lights On cyan treatment. */
+body.flashlight-mode #about .contact-email-icon {
+  color: var(--cyan) !important;
+  stroke: var(--cyan) !important;
+  filter: drop-shadow(0 0 4px rgba(115,217,232,.7)) !important;
+  animation: none !important;
+}
+/* The extra flashlight-only bottom clue is not part of the Lights On layout. */
+body.flashlight-mode #about .search-continues,
+body.flashlight-mode #about .flashlight-found-clue {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+</style>
+
+
+<style id="final-contact-heading-and-color-override">
+/* Final contact presentation: match the site's dark footer band in both light modes,
+   keep the closing line legible, and preserve the email icon as the final clue. */
+#about.about-section,
+body.flashlight-mode #about.about-section,
+body.flashlight-mode #about {
+  background: #25251f !important;
+  background-color: #25251f !important;
+  background-image: none !important;
+  color: #f2ebdd !important;
+}
+#about .about-outro,
+body.flashlight-mode #about .about-outro {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  color: #f2ebdd !important;
+}
+/* CONTACT was a separate label; it must not replace the requested closing line. */
+#about .contact-heading-inline,
+body.flashlight-mode #about .contact-heading-inline {
+  display: none !important;
+  visibility: hidden !important;
+}
+/* Keep the email link/icon visible and reachable as the last flashlight clue. */
+#about .contact-email,
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  color: #f2ebdd !important;
+  text-shadow: none !important;
+}
+#about .search-continues,
+body.flashlight-mode #about .search-continues {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+</style>
+
+
+<style id="final-footer-lights-off-background-fix">
+/* The footer used var(--ink), but Lights Off swaps --ink to the light cream text color.
+   Pin only the final footer banner to the same near-black as the rest of the night screen. */
+body.flashlight-mode footer.site-footer,
+body.flashlight-mode .site-footer {
+  background: #111311 !important;
+  background-color: #111311 !important;
+  background-image: none !important;
+  color: #f2ebdd !important;
+}
+</style>
+
+
+
+
+<style id="center-dressup-florida-desktop">
+/* Explicitly center the Dress-up and Florida galleries in the viewport on desktop.
+   Keep their existing masonry columns, image sizing, and all mobile rules unchanged. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #misc .photo-grid {
+    position:relative!important;
+    left:50%!important;
+    transform:translateX(-50%)!important;
+    width:min(900px, 88vw)!important;
+    max-width:none!important;
+    margin-left:0!important;
+    margin-right:0!important;
+    box-sizing:border-box!important;
+  }
+}
+</style>
+
+
+<style id="center-every-collection-gallery-desktop">
+/* Center every collection gallery on desktop; retain existing masonry columns, image proportions, and mobile layout. */
+@media (min-width:761px) {
+  .photo-category-section > .photo-grid {
+    width:100% !important;
+    max-width:min(1120px, calc(100% - 40px)) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    justify-self:center !important;
+    align-self:center !important;
+    box-sizing:border-box !important;
+  }
+  .photo-category-section {
+    align-items:stretch;
+  }
+}
+</style>
+
+<style id="centered-photo-collections-final">
+/* Center the photo collections without changing their responsive columns or image proportions. */
+@media (min-width:761px) {
+  .photo-category-section > .photo-grid {
+    width:100% !important; max-width:960px !important;
+    margin-left:auto !important; margin-right:auto !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+
+
+<style id="actual-centered-collection-sections-final-fix">
+/* Center the COLLECTION SECTION itself, not only its inner photo grid.
+   Earlier rules centered the grid while its parent remained full-width/right-shifted. */
+#work > .photo-category-section {
+  display:block !important;
+  float:none !important;
+  position:relative !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  width:100% !important;
+  max-width:960px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  box-sizing:border-box !important;
+}
+#work > .photo-category-section > .photo-grid {
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  box-sizing:border-box !important;
+}
+#work > .photo-category-section > .eyes-layout {
+  width:100% !important;
+  max-width:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+@media (max-width:760px) {
+  #work > .photo-category-section { max-width:100% !important; }
+}
+</style>
+
+
+<style id="wishboard-player-and-nyc-balance">
+/* Slightly reduce the Wishboard player footprint while preserving the full video frame. */
+#wishboard .wishboard-tutorial {
+  width: 88%;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Eight New York street photographs sit in two balanced masonry columns. */
+@media (min-width: 761px) {
+  #nyc-film > .photo-grid {
+    columns: 2;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 760px) {
+  #wishboard .wishboard-tutorial { width: 100%; }
+}
+</style>
+</head>
+<body id="home">
+<div class="flashlight-overlay" aria-hidden="true"></div><a class="night-email-shortcut" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email Desani at DCURBELO121@gmail.com" title="Email me"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg><span>EMAIL ME</span></a><div class="flashlight-scroll-hint" id="flashlight-scroll-hint" aria-live="polite">SCROLL FOR CLUES ↓</div><svg class="flashlight-guide-line" id="flashlight-guide-line" aria-hidden="true"><path id="flashlight-guide-path" d=""/><circle id="flashlight-guide-dot" cx="0" cy="0" r="4"/></svg><div class="flashlight-scroll-prompt" aria-hidden="true">SCROLL TO FOLLOW THE CLUES ↓</div>
+<div class="flashlight-clues" aria-hidden="true">
+  <span class="flashlight-clue star" style="left:12%;top:24%">✦</span>
+  <span class="flashlight-clue question" style="left:77%;top:18%">?</span>
+  <span class="flashlight-clue star" style="left:83%;top:67%;animation-delay:-1.3s">✧</span>
+  <span class="flashlight-clue question" style="left:19%;top:76%;animation-delay:-2s">?</span>
+  <span class="flashlight-clue print" style="left:62%;top:42%;transform:rotate(-18deg)"><svg viewBox="0 0 42 52"><path d="M8 32C3 14 13 4 21 4s18 10 13 28M12 36C8 22 14 10 21 10s13 12 9 26M16 39c-3-10-1-22 5-22s8 12 5 22M20 43c-1-6 0-12 2-12s3 6 2 12M5 28C1 14 10 1 21 1s20 13 16 27"/><path d="M10 43c3 5 7 7 11 7s9-2 12-7"/></svg></span>
+  <span class="flashlight-clue print" style="left:34%;top:57%;transform:rotate(22deg) scale(.8)"><svg viewBox="0 0 42 52"><path d="M8 32C3 14 13 4 21 4s18 10 13 28M12 36C8 22 14 10 21 10s13 12 9 26M16 39c-3-10-1-22 5-22s8 12 5 22M20 43c-1-6 0-12 2-12s3 6 2 12M5 28C1 14 10 1 21 1s20 13 16 27"/><path d="M10 43c3 5 7 7 11 7s9-2 12-7"/></svg></span><span class="flashlight-clue eyes" style="left:43%;top:31%"><svg viewBox="0 0 64 38"><path d="M3 19C10 7 20 4 29 19 20 34 10 31 3 19Z"/><path d="M35 19C44 4 54 7 61 19 54 31 44 34 35 19Z"/><circle cx="17" cy="19" r="4.5"/><circle cx="47" cy="19" r="4.5"/></svg></span>
+</div>
+<svg class="flashlight-cursor" id="flashlight-cursor" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(-28 24 24)" stroke="#25251f" stroke-width="2.4" stroke-linejoin="round"><path d="M17 8h14v7l-2 4v20H19V19l-2-4Z" fill="#ff6200"/><path d="M17 8h14v7H17Z" fill="#f4d447"/><path d="M19 19h10M19 35h10" fill="none"/><path d="M20 39h8l-1 4h-6Z" fill="#25251f"/></g><path d="M23 2 21 6M30 3 28 7M16 4 18 8" stroke="#f4d447" stroke-width="2" stroke-linecap="round"/></svg>
+<header class="site-header"><div class="brand-tools"><a class="wordmark" href="#home">Desani Curbelo <span class="wordmark-girl" aria-hidden="true"><svg viewBox="0 0 36 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="18" cy="21" r="16" fill="#ff8a22"/>
+<g stroke="#25251f" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+<path d="M18 3.2C11.4 3.2 8.1 8 8.8 14.1L8.8 32.8 12.6 34.5 15 21.8H21L23.4 34.5 27.2 32.8 27.2 14.1C27.9 8 24.6 3.2 18 3.2Z" fill="#b99459"/>
+<path d="M11.2 8.6C13 5.2 15.3 4.3 18 4.3S23.2 5.2 24.8 8.6" fill="none" stroke="#8d6a3d" stroke-width="1.1"/>
+<circle cx="18" cy="12.5" r="5.8" fill="#f2ebdd"/>
+<path d="M12.7 11.1C13.7 7.8 16 6.7 18 6.7s4.3 1.1 5.3 4.4" fill="none"/>
+<path d="M13.7 20.2 9.8 30.8 18 34.1 26.2 30.8 22.3 20.2Z" fill="#168d83"/>
+<path d="M15 32.7 13.3 43.8M21 32.7 22.7 43.8M9.8 30.8 6.5 28.1M26.2 30.8 29.5 28.1" fill="none"/>
+<path d="M13.3 43.8H10.5M22.7 43.8H25.5" fill="none" stroke-width="2.2"/>
+</g>
+
+<circle cx="16" cy="12.5" r=".8" fill="#25251f"/><circle cx="20" cy="12.5" r=".8" fill="#25251f"/>
+<path d="M16.1 15Q18 16.7 19.9 15" fill="none" stroke="#25251f" stroke-width="1.05" stroke-linecap="round"/>
+<circle cx="14.3" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/><circle cx="21.7" cy="14.3" r="1.05" fill="#e78d83" opacity=".95"/>
+</svg></span></a><span class="light-switch-hint"><button class="light-switch" id="light-switch" type="button" aria-pressed="false" aria-label="Turn flashlight dark mode on"><span class="switch-track" aria-hidden="true"></span><span id="switch-label">LIGHTS ON</span></button><span class="press-me-cue" aria-hidden="true"><span class="press-me-arrow">↙</span><span>PRESS ME</span></span></span></div><nav class="navigation" aria-label="Main navigation"><a href="#photos">Photography</a><a href="#video">Video / Film</a><a href="#wishboard">Digital</a><span class="navigation-social-pair"><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://open.spotify.com/user/vcb9lokksan3ox2amctt0zfn2?si=4266e609feca4c02" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="#about">Contact</a></span></nav></header>
+<main><section class="hero"><div class="hero-top" aria-hidden="true"></div>
+<div class="hero-art earth-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="#29a8f2" stroke="#25251f" stroke-width="3"/><path d="M25 17 37 13 42 20 38 29 43 35 38 43 28 44 24 53 16 51 13 39 18 28Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M55 9 69 12 74 20 69 27 75 35 69 42 59 39 55 32 48 29 49 20Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/><path d="M57 51 70 45 82 51 87 61 78 68 75 82 66 88 58 78 55 66Z" fill="#16b875" stroke="#25251f" stroke-width="2.5"/></svg></div>
+<div class="hero-art handprint-art" aria-hidden="true"><svg viewBox="0 0 100 130"><path fill="#25251f" stroke="#25251f" stroke-width="2.2" stroke-linejoin="round" d="M30 76 18 59c-3-4.2-1.5-8.5 2.2-10.7 3.8-2.2 7.7-.8 10.3 3l7.5 10.4-1.6-39.4c-.2-4.9 2.5-7.8 6.3-8 4.1-.2 6.6 2.7 6.8 7.4l1.7 34.6-1-39.3c-.1-4.7 2.6-7.6 6.4-7.7 4.1-.1 6.7 2.8 6.9 7.4l1.5 40.2.2-31.3c0-4.5 2.5-7.3 6.2-7.3 3.9 0 6.3 2.9 6.3 7.4v38.7l2.1-20c.5-4.5 3.2-6.7 6.7-6.2 3.7.5 5.5 3.5 5 7.7l-4 34.7c-2.3 20.4-14.8 33.7-32.7 33.7-15.8 0-26.7-9.6-31.2-24.6Z"/><path fill="none" stroke="#f4f0e6" stroke-width="2.4" d="m49.7 25 .9 28.8M63.4 23.4l.7 31.4M76.3 27.7l.1 28.2M35 69c7.2-3.8 14.2-3.8 21.1-.3M51 69c7.8-2.7 15.5-2.3 22.4 1"/></svg></div>
+<div class="hero-art music-art" aria-hidden="true"><svg viewBox="0 0 100 100"><g fill="#25251f" stroke="#25251f" stroke-width="3.5" stroke-linejoin="round"><path d="M42 18v48c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V34l31-8v30c-4-4-11-5-16-1-6 4-6 12 0 15 7 4 18 0 20-8V12Z"/><path d="M42 18 81 8v11L42 29Z"/></g></svg></div>
+<div class="hero-art magnifier-art" aria-hidden="true"><svg viewBox="0 0 100 100"><circle cx="41" cy="39" r="25" fill="#9ccfd4" fill-opacity=".55" stroke="#25251f" stroke-width="7"/><path d="M59 58 83 83" fill="none" stroke="#ff6200" stroke-width="11" stroke-linecap="round"/><path d="M59 58 83 83" fill="none" stroke="#25251f" stroke-width="3" stroke-linecap="round"/></svg></div>
+<div class="hero-art star-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M50 5 61 36 94 38 68 58 77 91 50 71 23 91 32 58 6 38 39 36Z" fill="#f4d447" stroke="#25251f" stroke-width="5" stroke-linejoin="round"/></svg></div>
+<div class="hero-art laptop-art" aria-hidden="true"><svg viewBox="0 0 100 80"><rect x="17" y="7" width="66" height="49" rx="4" fill="#25251f"/><rect x="21" y="11" width="58" height="41" rx="1.5" fill="#9ccfd4" stroke="#25251f" stroke-width="1.5"/><circle cx="50" cy="31" r="7" fill="#f4d447" stroke="#25251f" stroke-width="2.5"/><path d="M8 59Q8 57 12 57H88Q92 57 92 60L85 69H15Z" fill="#ff6200" stroke="#25251f" stroke-width="3.5"/><path d="M42 61H58" stroke="#25251f" stroke-width="2.5" stroke-linecap="round"/></svg></div>
+<div class="hero-art connections-art" aria-hidden="true"><svg viewBox="0 0 120 100"><g fill="none" stroke="#25251f" stroke-width="4" stroke-linecap="round"><path d="M18 68 45 25 78 58 103 18M45 25 101 79 78 58 18 68"/></g><g fill="#9ccfd4" stroke="#25251f" stroke-width="4"><circle cx="18" cy="68" r="9"/><circle cx="45" cy="25" r="9"/><circle cx="78" cy="58" r="9"/><circle cx="103" cy="18" r="9"/><circle cx="101" cy="79" r="9"/></g></svg></div>
+<div class="hero-art paper-pen-art" aria-hidden="true"><svg viewBox="0 0 100 100"><path d="M18 12h43l19 19v57H18Z" fill="#fff9e9" stroke="#25251f" stroke-width="4"/><path d="M61 12v20h19" fill="#f4d447" stroke="#25251f" stroke-width="4"/><path d="M29 45h31M29 55h25M29 65h17" stroke="#9ccfd4" stroke-width="4" stroke-linecap="round"/><g transform="rotate(38 69 66)"><path d="M63 43h13v38l-6.5 10L63 81Z" fill="#ff6200" stroke="#25251f" stroke-width="3"/><path d="M63 43h13v8H63Z" fill="#f4d447" stroke="#25251f" stroke-width="3"/><path d="M63 81h13l-6.5 10Z" fill="#fff9e9" stroke="#25251f" stroke-width="3"/></g></svg></div>
+<div class="work-stamp-row"><span class="work-stamp" role="img" aria-label="Made and found, 2026"><span class="hero-stamp" role="img" aria-label="Made and found, 2026"><svg viewBox="0 0 120 120"><defs><path id="stamp-made-arc" d="M 22,61 A 38,38 0 0 1 98,61"/><path id="stamp-found-arc" d="M 17,61 A 43,43 0 0 0 103,61"/></defs><circle class="stamp-ring" cx="60" cy="60" r="54"/><circle class="stamp-ring" cx="60" cy="60" r="49.5"/><text class="stamp-curve"><textPath href="#stamp-made-arc" startOffset="50%" text-anchor="middle">MADE &amp;</textPath></text><text class="stamp-curve"><textPath href="#stamp-found-arc" startOffset="50%" text-anchor="middle">FOUND</textPath></text><circle class="stamp-dot" cx="25" cy="61" r="1.7"/><circle class="stamp-dot" cx="95" cy="61" r="1.7"/><text class="stamp-year" x="40" y="65">20</text><path d="M60 48 63.6 55.6 71.8 56.8 65.9 62.5 67.3 70.8 60 66.9 52.7 70.8 54.1 62.5 48.2 56.8 56.4 55.6Z" fill="#ff6200"/><text class="stamp-year" x="80" y="65">26</text></svg></span></span></div>
+<h1><span>LOOKING</span><span class="for-word">FOR</span><span class="clues-word">CLUES</span></h1></section>
+
+
+<div class="clues-work-divider" aria-hidden="true"><svg viewBox="0 0 1440 48" preserveAspectRatio="none"><path d="M-10 7 C 70 -5, 125 19, 205 7 S 345 -5, 425 7 S 565 19, 645 7 S 785 -5, 865 7 S 1005 19, 1085 7 S 1225 -5, 1305 7 S 1390 16, 1450 5" /><path d="M-10 24 C 70 12, 125 36, 205 24 S 345 12, 425 24 S 565 36, 645 24 S 785 12, 865 24 S 1005 36, 1085 24 S 1225 12, 1305 24 S 1390 33, 1450 22" /><path d="M-10 41 C 70 29, 125 53, 205 41 S 345 29, 425 41 S 565 53, 645 41 S 785 29, 865 41 S 1005 53, 1085 41 S 1225 29, 1305 41 S 1390 50, 1450 39" /></svg></div>
+<section class="section" id="work">
+
+
+<div class="gallery-intro" id="photos"><div class="photography-heading"><h3>PHOTOGRAPHY</h3><p class="eyes-click-note">EXPAND PHOTOS FOR A CLOSER LOOK</p></div></div>
+<section class="photo-category-section" id="eyes">
+<div class="photo-group-label">01 / Knock knock, who’s there? <span>Reoccurring Subject</span></div>
+<div class="eyes-layout"><div class="eyes-layout-images"><div class="eyes-square-collage" id="eyes-preview" aria-label="Eyes photo collection">
+<a class="eyes-tile" href="./images/eye2.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye2.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye6.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye6.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE14.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE14.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye1.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye1.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye3.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye3.jpg" alt="Close-up blue-green eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye8.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye8.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye9.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye9.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/eye13.jpg" data-lightbox aria-label="Open photograph"><img src="./images/eye13.jpg" alt="Close-up eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE15.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE15.jpg" alt="Close-up brown eye photograph" loading="lazy"></a>
+<a class="eyes-tile" href="./images/EYE16.jpg" data-lightbox aria-label="Open photograph"><img src="./images/EYE16.jpg" alt="Close-up blue eye photograph" loading="lazy"></a>
+</div></div></div>
+</section><section class="photo-category-section" id="fashion-portraits"><div class="photo-group-label">02 / Dress-up <span>Los Angeles, California</span></div><div class="photo-grid">
+<figure class="photo-card"><a href="./images/fashion-03-color-shadow.webp" data-lightbox><img src="./images/fashion-03-color-shadow.webp" alt="Styled portrait with blue and orange shadows" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-01-olive-study.webp" data-lightbox><img src="./images/fashion-01-olive-study.webp" alt="Fashion portrait in an olive-green matching outfit" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/supplied-portrait.jpg" data-lightbox><img src="./images/supplied-portrait.jpg" alt="Portrait of a man in a light beige jacket and blue shirt against a blue background" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-05-blue-gloves.webp" data-lightbox><img src="./images/fashion-05-blue-gloves.webp" alt="Fashion editorial portrait with glossy dark gloves" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/dress-up-pearl-portrait.webp" data-lightbox aria-label="Open pearl-detail editorial portrait"><img src="./images/dress-up-pearl-portrait.webp" alt="Editorial close-up portrait with pearl details and sculptural silver ear jewelry" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/fashion-04-after-hours.JPG" data-lightbox><img src="./images/fashion-04-after-hours.JPG" alt="Candid fashion portrait through a car window at night" loading="lazy"></a></figure>
+</div></section><section class="photo-category-section" id="nyc-film"><div class="photo-group-label">03 / Woman on the Street <span>New York, New York</span></div><div class="photo-grid">
+<figure class="photo-card"><a href="./images/000927340025.jpg" data-lightbox><img src="./images/000927340025.jpg" alt="Street and city photograph" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/new-york-park-piano.jpg" data-lightbox aria-label="Open photograph of a piano player in a New York park"><img src="./images/new-york-park-piano.jpg" alt="A person leaning over a piano in a New York City park" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/nyc-woman-night.jpg" data-lightbox aria-label="Open nighttime New York street photograph"><img src="./images/nyc-woman-night.jpg" alt="A woman walking along a lively New York street at night" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/000927340006.jpg" data-lightbox><img src="./images/000927340006.jpg" alt="Portrait in a tan coat and scarf" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/000017470009.jpg" data-lightbox><img src="./images/000017470009.jpg" alt="Fashion-inspired photograph outdoors" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/000017470004.jpg" data-lightbox><img src="./images/000017470004.jpg" alt="Candid photograph through a window" loading="lazy"></a></figure>
+
+<figure class="photo-card"><a href="./images/000927340020.jpg" data-lightbox aria-label="Open construction sign with a painted happy face"><img src="./images/000927340020.jpg" alt="A worn construction barrier marked with a bright orange happy face on a New York sidewalk" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/000927340006.jpg.jpg" data-lightbox><img src="./images/000927340006.jpg.jpg" alt="Child bundled in winter clothes in a stroller on a city sidewalk" loading="lazy"></a></figure>
+</div></section><section class="photo-category-section" id="live-music">
+<div class="photo-group-label">04 / Nightlife <span></span></div>
+<div class="photo-grid music-photo-grid">
+<figure class="photo-card"><a href="./images/music-studio.jpg" data-lightbox aria-label="Open red-lit music studio photograph"><img src="./images/music-studio.jpg" alt="Music producer working at a mixing desk in a red-lit recording studio" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-08-dj-set.jpg" data-lightbox aria-label="Open DJ performance photograph"><img src="./images/music-08-dj-set.jpg" alt="DJ performing at a controller beneath purple stage lighting" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-07-outdoor-performance.jpg" data-lightbox aria-label="Open outdoor live performance"><img src="./images/music-07-outdoor-performance.jpg" alt="Performer singing on an outdoor festival stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-red-concert.jpg" data-lightbox aria-label="Open red-lit concert photograph"><img src="./images/music-red-concert.jpg" alt="A performer onstage before a crowd under intense red concert lighting" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-01-russ-live.jpg" data-lightbox aria-label="Expand Russ performing live in concert"><img src="./images/music-01-russ-live.jpg" alt="Russ performing live on stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-02-confetti-stage.jpg" data-lightbox aria-label="Expand concert stage in a cloud of confetti"><img src="./images/music-02-confetti-stage.jpg" alt="Concert stage in a cloud of confetti" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-04-purple-stage.jpg" data-lightbox aria-label="Expand purple-lit concert stage"><img src="./images/music-04-purple-stage.jpg" alt="Purple-lit concert stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-06-blue-stage.jpg" data-lightbox aria-label="Expand blue and red arena stage"><img src="./images/music-06-blue-stage.jpg" alt="Blue and red arena stage" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/electric-concert-lasers.jpg" data-lightbox aria-label="Expand green laser concert stage"><img src="./images/electric-concert-lasers.jpg" alt="Concert stage with green lasers and a silhouetted crowd" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/music-05-red-stage.jpg" data-lightbox aria-label="Expand red stage lights over a crowd"><img src="./images/music-05-red-stage.jpg" alt="Red stage lights over a crowd" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/nightlife.jpg" data-lightbox aria-label="Open photograph of a bottle pouring a drink"><img src="./images/nightlife.jpg" alt="A drink being poured from a glass bottle into a shot glass" loading="lazy"></a></figure>
+</div></section><section class="photo-category-section" id="misc"><div class="photo-group-label">05 / Florida <span></span></div><div class="photo-grid">
+<figure class="photo-card"><a href="./images/florida-07.jpg" data-lightbox aria-label="Open Florida river photograph"><img src="./images/florida-07.jpg" alt="A swimmer in a clear Florida river surrounded by trees" loading="lazy"></a></figure>
+
+
+
+
+
+
+
+<figure class="photo-card"><a href="./images/misc-07-trampoline.JPG" data-lightbox><img src="./images/misc-07-trampoline.JPG" alt="Candid moment with friends on a backyard trampoline" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/misc-06-water.JPG" data-lightbox><img src="./images/misc-06-water.JPG" alt="A swimmer looking through a snorkel mask in clear water" loading="lazy"></a></figure>
+<figure class="photo-card"><a href="./images/florida-11.jpg" data-lightbox aria-label="Open Florida sunset and pier photograph"><img src="./images/florida-11.jpg" alt="Sunset over the ocean with a pier stretching across the horizon" loading="lazy"></a></figure>
+
+
+</div></section>    
+<div class="gallery-intro" id="video"><h3>VIDEO / FILM <span class="tiny-star" aria-hidden="true"></span></h3><p>Music videos and collaborative projects. </p></div><div class="project-grid video-projects"><article class="project-card"><div class="project-type">01 / MUSIC VIDEO · FILMING + EDITING</div><div class="embed-frame"><iframe src="https://www.youtube-nocookie.com/embed/5VJyGdAp63c" title="Right Now — EDM Remix" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><h3>“Right Now” — EDM Remix</h3><p>Created for Miami rapper skinnythefatso, this music video was filmed and edited as part of a collaborative music project.</p><a class="project-link" href="https://www.youtube.com/watch?v=5VJyGdAp63c" target="_blank" rel="noopener noreferrer">Watch the video on YouTube ↗</a></article><article class="project-card"><div class="project-type">02 / MUSIC VIDEO · FILMING + EDITING</div><a class="instagram-preview" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer" aria-label="Watch Soul Never Dies Collective on Instagram"><img class="instagram-preview-image" src="./images/soul-never-dies-thumbnail.webp" alt="" loading="lazy"><span class="instagram-preview-play" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 5.5v13L19 12 8 5.5Z"/></svg></span><span class="instagram-preview-label">WATCH ON INSTAGRAM ↗</span></a><h3>Soul Never Dies Collective</h3><p>Soul Never Dies Collective is a jazz group based in New York City. I collaborated with the group to film and edit this video.</p><a class="project-link" href="https://www.instagram.com/reel/CmhEj1trg7-/" target="_blank" rel="noopener noreferrer">Watch on Instagram ↗</a></article><article class="project-card"><div class="project-type">03 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/visual-study-poster.jpg"><source src="./videos/visual-study.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>Visual Study</h3><p>An experimental visual piece I directed and edited, shaping the lighting, location, and atmosphere around an instrumental track by Skeeter Davis.</p></article><article class="project-card"><div class="project-type">04 / VIDEO · FILM</div><div class="embed-frame"><video controls playsinline preload="metadata" poster="./images/ryan-kj-poster.jpg"><source src="./videos/ryan-kj-best-moments.mp4" type="video/mp4">Your browser does not support the video element.</video></div><h3>“CR-V / Free” — Ryan KJ</h3><p>Made for Miami rapper Ryan KJ, this two-minute cut is an abridged version of the five-minute music video, bringing together selected moments to capture the video’s tone.</p></article></div>
+<div class="wishboard-wrap" id="wishboard"><div class="gallery-intro"><h3>DIGITAL / INTERACTIVE <span class="tiny-star" aria-hidden="true"></span></h3><p>An experiment in turning an idea into a working digital platform with AI-assisted tools.</p></div><article class="project-card"><div class="project-type">INDEPENDENT PROJECT · DESIGN + BUILD</div><h3>Wishboard</h3><p>A Pinterest-style wishlist and budgeting app I built independently, combining visual inspiration with practical planning.</p><div class="embed-frame wishboard-tutorial"><video controls playsinline preload="metadata"><source src="./videos/wishboard-tutorial.mp4" type="video/mp4">Your browser does not support the video element.</video></div><div class="wishboard-links"><a class="project-link" href="https://dcc1122dcc.github.io/wishboard/" target="_blank" rel="noopener noreferrer">Explore Wishboard ↗</a><a class="project-link" href="https://github.com/DCC1122DCC/wishboard/" target="_blank" rel="noopener noreferrer">View source on GitHub ↗</a></div></article></div>
+</section>
+
+<section class="section about-section" id="about"><div class="about-grid"><div class="about-copy"><p class="about-outro">LET'S SEE WHERE THIS GOES...</p><span class="section-label contact-heading-inline">CONTACT</span><a class="contact-email" href="mailto:DCURBELO121@GMAIL.COM" aria-label="Email DCURBELO121@gmail.com" title="Open email">DCURBELO121@GMAIL.COM <svg id="flashlight-end-clue" class="contact-email-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5h18v13H3z"/><path d="m3.5 6 8.5 7 8.5-7"/></svg></a><span class="search-continues">The search continues...</span></div></div></section></main>
+<footer class="site-footer"><span class="site-credit"><span class="site-credit-label">SITE MADE BY</span><span>© <span id="year">2026</span> DESANI CURBELO</span></span><a href="https://www.instagram.com/discarded.science/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a><a class="back-to-top" href="#home">BACK TO TOP <svg class="back-to-top-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M8 6h10v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></footer><script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+<script id="flashlight-controller">
+const initFlashlightController = () => {
+  const body = document.body;
+  const toggle = document.getElementById('light-switch');
+  const label = document.getElementById('switch-label');
+  const scrollHint = document.getElementById('flashlight-scroll-hint');
+  const cursor = document.getElementById('flashlight-cursor');
+  const guidePath = document.getElementById('flashlight-guide-path');
+  const guideDot = document.getElementById('flashlight-guide-dot');
+  if (!toggle || !cursor) return;
+
+  let enabled = false;
+  let frame = 0;
+  let activationScrollY = 0;
+  let lastX = window.innerWidth / 2;
+  let lastY = window.innerHeight * .38;
+
+  // Pick a real image from each collection, biased toward alternating sides.
+  // This avoids fragile filenames and keeps the route zigzagging on desktop and mobile.
+  function imageOnSide(sectionSelector, side) {
+    const section = document.querySelector(sectionSelector);
+    if (!section) return null;
+    const images = [...section.querySelectorAll('img')].filter(img => {
+      const r = img.getBoundingClientRect();
+      return r.width > 0 && r.height > 0;
+    });
+    if (!images.length) return null;
+    const targetX = window.innerWidth * side;
+    return images.sort((a, b) => {
+      const ar = a.getBoundingClientRect(), br = b.getBoundingClientRect();
+      return Math.abs((ar.left + ar.width / 2) - targetX) - Math.abs((br.left + br.width / 2) - targetX);
+    })[0];
+  }
+
+  function getTargets() {
+    // Keep one flashlight stop in every photo collection, using the current
+    // collection images. The email icon remains the final landing point.
+    const candidates = [
+      document.querySelector('.magnifier-art'),
+      document.querySelector('#eyes img[src*="EYE16.jpg"]') || document.querySelector('#eyes img[src*="EYE16"]'),
+      document.querySelector('#fashion-portraits img[src*="fashion-03-color-shadow"]'),
+      document.querySelector('#nyc-film img[src*="000927340006.jpg.jpg"]'),
+      document.querySelector('#live-music img[src*="music-red-concert.jpg"]'),
+      document.querySelector('#misc img[src*="florida-11.jpg"]'),
+      document.querySelector('#about .contact-email-icon')
+    ];
+    return candidates.filter(el => {
+      if (!el) return false;
+      const r = el.getBoundingClientRect();
+      return r.width > 0 && r.height > 0;
+    }).map(el => {
+      const r = el.getBoundingClientRect();
+      return {el, x:r.left + r.width/2, y:r.top + window.scrollY + r.height/2};
+    });
+  }
+
+  function setBeam(x, y) {
+    lastX = Math.max(8, Math.min(window.innerWidth - 8, x));
+    lastY = Math.max(8, Math.min(window.innerHeight - 8, y));
+    body.style.setProperty('--flash-x', lastX + 'px');
+    body.style.setProperty('--flash-y', lastY + 'px');
+    cursor.style.left = lastX + 'px';
+    cursor.style.top = lastY + 'px';
+    if (guideDot) { guideDot.setAttribute('cx', lastX); guideDot.setAttribute('cy', lastY); }
+  }
+
+  function updateFromScroll() {
+    frame = 0;
+    if (!enabled) return;
+    const points = getTargets();
+    if (!points.length) return;
+    const focusY = window.scrollY + window.innerHeight * .48;
+    if (guidePath) {
+      // Add short alternating bends between stops so the guide feels like a playful zigzag,
+      // not one long straight connector. The actual clue stops remain unchanged.
+      const routeParts = [];
+      points.forEach((p, i) => {
+        const y = p.y - window.scrollY;
+        if (i === 0) { routeParts.push(`M ${p.x.toFixed(1)} ${y.toFixed(1)}`); return; }
+        const prev = points[i - 1];
+        const prevY = prev.y - window.scrollY;
+        // Connect the actual photo targets directly. Their real positions create
+        // the natural zigzag; avoid adding artificial/random bends between them.
+        if (i === 5) {
+          // Give the Nightlife stop a curved, diagonal route into Florida.
+          const bend = Math.max(90, Math.min(170, window.innerWidth * .14));
+          const direction = p.x >= prev.x ? 1 : -1;
+          const cx = (prev.x + p.x) / 2 + bend * direction;
+          const cy = (prevY + y) / 2;
+          routeParts.push(`Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${p.x.toFixed(1)} ${y.toFixed(1)}`);
+        } else {
+          routeParts.push(`L ${p.x.toFixed(1)} ${y.toFixed(1)}`);
+        }
+      });
+      guidePath.setAttribute('d', routeParts.join(' '));
+    }
+
+    // The final landing point is the orange envelope icon beside the contact email.
+    const endClue = document.querySelector('#about .contact-email-icon');
+    const endRect = endClue ? endClue.getBoundingClientRect() : null;
+    const endPageY = endRect ? endRect.top + window.scrollY + endRect.height / 2 : Infinity;
+    const finalStage = !!endRect && endRect.width > 0 &&
+      window.scrollY + window.innerHeight >= endPageY + Math.min(80, endRect.height * .2);
+    body.classList.toggle('flashlight-final-stop', finalStage);
+
+    // Once the final email clue is reached, pin the beam to the center of its
+    // orange envelope icon instead of letting the route drift past it.
+    const stopRadius = Math.max(95, Math.min(190, window.innerHeight * .24));
+    if (endRect && endRect.width > 0 && endRect.bottom > 0 && endRect.top < window.innerHeight &&
+        (finalStage || Math.abs(focusY - endPageY) <= stopRadius)) {
+      setBeam(endRect.left + endRect.width / 2, endRect.top + endRect.height / 2);
+      return;
+    }
+
+    // Snap to each target as it reaches the reading zone; otherwise interpolate
+    // between adjacent target centers. The alternating image columns create a zigzag.
+    const nearby = points.filter(p => Math.abs(focusY - p.y) <= stopRadius)
+      .sort((a,b) => Math.abs(focusY-a.y) - Math.abs(focusY-b.y))[0];
+    if (nearby) {
+      setBeam(nearby.x, nearby.y - window.scrollY);
+      return;
+    }
+    let a = points[0], b = points[points.length - 1];
+    for (let i=0; i<points.length-1; i++) {
+      if (focusY < points[i+1].y) { a=points[i]; b=points[i+1]; break; }
+      a=points[i]; b=points[i+1];
+    }
+    const span = b.y - a.y;
+    const t = span <= 0 ? 1 : Math.max(0, Math.min(1, (focusY-a.y)/span));
+    if (points.indexOf(a) === 4 && points.indexOf(b) === 5) {
+      // Match the curved SVG guide between the Nightlife and Florida photo stops.
+      const bend = Math.max(90, Math.min(170, window.innerWidth * .14));
+      const direction = b.x >= a.x ? 1 : -1;
+      const cx = (a.x + b.x) / 2 + bend * direction;
+      const cy = (a.y + b.y) / 2;
+      const u = 1 - t;
+      const x = u*u*a.x + 2*u*t*cx + t*t*b.x;
+      const y = u*u*a.y + 2*u*t*cy + t*t*b.y;
+      setBeam(x, y - window.scrollY);
+    } else {
+      setBeam(a.x + (b.x-a.x)*t, a.y + (b.y-a.y)*t - window.scrollY);
+    }
+  }
+
+  function scheduleUpdate() {
+    if (frame) return;
+    frame = requestAnimationFrame(updateFromScroll);
+  }
+  function toggleMode() {
+    enabled = !enabled;
+    body.classList.toggle('flashlight-mode', enabled);
+    toggle.setAttribute('aria-pressed', String(enabled));
+    toggle.setAttribute('aria-label', enabled ? 'Turn flashlight dark mode off' : 'Turn flashlight dark mode on');
+    if (label) label.textContent = enabled ? 'LIGHTS OFF' : 'LIGHTS ON';
+    if (enabled) {
+      activationScrollY = window.scrollY;
+      const firstTarget = getTargets()[0];
+      if (firstTarget) {
+        const r = firstTarget.el.getBoundingClientRect();
+        setBeam(r.left + r.width/2, r.top + r.height/2);
+      }
+      if (scrollHint) { scrollHint.classList.remove('is-hidden'); scrollHint.style.display = 'block'; }
+      scheduleUpdate();
+    } else {
+      body.classList.remove('flashlight-final-stop');
+      if (scrollHint) { scrollHint.classList.remove('is-hidden'); scrollHint.style.display = ''; }
+      body.style.removeProperty('--flash-x');
+      body.style.removeProperty('--flash-y');
+    }
+  }
+  toggle.addEventListener('click', toggleMode);
+  window.addEventListener('scroll', () => {
+    scheduleUpdate();
+    if (enabled && scrollHint && Math.abs(window.scrollY - activationScrollY) > 24) scrollHint.classList.add('is-hidden');
+  }, {passive:true});
+  window.addEventListener('resize', scheduleUpdate, {passive:true});
+  window.addEventListener('load', scheduleUpdate, {once:true});
+  setBeam(lastX, lastY);
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initFlashlightController, {once:true});
+else initFlashlightController();
+</script>
+
+<style id="requested-my-work-updates">
+/* Three hand-drawn wavy lines divide Looking for Clues from the work archive. */
+.clues-work-divider{width:100%;height:clamp(28px,3.4vw,44px);overflow:hidden;line-height:0;margin:0 0 clamp(6px,1vw,12px);}
+.clues-work-divider svg{display:block;width:100%;height:100%;overflow:visible;}
+.clues-work-divider path{fill:none;stroke-width:4.5;stroke-linecap:round;vector-effect:non-scaling-stroke;}
+.clues-work-divider path:nth-child(1),.clues-work-divider path:nth-child(3){stroke:var(--orange);}
+.clues-work-divider path:nth-child(2){stroke:var(--cyan);}
+/* Slightly smaller cyan MY WORK lettering with orange polka dots, close to Photography. */
+#work .my-work-banner{font-size:clamp(42px,10.2vw,142px);color:var(--cyan);background-image:radial-gradient(circle, var(--orange) 2px, transparent 2.5px),linear-gradient(var(--cyan),var(--cyan));background-size:14px 14px,100% 100%;background-position:2px 2px,0 0;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;padding:clamp(3px,.7vw,8px) 1.5% clamp(5px,.8vw,10px);margin:0;}
+#work #photos.gallery-intro{margin-top:0;}
+@media(max-width:760px){.clues-work-divider{margin-bottom:6px}.clues-work-divider path{stroke-width:3.5}#work .my-work-banner{font-size:clamp(36px,11.5vw,78px);}}
+</style>
+
+<style id="requested-cleanup-updates">
+/* A simple cyan dotted divider replaces the three wavy lines. */
+.clues-work-divider{height:8px;margin:0 0 2px;border:0;border-top:4px dotted var(--cyan);overflow:hidden;}
+.clues-work-divider svg{display:none!important;}
+/* MY WORK is black and sits slightly closer to the Photography heading. */
+#work .my-work-banner{color:var(--ink);background:none;-webkit-text-fill-color:var(--ink);font-size:clamp(38px,8.8vw,124px);padding:0 1.5% 0;margin:0;line-height:.9;}
+@media(max-width:760px){#work .my-work-banner{font-size:clamp(34px,10vw,68px);padding:0 1% 0;}}
+/* Keep the flashlight experience focused on the moving beam, not extra overlays or prompts. */
+.flashlight-scroll-prompt,.flashlight-clues,.search-continues{display:none!important;}
+.flashlight-guide-line{display:none!important;}
+body.flashlight-mode .flashlight-guide-line{display:block!important;}
+.flashlight-cursor{transition:transform .12s ease-out!important;}
+</style>
+
+
+<style id="requested-stamp-position">
+/* Move Made and Found from the header to the upper-right corner of the My Work section. */
+.work-stamp-row{width:100%;box-sizing:border-box;display:flex;justify-content:flex-end;align-items:center;padding:0 clamp(12px,2.2vw,30px);height:58px;margin:0 0 -15px;}
+.work-stamp{display:flex;align-items:center;justify-content:center;flex:0 0 auto;width:54px;height:54px;margin:0;}
+.work-stamp .hero-stamp{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;transform:none!important;display:block;width:100%;height:100%;max-width:100%;}
+.work-stamp .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+@media(max-width:760px){.work-stamp-row{height:46px;padding:0 10px;margin-bottom:-10px;}.work-stamp{width:42px;height:42px;}}
+</style>
+
+
+<style id="night-email-and-zigzag-polish">
+/* Keep a separate, easy-to-click email destination visible in flashlight mode. */
+.night-email-shortcut{display:none;position:fixed;right:clamp(14px,3vw,34px);bottom:clamp(16px,3vh,30px);z-index:1305;align-items:center;gap:8px;padding:10px 12px;border:1px solid rgba(115,217,232,.8);border-radius:999px;background:rgba(20,29,29,.94);color:#c8fbff;text-decoration:none;font:700 10px/1 var(--mono);letter-spacing:.1em;cursor:pointer;pointer-events:auto;box-shadow:0 0 10px rgba(115,217,232,.45),inset 0 0 10px rgba(115,217,232,.12);text-shadow:0 0 8px rgba(115,217,232,.85);}
+.night-email-shortcut svg{display:block;width:23px;height:23px;fill:none;stroke:#73d9e8;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px #73d9e8);}
+body.flashlight-mode .night-email-shortcut{display:inline-flex;}
+.night-email-shortcut:hover,.night-email-shortcut:focus-visible{background:rgba(24,42,43,.98);color:#fff;outline:2px solid #9be7ee;outline-offset:3px;box-shadow:0 0 18px rgba(115,217,232,.8);}
+/* Make the custom flashlight graphic visible while preserving the real system pointer on links. */
+body.flashlight-mode .flashlight-cursor{filter:drop-shadow(0 0 5px #73d9e8) drop-shadow(0 2px 3px rgba(0,0,0,.9));}
+body.flashlight-mode a,body.flashlight-mode button{cursor:pointer!important;}
+/* MY WORK aligns with the left edge of the section, not the center. */
+#work .my-work-banner{text-align:left!important;padding-left:0!important;padding-right:0!important;}
+@media(max-width:760px){.night-email-shortcut{right:12px;bottom:calc(14px + env(safe-area-inset-bottom));padding:9px 10px;font-size:9px}.night-email-shortcut svg{width:21px;height:21px}#work .my-work-banner{padding-left:0!important;}}
+@media(prefers-reduced-motion:reduce){.night-email-shortcut{transition:none!important;}}
+</style>
+
+
+
+
+
+
+
+
+<style id="creative-archive-final-layout-fixes">
+/* Made & Found belongs to the LOOKING FOR CLUES hero, on its right side. */
+.hero{position:relative;}
+.hero .work-stamp-row{position:absolute;z-index:5;top:clamp(86px,11vw,150px);right:clamp(12px,3.5vw,48px);width:auto;height:auto;display:flex;justify-content:flex-end;align-items:center;padding:0;margin:0;overflow:visible;pointer-events:none;}
+.hero .work-stamp-row .work-stamp{display:block;width:clamp(92px,11vw,148px);height:clamp(92px,11vw,148px);margin:0;}
+.hero .work-stamp-row .hero-stamp{display:block!important;position:static!important;inset:auto!important;transform:none!important;width:100%!important;height:100%!important;max-width:none!important;}
+.hero .work-stamp-row .hero-stamp svg{display:block;width:100%;height:100%;overflow:visible;}
+/* The deploy copy uses the original hero-bottom stamp wrapper. */
+.hero .hero-bottom.archive-stamp-separator{position:absolute!important;z-index:5;top:clamp(86px,11vw,150px);right:clamp(12px,3.5vw,48px);bottom:auto!important;left:auto!important;width:clamp(92px,11vw,148px)!important;height:clamp(92px,11vw,148px)!important;margin:0!important;padding:0!important;display:block!important;pointer-events:none;}
+.hero .hero-bottom.archive-stamp-separator .hero-stamp{position:static!important;display:block!important;width:100%!important;height:100%!important;max-width:none!important;transform:none!important;}
+.hero .hero-bottom.archive-stamp-separator .hero-stamp svg{width:100%;height:100%;display:block;}
+/* MY WORK is centered again, with only a small gap below the cyan dotted line. */
+#work .my-work-banner{text-align:center!important;padding-left:1.5%!important;padding-right:1.5%!important;padding-top:clamp(6px,.8vw,10px)!important;padding-bottom:clamp(16px,2vw,24px)!important;margin-top:0!important;line-height:.9;}
+#work .work-stamp-row{display:none!important;}
+#work #photos.gallery-intro{margin-top:clamp(7px,1vw,12px)!important;padding-top:0!important;}
+/* The clickable EMAIL ME glow is the only final clue; no extra glowing sentence. */
+#about .about-copy .search-continues{display:none!important;}
+.night-email-shortcut{display:none!important;opacity:0;pointer-events:none;transition:opacity .35s ease;}
+body.flashlight-mode.flashlight-final-stop .night-email-shortcut{display:inline-flex!important;opacity:1;pointer-events:auto;}
+/* Keep the real cursor visible so the final email shortcut is easy to click. */
+body.flashlight-mode{cursor:auto!important;}
+body.flashlight-mode .flashlight-cursor{display:none!important;pointer-events:none;}
+body.flashlight-mode a,body.flashlight-mode button{cursor:pointer!important;}
+@media(max-width:760px){
+ .hero .work-stamp-row,.hero .hero-bottom.archive-stamp-separator{top:clamp(74px,20vw,112px);right:12px;}
+ .hero .work-stamp-row .work-stamp,.hero .hero-bottom.archive-stamp-separator{width:clamp(68px,19vw,94px)!important;height:clamp(68px,19vw,94px)!important;}
+ #work .my-work-banner{padding-top:6px!important;padding-bottom:clamp(14px,3.5vw,21px)!important;}
+ #work #photos.gallery-intro{margin-top:7px!important;}
+}
+@media(prefers-reduced-motion:reduce){.night-email-shortcut{transition:none!important;}}
+</style>
+
+
+
+<style id="requested-october-edits">
+/* The glow-in-the-dark artwork softly illuminates when the page is in lights-off mode. */
+body.flashlight-mode .hero-art,
+body.flashlight-mode .hero-art svg {
+  filter: drop-shadow(0 0 7px rgba(115,217,232,.85)) drop-shadow(0 0 16px rgba(115,217,232,.5));
+}
+body.flashlight-mode .hero-art svg * { transition: filter .25s ease; }
+body.flashlight-mode .hero-art { animation: night-art-glow 2.4s ease-in-out infinite alternate; }
+@keyframes night-art-glow { from { opacity:.78; } to { opacity:1; } }
+.flashlight-end-clue { display:none; text-align:center; align-items:center; flex-direction:column; gap:16px; padding:clamp(30px,5vw,58px) 12px 10px; }
+body.flashlight-mode .flashlight-end-clue { display:flex; }
+.flashlight-end-clue p { margin:0; color:#c8fbff; font:900 clamp(24px,5vw,54px)/.95 var(--display); letter-spacing:-.045em; text-shadow:0 0 7px #73d9e8,0 0 20px rgba(115,217,232,.95),0 0 38px rgba(115,217,232,.55); animation:clue-glow 1.8s ease-in-out infinite alternate; }
+.digital-clue-email { display:inline-flex; align-items:center; gap:8px; color:#c8fbff; text-decoration:none; font:700 11px/1 var(--mono); letter-spacing:.12em; padding:10px 13px; border:1px solid #73d9e8; border-radius:999px; box-shadow:0 0 14px rgba(115,217,232,.5); }
+.digital-clue-email svg { width:27px; height:27px; fill:none; stroke:#73d9e8; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 6px #73d9e8); }
+.digital-clue-email:hover { transform:translateY(-2px); box-shadow:0 0 22px rgba(115,217,232,.85); }
+body.flashlight-mode .search-continues { display:none!important; }
+body.flashlight-mode .night-email-shortcut { display:none!important; }
+.hero .work-stamp-row { top:auto!important; bottom:clamp(14px,3vw,38px)!important; right:clamp(12px,3.5vw,48px)!important; }
+#work .my-work-banner { text-align:left!important; padding-left:0!important; margin-top:-5px!important; }
+#work .my-work-banner:after { content:"↓  ↓  ↓  ↓"; display:block; color:var(--cyan); -webkit-text-fill-color:var(--cyan); font:700 clamp(16px,2.5vw,26px)/1 var(--mono); letter-spacing:.18em; margin-top:clamp(8px,1.4vw,16px); }
+@media(max-width:760px) { .hero .work-stamp-row { bottom:12px!important; right:10px!important; } #work .my-work-banner { padding-left:0!important; } }
+</style>
+
+
+<style id="desktop-stamp-and-single-final-clue-fix">
+/* On desktop, shift the Made & Found stamp left so it no longer covers the icons.
+   Mobile positioning is intentionally left unchanged. */
+@media (min-width:761px){
+  .hero .work-stamp-row{right:clamp(78px,10vw,150px)!important;}
+}
+/* In lights-off mode, keep the newly added clue near Interactive Digital as the
+   only final clue; hide the older contact/email treatment at the page bottom. */
+body.flashlight-mode #about .about-outro,
+body.flashlight-mode #about .contact-email,
+body.flashlight-mode #about .search-continues,
+body.flashlight-mode #about .flashlight-found-clue,
+body.flashlight-mode .night-email-shortcut{display:none!important;opacity:0!important;pointer-events:none!important;}
+</style>
+
+
+<style id="latest-desktop-zigzag-polish">
+/* Desktop-only refinements; leave the already-good mobile layout untouched. */
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(130px,17vw,250px)!important; }
+  #flashlight-end-clue { width:100%; max-width:100%; padding-left:24px; padding-right:24px; overflow:visible; }
+  #flashlight-end-clue p { width:100%; max-width:100%; white-space:nowrap; font-size:clamp(22px,3.15vw,44px)!important; letter-spacing:-.025em!important; text-align:center; text-shadow:0 0 8px #73d9e8,0 0 22px rgba(115,217,232,1),0 0 42px rgba(115,217,232,.75)!important; }
+}
+/* Let the switch glow in flashlight mode so it is obvious that it can be turned back off. */
+body.flashlight-mode .light-switch { color:#c8fbff!important; border-color:#9be7ee!important; box-shadow:0 0 8px rgba(115,217,232,.7),0 0 18px rgba(115,217,232,.45),inset 0 0 8px rgba(115,217,232,.12); text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,.9); animation:clue-glow 2s ease-in-out infinite alternate; }
+body.flashlight-mode .light-switch:hover { box-shadow:0 0 12px #73d9e8,0 0 24px rgba(115,217,232,.8); }
+/* Center the title and four arrows close to the cyan dotted divider. */
+#work .my-work-banner { text-align:center!important; padding-left:1.5%!important; padding-right:1.5%!important; }
+#work .my-work-banner:after { content:"↓  ↓  ↓  ↓"; display:block; text-align:center; color:var(--cyan); -webkit-text-fill-color:var(--cyan); font:700 clamp(16px,2.5vw,26px)/1 var(--mono); letter-spacing:.18em; margin-top:clamp(3px,.55vw,7px)!important; }
+@media(max-width:760px) {
+  #work .my-work-banner { text-align:center!important; }
+  #work .my-work-banner:after { margin-top:4px!important; }
+}
+</style>
+
+
+<style id="user-request-final-polish-2026-10-29">
+/* Desktop: make the Made & Found stamp smaller and shift it farther left; mobile stays as-is. */
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(175px,22vw,320px)!important; }
+  .hero .work-stamp-row .work-stamp { width:clamp(70px,8vw,112px)!important; height:clamp(70px,8vw,112px)!important; }
+  .hero .work-stamp-row .hero-stamp { width:100%!important; height:100%!important; }
+  #work .my-work-banner { font-size:clamp(42px,6.5vw,96px)!important; margin-top:-14px!important; padding-top:0!important; padding-bottom:clamp(8px,1.2vw,14px)!important; line-height:.92!important; }
+  #work .my-work-banner:after { margin-top:2px!important; font-size:clamp(14px,1.8vw,20px)!important; }
+}
+/* Keep the four arrows and heading centered, tucked close to the cyan divider. */
+#work .my-work-banner { text-align:center!important; }
+#work .my-work-banner:after { margin-top:2px!important; }
+/* Always make the lights toggle visibly glow while the page is dark, so users can switch it back on. */
+body.flashlight-mode #light-switch,
+body.flashlight-mode .light-switch { position:relative!important; z-index:1205!important; color:#e5fcff!important; background:#182525!important; border-color:#b6f8ff!important; box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important; text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important; animation:clue-glow 1.8s ease-in-out infinite alternate!important; }
+body.flashlight-mode #light-switch:hover,
+body.flashlight-mode .light-switch:hover { box-shadow:0 0 8px #b6f8ff,0 0 20px #73d9e8,0 0 34px rgba(115,217,232,1)!important; }
+@media(max-width:760px) {
+  /* Preserve the current mobile stamp and My Work sizing/placement. */
+  .hero .work-stamp-row { right:clamp(78px,10vw,150px)!important; }
+  .hero .work-stamp-row .work-stamp { width:clamp(68px,19vw,94px)!important; height:clamp(68px,19vw,94px)!important; }
+  #work .my-work-banner { margin-top:-5px!important; padding-top:6px!important; padding-bottom:clamp(14px,3.5vw,21px)!important; }
+}
+@media(prefers-reduced-motion:reduce) { body.flashlight-mode #light-switch,body.flashlight-mode .light-switch { animation:none!important; } }
+</style>
+
+
+<div class="photo-lightbox" id="photo-lightbox-runtime" role="dialog" aria-modal="true" aria-label="Expanded photograph" aria-hidden="true">
+  <button class="photo-lightbox-close" type="button" aria-label="Close expanded photograph">CLOSE ✕</button>
+  <button class="photo-lightbox-nav photo-lightbox-prev" type="button" aria-label="Previous photo">‹</button>
+  <img alt="" src="" />
+  <button class="photo-lightbox-nav photo-lightbox-next" type="button" aria-label="Next photo">›</button>
+  <span class="photo-lightbox-count" aria-live="polite"></span>
+</div>
+<style id="mobile-lightbox-close-fix">
+#photo-lightbox-runtime{touch-action:manipulation;z-index:2000;padding: max(18px, env(safe-area-inset-top)) max(14px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));}
+#photo-lightbox-runtime .photo-lightbox-close{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:2;min-height:42px;min-width:76px;touch-action:manipulation;}
+#photo-lightbox-runtime img{max-width:92vw;max-height:82vh;max-height:82dvh;object-fit:contain;touch-action:manipulation;}
+</style>
+<script id="photo-lightbox-runtime">
+(()=>{
+ const box=document.getElementById('photo-lightbox-runtime'); if(!box)return;
+ const image=box.querySelector('img'), close=box.querySelector('.photo-lightbox-close');
+ const prev=box.querySelector('.photo-lightbox-prev'), next=box.querySelector('.photo-lightbox-next'), count=box.querySelector('.photo-lightbox-count');
+ let previousFocus=null, photos=[], current=0, touchStartX=0;
+ let previousBodyOverflow='', previousBodyPaddingRight='';
+ function show(index){
+   if(!photos.length)return;
+   current=(index+photos.length)%photos.length;
+   const link=photos[current], href=link.getAttribute('href');
+   image.src=href; image.alt=link.querySelector('img')?.alt||'Expanded photograph';
+   count.textContent=(current+1)+' / '+photos.length;
+   prev.disabled=photos.length<2; next.disabled=photos.length<2;
+ }
+ function closeBox(){box.classList.remove('is-open');box.setAttribute('aria-hidden','true');image.removeAttribute('src');document.body.style.overflow=previousBodyOverflow;document.body.style.paddingRight=previousBodyPaddingRight;if(previousFocus&&previousFocus.focus)previousFocus.focus();}
+ document.querySelectorAll('a[data-lightbox]').forEach(link=>link.addEventListener('click',event=>{
+   const href=link.getAttribute('href'); if(!href)return; event.preventDefault();
+   const collection=link.closest('.photo-category-section')||link.closest('.photo-grid')||link.parentElement;
+   photos=Array.from(collection.querySelectorAll('a[data-lightbox]')).filter(a=>a.getAttribute('href'));
+   current=Math.max(0,photos.indexOf(link)); previousFocus=link; show(current);
+   previousBodyOverflow=document.body.style.overflow;
+   previousBodyPaddingRight=document.body.style.paddingRight;
+   const scrollbarWidth=Math.max(0,window.innerWidth-document.documentElement.clientWidth);
+   if(scrollbarWidth)document.body.style.paddingRight=scrollbarWidth+'px';
+   box.classList.add('is-open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';close.focus({preventScroll:true});
+ }));
+ prev.addEventListener('click',()=>show(current-1)); next.addEventListener('click',()=>show(current+1));
+ close.addEventListener('click',closeBox);
+ box.addEventListener('click',event=>{if(event.target===box)closeBox();});
+ image.addEventListener('click',()=>show(current+1));
+ box.addEventListener('touchstart',event=>{if(event.touches.length===1)touchStartX=event.touches[0].clientX;},{passive:true});
+ box.addEventListener('touchend',event=>{if(!box.classList.contains('is-open')||!touchStartX)return;const dx=event.changedTouches[0].clientX-touchStartX;touchStartX=0;if(Math.abs(dx)>45)show(current+(dx<0?1:-1));},{passive:true});
+ document.addEventListener('keydown',event=>{if(!box.classList.contains('is-open'))return;if(event.key==='Escape')closeBox();else if(event.key==='ArrowRight')show(current+1);else if(event.key==='ArrowLeft')show(current-1);});
+})();
+</script>
+
+
+<style id="october-30-cyan-night-sparkles-and-layout">
+/* Preserve the existing flashlight route; add only page-wide cyan starlight. */
+body.flashlight-mode::after{content:"";position:fixed;inset:0;z-index:1100;pointer-events:none;opacity:.58;background-image:radial-gradient(circle,rgba(190,249,255,.95) 0 1px,transparent 1.9px),radial-gradient(circle,rgba(115,217,232,.95) 0 1.2px,transparent 2.2px),radial-gradient(circle,rgba(200,251,255,.85) 0 .8px,transparent 1.8px),conic-gradient(from 0deg at 50% 50%,transparent 0 43%,rgba(115,217,232,.9) 46% 54%,transparent 57% 100%),conic-gradient(from 0deg at 50% 50%,transparent 0 43%,rgba(115,217,232,.9) 46% 54%,transparent 57% 100%);background-size:137px 173px,211px 229px,97px 131px,137px 173px,211px 229px;background-position:19px 27px,83px 61px,47px 103px,19px 27px,83px 61px;animation:cyan-starlight 3.8s ease-in-out infinite alternate;}
+@keyframes cyan-starlight{0%{opacity:.34;filter:drop-shadow(0 0 2px rgba(115,217,232,.45));}45%{opacity:.62;}100%{opacity:.46;filter:drop-shadow(0 0 5px rgba(115,217,232,.8));}}
+/* Three matching cyan dotted rules, stacked in the existing divider position. */
+.clues-work-divider{position:relative!important;box-sizing:border-box!important;height:18px!important;margin:0 0 2px!important;padding:0!important;border:0!important;border-top:4px dotted var(--cyan)!important;overflow:visible!important;background:none!important;}
+.clues-work-divider::before,.clues-work-divider::after{content:"";position:absolute;left:0;right:0;height:0;border-top:4px dotted var(--cyan);pointer-events:none;}
+.clues-work-divider::before{top:7px;}.clues-work-divider::after{top:14px;}.clues-work-divider>svg{display:none!important;}
+/* Latest direction: align MY WORK to the left edge. */
+#work .my-work-banner{text-align:left!important;padding-left:0!important;padding-right:0!important;}
+#work .my-work-banner::after{text-align:left!important;}
+/* Keep the same toggle easy to find and use on desktop and mobile. */
+body.flashlight-mode #light-switch,body.flashlight-mode .light-switch{position:relative!important;z-index:1205!important;color:#e5fcff!important;background:#182525!important;border-color:#b6f8ff!important;box-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 28px rgba(115,217,232,.7),inset 0 0 10px rgba(115,217,232,.22)!important;text-shadow:0 0 5px #73d9e8,0 0 12px rgba(115,217,232,1)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Reduce the Made and Found stamp, keeping its current right-side placement. */
+.hero .work-stamp-row .work-stamp{width:clamp(58px,6.2vw,78px)!important;height:clamp(58px,6.2vw,78px)!important;}
+.hero .work-stamp-row .hero-stamp{width:100%!important;height:100%!important;}
+@media(max-width:760px){.clues-work-divider{height:16px!important;}.clues-work-divider::before{top:6px;}.clues-work-divider::after{top:12px;}.hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,62px)!important;height:clamp(48px,13vw,62px)!important;}#work .my-work-banner{text-align:left!important;padding-left:0!important;}#work .my-work-banner::after{text-align:left!important;}}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode::after{animation:none!important;opacity:.48;}}
+</style>
+
+
+<style id="october-2026-requested-visual-cleanup">
+/* Remove the cyan rule treatment and bring the work/photography content upward. */
+:root{--cyan:#25251f;--cyan-pale:#eae3d6;}
+.work-row:nth-child(2) .work-title:after,
+.reference-card:nth-child(even) h3:after{background:var(--ink)!important;}
+.work-row:hover .work-arrow{background:var(--paper)!important;}
+.clues-work-divider{display:none!important;height:0!important;border:0!important;margin:0!important;padding:0!important;}
+#work{padding-top:clamp(8px,1.2vw,16px)!important;}
+#work .my-work-banner{margin-top:0!important;padding-top:0!important;padding-bottom:clamp(8px,1.2vw,14px)!important;}
+#work #photos.gallery-intro{margin-top:0!important;padding-top:0!important;margin-bottom:10px!important;}
+#photos .photography-heading{gap:5px!important;}
+/* Neutralize remaining cyan linework in decorative SVG artwork. */
+svg [stroke="#9ccfd4"],svg [stroke="#9CCFD4"],svg [stroke="#73d9e8"],svg [stroke="#73D9E8"]{stroke:var(--ink)!important;}
+svg [fill="#9ccfd4"],svg [fill="#9CCFD4"]{fill:var(--paper)!important;}
+/* Made & Found belongs at the top-right of the LOOKING FOR CLUES title card. */
+.hero{position:relative!important;}
+.hero .work-stamp-row{
+  position:absolute!important;top:clamp(14px,2.4vw,30px)!important;
+  right:clamp(12px,2.5vw,36px)!important;left:auto!important;bottom:auto!important;
+  width:auto!important;height:auto!important;margin:0!important;padding:0!important;
+  display:flex!important;justify-content:flex-end!important;align-items:flex-start!important;
+  z-index:8!important;pointer-events:none!important;
+}
+.hero .work-stamp-row .work-stamp{width:clamp(58px,7.2vw,92px)!important;height:clamp(58px,7.2vw,92px)!important;}
+@media(max-width:760px){
+  .hero .work-stamp-row{top:12px!important;right:10px!important;}
+  .hero .work-stamp-row .work-stamp{width:clamp(48px,13vw,64px)!important;height:clamp(48px,13vw,64px)!important;}
+}
+/* Replace the busy triangle/conic texture with sparse, tiny glowing stars. */
+body.flashlight-mode::after{
+  content:"";position:fixed;inset:0;z-index:1100;pointer-events:none;opacity:.72;
+  background-image:
+    radial-gradient(circle,rgba(255,248,218,.98) 0 .8px,transparent 1.8px),
+    radial-gradient(circle,rgba(255,226,170,.9) 0 .7px,transparent 1.7px),
+    radial-gradient(circle,rgba(255,255,239,.86) 0 .6px,transparent 1.5px);
+  background-size:173px 191px,239px 223px,127px 149px;
+  background-position:17px 31px,91px 73px,48px 109px;
+  animation:soft-star-twinkle 4.2s ease-in-out infinite alternate;
+}
+@keyframes soft-star-twinkle{from{opacity:.42}to{opacity:.78}}
+/* Keep the LIGHTS ON control visibly locatable above the dark overlay. */
+body.flashlight-mode .site-header{z-index:1200!important;}
+body.flashlight-mode .light-switch{
+  position:relative!important;z-index:1202!important;isolation:isolate;
+  color:#fff7dc!important;background:rgba(30,29,24,.94)!important;
+  border:1px solid rgba(255,239,190,.98)!important;border-radius:999px!important;
+  box-shadow:0 0 5px rgba(255,239,190,.95),0 0 13px rgba(255,220,145,.82),0 0 27px rgba(255,220,145,.48),inset 0 0 9px rgba(255,239,190,.22)!important;
+  text-shadow:0 0 5px rgba(255,239,190,.95),0 0 12px rgba(255,220,145,.9)!important;
+  animation:lights-switch-beacon 1.8s ease-in-out infinite alternate!important;
+}
+body.flashlight-mode .light-switch:before{
+  content:"";position:absolute;inset:-7px;border-radius:999px;z-index:-1;
+  background:radial-gradient(ellipse,rgba(255,229,166,.34),rgba(255,229,166,0) 72%);
+  pointer-events:none;
+}
+body.flashlight-mode .light-switch .switch-track{border-color:#fff1c9!important;box-shadow:0 0 8px rgba(255,235,190,.95)!important;}
+body.flashlight-mode .light-switch:hover{
+  box-shadow:0 0 8px #fff1c9,0 0 20px rgba(255,220,145,.95),0 0 34px rgba(255,220,145,.6)!important;
+}
+@keyframes lights-switch-beacon{from{filter:brightness(1);box-shadow:0 0 5px rgba(255,239,190,.85),0 0 13px rgba(255,220,145,.65),0 0 22px rgba(255,220,145,.35),inset 0 0 9px rgba(255,239,190,.2)}to{filter:brightness(1.2);box-shadow:0 0 8px rgba(255,248,218,1),0 0 18px rgba(255,220,145,.95),0 0 32px rgba(255,220,145,.62),inset 0 0 11px rgba(255,239,190,.3)}}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode .light-switch{animation:none!important}body.flashlight-mode::after{animation:none!important}}
+</style>
+
+
+<style id="final-user-request-overrides">
+/* Restore the flashlight's original final destination: the contact email icon. */
+#about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;position:relative!important;z-index:1202!important;}
+body.flashlight-mode #about .contact-email{display:inline-flex!important;visibility:visible!important;opacity:1!important;color:#c8fbff!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95)!important;}
+#about .contact-email-icon{position:relative;z-index:1204!important;}
+#about .search-continues{display:none!important;}
+body.flashlight-mode.flashlight-final-stop #about .search-continues{display:block!important;visibility:visible!important;opacity:1!important;position:relative!important;z-index:1205!important;margin:12px 0 0!important;color:#c8fbff!important;font:700 clamp(11px,1.25vw,14px)/1.5 var(--mono)!important;letter-spacing:.12em!important;text-shadow:0 0 5px #73d9e8,0 0 14px rgba(115,217,232,.95),0 0 25px rgba(115,217,232,.7)!important;animation:clue-glow 1.8s ease-in-out infinite alternate!important;}
+/* Lights ON: cream pill with a cyan outlined oval and cyan knob. */
+body:not(.flashlight-mode) #light-switch,body:not(.flashlight-mode) .light-switch{background:#f2ebdd!important;color:#25251f!important;border:1px solid #25251f!important;box-shadow:0 3px 0 rgba(37,37,31,.15)!important;text-shadow:none!important;filter:none!important;animation:none!important;}
+body:not(.flashlight-mode) #light-switch .switch-track,body:not(.flashlight-mode) .light-switch .switch-track{background:#f2ebdd!important;border:1px solid #73d9e8!important;}
+body:not(.flashlight-mode) #light-switch .switch-track:after,body:not(.flashlight-mode) .light-switch .switch-track:after{background:#73d9e8!important;box-shadow:0 0 3px rgba(115,217,232,.45)!important;}
+/* Keep the PRESS ME cue black, separate from the cyan switch detail. */
+.press-me-cue{color:#25251f!important;text-shadow:none!important;}
+.press-me-arrow{color:#25251f!important;text-shadow:none!important;}
+/* Tiny four-point cyan stars replace plain dots in lights-off mode. */
+@keyframes restored-cyan-stars{0%{opacity:.58;filter:drop-shadow(0 0 2px rgba(115,217,232,.65));}100%{opacity:.95;filter:drop-shadow(0 0 4px rgba(115,217,232,.95)) drop-shadow(0 0 9px rgba(115,217,232,.65));}}
+body.flashlight-mode::after{content:""!important;position:fixed!important;inset:0!important;z-index:1100!important;pointer-events:none!important;opacity:1!important;background-image:radial-gradient(circle,rgba(210,250,255,.95) 0 .7px,transparent 1.4px),conic-gradient(from 0deg at 50% 50%,transparent 0deg 38deg,rgba(182,248,255,.98) 43deg 47deg,transparent 52deg 128deg,rgba(182,248,255,.98) 133deg 137deg,transparent 142deg 218deg,rgba(182,248,255,.98) 223deg 227deg,transparent 232deg 308deg,rgba(182,248,255,.98) 313deg 317deg,transparent 322deg 360deg),radial-gradient(circle,rgba(115,217,232,.92) 0 .7px,transparent 1.5px)!important;background-size:151px 167px,151px 167px,223px 197px!important;background-position:0 0,0 0,73px 41px!important;animation:restored-cyan-stars 3.1s ease-in-out infinite alternate!important;}
+@media(prefers-reduced-motion:reduce){body.flashlight-mode::after,body.flashlight-mode.flashlight-final-stop #about .search-continues{animation:none!important;}}
+</style>
+
+
+
+<style id="november-2026-precision-followup">
+/* Lights-off atmosphere: tiny cyan pinpoints only — no star glyphs, rays, or geometric texture. */
+@keyframes pinpoint-cyan-twinkle { 0%,100% { opacity:.62; } 50% { opacity:.88; } }
+body.flashlight-mode::after {
+  content:"" !important;
+  position:fixed !important; inset:0 !important; z-index:1100 !important;
+  pointer-events:none !important; opacity:1 !important;
+  background-image:
+    radial-gradient(circle, rgba(220,252,255,.98) 0 .48px, rgba(115,217,232,.62) .72px, transparent 1.2px),
+    radial-gradient(circle, rgba(190,247,253,.94) 0 .42px, rgba(115,217,232,.55) .68px, transparent 1.12px),
+    radial-gradient(circle, rgba(220,252,255,.92) 0 .38px, rgba(115,217,232,.5) .62px, transparent 1.05px);
+  background-size:151px 167px,223px 197px,181px 239px;
+  background-position:0 0,73px 41px,37px 119px;
+  filter:drop-shadow(0 0 1.2px rgba(115,217,232,.78));
+  animation:pinpoint-cyan-twinkle 3.8s ease-in-out infinite;
+}
+/* Keep Made & Found at the lower-right, inside the Looking for Clues title card. */
+.hero .work-stamp-row {
+  position:absolute !important; top:auto !important; bottom:clamp(14px,3vw,38px) !important;
+  right:clamp(12px,3.5vw,48px) !important; left:auto !important;
+  width:auto !important; height:auto !important; margin:0 !important;
+  padding:0 !important; z-index:9 !important;
+  display:flex !important; justify-content:flex-end !important; align-items:flex-end !important;
+  pointer-events:none !important;
+}
+.hero .work-stamp-row .work-stamp {
+  width:clamp(58px,6.2vw,78px) !important;
+  height:clamp(58px,6.2vw,78px) !important;
+}
+/* Small PRESS ME cue points toward the existing LIGHTS ON control. */
+.light-switch-hint {
+  display:inline-flex !important; align-items:center !important;
+  justify-content:flex-start !important; gap:6px !important;
+  flex-wrap:nowrap !important; max-width:100% !important;
+}
+.press-me-cue {
+  display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; gap:2px !important;
+  white-space:nowrap !important; color:var(--ink) !important;
+  font:700 6px/1 var(--mono) !important; letter-spacing:.055em !important;
+  text-shadow:none !important; opacity:.78 !important;
+}
+.press-me-arrow {
+  display:inline-block !important; color:var(--ink) !important;
+  font:700 11px/1 Arial,sans-serif !important;
+  text-shadow:none !important; transform:none !important;
+}
+@media(max-width:760px) {
+  .hero .work-stamp-row { bottom:12px !important; right:10px !important; }
+  .hero .work-stamp-row .work-stamp {
+    width:clamp(48px,13vw,62px) !important;
+    height:clamp(48px,13vw,62px) !important;
+  }
+  .brand-tools {
+    display:flex !important; flex-wrap:wrap !important; align-items:center !important;
+    width:100% !important; max-width:100% !important; min-width:0 !important;
+    column-gap:8px !important; row-gap:5px !important;
+  }
+  .light-switch-hint {
+    display:inline-flex !important; flex-direction:column !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:3px !important; width:max-content !important; max-width:100% !important;
+    min-width:0 !important;
+  }
+  .press-me-cue {
+    align-self:center !important; flex-direction:row !important;
+    gap:2px !important; font-size:6px !important;
+  }
+  .press-me-arrow { font-size:10px !important; transform:none !important; }
+}
+@media(max-width:380px) {
+  .brand-tools { max-width:100% !important; min-width:0 !important; }
+  .light-switch-hint { max-width:calc(100vw - 36px) !important; }
+  .light-switch { max-width:100% !important; }
+}
+@media(prefers-reduced-motion:reduce) {
+  body.flashlight-mode::after { animation:none !important; opacity:.72 !important; }
+}
+/* Point PRESS ME back toward the LIGHTS ON switch; on mobile it points upward. */
+.press-me-arrow { font-size:0 !important; }
+.press-me-arrow::after { content:"←"; font:700 11px/1 Arial,sans-serif; }
+@media(max-width:760px) {
+  .press-me-arrow::after { content:"↑"; font-size:10px; }
+}
+</style>
+
+<style id="october-31-lights-and-stamp-adjustments">
+/* Lights OFF: remove decorative star glyphs; retain only isolated cyan pinpoints. */
+body.flashlight-mode .flashlight-clue.star { display:none !important; }
+@keyframes sparse-cyan-points { 0%,100% { opacity:.68; } 50% { opacity:.9; } }
+body.flashlight-mode::after {
+  content:"" !important;
+  position:fixed !important;
+  inset:0 !important;
+  z-index:1100 !important;
+  pointer-events:none !important;
+  opacity:1 !important;
+  background-image:
+    radial-gradient(circle at 4% 13%, rgba(220,252,255,.98) 0 .5px, transparent 1.35px),
+    radial-gradient(circle at 13% 72%, rgba(190,247,253,.94) 0 .45px, transparent 1.25px),
+    radial-gradient(circle at 21% 31%, rgba(220,252,255,.92) 0 .42px, transparent 1.2px),
+    radial-gradient(circle at 29% 88%, rgba(190,247,253,.9) 0 .48px, transparent 1.3px),
+    radial-gradient(circle at 37% 9%, rgba(220,252,255,.96) 0 .45px, transparent 1.25px),
+    radial-gradient(circle at 44% 57%, rgba(190,247,253,.92) 0 .4px, transparent 1.2px),
+    radial-gradient(circle at 53% 23%, rgba(220,252,255,.95) 0 .5px, transparent 1.35px),
+    radial-gradient(circle at 61% 81%, rgba(190,247,253,.9) 0 .42px, transparent 1.2px),
+    radial-gradient(circle at 69% 44%, rgba(220,252,255,.94) 0 .45px, transparent 1.25px),
+    radial-gradient(circle at 77% 6%, rgba(190,247,253,.92) 0 .4px, transparent 1.2px),
+    radial-gradient(circle at 84% 66%, rgba(220,252,255,.96) 0 .48px, transparent 1.3px),
+    radial-gradient(circle at 94% 37%, rgba(190,247,253,.9) 0 .42px, transparent 1.2px);
+  background-repeat:no-repeat !important;
+  background-size:100% 100% !important;
+  filter:drop-shadow(0 0 1.2px rgba(115,217,232,.78));
+  animation:sparse-cyan-points 3.8s ease-in-out infinite;
+}
+/* Desktop: anchor Made & Found neatly inside the hero card's lower-right corner. */
+@media (min-width:761px) {
+  .hero .work-stamp-row {
+    top:auto !important;
+    right:clamp(18px,3.2vw,44px) !important;
+    bottom:clamp(18px,3vw,38px) !important;
+    left:auto !important;
+    transform:none !important;
+  }
+}
+/* Preserve the mobile stamp placement that is already working. */
+@media (max-width:760px) {
+  .hero .work-stamp-row {
+    top:auto !important;
+    right:10px !important;
+    bottom:12px !important;
+    left:auto !important;
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  body.flashlight-mode::after { animation:none !important; opacity:.78 !important; }
+}
+</style>
+
+
+<style id="final-cyan-star-points-and-desktop-stamp">
+/* Remove every tiled/gradient flashlight overlay. The stars below are individual elements. */
+body.flashlight-mode::before,
+body.flashlight-mode::after { content:none !important; display:none !important; background:none !important; animation:none !important; }
+.cyan-night-star {
+  position:fixed !important; display:block !important; width:2px !important; height:2px !important;
+  margin:0 !important; padding:0 !important; border:0 !important; border-radius:50% !important;
+  background:#c8fbff !important; opacity:.76; pointer-events:none !important;
+  z-index:1100 !important; box-shadow:0 0 3px 1px rgba(115,217,232,.9),0 0 8px 2px rgba(115,217,232,.48) !important;
+  animation:individual-cyan-twinkle 3.4s ease-in-out infinite alternate !important;
+}
+@keyframes individual-cyan-twinkle { from { opacity:.38; } to { opacity:.95; } }
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(58px,6vw,84px) !important; }
+}
+/* Mobile stamp placement remains unchanged. */
+@media (max-width:760px) {
+  .hero .work-stamp-row { right:10px !important; bottom:12px !important; }
+}
+@media (prefers-reduced-motion:reduce) { .cyan-night-star { animation:none !important; opacity:.72 !important; } }
+</style>
+<script id="individual-cyan-stars-script">
+(() => {
+  const positions = [
+    [4,13],[13,72],[21,31],[29,88],[37,9],[44,57],[53,23],[61,81],
+    [69,44],[77,6],[84,66],[94,37],[8,48],[17,94],[26,61],[34,39],
+    [48,5],[57,94],[66,17],[73,78],[81,48],[89,90],[97,14],[39,74],
+    [3,86],[56,42],[91,59],[24,6]
+  ];
+  let stars = [];
+  function clearStars() { stars.forEach(star => star.remove()); stars = []; }
+  function syncStars() {
+    clearStars();
+    if (!document.body.classList.contains('flashlight-mode')) return;
+    stars = positions.map(([x,y],i) => {
+      const star = document.createElement('i');
+      star.className = 'cyan-night-star';
+      star.setAttribute('aria-hidden','true');
+      star.style.left = x + 'vw';
+      star.style.top = y + 'vh';
+      star.style.animationDelay = (-((i * 0.37) % 3.4)) + 's';
+      document.body.appendChild(star);
+      return star;
+    });
+  }
+  const observer = new MutationObserver(syncStars);
+  observer.observe(document.body,{attributes:true,attributeFilter:['class']});
+  syncStars();
+})();
+</script>
+
+
+<style id="final-email-orange-and-stamp-clearance">
+/* The final email clue glows orange only with the lights off; lights-on remains cyan. */
+body.flashlight-mode #about .contact-email-icon {
+  color:#ff9a45 !important; stroke:#ff9a45 !important;
+  filter:drop-shadow(0 0 5px #ff7a18) drop-shadow(0 0 13px rgba(255,122,24,.98)) drop-shadow(0 0 24px rgba(255,122,24,.72)) !important;
+  animation:email-orange-beacon 1.65s ease-in-out infinite alternate !important;
+}
+@keyframes email-orange-beacon { from { opacity:.78; } to { opacity:1; } }
+body:not(.flashlight-mode) #about .contact-email-icon {
+  color:#73d9e8 !important; stroke:#73d9e8 !important;
+  filter:drop-shadow(0 0 5px rgba(115,217,232,.9)) !important; animation:none !important;
+}
+/* Shift the desktop stamp left and above nearby artwork/icons; preserve mobile placement. */
+@media (min-width:761px) {
+  .hero .work-stamp-row { right:clamp(155px,16vw,245px) !important; z-index:30 !important; }
+  .hero .work-stamp-row .work-stamp,
+  .hero .work-stamp-row .hero-stamp,
+  .hero .work-stamp-row .hero-stamp svg { position:relative !important; z-index:31 !important; }
+}
+@media (max-width:760px) {
+  .hero .work-stamp-row { right:10px !important; bottom:12px !important; z-index:9 !important; }
+}
+@media (prefers-reduced-motion:reduce) { body.flashlight-mode #about .contact-email-icon { animation:none !important; } }
+</style>
+
+<style id="mobile-top-left-controls-and-desktop-press-me-size">
+/* Mobile: float the controls at the top-left without taking up space or shifting the page. */
+@media (max-width:760px) {
+  .site-header { position:sticky !important; }
+  .site-header:before { left:auto !important; right:6% !important; }
+  .light-switch-hint {
+    position:absolute !important; top:2px !important; left:6% !important;
+    display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:6px !important; width:max-content !important; max-width:88vw !important;
+    margin:0 !important; z-index:30 !important;
+  }
+  .press-me-cue { font-size:7px !important; gap:3px !important; opacity:.9 !important; }
+  .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+}
+/* Desktop: make PRESS ME slightly easier to read without changing its placement. */
+@media (min-width:761px) {
+  .press-me-cue { font-size:7.5px !important; }
+  .press-me-arrow::after { font-size:12px !important; }
+}
+</style>
+<style id="keep-site-made-by-fixed-top-right-mobile">
+/* Keep SITE MADE BY anchored at the top-right on mobile, independent of the light controls. */
+@media (max-width:760px) {
+  .site-header { position:sticky !important; }
+  .site-header:before {
+    position:absolute !important;
+    top:9px !important;
+    right:6% !important;
+    left:auto !important;
+    z-index:31 !important;
+    transform:none !important;
+    pointer-events:none !important;
+    white-space:nowrap !important;
+  }
+  .light-switch-hint {
+    position:absolute !important;
+    top:2px !important;
+    left:6% !important;
+    right:auto !important;
+    transform:none !important;
+    z-index:30 !important;
+  }
+}
+</style>
+
+<style id="clickable-final-email-clue">
+/* The final envelope clue is part of the mailto link: clicking or tapping it opens the user's email app. */
+#about .contact-email { cursor:pointer!important; touch-action:manipulation; }
+#about .contact-email-icon { cursor:pointer!important; pointer-events:none!important; }
+body.flashlight-mode #about .contact-email { position:relative!important; z-index:1202!important; pointer-events:auto!important; }
+</style>
+
+<style id="october-31-top-left-fixed-controls-and-larger-stamp">
+/* Keep both small labels fixed in the top-left corner, with the controls just below the credit. */
+.site-header { padding-top:58px !important; }
+.site-header:before {
+  position:fixed !important; top:8px !important; left:3.3% !important; right:auto !important;
+  z-index:1301 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:23px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:6px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important;
+}
+/* A small size increase only; keep the stamp in its existing lower-right position. */
+.hero .work-stamp-row .work-stamp {
+  width:clamp(64px,6.8vw,84px) !important;
+  height:clamp(64px,6.8vw,84px) !important;
+}
+.hero .work-stamp-row .hero-stamp { width:100% !important; height:100% !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:60px !important; }
+  .site-header:before { top:8px !important; left:6% !important; right:auto !important; }
+  .site-header .light-switch-hint {
+    top:23px !important; left:6% !important; right:auto !important;
+    flex-direction:row !important; align-items:center !important; gap:6px !important;
+  }
+  .press-me-cue { font-size:7px !important; }
+  .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+  .hero .work-stamp-row { right:10px !important; bottom:12px !important; }
+  .hero .work-stamp-row .work-stamp {
+    width:clamp(52px,14vw,66px) !important;
+    height:clamp(52px,14vw,66px) !important;
+  }
+}
+</style>
+
+<style id="corrected-controls-placement-final">
+/* Desktop: keep LIGHTS ON / PRESS ME in the brand row beside the name and girl icon. */
+@media (min-width:761px) {
+  .site-header { padding-top:58px !important; }
+  .site-header:before { position:fixed !important; top:8px !important; left:3.3% !important; right:auto !important; z-index:1301 !important; }
+  .site-header .brand-tools { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; gap:10px !important; width:auto !important; max-width:none !important; }
+  .site-header .light-switch-hint { position:static !important; display:inline-flex !important; flex-direction:row !important; align-items:center !important; justify-content:flex-start !important; gap:6px !important; width:max-content !important; max-width:none !important; margin:0 !important; transform:none !important; z-index:auto !important; }
+}
+/* Mobile: put the controls in the top-right; SITE MADE BY remains top-left. */
+@media (max-width:760px) {
+  .site-header { padding-top:60px !important; }
+  .site-header:before { position:fixed !important; top:8px !important; left:6% !important; right:auto !important; z-index:1301 !important; white-space:nowrap !important; }
+  .site-header .brand-tools { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; }
+  .site-header .light-switch-hint { position:fixed !important; top:8px !important; left:auto !important; right:6% !important; transform:none !important; z-index:1300 !important; display:inline-flex !important; flex-direction:row !important; align-items:center !important; justify-content:flex-end !important; gap:6px !important; width:max-content !important; max-width:58vw !important; margin:0 !important; }
+  .site-header .press-me-cue { font-size:7px !important; }
+  .site-header .press-me-arrow::after { content:"←" !important; font-size:11px !important; }
+}
+</style>
+
+
+<style id="final-october-31-layout-lowering">
+/* Lower the top utility row so the maker credit and light controls have breathing room. */
+@media (min-width:761px) {
+  .site-header { padding-top:72px !important; }
+  .site-header:before { top:18px !important; }
+  .site-header .brand-tools { transform:translateY(10px) !important; }
+}
+@media (max-width:760px) {
+  .site-header { padding-top:72px !important; }
+  .site-header:before { top:18px !important; }
+  .site-header .light-switch-hint { top:18px !important; }
+}
+/* Bring the footer maker name closer to its SITE MADE BY label. */
+.site-footer .site-credit { gap:0 !important; }
+.site-footer .site-credit-label { line-height:.8 !important; margin:0 0 -3px !important; }
+.site-footer .site-credit > span:last-child { line-height:1 !important; margin:0 !important; }
+</style>
+
+
+<style id="final-top-edge-spacing-correction">
+/* Give the top utility labels real breathing room; keep them in a deliberate vertical stack. */
+.site-header { padding-top:122px !important; }
+.site-header:before {
+  position:fixed !important; top:42px !important; left:3.3% !important; right:auto !important;
+  z-index:1301 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:70px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:8px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important;
+  transform:none !important;
+}
+.site-header .brand-tools { transform:none !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:122px !important; }
+  .site-header:before { top:42px !important; left:6% !important; right:auto !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:70px !important; left:6% !important; right:auto !important;
+    max-width:88vw !important; justify-content:flex-start !important;
+  }
+}
+</style>
+
+
+<style id="site-credit-stacked-above-name">
+/* Stack the creator credit immediately above the site owner's name. */
+.site-header { padding-top:150px !important; }
+.site-header:before {
+  position:fixed !important; top:28px !important; left:3.3% !important; right:auto !important;
+  z-index:1302 !important; white-space:nowrap !important; pointer-events:none !important;
+}
+.site-header .wordmark {
+  position:fixed !important; top:43px !important; left:3.3% !important;
+  z-index:1301 !important; margin:0 !important;
+}
+.site-header .light-switch-hint {
+  position:fixed !important; top:101px !important; left:3.3% !important; right:auto !important;
+  z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+  align-items:center !important; justify-content:flex-start !important; gap:8px !important;
+  width:max-content !important; max-width:90vw !important; margin:0 !important; transform:none !important;
+}
+.site-header .brand-tools { transform:none !important; }
+@media (max-width:760px) {
+  .site-header { padding-top:150px !important; }
+  .site-header:before { top:28px !important; left:6% !important; }
+  .site-header .wordmark { top:43px !important; left:6% !important; }
+  .site-header .light-switch-hint { top:101px !important; left:6% !important; max-width:88vw !important; }
+}
+</style>
+
+
+<style id="compact-lights-and-inline-top-navigation">
+/* Compact the light control so the navigation has room to remain one clean row on desktop. */
+@media (min-width:761px) {
+  .site-header { gap:clamp(12px,2vw,26px) !important; }
+  .site-header .light-switch-hint { gap:5px !important; }
+  .site-header .light-switch { gap:4px !important; padding:4px 6px !important; font-size:7px !important; line-height:1 !important; }
+  .site-header .switch-track { width:17px !important; height:10px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:9px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; }
+  .site-header .press-me-arrow, .site-header .press-me-arrow:after { font-size:9px !important; line-height:1 !important; }
+  .site-header .navigation { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; justify-content:flex-end !important; gap:clamp(10px,1.45vw,20px) !important; font-size:clamp(8px,.72vw,10px) !important; white-space:nowrap !important; min-width:0 !important; }
+  .site-header .navigation > a, .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair { display:inline-flex !important; flex-wrap:nowrap !important; align-items:center !important; gap:clamp(10px,1.45vw,20px) !important; white-space:nowrap !important; }
+}
+/* Keep the compact controls legible on smaller screens without forcing the nav into a cramped row. */
+@media (max-width:760px) {
+  .site-header .light-switch { font-size:7px !important; padding:4px 6px !important; gap:4px !important; }
+  .site-header .press-me-cue { font-size:6px !important; gap:2px !important; }
+  .site-header .press-me-arrow, .site-header .press-me-arrow:after { font-size:9px !important; }
+}
+</style>
+
+
+<style id="aligned-header-refinement-oct31">
+/* Preserve full-size navigation; tighten the maker credit and light-control cluster. */
+@media (min-width:761px) {
+  .site-header { padding-top:76px !important; gap:clamp(14px,1.8vw,26px) !important; }
+  .site-header:before {
+    position:fixed !important; top:15px !important; left:3.3% !important; right:auto !important;
+    z-index:1302 !important; font-size:6px !important; line-height:1 !important;
+    letter-spacing:.10em !important; white-space:nowrap !important;
+  }
+  .site-header .wordmark {
+    position:fixed !important; top:26px !important; left:3.3% !important;
+    z-index:1301 !important; margin:0 !important;
+    font-size:clamp(14px,1.35vw,19px) !important; line-height:1 !important;
+    letter-spacing:-.45px !important;
+  }
+  .site-header .wordmark-girl { width:25px !important; height:32px !important; margin-left:5px !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:49px !important; left:3.3% !important; right:auto !important;
+    z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:5px !important;
+    width:max-content !important; max-width:90vw !important; margin:0 !important; transform:none !important;
+  }
+  .site-header .light-switch {
+    gap:4px !important; padding:3px 5px !important; font-size:7px !important;
+    line-height:1 !important; letter-spacing:.04em !important; box-shadow:none !important;
+  }
+  .site-header .switch-track { width:15px !important; height:9px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:8px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; letter-spacing:.04em !important; }
+  .site-header .press-me-arrow { display:inline-block !important; font-size:9px !important; line-height:1 !important; }
+  /* Keep navigation links at their original full size; only tighten their spacing. */
+  .site-header .navigation {
+    display:flex !important; flex-wrap:nowrap !important; align-items:center !important;
+    justify-content:flex-end !important; gap:clamp(12px,1.5vw,22px) !important;
+    font-size:clamp(10px,.95vw,14px) !important; white-space:nowrap !important; min-width:0 !important;
+  }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex-wrap:nowrap !important; align-items:center !important;
+    gap:clamp(12px,1.5vw,22px) !important; white-space:nowrap !important;
+  }
+}
+@media (max-width:760px) {
+  .site-header { padding-top:76px !important; }
+  .site-header:before {
+    position:fixed !important; top:15px !important; left:6% !important; right:auto !important;
+    z-index:1302 !important; font-size:6px !important; letter-spacing:.10em !important;
+  }
+  .site-header .wordmark {
+    position:fixed !important; top:26px !important; left:6% !important;
+    z-index:1301 !important; margin:0 !important; font-size:clamp(14px,4vw,18px) !important;
+    line-height:1 !important; letter-spacing:-.45px !important;
+  }
+  .site-header .wordmark-girl { width:24px !important; height:30px !important; margin-left:5px !important; }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:49px !important; left:6% !important; right:auto !important;
+    z-index:1300 !important; display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important; gap:5px !important;
+    width:max-content !important; max-width:88vw !important; margin:0 !important; transform:none !important;
+  }
+  .site-header .light-switch { gap:4px !important; padding:3px 5px !important; font-size:7px !important; line-height:1 !important; box-shadow:none !important; }
+  .site-header .switch-track { width:15px !important; height:9px !important; }
+  .site-header .switch-track:after { width:5px !important; height:5px !important; top:2px !important; left:2px !important; }
+  body.flashlight-mode .site-header .switch-track:after { left:8px !important; }
+  .site-header .press-me-cue { gap:2px !important; font-size:6px !important; line-height:1 !important; }
+  .site-header .press-me-arrow { display:inline-block !important; font-size:9px !important; line-height:1 !important; }
+}
+/* There is one arrow in the markup; remove the extra CSS-generated arrow. */
+.site-header .press-me-arrow::after { content:none !important; display:none !important; }
+</style>
+
+
+<style id="header-size-and-nav-row-correction">
+/* Restore the creator/control sizing; keep the navigation at its original size. */
+@media (min-width:761px) {
+  .site-header {
+    position:sticky !important; top:0 !important;
+    display:flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:space-between !important;
+    min-height:112px !important; padding:76px 3.3% 18px !important;
+    gap:18px !important;
+  }
+  .site-header:before {
+    position:fixed !important; top:16px !important; left:3.3% !important;
+    right:auto !important; z-index:1302 !important;
+    font-size:8px !important; line-height:1 !important;
+    letter-spacing:.12em !important; white-space:nowrap !important;
+  }
+  .site-header .wordmark {
+    position:fixed !important; top:31px !important; left:3.3% !important;
+    right:auto !important; z-index:1301 !important; margin:0 !important;
+    font-size:clamp(23px,2.4vw,34px) !important;
+    line-height:1.05 !important; letter-spacing:-1.2px !important;
+    white-space:nowrap !important;
+  }
+  .site-header .wordmark-girl {
+    width:31px !important; height:38px !important; margin-left:7px !important;
+  }
+  .site-header .light-switch-hint {
+    position:fixed !important; top:76px !important; left:3.3% !important;
+    right:auto !important; z-index:1300 !important;
+    display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:7px !important; width:max-content !important; max-width:38vw !important;
+    margin:0 !important; transform:none !important;
+  }
+  .site-header .light-switch {
+    font-size:9px !important; line-height:1 !important;
+    letter-spacing:.06em !important; gap:6px !important;
+    padding:6px 8px !important;
+  }
+  .site-header .switch-track { width:17px !important; height:10px !important; }
+  .site-header .switch-track:after {
+    width:6px !important; height:6px !important; top:1px !important; left:2px !important;
+  }
+  body.flashlight-mode .site-header .switch-track:after { left:9px !important; }
+  .site-header .press-me-cue {
+    display:inline-flex !important; flex-direction:row !important;
+    align-items:center !important; gap:3px !important;
+    font-size:7.5px !important; line-height:1 !important;
+    letter-spacing:.055em !important; white-space:nowrap !important;
+  }
+  /* Keep the single left-pointing arrow aimed at the switch; suppress the duplicate glyph in the HTML. */
+  .site-header .press-me-arrow { font-size:0 !important; line-height:1 !important; }
+  .site-header .press-me-arrow::after {
+    content:"←" !important; display:inline-block !important;
+    font:700 12px/1 Arial,sans-serif !important;
+  }
+  .site-header .navigation {
+    position:absolute !important; top:45px !important; right:3.3% !important;
+    display:flex !important; flex:0 0 auto !important;
+    flex-direction:row !important; flex-wrap:nowrap !important;
+    align-items:center !important; justify-content:flex-end !important;
+    gap:clamp(14px,1.8vw,26px) !important;
+    font-size:clamp(10px,.95vw,14px) !important;
+    white-space:nowrap !important; min-width:max-content !important;
+  }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex-direction:row !important;
+    flex-wrap:nowrap !important; align-items:center !important;
+    gap:clamp(14px,1.8vw,26px) !important; white-space:nowrap !important;
+  }
+}
+@media (max-width:760px) {
+  .site-header { padding-top:76px !important; }
+  .site-header:before { font-size:8px !important; }
+  .site-header .wordmark { font-size:clamp(20px,5.2vw,25px) !important; letter-spacing:-.8px !important; }
+  .site-header .wordmark-girl { width:27px !important; height:34px !important; }
+  .site-header .light-switch { font-size:8.5px !important; padding:5px 7px !important; gap:5px !important; }
+  .site-header .press-me-cue { font-size:7px !important; gap:3px !important; }
+  .site-header .press-me-arrow { font-size:0 !important; }
+  .site-header .press-me-arrow::after { content:"↑" !important; display:inline-block !important; font:700 11px/1 Arial,sans-serif !important; }
+}
+</style>
+
+
+<style id="mobile-lights-spacing-and-arrow-fix">
+/* Match the desktop name-to-controls spacing on mobile (45px baseline-to-baseline). */
+@media (max-width:760px) {
+  .site-header .wordmark { top:26px !important; }
+  .site-header .light-switch-hint { top:65px !important; }
+  /* The cue sits to the right of the switch, so point left toward LIGHTS ON. */
+  .site-header .press-me-arrow { font-size:0 !important; }
+  .site-header .press-me-arrow::after {
+    content:"←" !important; display:inline-block !important;
+    font:700 11px/1 Arial,sans-serif !important;
+  }
+}
+</style>
+
+
+<style id="contact-label-above-email-alignment">
+/* CONTACT sits directly above the email, aligned with the copy column. */
+#about .about-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important; }
+#about .about-copy { grid-column: 2 !important; justify-self: start !important; }
+#about .contact-heading-inline { display: block !important; margin: 0 0 10px !important; padding: 0 !important; color: #9ccfd4 !important; font-family: var(--display) !important; font-size: clamp(28px, 4.5vw, 48px) !important; font-weight: 400 !important; line-height: .98 !important; letter-spacing: -.055em !important; text-transform: uppercase !important; }
+@media (max-width: 760px) {
+  #about .about-grid { grid-template-columns: minmax(0, 1fr) !important; }
+  #about .about-copy { grid-column: 1 !important; }
+}
+</style>
+
+<style id="tiny-mobile-lights-position-refinement">
+/* Nudge only the LIGHTS ON / PRESS ME cluster slightly higher on mobile. */
+@media (max-width:760px) {
+  .site-header .light-switch-hint { top:62px !important; }
+}
+</style>
+
+
+
+<style id="contact-left-alignment-expanded-layout">
+/* Keep CONTACT, the email address, and its envelope anchored to one left edge at every desktop width. */
+#about .about-copy {
+  text-align: left !important;
+  justify-self: start !important;
+  align-items: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+#about .contact-heading-inline {
+  display: block !important;
+  width: 100% !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+#about .contact-email {
+  display: inline-flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+#about .contact-email-icon {
+  flex: 0 0 auto !important;
+  margin-left: 0 !important;
+}
+</style>
+
+
+<style id="final-mobile-navigation-and-contact-left-alignment">
+/* Mobile navigation now uses the same single-row, uppercase mono treatment as desktop.
+   On exceptionally narrow screens it can scroll horizontally rather than wrap or distort the header. */
+@media (max-width:760px) {
+  .site-header .navigation {
+    display:flex !important; flex:0 0 auto !important; flex-wrap:nowrap !important;
+    align-items:center !important; justify-content:flex-start !important;
+    gap:clamp(8px,2.4vw,14px) !important; width:100% !important; max-width:100% !important;
+    min-width:0 !important; margin:12px 0 0 !important; padding:0 0 3px !important;
+    overflow-x:auto !important; overflow-y:hidden !important; white-space:nowrap !important;
+    font-family:var(--mono) !important; font-size:clamp(8px,2.5vw,10px) !important;
+    line-height:1.5 !important; text-transform:uppercase !important;
+    scrollbar-width:none !important; -webkit-overflow-scrolling:touch !important;
+  }
+  .site-header .navigation::-webkit-scrollbar { display:none !important; }
+  .site-header .navigation > a,
+  .site-header .navigation-social-pair > a { flex:0 0 auto !important; white-space:nowrap !important; }
+  .site-header .navigation-social-pair {
+    display:inline-flex !important; flex:0 0 auto !important; flex-wrap:nowrap !important;
+    align-items:center !important; gap:clamp(8px,2.4vw,14px) !important; white-space:nowrap !important;
+  }
+}
+/* The Contact copy column starts at the left edge on desktop as it already does on mobile. */
+#about .about-grid { grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important; }
+#about .about-copy {
+  grid-column:1 !important; justify-self:start !important;
+  text-align:left !important; margin-left:0 !important; margin-right:auto !important;
+}
+#about .contact-heading-inline { display:block !important; width:100% !important; text-align:left !important; }
+@media (max-width:760px) {
+  #about .about-grid { grid-template-columns:minmax(0,1fr) !important; }
+  #about .about-copy { grid-column:1 !important; }
+}
+</style>
+
+<style id="compact-contact-and-collection-slideshow">
+/* Make the contact band intentionally slimmer without changing its left alignment. */
+#about.section { padding: clamp(24px,3.2vw,38px) 8% !important; }
+#about .about-grid { gap: 12px !important; }
+#about .about-outro { margin: 0 0 12px !important; font-size: clamp(23px,3.1vw,36px) !important; line-height: .98 !important; }
+#about .contact-heading-inline { font-size: clamp(22px,3vw,34px) !important; line-height: .98 !important; margin: 0 0 5px !important; }
+#about .contact-email { font-size: clamp(14px,1.65vw,19px) !important; line-height: 1.25 !important; }
+#about .contact-email-icon { width: clamp(20px,2.2vw,27px) !important; height: clamp(20px,2.2vw,27px) !important; }
+@media (max-width:760px) {
+  #about.section { padding: 22px 6% !important; }
+  #about .about-outro { font-size: clamp(21px,6vw,29px) !important; margin-bottom: 9px !important; }
+  #about .contact-heading-inline { font-size: clamp(21px,6vw,28px) !important; margin-bottom: 4px !important; }
+  #about .contact-email { font-size: clamp(13px,3.8vw,17px) !important; }
+  #about .contact-email-icon { width:21px !important; height:21px !important; }
+}
+/* Collection lightbox controls: each collection is navigated independently. */
+#photo-lightbox-runtime .photo-lightbox-nav { position:absolute; top:50%; transform:translateY(-50%); z-index:3; display:grid; place-items:center; width:48px; height:64px; border:1px solid rgba(242,235,221,.45); border-radius:2px; background:rgba(20,20,18,.25); color:var(--cream); font:400 48px/1 var(--body); cursor:pointer; touch-action:manipulation; }
+#photo-lightbox-runtime .photo-lightbox-prev { left:max(14px,env(safe-area-inset-left)); }
+#photo-lightbox-runtime .photo-lightbox-next { right:max(14px,env(safe-area-inset-right)); }
+#photo-lightbox-runtime .photo-lightbox-nav:hover { color:var(--cyan); border-color:var(--cyan); }
+#photo-lightbox-runtime .photo-lightbox-nav:disabled { opacity:.35; cursor:default; }
+#photo-lightbox-runtime .photo-lightbox-count { position:absolute; bottom:max(14px,env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); color:rgba(242,235,221,.8); font:10px var(--mono); letter-spacing:.08em; }
+@media(max-width:600px) {
+  #photo-lightbox-runtime .photo-lightbox-nav { width:38px; height:52px; font-size:40px; background:rgba(20,20,18,.48); }
+  #photo-lightbox-runtime img { max-width:calc(100vw - 84px); }
+}
+</style>
+
+
+<style id="final-lights-off-contact-overlay-fix">
+/* Lights Off: let the Contact section sit in the same darkened layer as the rest
+   of the page. The previous z-index put the entire section above the flashlight
+   overlay, which made its background stay visibly different. */
+body.flashlight-mode #about,
+body.flashlight-mode #about.about-section {
+  position: relative !important;
+  z-index: auto !important;
+  isolation: auto !important;
+  background: var(--cream) !important;
+  background-color: var(--cream) !important;
+  background-image: none !important;
+  color: var(--ink) !important;
+}
+/* Keep only the final email icon above the dimming layer as the flashlight clue.
+   The email text itself remains in the same lighting as the rest of the section. */
+body.flashlight-mode #about .contact-email {
+  position: relative !important;
+  z-index: auto !important;
+}
+body.flashlight-mode #about .contact-email-icon {
+  position: relative !important;
+  z-index: 1204 !important;
+}
+</style>
+
+<style id="final-lights-off-email-address-glow-fix">
+/* Final override: keep the real email address visible and glowing with its
+   envelope icon in Lights Off, above the dimming overlay. */
+body.flashlight-mode #about .contact-email {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: 1202 !important;
+  color: #ffb36b !important;
+  -webkit-text-fill-color: #ffb36b !important;
+  text-shadow: 0 0 5px #ff7a18, 0 0 12px rgba(255,122,24,.98), 0 0 24px rgba(255,122,24,.72) !important;
+  animation: actual-email-address-glow 1.8s ease-in-out infinite alternate !important;
+}
+@keyframes actual-email-address-glow {
+  from { text-shadow: 0 0 4px #ff7a18, 0 0 10px rgba(255,122,24,.82), 0 0 18px rgba(255,122,24,.55); }
+  to   { text-shadow: 0 0 7px #ff7a18, 0 0 16px rgba(255,122,24,1), 0 0 29px rgba(255,122,24,.82); }
+}
+/* Preserve the existing orange envelope beacon and its final-clue layering. */
+body.flashlight-mode #about .contact-email-icon {
+  position: relative !important;
+  z-index: 1204 !important;
+}
+
+/* Florida uses the same compact three-column photo flow as the other collections. */
+#misc .photo-grid{columns:3!important;column-gap:clamp(10px,1.4vw,18px)!important;}
+#misc .photo-card{margin-bottom:clamp(10px,1.4vw,18px)!important;}
+#misc .photo-card img{width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;}
+@media(max-width:760px){#misc .photo-grid{columns:2!important;column-gap:8px!important;}#misc .photo-card{margin-bottom:8px!important;}}
+</style>
+
+<style id="desktop-compact-masonry-only">
+/* Desktop-only compact masonry: keep photographs uncropped and preserve the existing mobile layout. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid,
+  #misc .photo-grid {
+    display:block!important;
+    width:100%;
+    max-width:1120px;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    columns:4;
+    column-gap:12px;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card,
+  #misc .photo-card {
+    display:inline-block!important;
+    width:100%!important;
+    break-inside:avoid;
+    margin:0 0 12px!important;
+    vertical-align:top;
+  }
+  #fashion-portraits .photo-card a,
+  #nyc-film .photo-card a,
+  #live-music .photo-card a,
+  #misc .photo-card a {height:auto!important;min-height:0!important;}
+  #fashion-portraits .photo-card img,
+  #nyc-film .photo-card img,
+  #live-music .photo-card img,
+  #misc .photo-card img {
+    display:block;width:100%!important;height:auto!important;max-height:none!important;
+    object-fit:contain!important;object-position:center;
+  }
+}
+@media (min-width:761px) and (max-width:1099px) {
+  #fashion-portraits .photo-grid,#nyc-film .photo-grid,#live-music .photo-grid,#misc .photo-grid {max-width:960px;columns:3;}
+}
+</style>
+
+
+<style id="desktop-balanced-masonry-collections">
+/* A middle ground between the oversized two-column desktop view and the denser original grid.
+   Three columns let visitors see more photographs together without making them feel tiny.
+   Eye and Florida are deliberately excluded; mobile styling remains untouched. */
+@media (min-width:1100px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid {
+    columns:3!important;
+    column-gap:14px!important;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card {
+    margin-bottom:14px!important;
+  }
+}
+@media (min-width:761px) and (max-width:1099px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid {
+    columns:2!important;
+    column-gap:12px!important;
+  }
+  #fashion-portraits .photo-card,
+  #nyc-film .photo-card,
+  #live-music .photo-card {
+    margin-bottom:12px!important;
+  }
+}
+</style>
+
+
+<style id="final-centered-collections-and-flashlight-route">
+/* Keep each collection gallery centered within its own content area. This changes alignment only,
+   not the established photo order, proportions, column counts, or Florida/Eyes styling. */
+@media (min-width:761px) {
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid,
+  #misc .photo-grid,
+  #eyes .eyes-preview,
+  #eyes .eyes-more .photo-grid {
+    margin-left:auto!important;
+    margin-right:auto!important;
+  }
+  #fashion-portraits .photo-grid,
+  #nyc-film .photo-grid,
+  #live-music .photo-grid { width:100%; max-width:960px; }
+}
+</style>
+
+<style id="florida-collection-true-center-final">
+/* Florida centering fix (inspected): the former left:50% + translateX(-50%)
+   shifted the section relative to #work's padded content box. Center the
+   section as a normal layout item instead; keep its existing photo layout. */
+#work > section#misc.photo-category-section {
+  display:block !important;
+  position:static !important;
+  inset:auto !important;
+  left:auto !important;
+  right:auto !important;
+  transform:none !important;
+  float:none !important;
+  width:min(960px, 100%) !important;
+  max-width:960px !important;
+  margin-left:auto !important;
+  margin-right:auto !important;
+  justify-self:center !important;
+  align-self:stretch !important;
+  box-sizing:border-box !important;
+}
+#work > section#misc.photo-category-section > .photo-grid {
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+  box-sizing:border-box !important;
+}
+@media (max-width:760px) {
+  #work > section#misc.photo-category-section {
+    width:100% !important;
+    max-width:none !important;
+  }
+}
+</style>
+
+<style id="florida-desktop-alignment-final-2026">
+/* Align Florida with the centered desktop collection column. Keep the mobile layout unchanged. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section {
+    grid-column:1 / -1 !important;
+    justify-self:center !important;
+    align-self:center !important;
+    width:min(960px, 100%) !important;
+    max-width:960px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    inset:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    box-sizing:border-box !important;
+  }
+  #work > section#misc.photo-category-section > .photo-group-label,
+  #work > section#misc.photo-category-section > .photo-grid {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+
+<style id="florida-final-horizontal-centering-adjustment">
+/* Center the actual Florida photo grid itself. Cancel the older relative left/translate
+   positioning so the narrower two-column composition is centered in its parent. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section > .photo-grid {
+    position:static !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    float:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    width:min(680px, 72%) !important;
+    max-width:680px !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+
+
+<style id="video-controls-fade">
+/* Let the native video controls gently fade after playback begins. They return
+   when the viewer hovers or focuses the player, so pause/seek remain accessible. */
+.embed-frame video::-webkit-media-controls-panel {
+  transition: opacity .45s ease !important;
+}
+.embed-frame video.controls-faded::-webkit-media-controls-panel {
+  opacity: 0 !important;
+}
+.embed-frame video.controls-faded:hover::-webkit-media-controls-panel,
+.embed-frame video.controls-faded:focus-visible::-webkit-media-controls-panel {
+  opacity: 1 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .embed-frame video::-webkit-media-controls-panel { transition:none !important; }
+}
+</style>
+<script id="video-controls-fade-script">
+(() => {
+  document.querySelectorAll('.embed-frame video[controls]').forEach((video) => {
+    let fadeTimer;
+    const fadeControls = () => {
+      clearTimeout(fadeTimer);
+      video.classList.remove('controls-faded');
+      if (!video.paused && !video.ended) {
+        fadeTimer = setTimeout(() => video.classList.add('controls-faded'), 1800);
+      }
+    };
+    video.addEventListener('play', fadeControls);
+    video.addEventListener('pause', () => { clearTimeout(fadeTimer); video.classList.remove('controls-faded'); });
+    video.addEventListener('ended', () => { clearTimeout(fadeTimer); video.classList.remove('controls-faded'); });
+    video.addEventListener('pointermove', fadeControls);
+    video.addEventListener('pointerdown', fadeControls);
+  });
+})();
+</script>
+
+</body></html>
+<style id="florida-normal-width-centered">
+/* Restore Florida to its normal collection width while keeping it centered on desktop. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section {
+    display:block !important;
+    position:relative !important;
+    float:none !important;
+    inset:auto !important;
+    transform:none !important;
+    width:min(960px, 100%) !important;
+    max-width:960px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    justify-self:center !important;
+    box-sizing:border-box !important;
+  }
+  #work > section#misc.photo-category-section > .photo-group-label,
+  #work > section#misc.photo-category-section > .photo-grid {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+  }
+}
+</style>
+
+<style id="final-florida-centered-and-navigation">
+/* Final Florida alignment override: center the complete collection block in the same
+   desktop column as the other collections, without changing its image layout. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section {
+    display:block !important;
+    position:relative !important;
+    float:none !important;
+    inset:auto !important;
+    left:auto !important;
+    right:auto !important;
+    transform:none !important;
+    grid-column:1 / -1 !important;
+    justify-self:center !important;
+    align-self:center !important;
+    width:min(960px, calc(100% - 40px)) !important;
+    max-width:960px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    box-sizing:border-box !important;
+  }
+  #work > section#misc.photo-category-section > .photo-group-label,
+  #work > section#misc.photo-category-section > .photo-grid {
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    box-sizing:border-box !important;
+  }
+}
+@media (max-width:760px) {
+  #work > section#misc.photo-category-section {
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
+<style id="florida-visual-balance-center-final">
+/* Florida has fewer photographs, so center a narrower two-column photo composition
+   beneath its full-width heading instead of stretching a sparse three-column grid. */
+@media (min-width:761px) {
+  #work > section#misc.photo-category-section > .photo-grid {
+    display:block !important;
+    width: min(680px, 72%) !important;
+    max-width:680px !important;
+    columns:2 !important;
+    column-gap:clamp(12px, 1.5vw, 20px) !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+  }
+  #work > section#misc.photo-category-section > .photo-grid > .photo-card {
+    display:inline-block !important;
+    width:100% !important;
+    break-inside:avoid !important;
+  }
+}
+</style>
